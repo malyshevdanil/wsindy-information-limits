@@ -58,7 +58,8 @@ def main(publication=False):
         assert '### 4.3.' in article and '### 4.4.' in article
         assert '## Declaration of generative AI and AI-assisted technologies' in article
         assert '## Data availability' in article
-        assert 'https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.0.0' in article
+        archive=json.loads((ROOT/'configs/public_archive.json').read_text())
+        assert archive['version_url'] in article
         assert not re.search('abandoned grid diagnostic|initial custom-STLS pilot|historical|earlier 4,000-path experiment|fresh validation',article,re.I)
         assert 'malyshevdanil' not in supplement and 'credentials' not in supplement
         assert len(Document(ROOT/'manuscript/article_revised.docx').tables)==9

@@ -65,11 +65,13 @@ in the manuscript supplement. Source fingerprints match frozen notebooks,
 not subsequent local manuscript edits.
 
 `release_manifest.json` provides SHA256 for every tracked artifact. The tag
-`v1.0.0` identifies the manuscript's public code/data version. No DOI has been
+`v1.0.1` identifies the manuscript's public code/data version. No DOI has been
 assigned. Authorship and journal submission are separate from this archive.
 '''
     (TARGET/'README.md').write_text(public_readme,encoding='utf-8')
     (TARGET/'.gitignore').write_text('__pycache__/\n*.pyc\n.pytest_cache/\ntools/\n.env\n.kaggle/\nreports/release_check*/\nreports/public_release*/\n')
+    # Keep the scientific artifact bytes identical on every Git platform.
+    (TARGET/'.gitattributes').write_text('* -text\n')
     # Figures are analysis outputs; include them to make the snapshot usable immediately.
     for p in (ROOT/'manuscript/figures/publication').glob('*'):
         dest=TARGET/p.relative_to(ROOT);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)

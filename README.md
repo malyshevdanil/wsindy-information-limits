@@ -44,5 +44,5 @@ in the manuscript supplement. Source fingerprints match frozen notebooks,
 not subsequent local manuscript edits.
 
 `release_manifest.json` provides SHA256 for every tracked artifact. The tag
-`v1.0.0` identifies the manuscript's public code/data version. No DOI has been
+`v1.0.1` identifies the manuscript's public code/data version. No DOI has been
 assigned. Authorship and journal submission are separate from this archive.

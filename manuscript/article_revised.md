@@ -510,6 +510,6 @@ OpenAI Codex assisted literature searches, mathematical drafting, source develop
 
 ## Data availability
 
-Code, synthetic observations, numerical outputs and frozen execution notebooks are available in the public [reproducibility repository, version v1.0.0](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.0.0). The repository includes protocol configurations, source fingerprints, pinned author-code download specifications, compatibility adapters, postprocessing scripts and SHA256 manifests. Original author sources are downloaded from their pinned repositories rather than redistributed. No external experimental dataset is used. The tagged snapshot identifies the version supporting this article; a DOI has not been assigned.
+Code, synthetic observations, numerical outputs and frozen execution notebooks are available in the public [reproducibility repository, version v1.0.1](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.0.1). The repository includes protocol configurations, source fingerprints, pinned author-code download specifications, compatibility adapters, postprocessing scripts and SHA256 manifests. Original author sources are downloaded from their pinned repositories rather than redistributed. No external experimental dataset is used. The tagged snapshot identifies the version supporting this article; a DOI has not been assigned.
 
 ## References
