@@ -249,6 +249,9 @@ def run(stage='revision'):
                         'converged_count':sum(r.get('converged',False) for r in group)})
     (ROOT/'reports/revision_results.json').write_text(json.dumps(report,indent=2,allow_nan=False))
     source=BASE/'article_revised.md';text=source.read_text(encoding='utf-8');begin='<!-- REVISION_RESULTS_START -->';end='<!-- REVISION_RESULTS_END -->'
+    if 'Efficient weak-form estimation under correlated measurement error' in text:
+        print(json.dumps({'status':'complete','benchmark_summary_cells':len(report['sparse']),'figures':6,'manuscript_update':'use analyze_efficiency.py'}))
+        return
     text=text.split(begin)[0]+begin+'\n\n'+text_results(report)+'\n\n'+end+text.split(end)[1]
     text=text.replace('The new independent protocol adds damped and Duffing oscillators, published relative MSTLS, Gaussian likelihood, coefficient-surrogate validation, covariance-null calibration and heterogeneous initial conditions. Its results are included only after completed output is downloaded.','The independent validation adds damped and Duffing oscillators, published relative MSTLS, Gaussian likelihood, coefficient-surrogate validation, covariance-null calibration and heterogeneous initial conditions.')
     text=text.replace('Pending independent computations are not evidence until their outputs are available.','')

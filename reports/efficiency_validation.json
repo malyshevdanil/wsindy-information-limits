@@ -1,0 +1,33 @@
+{
+  "completed": true,
+  "stages": [
+    {
+      "stage": "efficiency_scalar_v3",
+      "output_sha256": "fe162f8b285ed723e5e173ce3d81db49a956a2ffcfbcfb154d5c98d37e44ba6f",
+      "execution_fingerprint_verified": true
+    },
+    {
+      "stage": "efficiency_geometry_v2",
+      "output_sha256": "ec92e1fd7ce5de10daece227d21571e033f1e412c4f3ac9ce9c4d3748b81ead1",
+      "execution_fingerprint_verified": true
+    },
+    {
+      "stage": "efficiency_vdp_final_0",
+      "output_sha256": "91ea9acb994a3006061634e368a440a8ec502eb31863ea292d763b22c7a5a775",
+      "execution_fingerprint_verified": true
+    },
+    {
+      "stage": "efficiency_vdp_final_1",
+      "output_sha256": "277264b593024137cd4b3a3c92dd949587da2f2e069b6d9ab6352235d97fcfcf",
+      "execution_fingerprint_verified": true
+    }
+  ],
+  "expected_seed_counts_and_finite_estimates": true,
+  "source_snapshots_and_protocols_verified": true,
+  "bias_variance_identity": true,
+  "scalar_annihilation_quadrature_and_class_bound": true,
+  "exact_covariance_fixture": true,
+  "matrix_covariance_positive_and_gls_normalized": true,
+  "publication_checked": true,
+  "theorem_conditions_sequential_numbering_main_and_supplement_verified": true
+}

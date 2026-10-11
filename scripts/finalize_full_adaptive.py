@@ -19,7 +19,8 @@ def main():
     text=text.replace(old,new)
     text=text.replace('Numerical comparisons examine full Gaussian likelihood, sparse weak regression, coefficient covariance and independent recordings.',
                       'Numerical comparisons examine full Gaussian likelihood, sparse weak regression, complete adaptive author pipelines, coefficient covariance and independent recordings.')
-    path.write_text(text,encoding='utf-8')
+    if 'Efficient weak-form estimation under correlated measurement error' not in text:
+        path.write_text(text,encoding='utf-8')
     supplement=BASE/'supplement.md';text=supplement.read_text(encoding='utf-8')
     section='''## S6. Complete adaptive author-pipeline reproduction
 
@@ -45,7 +46,8 @@ The comparison contains 448 planned fits: four discovery algorithms and three su
         text=text.replace('`'+pin['commit']+'`','`'+pin['commit'][:12]+'`')
     text=text.replace('verified with the SHA256 values in `configs/author_pins.json`.',
                       'verified with the full revision identifiers and SHA256 values in `configs/author_pins.json`.')
-    supplement.write_text(text,encoding='utf-8')
+    if '## S8. Efficiency protocols' not in text:
+        supplement.write_text(text,encoding='utf-8')
     lines=['# Результаты полного адаптивного воспроизведения','',
            'На Kaggle завершены полные авторские WSINDy, WENDy и WmSINDy с закреплёнными версиями и проверенными SHA256. WmSINDy прошёл 8 × 5000 шагов в каждом успешном fit, включая обновление окон, восстановление шума и повторную регрессию.','',
            'Сравнение: Ван-дер-Поль, T=20, шум 5%, OU с τ=0.3 и независимый шум, h=0.04/0.01, 16 независимых записей в каждой ячейке. Всего 448 fits; наблюдения между методами совпадают побитово. WENDy и два параметрических сравнения получают заранее заданную структуру; их результаты не оценивают обнаружение структуры.','',

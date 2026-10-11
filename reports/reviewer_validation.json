@@ -8,5 +8,5 @@
   "replay_3600_fits_matches_original": true,
   "bias_variance_identity_checked": true,
   "publication_checked": true,
-  "nine_tables_and_main_disclosures_verified": true
+  "main_tables_supporting_calculations_and_disclosures_verified": true
 }

@@ -136,7 +136,8 @@ def main():
     if start in text:
         left=text.index(start);right=text.index(end)+len(end);text=text[:left]+block.rstrip()+text[right:]
     else:text=text.replace('## 8. Discussion and limitations',block+'## 8. Discussion and limitations')
-    target.write_text(text,encoding='utf-8')
+    if 'Efficient weak-form estimation under correlated measurement error' not in text:
+        target.write_text(text,encoding='utf-8')
     print(json.dumps({'fits':len(rows),'cases':len(hashes),'failures':sum(g['failed'] for g in grouped)}))
 
 

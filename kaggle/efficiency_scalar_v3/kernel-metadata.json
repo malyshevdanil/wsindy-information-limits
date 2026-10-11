@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-efficiency-scalar-v3",
+  "title": "WSINDy Sampling Saturation Efficiency Scalar V3",
+  "code_file": "wsindy_efficiency_scalar_v3.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

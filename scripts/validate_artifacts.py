@@ -107,8 +107,8 @@ def validate():
                         assert page.rect.contains(rectangle), f'Image outside PDF page: {name}'
                         figure_count+=1
             if name=='article_revised':
-                adaptive='<!-- FULL_ADAPTIVE_START -->' in (ROOT/'manuscript/article_revised.md').read_text(encoding='utf-8')
-                assert figure_count==(7 if adaptive else 6)
+                source=(ROOT/'manuscript/article_revised.md').read_text(encoding='utf-8')
+                assert figure_count==len(re.findall(r'^!\[Figure \d+\.',source,flags=re.M))
                 text='\n'.join(page.get_text() for page in document)
                 manuscript=(ROOT/'manuscript/article_revised.md').read_text(encoding='utf-8')
                 tables=re.findall(r'^Table (\d+)\.',manuscript,flags=re.M)

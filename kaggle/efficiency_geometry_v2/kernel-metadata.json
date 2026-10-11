@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-efficiency-geometry-v2",
+  "title": "WSINDy Sampling Saturation Efficiency Geometry V2",
+  "code_file": "wsindy_efficiency_geometry_v2.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

@@ -1,0 +1,85 @@
+{
+  "stage": "efficiency_vdp_final_1",
+  "protocol": {
+    "protocol": "weak_efficiency_v1",
+    "scalar": {
+      "a": -1.0,
+      "x0": 2.0,
+      "T": 4.0,
+      "tau": 0.4,
+      "h": 6.103515625e-05,
+      "sigmas": [
+        0.1,
+        0.02,
+        0.005
+      ],
+      "quadrature": "composite Simpson on a uniform even-interval grid",
+      "bounded_risk_estimator": "all final scalar estimates clipped to [-2.5,0.5]; medians also retained without clipping",
+      "paths": 1000,
+      "seed_base": 2100000,
+      "smoothing_widths": [
+        0.2,
+        0.1,
+        0.05,
+        0.025,
+        0.0125
+      ],
+      "pilot": "30 fixed bump windows of full width 1.6, corrected weak OLS, clipped to [-2.5,0.5]",
+      "ratio_guard": "denominator absolute magnitude >= 0.05 times clean generating-trajectory moment; diagnostics only, all medians retained"
+    },
+    "vdp": {
+      "T": 20.0,
+      "initial": [
+        2.0,
+        0.0
+      ],
+      "tau": 0.3,
+      "h": 0.005,
+      "levels": [
+        0.005,
+        0.05
+      ],
+      "paths": 128,
+      "seed_base": 2200000,
+      "window_counts": [
+        30,
+        120,
+        480
+      ],
+      "families": "nested bumps: 30 width3; add30 width1.5 +60 width0.75; add120 width0.375 +240 width0.1875",
+      "reference_basis": "H1-orthonormalized prescribed test-function span, common to both covariance models",
+      "basis_relative_cutoff": 1e-10,
+      "covariance_relative_relaxation": 1e-10,
+      "iterations": 100,
+      "tolerance": 1e-07,
+      "feature_correction": "known marginal Gaussian variance",
+      "covariance": "Prop3 exact polynomial residual covariance at a fixed pilot model trajectory, iterated coefficient weights",
+      "pilot_box": [
+        [
+          0.25,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.25
+        ],
+        [
+          0.1,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.1
+        ]
+      ],
+      "scope": "known-support WENDy-like component, not a modification or reproduction of complete author WENDy"
+    },
+    "theory": {
+      "scope": "closure of adjoint test-function range in OU covariance norm; sequential small-noise then dense-span limit",
+      "no_uniform_joint_limit_claim": true,
+      "no_guaranteed_iid_plateau_claim": true,
+      "no_boundary_augmented_estimator": true
+    }
+  },
+  "source_sha256": "a7af9d1b9effd0160a46d87de7b75f8637e1b2654ed067c7c1ff62555e030c5d"
+}

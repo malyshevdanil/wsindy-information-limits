@@ -1,11 +1,11 @@
 ---
-title: "Fixed-horizon information limits and polynomial weak-residual covariance under correlated measurement error"
+title: "Efficient weak-form estimation under correlated measurement error: fixed-horizon information limits and the cost of boundary-free test functions"
 lang: en-US
 ---
 
 ## Abstract
 
-Increasing the sampling frequency of a noisy trajectory improves numerical resolution but may leave parameter uncertainty essentially unchanged. We study deterministic ordinary differential equations observed through stationary Ornstein–Uhlenbeck measurement error with fixed physical correlation time. An explicit Cameron–Martin norm shows that smooth parameter-dependent trajectories induce equivalent continuous-path laws on a fixed observation interval. A quantitative two-point bound therefore excludes simultaneous consistency throughout a nontrivial parameter family, for every estimator based on increasingly dense samples. Dynamical sensitivities give finite continuous-record Fisher information. Boundary-free weak influences annihilate initial-state sensitivities, yielding a stricter local covariance bound even when the initial state is known. For polynomial vector fields, a finite Hermite expansion yields exact weak-residual covariance, including higher Gaussian orders and library–response cross-covariance; exponential recursions evaluate it without a dense time covariance matrix. Numerical comparisons examine full Gaussian likelihood, sparse weak regression, complete adaptive author pipelines, coefficient covariance and independent recordings. They separate support-selection failures from parameter uncertainty and locate the small-noise range of coefficient linearization. The analysis distinguishes denser sampling from longer observation and repeated acquisition: independent recordings add information, whereas longer observation requires persistent parameter sensitivity. These results provide an explicit statistical reference for interpreting sampling saturation in weak identification.
+Weak-form dynamical identification avoids differentiating noisy measurements, but removing boundary terms also discards information. For deterministic ODEs observed in stationary Ornstein-Uhlenbeck measurement error, we characterize the closure of boundary-free adjoint influences: it is exactly the covariance-dual subspace orthogonal to initial-state sensitivities. This gives a sharp local covariance bound equal to the inverse initial-state Schur complement, even when the initial state is known. We construct its optimal influence and an explicit generalized test function with endpoint jumps. Compact tests attain the bound as an infimum. Correct-covariance weak generalized least squares approaches this bound for dense test spans, in a sequential small-noise limit with controlled quadrature and regular pilots. A finite Hermite expansion supplies exact coupled polynomial residual weights. A fixed-horizon two-point bound separates this efficiency question from consistency under denser sampling. Experiments test a smoothed scalar optimal function with a fitted pilot and nested 30-, 120- and 480-window Van der Pol families, comparing physical OU and iid weights. The scalar fitted-pilot median error decreases from 0.224 to 0.060. Van der Pol empirical RMSE at 0.5% noise is 0.00174, versus the weak reference 0.00169; the 5% experiment retains excess error. Bias and dispersion are reported separately. The contribution identifies which information weak equations can retain and how covariance weighting and test-space approximation govern its recovery.
 
 **Keywords:** weak-form identification; correlated measurement error; fixed-domain asymptotics; Fisher information; polynomial covariance; errors in variables.
 
@@ -17,11 +17,11 @@ Sparse identification of nonlinear dynamics represents a vector field through a 
 
 The distinction between fixed-domain and increasing-domain observations is classical in Gaussian process inference [@stein1999]. Ying established fixed-domain results for exponential covariance parameters [@ying1991], and Zhang used equivalence of Gaussian measures to explain inconsistent covariance estimation in the Matérn family [@zhang2004]. Those results concern covariance parameters. Here the covariance is common across parameters, and the parameter enters the deterministic mean through an ODE. The same measure-equivalence mechanism supplies an estimator-independent limit, with an explicit norm determined by dynamical sensitivities.
 
-Continuous-time regression with correlated errors has an established optimal-design theory. Dette, Pepelyshev and Zhigljavsky derive continuous-record best linear unbiased estimators and efficient discrete designs for triangular covariance kernels [@dette2016]. Dynamical sensitivities define a local regression in this framework. Finite limiting precision and endpoint information are therefore precedents for our weak-estimation analysis.
+Continuous-time regression with correlated errors has an established optimal-design theory, including optimal signed measures with endpoint masses. Dette, Pepelyshev and Zhigljavsky derive continuous-record best linear unbiased estimators and efficient discrete designs for triangular covariance kernels [@dette2016]. Dynamical sensitivities define a local regression in this framework. Finite limiting precision and endpoint information are therefore precedents for our weak-estimation analysis.
 
 The continuum-data theory of WSINDy studies uncorrelated measurement errors and library-dependent consistency [@messenger2025]. Fixed physical correlation time defines a different experiment: adjacent correlations approach one as the mesh is refined. Correlation induced by filtering independently sampled errors also requires distinguishing a physical filter scale from a fixed number of sample indices. Our analysis concerns a fixed covariance process observed at increasingly dense times.
 
-We develop an explicit OU Gaussian-shift representation, a two-point lower bound, finite Fisher information and a weak influence bound that identifies loss of initial-state information. We then specialize Hermite identities to the coupled polynomial weak residual and derive its exact covariance and efficient evaluation. Finally, we contrast grid refinement, observation duration and independent acquisition. Classical Gaussian-measure, nuisance projection and polynomial identities are used with attribution; the contribution is their explicit dynamical formulation and numerical examination in this sampling regime.
+Our main result identifies the complete boundary-free adjoint influence class and constructs the influence attaining its sharp information reference in covariance-norm closure. Correct temporal covariance and dense test spans then yield a conditional, sequential small-noise efficiency result for WENDy-like estimation. An explicit OU adjoint construction and exact polynomial residual weights make the reference computable. Continuous-regression BLUE, Gaussian projection and Hermite identities are established results [@dette2016; @isserlis1918]; the contribution is their precise connection through the ODE adjoint range, including the boundary restriction and the order of limits. Two experiments test the resulting predictions.
 
 ## 2. Related estimation methods
 
@@ -102,15 +102,15 @@ $$
 
 A constant estimator can be consistent at one parameter. The theorem excludes consistency throughout the family. The equivalence-based obstruction is established fixed-domain theory [@zhang2004]; its norm and quantitative specialization here concern ODE mean trajectories. The bound includes adaptive weak functions and full-path inference.
 
-### 4.2. Fisher information and weak efficiency
+### 4.2. Continuous-record information and scalar weak ratios
 
-If $\theta\mapsto x_\theta$ is differentiable in $\mathcal H$ and $s_r=\partial_{\theta_r}x_\theta$, continuous-record Fisher information is
+**Proposition 1 (continuous-record information).** If $\theta\mapsto x_\theta$ is differentiable in $\mathcal H$ and $s_r=\partial_{\theta_r}x_\theta$, continuous-record Fisher information is
 
 $$
 \mathcal I_{rs}(\theta)=\langle s_r,s_s\rangle_{\mathcal H}.
 $$
 
-Its inverse is the Cramér–Rao covariance bound for regular unbiased estimators, when nonsingular. Biased estimators require the corresponding bias derivative; finite-horizon maximum likelihood need not attain the unbiased bound.
+The Gaussian mean-score identity proves the assertion: the directional score has variance equal to the squared Cameron-Martin norm of its sensitivity. Its inverse is the Cramér–Rao covariance bound for regular unbiased estimators, when nonsingular. Biased estimators require the corresponding bias derivative; finite-horizon maximum likelihood need not attain the unbiased bound.
 
 For $x_a(t)=x_0e^{at}$ with known $x_0$, $s(t)=x_0te^{at}$ and
 
@@ -148,52 +148,153 @@ $$
 
 This efficiency concerns the Gaussian linearization; it is not the unguarded ratio's variance.
 
-### 4.3. Optimal combination within a finite window family
+### 4.3. Exact boundary-free influence class
 
-For scalar exponential dynamics, let $w_k=-\phi'_k-a\phi_k$. Define the normalizing moments and residual covariance by
-
-$$
-D_k=\int\phi_k x_a\,dt,\qquad
-C_{k\ell}=\iint w_k(s)C(s,t)w_\ell(t)\,ds\,dt.
-$$
-
-A combined Gaussian influence $\ell=\sum_k\alpha_kw_k$ is normalized by $\alpha^TD=1$. If the residual covariance matrix $C$ is positive definite, minimizing $\alpha^TC\alpha$ under this constraint gives
+Let $J\in C^1([0,T];\mathbb R^{d\times d})$, and let the invertible fundamental matrix satisfy $Z'=JZ$, $Z(0)=I_d$. Put $A h=h'-Jh$ and $A^*\phi=-\phi'-J^T\phi$. Sensor coordinates have independent stationary OU covariance with fixed positive scales. Its Cameron–Martin space $\mathcal H$ is $H^1$ with the OU inner product. Write $\mathcal E=\mathcal H'$ for its continuous dual, equipped with the covariance norm
 
 $$
-\alpha_* = \frac{C^{-1}D}{D^TC^{-1}D},\qquad
-V_*=(D^TC^{-1}D)^{-1},\qquad
-\operatorname{Eff}_{\mathcal F}=\frac{D^TC^{-1}D}{\mathcal I_T(a)}.
+\|\lambda\|_C^2=\langle\lambda,C\lambda\rangle,
+\qquad
+\langle C^{-1}g,h\rangle=\langle g,h\rangle_{\mathcal H}.
 $$
 
-This follows either from a Lagrange multiplier or covariance Cauchy–Schwarz. With a singular matrix, the inverse is restricted to its retained positive eigenspace and the constraint must remain feasible. The weights use the generating coefficient and known covariance: this is an oracle local optimum within the specified span, rather than a demonstrated adaptive estimator or a global optimum over all compactly supported functions. Every member still annihilates initial-state sensitivity, so $V_*\geq\mathcal I_{a\mid u}^{-1}$. Section 7.8 reports declared families, spectral cutoffs and quadrature checks.
+This definition includes ordinary integrated influences and endpoint evaluation measures. It is the variance norm of the associated Gaussian linear observation; the noise path itself need not belong to $\mathcal H$.
 
-### 4.4. Initial-state information lost by weak influences
-
-Let $S=\partial_\theta x$ and $Z=\partial_u x$ be trajectory sensitivities to active coefficients and initial state $u=x(0)$, respectively. Write $J=\partial_x f(x)$, so $Z'=JZ$. For fixed compactly supported test functions and a full-rank clean restricted design, the coefficient influence has the form $L_\varepsilon=\int_0^T\ell(t)\varepsilon(t)dt$. Integration by parts in the linearized weak equations gives
+**Proposition 2 (exact range and closure).** In $L^2$,
 
 $$
-\int_0^T\ell S\,dt=I,\qquad \int_0^T\ell Z\,dt=0.
+A^*H_0^1
+=\left\{\ell\in L^2:\int_0^T Z(t)^T\ell(t)dt=0\right\}.
 $$
 
-Indeed each unnormalized residual influence is $-\phi'_k I-\phi_kJ$ and therefore annihilates $Z$; multiplication by the clean regression inverse preserves this property. Coefficient sensitivities obey $S'=JS+\partial_\theta f$, whose weak integral is the clean design, giving the first identity.
-
-Form the joint sensitivity information blocks $\mathcal I_{\theta\theta}$, $\mathcal I_{\theta u}$ and $\mathcal I_{uu}$ using the inner product of Section 4.2. Define
+The range of compactly supported smooth tests is dense in this space in $L^2$. Its closure in $\mathcal E$ is exactly
 
 $$
-\mathcal I_{\theta\mid u}=\mathcal I_{\theta\theta}
+\mathcal M=\overline{A^*C_c^\infty}^{\|\cdot\|_C}
+=\{\lambda\in\mathcal E:\langle\lambda,Z_j\rangle=0, j=1,\ldots,d\}.
+$$
+
+Consequently $\mathcal M$ has codimension $d$.
+
+**Proof.** Since $Z^TA^*\phi=-(Z^T\phi)'$, zero endpoint values imply the moment constraint. Conversely, for an $L^2$ influence with zero moment,
+
+$$
+\phi(t)=-Z(t)^{-T}\int_0^t Z(s)^T\ell(s)ds
+$$
+
+belongs to $H_0^1$ and satisfies $A^*\phi=\ell$. Approximation in $H_0^1$ by $C_c^\infty$ and continuity of $A^*:H_0^1\to L^2$ give $L^2$ density. For the stronger closure statement, a function $h\in\mathcal H$ annihilates every $A^*\phi$ if and only if $Ah=0$ distributionally, hence $h=Zc$. The Hahn–Banach annihilator characterization of a closed subspace then gives the stated closure in $\mathcal H'$. The columns of $Z$ are linearly independent elements of $\mathcal H$, so their dual constraints have rank $d$. $\square$
+
+Zero values at the endpoints do not imply compact support. Equality for literal compact tests, without a closure or an $H_0^1$ qualification, would be false. The relevant closure uses the covariance norm, which is equivalent to the dual Sobolev norm for this positive OU model.
+
+### 4.4. Sharp information and optimal influence
+
+Let $S=[S_1,\ldots,S_p]\in\mathcal H^p$ be coefficient sensitivities, and form the joint information blocks for $S$ and $Z$. Assume $\mathcal I_{uu}$ and the Schur complement are positive definite. Set
+
+$$
+R=S-Z\mathcal I_{uu}^{-1}\mathcal I_{u\theta},
+\qquad
+\mathcal I_e=\mathcal I_{\theta\theta}
 -\mathcal I_{\theta u}\mathcal I_{uu}^{-1}\mathcal I_{u\theta}.
 $$
 
-**Proposition 2 (weak influence covariance bound).** If these matrices are nonsingular, the Gaussian influence covariance satisfies
+Projection and best linear unbiased estimation in correlated continuous regression are classical [@dette2016]. Here the adjoint-range characterization identifies exactly which dynamical weak influences obey that projection.
+
+**Theorem 2 (sharp boundary-free influence covariance).** Let $\Lambda=[\lambda_1,\ldots,\lambda_p]\in\mathcal M^p$ satisfy $\langle\lambda_r,S_s\rangle=\delta_{rs}$. Its Gaussian influence covariance obeys
 
 $$
-\operatorname{Cov}(L_\varepsilon)\succeq\mathcal I_{\theta\mid u}^{-1}
-\succeq\mathcal I_{\theta\theta}^{-1}.
+V(\Lambda)\succeq\mathcal I_e^{-1}.
 $$
 
-**Proof.** Project the coefficient score orthogonally away from initial-state scores in the Gaussian observation space. Its covariance is $\mathcal I_{\theta\mid u}$. The two influence identities give cross-covariance $I$ with the projected score. Subtracting its information-normalized version from $L_\varepsilon$ leaves covariance $\operatorname{Cov}(L_\varepsilon)-\mathcal I_{\theta\mid u}^{-1}\succeq0$. The second inequality follows from the Schur complement. $\square$
+The bound is attained in $\mathcal M$ by the matrix-valued dual influence
 
-The projection is classical efficient-information geometry, consistent with continuous-regression precision theory [@dette2016]. The weak-specific restriction is annihilation of initial-state sensitivities. It holds even when the actual experiment knows $u$: these weak equations do not exploit that knowledge. For scalar decay, the nuisance direction is $q(t)=e^{at}$ and the stronger bound is $V_\phi\geq[\mathcal I_{aa}-\langle s,q\rangle_{\mathcal H}^2/\|q\|_{\mathcal H}^2]^{-1}$. Additional window inefficiency is distinct from this class restriction. The bound describes local influence covariance, without asserting efficiency of a nonlinear ratio or attainability within a finite window family.
+$$
+\Lambda_*=C^{-1}R\,\mathcal I_e^{-1}.
+$$
+
+It is the infimum for normalized compact-test influences. It is a minimum among literal compact tests only when $\Lambda_*$ belongs to their adjoint range.
+
+**Proof.** The $\mathcal H$ projection makes $\langle C^{-1}R,Z\rangle=0$ and $\langle C^{-1}R,S\rangle=\mathcal I_e$. Thus $\Lambda_*$ meets both constraints and has covariance $\mathcal I_e^{-1}$. The difference $\Delta=\Lambda-\Lambda_*$ pairs to zero with both $S$ and $Z$, hence with $R$. Covariance cross terms vanish and
+
+$$
+V(\Lambda)=\mathcal I_e^{-1}+V(\Delta).
+$$
+
+For attainability as an infimum, approximate each column of $\Lambda_*$ by compact-test influences in covariance norm. Their normalization matrices converge to $I_p$ by continuous pairing with $S$; right-multiplication by their inverse transpose enforces exact normalization while preserving the range and covariance convergence. $\square$
+
+This is a matrix statement. Dividing a vector influence by a scalar information is valid only when $p=1$. The information loss is exactly $\mathcal I_{\theta u}\mathcal I_{uu}^{-1}\mathcal I_{u\theta}$; covariance inflation is $\mathcal I_e^{-1}-\mathcal I_{\theta\theta}^{-1}$. There is no direction-independent scalar loss percentage in general.
+
+### 4.5. Explicit optimal OU test
+
+For a scalar coordinate with $g\in H^2$, integration by parts in the stationary OU norm gives the dual measure
+
+$$
+C^{-1}g=
+\frac{g-\tau^2g''}{2\sigma^2\tau}\,dt
++\frac{g(0)-\tau g'(0)}{2\sigma^2}\delta_0
++\frac{g(T)+\tau g'(T)}{2\sigma^2}\delta_T.
+$$
+
+For independent coordinates the formula applies coordinatewise, using their respective scales. If only $g\in H^1$, the Riesz representative remains well-defined in $\mathcal H'$ but need not be a density plus finite endpoint measures.
+
+For a smooth optimal representative write $\Lambda_*=m(t)dt+m_0\delta_0+m_T\delta_T$. On the open interval an adjoint test matrix is
+
+$$
+\Phi_*(t)=-Z(t)^{-T}
+\left[Z(0)^Tm_0+\int_0^t Z(s)^Tm(s)ds\right].
+$$
+
+Extend it by zero outside the observation interval. Its endpoint jumps supply $m_0=-\Phi_*(0+)$ and $m_T=\Phi_*(T-)$, and distributionally $A^*\Phi_*=\Lambda_*$. These formulas include the initial atom; omitting it in the cumulative integral is incorrect. The annihilation condition supplies the terminal jump. Cutoff and smoothing approximate this generalized test in covariance norm. These measures describe a statistical reference; the implemented estimators keep compact tests and add no explicit boundary observation terms.
+
+For scalar exponential dynamics, $z=e^{at}$, $s=x_0te^{at}$, $k=\mathcal I_{au}/\mathcal I_{uu}$ and $g=e^{at}(x_0t-k)$. Define
+
+$$
+A_0=\frac{(1-\tau^2a^2)x_0}{2\sigma^2\tau},\qquad
+B_0=\frac{-(1-\tau^2a^2)k-2\tau^2ax_0}{2\sigma^2\tau},
+$$
+
+$$
+q_0=\frac{-k-\tau(x_0-ak)}{2\sigma^2},\qquad
+F_j(t)=\int_0^t s^je^{2as}ds.
+$$
+
+Then
+
+$$
+\phi_*(t)=-\frac{e^{-at}}{\mathcal I_e}
+[q_0+A_0F_1(t)+B_0F_0(t)].
+$$
+
+For $a\ne0$, $F_0=\operatorname{expm1}(2at)/(2a)$ and $F_1=[e^{2at}(2at-1)+1]/(4a^2)$; their continuous limits at $a=0$ are $t$ and $t^2/2$. A pilot coefficient substitutes into this expression before a compact cutoff is applied. The explicit multivariate fundamental-matrix expression is an analytical identity, not a guarantee of stable numerical inversion of $Z(t)$; strongly contracting dynamics can make that inversion ill-conditioned.
+
+### 4.6. Correct-covariance GLS and dense spans
+
+For tests $\phi_k$, put $\lambda_k=A^*\phi_k$, $D_{kr}=\langle\lambda_k,S_r\rangle$ and $\Sigma_{k\ell}=\langle\lambda_k,C\lambda_\ell\rangle$. Remove exact linear dependencies. If $D$ has full column rank, covariance-weighted weak regression has local influence and covariance
+
+$$
+P=(D^T\Sigma^{-1}D)^{-1}D^T\Sigma^{-1},\qquad
+V_K=(D^T\Sigma^{-1}D)^{-1}.
+$$
+
+WENDy's covariance iteration motivates this construction [@bortz2023], but the released iid covariance is not the correct physical-OU covariance. Under polynomial features Proposition 3 supplies the complete coupled residual weights. Its order-one term determines the small-noise efficient influence; higher orders correct residual uncertainty at finite amplitude without by themselves removing coefficient-estimator bias.
+
+**Corollary 1 (small-noise, dense-span efficiency).** Let the noise be $\epsilon Z_C$ with known covariance shape $C$. Assume a smooth identifiable parameterization, a generating parameter interior to a compact parameter set, consistent pilots, consistent covariance-shape weights and quadrature error $o(\epsilon)$. For each fixed finite test family assume a regular local weak solution with the GLS linearization. For the covariance conclusion additionally assume uniform integrability of $\|\epsilon^{-1}(\widehat\theta_{K,\epsilon}-\theta)\|^2$. A sufficient implementation uses a uniformly stable smooth local solve, Gaussian moment control on the local Taylor remainder, and bounded fallback outside the regular region whose probability is $o(\epsilon^2)$. Then
+
+$$
+\epsilon^{-1}(\widehat\theta_{K,\epsilon}-\theta)
+\Rightarrow N(0,V_K),\qquad
+\epsilon^{-2}\operatorname{Cov}(\widehat\theta_{K,\epsilon})\to V_K.
+$$
+
+If nested test-influence spans are dense in $\mathcal M$, then
+
+$$
+V_K\longrightarrow\mathcal I_{e,C}^{-1}.
+$$
+
+**Proof.** For fixed $K$, a first-order expansion of the weak equations gives $D(\widehat\theta-\theta)=\epsilon r_1+o_p(\epsilon)$ with the GLS map above. Consistent pilots and weights change the leading map by $o_p(1)$; derivatives of pilot-dependent tests multiply the zero clean residual. Gaussianity gives the distributional assertion; the stated risk condition justifies covariance convergence. In the Gaussian dual space, finite-family information is the Gram matrix of the orthogonal projection of $C^{-1}R$ onto its test span. Density gives projection convergence, and nested spans give increasing information; continuity of inversion at positive definite $\mathcal I_e$ gives covariance convergence. $\square$
+
+The conclusion is sequential: first small noise and controlled quadrature for fixed $K$, then dense spans. A diagonal joint limit requires uniform remainder, conditioning and covariance-weight control that are not supplied here. This theorem concerns regular WENDy-like weak estimation with correct covariance and supplied identifiable structure, not all implementations called WENDy, finite-noise sparse selection, or a universal plateau for misspecified iid weighting. A fixed basis cutoff must be compatible with the density assumption; discarding an informative direction permanently can invalidate it.
+
 
 ## 5. Exact polynomial weak-residual covariance
 
@@ -227,7 +328,7 @@ $$
 
 **Proof.** The generating function $\exp(zu-vz^2/2)$ yields $E[H_q(U;v)H_r(V;v)]=\mathbf1_{q=r}q!v^q\rho^q$ for jointly Gaussian variables of variance $v$ and correlation $\rho$. This is the Hermite form of classical Gaussian moment identities [@isserlis1918]. Coordinate independence gives orthogonality between different multi-indices and factor $\alpha!\prod_jv_j^{\alpha_j}$. Substitute $\rho=e^{-|s-t|/\tau}$ and integrate the finite expansion. $\square$
 
-Order $q$ has correlation time $\tau/q$. Higher orders need not be negligible at moderate amplitude. Different windows and equations remain correlated despite independent sensor coordinates. The covariance is exact for a supplied clean trajectory and true polynomial; plugging in estimates introduces another approximation.
+The order-one covariance supplies the GLS weights required by Corollary 1. Higher orders refine residual weights at finite amplitude; they do not alone remove coefficient bias. Order $q$ has correlation time $\tau/q$. Higher orders need not be negligible at moderate amplitude. Different windows and equations remain correlated despite independent sensor coordinates. The covariance is exact for a supplied clean trajectory and true polynomial; plugging in estimates introduces another approximation.
 
 ### 5.2. Raw features and efficient evaluation
 
@@ -259,250 +360,87 @@ $$
 
 $P_0$ maps the joint residual ordered by window and equation to the supplied coefficient coordinates, retaining cross-equation covariance. $\Sigma_{r,1}$ contains Gaussian order one. Discrete validation subtracts the noise-free discrete fit to isolate quadrature error. This pathwise expansion defines a Gaussian surrogate, rather than an unconditional moment expansion. A singular-value guard specifies the conditional region for actual coefficient-covariance validation.
 
-## 6. Sampling, duration and independent acquisition
+## 6. Sampling and the scope of efficiency
 
-For a constant unknown mean in OU error, continuous information is $\sigma^{-2}[1+T/(2\tau)]$. Thus $1+T/(2\tau)$ is its information-equivalent number of independent observations of variance $\sigma^2$. This gives a precise interpretation of the familiar $T/\tau$ scale in a specified model.
+Theorem 1 applies at fixed physical noise covariance and fixed horizon. Corollary 1 concerns a different limit: decreasing noise for each fixed test family, followed by dense test spans. Increasing the grid density improves the quadrature approximation; it does not replace either limit. Increasing the number of tests improves approximation of an admissible influence but cannot recover the initial-state information excluded by Proposition 2.
 
-ODE coefficients depend on excitation. For exponential decay $a<0$, $\mathcal I_T(a)$ approaches a finite limit as $T\to\infty$, because late observations have vanishing sensitivity. At $a=0$,
+Independent records add their sensitivity information. Longer records add useful information only while parameter sensitivities remain appreciable. For scalar decay, information approaches a finite limit as duration increases. These distinctions and numerical acquisition and aggregation checks are detailed in S9. Averaging corrected weak matrices and stacking noisy regressions are different estimating equations; the latter can retain errors-in-variables bias [@fuller1987].
 
-$$
-\mathcal I_T(0)=\frac{\tau x_0^2}{2\sigma^2}
-\left[T+T^2/\tau+T^3/(3\tau^2)\right].
-$$
+## 7. Two tests of the efficiency prediction
 
-A universal duration prescription based only on $T/\tau$ misses this dependence. Known covariance and specified sensitivities allow $\mathcal I_h/\mathcal I_T$ to quantify sampling information capture. It is a model-based reference, not a data-only sparse support diagnostic.
+Both experiments use known covariance shape and supplied identifiable structure. They test feasible weak-estimation components, separately from the complete author pipelines archived in S6 and S9.6. No true parameter is supplied to a feasible pilot. Deterministic geometry calculations use true parameters only as local references. All computations execute on Kaggle; protocols, seeds, source fingerprints and output archives are preserved.
 
-Independent recordings add information: identical experiments give $M\mathcal I_T$, and differing known initial conditions give the sum of their sensitivity information matrices. Shared calibration errors or drift would violate the independence assumption.
+### 7.1. Scalar optimal test with a fitted pilot
 
-Weak aggregation depends on the estimating equation. For identical clean trajectories, corrected matrices satisfy $E[G_m]=G_h^0$ and $E[b_m]=b_h^0$. Averaging before regression converges to the clean finite-grid fit, followed by the true coefficient as quadrature error vanishes. Stacking instead has limit
+The scalar model is $x'=ax$, with $a=-1$, $x_0=2$, $T=4$ and OU correlation time 0.4. Noise standard deviations are 0.1, 0.02 and 0.005. For each amplitude, 1000 independent OU paths are shared across tests. A 30-window weak OLS pilot, clipped to $[-2.5,0.5]$, is substituted into the explicit function of Section 4.5. A quintic cutoff is zero within a quarter of the declared width from either endpoint and reaches one at that width. Widths are 0.2, 0.1, 0.05, 0.025 and 0.0125. Simpson quadrature uses $h=1/16384$. The generating-parameter test is an oracle comparison; the fitted-pilot test receives no true coefficient.
 
-$$
-\xi_{\mathrm{stack}}=[E(G_m^TG_m)]^{-1}E(G_m^Tb_m),
-$$
+Unguarded weak ratios can have infinite population moments (Section 4.2). Reported scalar RMSE therefore uses the prespecified clipping of final estimates to $[-2.5,0.5]$; unbounded medians are also archived. A clean-moment denominator diagnostic does not filter paths and is not used by the estimator. All path counts, clips and diagnostics are listed in S8.
 
-when invertible. Random design–response moments generally survive, as in errors-in-variables regression [@fuller1987]. With differing initial conditions and shared coefficients, weak-matrix averaging remains valid for independent identically distributed records if moments are finite and $E[G_m^0]$ has full rank on the chosen support, with quadrature controlled. Opposing excitation can cancel and invalidate this rank condition. Averaging sensor paths before evaluating nonlinear features is generally invalid because $f(E[x_m])\ne E[f(x_m)]$.
+Table 1. Scalar coefficient errors at cutoff width 0.0125, with 1000 paired paths per amplitude. Medians are absolute errors; RMSE uses bounded final estimates. The reference is the standard deviation of the efficient Gaussian influence, not a finite-noise bound on the nonlinear bounded estimator.
 
-## 7. Numerical evidence
-
-The numerical experiments use exponential decay, damped, Van der Pol and Duffing oscillators. Fixed windows and nested grids distinguish numerical resolution from independent-noise averaging. They evaluate Gaussian likelihood, sparse weak regression, polynomial residual and coefficient covariance, covariance reweighting, heterogeneous-record aggregation and complete adaptive pipelines. Known marginal variance is used where explicitly stated. Settings and provenance are detailed in the supplement.
-
-<!-- REVISION_RESULTS_START -->
-
-### 7.1. Full-record information and scalar likelihood
-
-For $a=-1$, $x_0=2$, $T=4$, $\tau=0.4$ and $\sigma=0.1$, continuous Fisher information is 144.187. The chosen scalar weak function has linearized information efficiency 0.063; Section 7.8 evaluates optimal combinations within declared window families. On 1,000 paired paths, the finest-grid median absolute errors were 0.2271 (95% interval [0.2132, 0.2454]) for the weak ratio and 0.0561 ([0.0533, 0.0603]) for bounded Gaussian likelihood. The latter uses known covariance and initial condition. Its finite-sample bias and boundedness prevent interpreting its MSE as an unbiased Cramér–Rao efficiency measure.
-
-![Figure 1. Scalar coefficient errors with median bootstrap intervals, and continuous Fisher information as duration increases.](figures/publication/information_and_likelihood.png)
-
-The coarsest scalar grid already captures 99.937% of continuous-record information. Extending the decay record from $T=4$ to $8$ adds only 0.564%, whereas a second independent record doubles information. This is a quantitative acquisition comparison under the stated known-covariance model, rather than a universal cost-optimal allocation.
-
-Initial-state annihilation raises the weak influence variance lower bound from 0.006935 to 0.008213, an increase of 18.4%. The chosen window's efficiency relative to the nuisance-adjusted information reference is 0.075, compared with 0.063 relative to known-initial-state information. This separates the weak class restriction from additional window inefficiency. Deterministic quadrature verifies both influence identities to $10^{-9}$; it adds no Monte Carlo paths.
-
-### 7.2. Fixed-window sparse regression
-
-The fixed-window comparison contains 24,576 fits: four systems, two noise regimes, two amplitudes, four grids, three methods and 128 paths per condition. Thirty fourth-power polynomial bump windows remain fixed as the grid changes. For decay, $T=4$ and $L=1.6$; for oscillators, $T=20$ and $L=3$. Correlation ratio is $\tau/L=0.1$. Relative MSTLS uses 50 thresholds between $10^{-4}$ and one, loss weight 0.8 and no ridge penalty; raw and known-variance corrected features share these settings. Settings and seed ranges were fixed before outputs; this is not a public preregistration. Initial states and libraries are specified in the supplement.
-
-Table 1. Corrected relative MSTLS at 5% noise and $h=0.005$. Error and exact support are separate endpoints; 128 paths enter each row.
-
-| System | Error model | Median relative error | 95% median interval | Exact support | 95% support interval |
-|---|---|---:|---|---:|---|
-| Exponential decay | OU | 0.0213 | [0.0160, 0.0248] | 128/128 | [0.971, 1.000] |
-| Exponential decay | Independent | 0.0026 | [0.0021, 0.0034] | 128/128 | [0.971, 1.000] |
-| Damped oscillator | OU | 0.0131 | [0.0114, 0.0152] | 128/128 | [0.971, 1.000] |
-| Damped oscillator | Independent | 0.0013 | [0.0012, 0.0016] | 128/128 | [0.971, 1.000] |
-| Van der Pol | OU | 0.0536 | [0.0402, 0.0658] | 81/128 | [0.547, 0.711] |
-| Van der Pol | Independent | 0.0031 | [0.0028, 0.0034] | 126/128 | [0.945, 0.996] |
-| Duffing | OU | 0.0804 | [0.0698, 0.0990] | 63/128 | [0.407, 0.578] |
-| Duffing | Independent | 0.0061 | [0.0053, 0.0077] | 128/128 | [0.971, 1.000] |
-
-In the Van der Pol OU condition, correct-support paths had median error 0.0340, whereas incorrect-support paths had median 0.7189. The aggregate median therefore combines parameter-estimation error with structure-selection error and cannot be read as an intrinsic information limit.
-
-![Figure 2. Median coefficient errors with 95% path bootstrap intervals. Known-support fits separate parameter estimation from sparse selection.](figures/publication/sparse_refinement.png)
-
-![Figure 3. Error distributions conditional on correct or incorrect selected support in the finest-grid Van der Pol OU condition. Counts accompany each distribution; bimodality is not presumed.](figures/publication/support_conditional.png)
-
-Intervals resample independent paths and retain paired mesh comparisons. Conditions share random-number indices and are not pooled as independent experiments. Exact-support intervals use Wilson limits. No multiplicity-adjusted global support claim is made. No forecast endpoint is included in this validation.
-
-For corrected MSTLS at 5% OU noise, 3 of four system-specific paired median-improvement intervals for $h=0.01$ to $0.005$ lie wholly inside the $\pm5\%$ band. This is a descriptive equivalence check of coefficient medians and does not guarantee support recovery.
-
-### 7.3. Coefficient covariance and Monte Carlo calibration
-
-Joint coefficient covariance was tested on 2,000 Van der Pol paths at each amplitude, on known support. Actual errors subtract the clean discrete fit; a guard retains designs whose smallest support singular value is at least half its clean value. Every simulated path passed: the guard did not filter these samples, so guarded summaries equal the full empirical summaries. This observation does not establish finite unconditional estimator moments or control unobserved near-singular designs. The guard defines the intended validation region; it is not evidence that the linearization is accurate.
-
-Table 2. Relative Frobenius covariance discrepancies and paired relative RMS linearization errors on known support.
-
-| Noise amplitude | Guarded paths | Linear covariance discrepancy | Guarded actual discrepancy | Paired linearization RMS |
+| Noise SD | One-window median | Pilot-test median (95% interval) | Pilot-test RMSE | Weak influence SD |
 |---|---:|---:|---:|---:|
-| 0.1% | 2000/2000 | 0.040 | 0.040 | 0.025 |
-| 1.0% | 2000/2000 | 0.040 | 0.041 | 0.245 |
-| 5.0% | 2000/2000 | 0.040 | 0.294 | 1.156 |
-| 20.0% | 2000/2000 | 0.040 | 0.481 | 2.591 |
+| 0.1 | 0.22443 | 0.05981 [0.05662, 0.06437] | 0.09035 | 0.09063 |
+| 0.02 | 0.04585 | 0.01248 [0.01159, 0.01331] | 0.01818 | 0.01813 |
+| 0.005 | 0.01141 | 0.00312 [0.00289, 0.00336] | 0.00455 | 0.00453 |
 
-The linear covariance discrepancy is close to its Monte Carlo RMS floor at every amplitude because the standardized linear experiment is paired across amplitudes. Actual covariance agrees at 0.1% and 1% noise but has substantially larger discrepancy at 5% and 20%. Paired pathwise linearization already has appreciable error at 1%. Thus the coefficient surrogate is a local small-noise description, and the residual covariance theorem alone cannot validate it at the moderate-noise benchmark setting.
+At noise SD 0.1, the fitted-pilot median is 0.05981, compared with 0.22443 for the fixed window. The Gaussian absolute-error median at the class bound is 0.06113. These are different statistical summaries; agreement of medians alone does not establish covariance efficiency. At the smallest noise the pilot-test bias is 0.000050 and dispersion 0.004551. The oracle local efficiency relative to the weak-class bound at width 0.0125 is 0.9864. Full width and amplitude dependence is retained in S8.
 
-The last column is $R=\{\sum_m\|e_m-\ell_m\|^2/\sum_m\|\ell_m\|^2\}^{1/2}$, where $e_m$ is the actual coefficient displacement from the clean fit and $\ell_m$ its first-order surrogate. It is not a relative error of the estimated coefficients and is not constrained to $[0,1]$. At 5% and 20% noise, omitted nonlinear terms and random-design coupling exceed the RMS magnitude of the first-order surrogate. A stable singular value alone does not suppress those terms.
+![Figure 1. Scalar compact optimal tests at two noise amplitudes. Intervals resample independent paths; the dotted Gaussian median reference is derived from the sharp influence bound.](figures/publication/efficient_scalar.png)
 
-![Figure 4. Joint coefficient covariance discrepancies, bootstrap intervals for guarded actual covariance, Gaussian Monte Carlo RMS references, and paired pathwise linearization error.](figures/publication/coefficient_covariance.png)
+### 7.2. Van der Pol: nested spans and temporal weighting
 
-In the 4,000-path nonlinear residual experiment, higher orders contributed 20.3% of corrected trace at 50% noise. The covariance calibration places the observed Frobenius discrepancy against the fourth-moment Monte Carlo scale and an affine-null bootstrap. The null procedure retains empirical non-Gaussian shape and forces the analytical covariance; its range is approximate, and its exceedance fraction is not an exact p-value.
+We estimate four independently free coefficients in $x'=av$, $v'=bx+cv+dx^2v$, with truth $(1,-1,1,-1)$, initial state $(2,0)$, $T=20$, OU correlation time 0.3 and $h=0.005$. Marginal coordinate noise scales are fixed from the same clean $h=0.01$ calibration as S9.6. The relative error denominator is the Euclidean coefficient norm, two. The continuous known-initial-state reference is 0.013093 at 5% noise; the sharp boundary-free relative RMSE reference is 0.016904. At 0.5% noise these scale down by ten. Estimating a single tied oscillator parameter would be a different information experiment (S9.7).
 
-For the corrected 50% condition, observed matrix discrepancy was 0.064; estimated fourth-moment relative RMS floor was 0.063, and the approximate null 95% range was [0.053, 0.072]. The 6.4% discrepancy therefore must be read relative to this uncertainty, rather than as an isolated accuracy percentage.
+The nested families contain 30 full-width-three bumps; then 30 width-1.5 and 60 width-0.75 bumps; then 120 width-0.375 and 240 width-0.1875 bumps. A fixed $H^1$ Gram transformation preserves their spans while improving representation. Relative cutoff $10^{-10}$ retains 30, 120 and 479 dimensions; the largest family has one linear dependence at this numerical resolution. The smallest retained relative Gram eigenvalue in that family is approximately $2.1\times10^{-5}$. Covariance solves add $10^{-10}$ times the mean diagonal. This finite family is an approximation experiment, not a proof of density for an infinite sequence.
 
-![Figure 5. Observed covariance discrepancies and approximate covariance-null bootstrap ranges for three discrete amplitudes and two correction choices.](figures/publication/covariance_null.png)
+Table 2. Oracle Gaussian influence RMSE under actual OU noise at 5%. Both methods use the same test span and clean design; they differ only in the covariance used for GLS weights. Actual variance uses the OU covariance for both.
 
-### 7.4. Different initial conditions
+| Prescribed windows | Retained tests | OU-weight RMSE | iid-weight RMSE | OU RMSE / class reference |
+|---:|---:|---:|---:|---:|
+| 30 | 30 | 0.019605 | 0.020296 | 1.1597 |
+| 120 | 120 | 0.017043 | 0.017839 | 1.0082 |
+| 480 | 479 | 0.016938 | 0.017734 | 1.0020 |
 
-A separate frozen experiment used 400 blocks with up to 16 independent Van der Pol recordings. Initial offsets were uniform on $[-0.25,0.25]^2$ about $(2,0)$; sensor noise covariance remained fixed. All methods supplied true support.
+The OU-weighted 480-window local reference is within 0.2% in RMSE of the class optimum; iid weighting retains a roughly 4.9% gap. Optimal weighting in the narrow 30-window span limits how much temporal covariance can help. Expanding the span makes the distinction observable. This is a verified prediction for the specified spans; it does not imply that every iid-weighted dense family must have a positive limiting gap. The independent exact-polynomial covariance fixture agrees with Proposition 3 to relative error below $10^{-14}$.
 
-Table 3. Known-support aggregation with different initial conditions; 400 independent blocks per row.
+The largest clean discrete GLS coefficient error is 2.82e-07, below the small-noise error scale. For the feasible test, 128 independent paths at each amplitude are shared by both weights and all three families. Hermite-corrected moments use known marginal variances. A 30-window OLS pilot is clipped to a fixed physical parameter box and integrated from the known initial state. Exact polynomial covariance is evaluated on this fitted model trajectory, and coefficient-dependent weights are updated for at most 100 iterations, with relative tolerance $10^{-7}$. The true trajectory is not supplied to this estimator. This is a known-support WENDy-like component; the complete author WENDy benchmark is documented separately in S6 and S9.6.
 
-| Method | M | Median relative error | 95% median interval |
-|---|---:|---:|---|
-| Stacked design | 1 | 0.03577 | [0.03305, 0.03888] |
-| Stacked design | 16 | 0.03785 | [0.03684, 0.03857] |
-| Mean weak matrices | 1 | 0.03577 | [0.03305, 0.03888] |
-| Mean weak matrices | 16 | 0.00735 | [0.00693, 0.00773] |
-| Mean sensor path | 1 | 0.03577 | [0.03305, 0.03888] |
-| Mean sensor path | 16 | 0.10847 | [0.10523, 0.11193] |
+Table 3. Feasible Van der Pol empirical relative RMSE and 95% path bootstrap intervals, with 128 paired paths per row. Bias and dispersion refer to the OU-weighted coefficient errors; their squares sum to empirical MSE. Final coefficient estimates are unbounded, so these finite-cohort summaries do not assert finite unconditional moments.
 
-Mean weak matrices improve with independent acquisition in this heterogeneous setting, whereas stacking retains a stable error and sensor-path averaging deteriorates. The latter estimates the dynamics of an averaged path that generally fails the original nonlinear equation. The evidence supports a distinction between aggregation operations, under the supplied support and excitation used here. Coefficient-level bias and dispersion are reported in Section 7.9; the near-equal single-record and stacked median errors alone do not identify the bias fraction.
-
-![Figure 6. Independent recordings with different initial states. Mean weak matrices and sensor-path averaging define different estimating equations.](figures/publication/heterogeneous_recordings.png)
-
-### 7.5. Covariance reweighting component
-
-An additional comparison supplies known support and compares ordinary raw-feature least squares, the iid covariance IRLS step from WENDy Algorithm 2, and its known-OU covariance extension. It retains our fixed windows and uses ten iterations, relative stopping tolerance $10^{-6}$, known coordinate variances and scale-aware covariance relaxation $10^{-10}$. These choices make it a component experiment rather than a reproduction of complete WENDy.
-
-Table 4. Van der Pol covariance-reweighting components: parameter one, initial state (2,0), T=20, 5% state-scaled noise, OU correlation time 0.3, 30 fixed windows of full width three, and 128 paths per condition. True support is supplied.
-
-| Error model | Component | h | Median relative error | 95% median interval | Converged |
-|---|---|---:|---:|---|---:|
-| OU | OLS, known support | 0.04 | 0.0322 | [0.0289, 0.0378] | n/a |
-| OU | OLS, known support | 0.005 | 0.0325 | [0.0289, 0.0363] | n/a |
-| OU | WENDy iid IRLS core | 0.04 | 0.0185 | [0.0164, 0.0205] | 126/128 |
-| OU | WENDy iid IRLS core | 0.005 | 0.0186 | [0.0165, 0.0203] | 127/128 |
-| OU | OU IRLS core | 0.04 | 0.0184 | [0.0163, 0.0202] | 124/128 |
-| OU | OU IRLS core | 0.005 | 0.0181 | [0.0161, 0.0198] | 121/128 |
-| Independent | OLS, known support | 0.04 | 0.0080 | [0.0071, 0.0092] | n/a |
-| Independent | OLS, known support | 0.005 | 0.0034 | [0.0031, 0.0037] | n/a |
-| Independent | WENDy iid IRLS core | 0.04 | 0.0057 | [0.0047, 0.0065] | 128/128 |
-| Independent | WENDy iid IRLS core | 0.005 | 0.0032 | [0.0030, 0.0034] | 128/128 |
-| Independent | OU IRLS core | 0.04 | 0.0058 | [0.0051, 0.0065] | 128/128 |
-| Independent | OU IRLS core | 0.005 | 0.0032 | [0.0029, 0.0035] | 128/128 |
-
-At h=0.005 under OU error, the median decreases from 0.0325 for ordinary least squares to 0.0186 for iid IRLS and 0.0181 for OU IRLS. Reweighting therefore improves this component comparison, but its two IRLS medians are close and their displayed intervals overlap; the table alone does not establish superiority of the OU extension. OU errors remain nearly unchanged across the two meshes, whereas independent-noise errors decrease. Known covariance and supplied support distinguish this comparison from the complete adaptive pipelines in Section 7.6. All iteration-capped estimates enter the summaries. The convergence column reports the prescribed tolerance; it does not assess model correctness.
-
-<!-- REVISION_RESULTS_END -->
-
-<!-- FULL_ADAPTIVE_START -->
-
-### 7.6. Complete adaptive author pipelines
-
-A separate frozen comparison executes the complete pinned author WSINDy, WENDy and WmSINDy algorithms [@messenger2021; @bortz2023; @lopez2026]. WSINDy selects its test-function widths spectrally, places centers by the gradient, applies automatic SMAF smoothing and library scaling, and selects the MSTLS threshold. WENDy estimates noise, selects four adaptive radii and an SVD basis, and runs its full covariance iteration and stopping rules. WmSINDy jointly learns coefficients and noise with forward/backward RK4 and weak-residual losses, updates windows from the denoised data, and prunes and refits coefficients after each of eight cycles of 5000 Adam steps. Versions and compatibility adapters are detailed in Supplement S6.
-
-The benchmark uses Van der Pol, five-percent state-scaled noise, fixed duration 20, correlation time 0.3, and 16 independent paths per condition. Meshes 0.04 and 0.01 are nested. All methods receive identical observations verified by SHA256; discovery methods share the nine nonconstant monomials of degrees one through three. Fixed-window MSTLS is rerun on this library. WENDy receives the prespecified correct four-term structure and is assessed as parameter estimation. Hermite MSTLS uses the known calibration variance, whereas author pipelines estimate or reconstruct noise from observations.
-
-Table 5. Discovery pipelines at h=0.01; 16 independent records per row. Median intervals are path bootstraps. Support counts include all planned fits.
-
-| Error model | Method | Median error [95% interval] | Exact support | Failed fits |
-|---|---|---:|---:|---:|
-| OU | Fixed raw MSTLS | 0.0402 [0.0300, 0.5657] | 11/16 | 0/16 |
-| OU | Fixed Hermite MSTLS | 0.0420 [0.0311, 0.5656] | 11/16 | 0/16 |
-| OU | Adaptive author WSINDy | 0.0430 [0.0354, 0.0536] | 14/16 | 0/16 |
-| OU | Adaptive author WmSINDy | 0.0153 [0.0110, 0.0180] | 16/16 | 0/16 |
-| Independent | Fixed raw MSTLS | 0.0043 [0.0036, 0.0059] | 16/16 | 0/16 |
-| Independent | Fixed Hermite MSTLS | 0.0029 [0.0023, 0.0046] | 16/16 | 0/16 |
-| Independent | Adaptive author WSINDy | 0.0086 [0.0070, 0.0118] | 16/16 | 0/16 |
-| Independent | Adaptive author WmSINDy | 0.0059 [0.0036, 0.5396] | 10/16 | 0/16 |
-
-Table 6. Parameter estimation with supplied support at h=0.01; 16 independent records per row.
-
-| Error model | Method | Median error [95% interval] | Failed fits |
-|---|---|---:|---:|
-| OU | Adaptive author WENDy (known support) | 0.0151 [0.0120, 0.0212] | 0/16 |
-| OU | Fixed raw, known support | 0.0300 [0.0224, 0.0367] | 0/16 |
-| OU | Fixed Hermite, known support | 0.0312 [0.0235, 0.0384] | 0/16 |
-| Independent | Adaptive author WENDy (known support) | 0.0029 [0.0023, 0.0035] | 0/16 |
-| Independent | Fixed raw, known support | 0.0043 [0.0036, 0.0058] | 0/16 |
-| Independent | Fixed Hermite, known support | 0.0029 [0.0023, 0.0042] | 0/16 |
-
-On the finer OU grid, WmSINDy recovered support on 16/16 paths with median error 0.0153, whereas adaptive WSINDy recovered 14/16 with median 0.0430. The paired median error difference, WmSINDy minus WSINDy, was -0.0279 with a descriptive 95% bootstrap interval [-0.0378, -0.0204]. Under independent errors, WmSINDy recovered support on 10/16 paths, compared with 16/16 for fixed Hermite MSTLS. Its wide median interval reflects selection failures despite the full training budget. Thus the favorable OU result does not establish uniform superiority across observation regimes. These unadjusted comparisons are descriptive and limited to the frozen example.
-
-The supplied-support comparison likewise concerns finite-sample accuracy: adaptive WENDy improves the OU coefficient median relative to these fixed-window fits, although its released noise model assumes independent observations. This empirical behavior does not establish calibrated uncertainty under OU error. Better window selection or reconstruction can improve accuracy within the finite information budget; it does not contradict the full-path infill bound.
-
-All 448 planned fits are archived; 0 computational failures occurred. Error medians condition on completed fits. Wilson intervals, coarse-grid values, and paired mesh differences are retained in the reproducibility report. With 16 paths, support fractions have substantial binomial uncertainty. These conditions compare complete algorithms on one oscillator and do not establish a general ranking or an asymptotic plateau.
-
-![Figure 7. Complete adaptive author pipelines and matched fixed-window comparisons. Error bars are 95% path bootstrap intervals with n=16 per cell. WENDy uses known support; the discovery methods do not.](figures/publication/full_adaptive.png)
-
-<!-- FULL_ADAPTIVE_END -->
-
-<!-- REVIEWER_RESULTS_START -->
-
-### 7.7. Van der Pol information reference
-
-The OU experiment in Section 7.6 has $x'=a v$ and $v'=b x+c v+d x^2v$, with four independently free active coefficients $(a,b,c,d)=(1,-1,1,-1)$. The initial state (2,0) is known. We hold the calibrated coordinate noise variances fixed when differentiating the mean, rather than re-estimating state-scaled variance at perturbed parameters. The calibration is exactly that of the benchmark fine grid. Coefficient and initial-state sensitivities solve $S'=JS+\partial_\theta f$ and $Z'=JZ$, with $S(0)=0$ and $Z(0)=I$. OU innovations give discrete information; the continuous norm in Section 4.1 gives its limit.
-
-For four active coefficients, the relative RMS reference is $\{\operatorname{tr}(\mathcal I_{\theta\theta}^{-1})\}^{1/2}/\|\theta\|_2$. The weak initial-state-annihilation reference replaces information by its Schur complement. Both are local covariance bounds, rather than bounds on error medians or on every biased estimator.
-
-Table 7. Van der Pol OU relative RMS information references for the exact Section 7.6 calibration. Four active coefficients are independently free. The second column assumes known initial state; the third also imposes weak initial-sensitivity annihilation.
-
-| Observation | Known-initial reference | Weak influence reference |
-|---|---:|---:|
-| Grid h=0.04 | 0.013115 | 0.016929 |
-| Grid h=0.01 | 0.013094 | 0.016906 |
-| Continuous record | 0.013093 | 0.016904 |
-
-For the same 16 OU records, WmSINDy has relative RMSE 0.01926 (descriptive 95% bootstrap interval [0.01324, 0.02576]) and WENDy 0.02154 ([0.01446, 0.02927]). Their RMSEs are respectively 1.47 and 1.65 times the known-initial local reference. This scale comparison is more informative than comparing their medians near 0.015 with a variance bound. It is not an efficiency certificate: sparse selection and nonlinear bias are present, the sample is small, and the regular locally unbiased assumption is unverified. WmSINDy also includes trajectory-prediction terms, so it is not restricted to boundary-free weak influences.
-
-A one-parameter Van der Pol model fixes a=1 and b=-1 and ties c=mu, d=-mu. Its continuous standard-deviation reference for mu is 0.002492. That substantially stronger constraint changes the estimation problem and must not be used to judge four-coefficient discovery. Central finite differences check the four sensitivities with relative discrepancies below 1.6e-07; refining information quadrature from h=0.0025 to 0.00125 checks the reported reference.
-
-### 7.8. Optimal efficiency within declared window spans
-
-The scalar parameters are those of Section 7.1. We optimize the covariance-weighted linear combination in Section 4.3, including every cross-window covariance. Family F30 contains 30 fourth-power bump windows of full width 1.6; centers range uniformly from 0.805 to 3.195. Family F120 contains 60 centers for each of widths 1.6 and 3.0, with centers 0.005 inside the admissible support range. These are declared finite families, rather than an exhaustive search over all shapes and widths. The reference single window has width three and center two.
-
-Table 8. Oracle optimal local influence variance and efficiency within each scalar window span. Information references are 144.187 for known initial state and 121.752 after initial-state projection. The table uses 8192 quadrature intervals and relative covariance-eigenvalue cutoff 1e-12.
-
-| Family | Retained rank | Variance | Known-initial efficiency | Weak-class efficiency |
-|---|---:|---:|---:|---:|
-| Single window | 1 | 0.109776 | 0.0632 | 0.0748 |
-| F30 (30 windows) | 30 | 0.010656 | 0.6508 | 0.7708 |
-| F120 (120 windows) | 68 | 0.009339 | 0.7426 | 0.8795 |
-
-Thus 0.063 describes one window, not the optimal efficiency of the weak family. F120 attains 0.743 of known-initial information in the retained span. Tightening the cutoff from 1e-10 to 1e-12 raises retained rank from 41 to 68; at 1e-10 its known-initial efficiency is 0.718. This sensitivity is disclosed rather than treated as an exact infinite-dimensional optimum. Doubling quadrature intervals changes every reported variance by less than 0.0004%. All optimal influences satisfy coefficient normalization and initial-state annihilation numerically. Their efficiencies remain below the initial-state-projected ceiling.
-
-### 7.9. Bias and dispersion of aggregation
-
-The coefficient-preserving execution replays exactly the 400 independent blocks in Table 3; it adds no independent samples. For normalized coefficient errors, the empirical identity states that squared RMSE equals squared bias plus squared dispersion. Table 9 reports the norm of the sample mean error as bias and the square root of the second term as dispersion. Bias here is an empirical estimate, not a proved population limit. We also subtract sample-mean sampling variance when estimating the squared-bias fraction; the adjustment is small for 400 blocks.
-
-Table 9. Relative coefficient bias, dispersion and RMS error for heterogeneous Van der Pol aggregation; the same 400 blocks as Table 3. Values are dimensionless. Bias fraction uses the unadjusted empirical squared mean error.
-
-| Method | M | Bias | Dispersion | RMSE | Squared-bias fraction |
+| Noise | Windows | OU RMSE (95% interval) | iid RMSE (95% interval) | OU bias | OU dispersion |
 |---|---:|---:|---:|---:|---:|
-| Stacked design | 1 | 0.02967 | 0.03229 | 0.04385 | 45.8% |
-| Stacked design | 16 | 0.03738 | 0.00835 | 0.03830 | 95.3% |
-| Mean weak matrices | 1 | 0.02967 | 0.03229 | 0.04385 | 45.8% |
-| Mean weak matrices | 16 | 0.00239 | 0.00893 | 0.00924 | 6.7% |
-| Mean sensor path | 1 | 0.02967 | 0.03229 | 0.04385 | 45.8% |
-| Mean sensor path | 16 | 0.11044 | 0.02914 | 0.11422 | 93.5% |
+| 0.5% | 30 | 0.00200 [0.00181, 0.00220] | 0.00203 [0.00184, 0.00223] | 0.00027 | 0.00198 |
+| 0.5% | 120 | 0.00173 [0.00156, 0.00190] | 0.00177 [0.00161, 0.00194] | 0.00010 | 0.00173 |
+| 0.5% | 480 | 0.00174 [0.00157, 0.00190] | 0.00178 [0.00161, 0.00194] | 0.00011 | 0.00173 |
+| 5% | 30 | 0.02711 [0.02437, 0.02993] | 0.02744 [0.02439, 0.03050] | 0.00900 | 0.02557 |
+| 5% | 120 | 0.02545 [0.02277, 0.02810] | 0.02548 [0.02286, 0.02819] | 0.00770 | 0.02426 |
+| 5% | 480 | 0.02558 [0.02288, 0.02833] | 0.02551 [0.02295, 0.02799] | 0.00814 | 0.02425 |
 
-For stacking, dispersion decreases from 0.03229 at M=1 to 0.00835 at M=16, while bias changes from 0.02967 to 0.03738. The estimated bias contribution is 45.8% of single-record MSE and 95.3% at M=16; the sample-mean-adjusted fractions are 45.6% and 95.2%. The stacking floor is therefore dominated by systematic random-design error as acquisition increases. Whether the single-record error is mainly bias must be judged by this decomposition, not by the two median norms. Mean weak matrices reduce both errors under the stated excitation, whereas sensor-path averaging produces nonlinear averaging bias.
+At 0.5% noise, OU weighting with 480 windows gives empirical RMSE 0.001737, versus the sharp reference 0.001690. At 5% noise it gives 0.025583, versus 0.016904; bias 0.008143 and dispersion 0.024253 identify finite-noise excess error. The stronger finite-noise assertion that more windows alone would reach 0.016904 is therefore not supported by this feasible implementation. The small-noise result and deterministic geometry support the conditional efficiency mechanism, while the moderate-noise result delimits it.
 
+At 0.5% noise, paired iid-minus-OU RMSE for 480 windows is 0.000038, with 95% interval [-0.000038, 0.000116]. At 5% noise, paired iid-minus-OU RMSE for 480 windows is -0.000075, with 95% interval [-0.001295, 0.001045]. Both paired intervals include zero: this 128-path experiment does not resolve a statistical advantage of OU over iid weighting. Intervals are not adjusted for multiple comparisons. All 1536 final fits meet the stopping tolerance within 23 iterations, and no pilot is clipped; the finite-noise gap persists after this convergence control. Stopping counts are retained in S8; no path is excluded.
 
-<!-- REVIEWER_RESULTS_END -->
+![Figure 2. Feasible Van der Pol RMSE as the test span grows. Dotted curves show oracle local influences and the horizontal dashed line the class reference. Finite-noise estimation is distinguished from local Gaussian geometry.](figures/publication/efficient_vdp.png)
+
+### 7.3. Supporting validation
+
+The supplement retains fixed-window sparse selection, coefficient linearization checks, independent-record aggregation and 448 complete adaptive author fits. These results provide context without constituting a test of Corollary 1. In the separate 16-path 5% OU comparison, full WmSINDy has empirical RMSE 0.01926 and WENDy 0.02154, compared with the weak reference 0.01690; their medians of approximately 0.015 do not establish efficiency. Full coefficient and support distributions are retained in S9.6–S9.7.
+
+Stacking heterogeneous noisy regressions retains bias: the 16-record empirical error decomposition is bias 0.03738, dispersion 0.00835 and RMSE 0.03830. Approximately 95.3% of empirical MSE is squared bias (S9.9). In the coefficient covariance check all 2000 paths pass the design guard, so it does not filter that finite sample. Its relative RMS linearization discrepancy can exceed one because its denominator is the RMS linear displacement (S3 and S9.3). These observations distinguish covariance calculation, estimator bias and independent acquisition.
+
 
 ## 8. Discussion and limitations
 
-Proposition 2 identifies a cost of eliminating boundary terms: the resulting influences discard initial-state sensitivity information. When the initial state is known, this restriction raises the local covariance reference before any particular window inefficiency is considered. Boundary-augmented moments or an additional trajectory-likelihood term could retain that information; their endpoint noise and its correlation with integrated noise would require explicit treatment. The present experiments quantify the restriction without testing those extensions.
+The adjoint-range characterization turns the initial-sensitivity constraint into an exact description of the closed influence class. Its sharp optimum follows from classical Gaussian projection, and the OU inverse covariance makes an optimal generalized test explicit. Endpoint atoms explain why compact tests generally approach the optimum without attaining it. The constructed scalar cutoff uses compact tests throughout; this article does not test an estimator with additional boundary terms.
 
-The full-path bound changes the interpretation of sampling saturation. A stable error curve of one weak estimator describes that estimator; Theorem 1 establishes that no procedure can obtain simultaneous consistency from the specified single-path infill experiment. Algorithms can nevertheless have very different finite-sample accuracy. Likelihood, weighting and test-function design can improve estimation within the finite information available.
+Correct covariance weighting is optimal within a fixed span. Density in the covariance norm is required to approach the class bound. A well-conditioned representation changes computation, not the underlying span. An explicit fundamental-matrix inverse may itself be ill-conditioned for a contracting dynamical direction. The multiscale calculation therefore uses a fixed, data-independent basis transformation and reports retained dimensions and numerical relaxation.
 
-Higher Gaussian orders affect residual uncertainty after exact marginal correction. Their covariance is computable independently of sparse selection. Propagating order-one covariance through a clean restricted design is a separate local approximation: the independent validation finds moderate-noise coefficient discrepancies well above the Monte Carlo floor. Small-noise covariance agreement and exact nonlinear residual covariance therefore do not imply calibrated uncertainty for the full sparse estimator.
+Corollary 1 requires consistent pilots, correct covariance shape, a regular local estimator, controlled quadrature and risk conditions. Its limits are sequential. It does not prove a joint window-growth/noise-decay limit, global convergence of covariance iterations, efficiency after sparse support selection, or efficiency of the released iid WENDy implementation under OU noise. A finite nested family does not establish density of an infinite family. The iid comparison tests a specified misspecification and does not establish a universal limiting plateau.
 
-The analysis assumes additive stationary Gaussian error, positive covariance common across parameters and fully observed deterministic ODEs. Unknown covariance, dependent coordinates, partial observation and process noise require further work. General information theory allows unequal coordinate correlation times; the implemented polynomial covariance uses a common time scale. Acquisition costs are not estimated and no universal budget optimizer is asserted.
+Exact residual covariance and marginal Hermite correction address distinct parts of the weak errors-in-variables problem. At finite noise, random design and pilot errors can still produce bias and excess dispersion. The numerical comparison therefore reports RMSE, bias, dispersion, stopping diagnostics and uncertainty, rather than equating a median error with a covariance bound. Supplementary complete-pipeline results use a different 16-path protocol and are not pooled with the new 128-path experiment.
 
-The large sparse comparison concerns a published regression component with fixed windows. The additional full adaptive author-pipeline benchmark uses one oscillator, two meshes and 16 paths per condition. It establishes executable comparisons under those conditions, with substantial support uncertainty, but cannot establish universal method rankings or an asymptotic plateau. WENDy and its fixed-window parameter comparators receive supplied structure; discovery results are reported separately. Oracle states and supplied support are verification devices. 
-
-Acquisition decisions should compare discretization, missed sampling information, sensitivity over additional time and independence of additional records. For decay, repeating the experiment may be more informative than observing an increasingly long tail. Persistent excitation can instead make longer recordings useful. Application-specific covariance and sensitivities determine which regime applies.
+The analysis assumes fully observed deterministic ODEs and additive stationary Gaussian measurement error with known positive covariance common across parameters. Unknown covariance, partial observation and process noise are outside the theorem proved here. The scope is an information reference and its weak approximation, rather than a general ranking of identification algorithms.
 
 ## Declaration of generative AI and AI-assisted technologies
 
@@ -510,6 +448,6 @@ OpenAI Codex assisted literature searches, mathematical drafting, source develop
 
 ## Data availability
 
-Code, synthetic observations, numerical outputs and frozen execution notebooks are available in the public [reproducibility repository, version v1.0.1](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.0.1). The repository includes protocol configurations, source fingerprints, pinned author-code download specifications, compatibility adapters, postprocessing scripts and SHA256 manifests. Original author sources are downloaded from their pinned repositories rather than redistributed. No external experimental dataset is used. The tagged snapshot identifies the version supporting this article; a DOI has not been assigned.
+Code, synthetic observations, numerical outputs and frozen execution notebooks are available in the public [reproducibility repository, version v1.1.0](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.1.0). The repository includes protocol configurations, source fingerprints, pinned author-code download specifications, compatibility adapters, postprocessing scripts and SHA256 manifests. Original author sources are downloaded from their pinned repositories rather than redistributed. No external experimental dataset is used. The tagged snapshot identifies the version supporting this article; a DOI has not been assigned.
 
 ## References

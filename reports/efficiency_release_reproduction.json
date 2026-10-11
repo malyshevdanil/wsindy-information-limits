@@ -1,0 +1,14 @@
+{
+  "fresh_code_and_data_archives": true,
+  "all_postprocessing_commands_passed": true,
+  "efficiency_statistics_and_bootstrap_intervals_exactly_reproduced": true,
+  "manuscript_sources_identical": [
+    "article_revised.md",
+    "supplement.md",
+    "weak_efficiency_theory.md"
+  ],
+  "verified_archives": {
+    "reproducibility_code": "4eb01afab71d948dafa092b227501e341ba250749df7f6ee56fed541d2012c9b",
+    "reproducibility_data": "ac309184df8b41a9fc223f4de64dbdc84b191a8280f2c69c42418dcb4069f446"
+  }
+}

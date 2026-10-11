@@ -74,5 +74,5 @@ def download(stage):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
-    parser.add_argument('stage',choices=['smoke','pilot','covariance','extended','replication','revision','revision_fast','reweighting','geometry','reviewer','adaptive_probe','adaptive_smoke','adaptive_octave_smoke','adaptive_classical','adaptive_wm',*[f'adaptive_wm_{i}' for i in range(4)]])
+    parser.add_argument('stage',choices=['smoke','pilot','covariance','extended','replication','revision','revision_fast','reweighting','geometry','reviewer','efficiency_scalar','efficiency_scalar_v2','efficiency_scalar_v3','efficiency_geometry','efficiency_geometry_v2','efficiency_vdp_0','efficiency_vdp_1','efficiency_vdp_polish_0','efficiency_vdp_polish_1','efficiency_vdp_final_0','efficiency_vdp_final_1','adaptive_probe','adaptive_smoke','adaptive_octave_smoke','adaptive_classical','adaptive_wm',*[f'adaptive_wm_{i}' for i in range(4)]])
     download(parser.parse_args().stage)

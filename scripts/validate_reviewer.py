@@ -62,12 +62,17 @@ def main(publication=False):
         assert archive['version_url'] in article
         assert not re.search('abandoned grid diagnostic|initial custom-STLS pilot|historical|earlier 4,000-path experiment|fresh validation',article,re.I)
         assert 'malyshevdanil' not in supplement and 'credentials' not in supplement
-        assert len(Document(ROOT/'manuscript/article_revised.docx').tables)==9
+        table_count=len(re.findall(r'^Table \d+\.',article,flags=re.M))
+        assert len(Document(ROOT/'manuscript/article_revised.docx').tables)==table_count
         with pymupdf.open(ROOT/'manuscript/article_revised.pdf') as pdf:
             text='\n'.join(p.get_text() for p in pdf)
-            assert all(f'Table {i}.' in text for i in range(1,10))
-            assert 'Data availability' in text and 'Van der Pol information reference' in text
-        result['nine_tables_and_main_disclosures_verified']=True
+            assert all(f'Table {i}.' in text for i in range(1,table_count+1))
+            assert 'Data availability' in text and 'Sharp information and optimal influence' in text
+        with pymupdf.open(ROOT/'manuscript/supplement.pdf') as pdf:
+            supporting='\n'.join(p.get_text() for p in pdf)
+            assert 'Van der Pol information reference' in supporting
+        assert len(Document(ROOT/'manuscript/supplement.docx').tables)>=9
+        result['main_tables_supporting_calculations_and_disclosures_verified']=True
     (ROOT/'reports/reviewer_validation.json').write_text(json.dumps(result,indent=2))
     print(json.dumps(result))
 

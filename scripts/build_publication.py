@@ -15,7 +15,7 @@ BASE=ROOT/'manuscript'
 
 def keep_short_tables(content):
     """Keep each publication table and its caption in one nonbreaking block."""
-    pattern=(r'(Table \d+\..*?)\n\n\{\\def\\LTcaptype\{none\}[^\n]*\n'
+    pattern=(r'(^Table S?\d+\.[^\n]*(?:\n[^\n]+)*)\n\n\{\\def\\LTcaptype\{none\}[^\n]*\n'
              r'\\small\\setlength\{\\tabcolsep\}\{3pt\}\n'
              r'(\\begin\{longtable\}.*?\\end\{longtable\})\n\}')
     def convert(match):
@@ -25,7 +25,7 @@ def keep_short_tables(content):
         return ('\\begin{center}\n\\begin{minipage}{\\linewidth}\n'+match[1]+'\n\n'
                 '\\small\\setlength{\\tabcolsep}{3pt}\n'+head+body+
                 '\n\\end{minipage}\n\\end{center}')
-    return re.sub(pattern,convert,content,flags=re.S)
+    return re.sub(pattern,convert,content,flags=re.S|re.M)
 
 
 def build(source):
@@ -34,6 +34,8 @@ def build(source):
     target=source.with_suffix('.docx')
     pypandoc.convert_file(str(source),'docx',format='markdown+tex_math_dollars+tex_math_single_backslash',outputfile=str(target),extra_args=common)
     doc=Document(target)
+    for paragraph in doc.paragraphs:
+        if re.match(r'^Table S?\d+\.',paragraph.text):paragraph.paragraph_format.keep_with_next=True
     normal=doc.styles['Normal'];normal.font.name='Times New Roman';normal.font.size=Pt(11)
     for sec in doc.sections:
         sec.page_width=Cm(21);sec.page_height=Cm(29.7)
@@ -46,7 +48,9 @@ def build(source):
     # Float-only figure placement avoids longtable's output routine clipping
     # deferred figures. Short captions retain LaTeX's automatic numbering.
     content=content.replace('\\begin{figure}','\\begin{figure}[p]')
-    content=re.sub(r'\\caption\{Figure \d+\.\s*',lambda _:r'\caption{',content)
+    content=re.sub(r'\\caption\{Figure S?\d+\.\s*',lambda _:r'\caption{',content)
+    if source.stem=='supplement':
+        content=content.replace('\\begin{document}',r'\renewcommand{\thefigure}{S\arabic{figure}}'+'\n'+r'\begin{document}')
     content=content.replace('\\begin{longtable}',r'\small\setlength{\tabcolsep}{3pt}'+'\n'+r'\begin{longtable}')
     content=keep_short_tables(content)
     content=content.replace('\\section{References}',r'\clearpage'+'\n'+r'\section{References}')
@@ -66,7 +70,7 @@ def build(source):
 
 
 if __name__=='__main__':
-    records=[build(BASE/name) for name in ('article_revised.md','supplement.md','information_theory.md')]
+    records=[build(BASE/name) for name in ('article_revised.md','supplement.md','information_theory.md','weak_efficiency_theory.md')]
     for original,alias in [('article_revised','article_en'),('information_theory','theory')]:
         for suffix in ('.md','.docx','.tex','.pdf'):
             shutil.copy2(BASE/(original+suffix),BASE/(alias+suffix))

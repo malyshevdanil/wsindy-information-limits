@@ -17,14 +17,19 @@ sources += list((ROOT/'kaggle').glob('*/*metadata.json'))
 sources += [ROOT/'kaggle/README_RU.md',ROOT/'literature/q1_revision_notes_RU.md',
             ROOT/'literature/publication_metadata_audit.json',ROOT/'literature/author_code_audit.json',
             ROOT/'reports/mstls_parity.json']
+sources += [ROOT/'literature/efficiency_notes_RU.md']
 sources += [BASE/name for name in ('article_revised.md','supplement.md','information_theory.md',
                                  'publication_references.bib','numeric.csl')]
+sources += [BASE/name for name in ('weak_efficiency_theory.md','efficiency_article_template.md',
+            'efficiency_supplement_template.md','supporting_validation.md')]
+sources += [BASE/'archive/pre_efficiency'/name for name in ('article_revised.md','supplement.md')]
 sources += [ROOT/'reports/full_adaptive_protocol_RU.md']
 if (ROOT/'reports/reviewer_results.json').exists():
     sources += [ROOT/'reports/reviewer_protocol_RU.md']
-sources = [p for p in sources if p.name != 'inspect_revision_live_log.py']
+sources = [p for p in sources if p.name != 'inspect_revision_live_log.py' and p.parent.name not in ('efficiency_vdp_polish_0','efficiency_vdp_polish_1')]
 manuscripts=[BASE/('article_revised'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
 manuscripts += [BASE/('supplement'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
+manuscripts += [BASE/('weak_efficiency_theory'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
 manuscripts += [BASE/'publication_references.bib',BASE/'numeric.csl',BASE/'publication_build.json']
 manuscripts += list((BASE/'figures/publication').glob('*'))+list((BASE/'submission').glob('*'))
 data=[]
@@ -52,6 +57,13 @@ if (ROOT/'reports/reviewer_results.json').exists():
              ROOT/'reports/reviewer_results.json',ROOT/'reports/reviewer_results_RU.md',
              ROOT/'reports/reviewer_results_RU.docx',ROOT/'reports/reviewer_validation.json']
 archives=[]
+if (ROOT/'reports/efficiency_results.json').exists():
+    for stage in ('efficiency_scalar_v3','efficiency_geometry','efficiency_geometry_v2','efficiency_vdp_0','efficiency_vdp_1',
+                  'efficiency_vdp_final_0','efficiency_vdp_final_1'):
+        data += list((ROOT/f'results/kaggle_{stage}').glob('*.json'))
+        data.append(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip')
+    data += [ROOT/'reports'/name for name in ('efficiency_results.json','efficiency_results_RU.md',
+               'efficiency_results_RU.docx','efficiency_validation.json')]
 for name,files in [('submission_package',manuscripts),('reproducibility_code',sources),('reproducibility_data',data)]:
     path=DIST/(name+'.zip')
     with zipfile.ZipFile(path,'w',compression=zipfile.ZIP_DEFLATED) as archive:

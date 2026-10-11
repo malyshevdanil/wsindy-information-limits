@@ -58,11 +58,15 @@ def main(publication=False,smoke_only=False):
         doc=Document(ROOT/'manuscript/article_revised.docx')
         source=(ROOT/'manuscript/article_revised.md').read_text(encoding='utf-8')
         table_count=len(re.findall(r'^Table \d+\.',source,flags=re.M))
-        assert len(doc.inline_shapes)==7 and len(doc.tables)==table_count
+        assert len(doc.inline_shapes)==len(re.findall(r'^!\[Figure \d+\.',source,flags=re.M)) and len(doc.tables)==table_count
         with pymupdf.open(ROOT/'manuscript/article_revised.pdf') as pdf:
             text='\n'.join(p.get_text() for p in pdf)
-            assert 'Complete adaptive author pipelines' in text
             assert all(f'Table {i}.' in text for i in range(1,table_count+1))
+        with pymupdf.open(ROOT/'manuscript/supplement.pdf') as pdf:
+            supporting='\n'.join(p.get_text() for p in pdf)
+            assert 'Complete adaptive author pipelines' in supporting
+        supplement_doc=Document(ROOT/'manuscript/supplement.docx')
+        assert len(supplement_doc.inline_shapes)==7
         for item in json.loads((ROOT/'dist/manifest.json').read_text()):
             path=ROOT/'dist'/item['file'];assert hashlib.sha256(path.read_bytes()).hexdigest()==item['sha256']
             with zipfile.ZipFile(path) as archive:
