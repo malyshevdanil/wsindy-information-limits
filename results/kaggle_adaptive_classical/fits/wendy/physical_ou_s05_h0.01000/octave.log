@@ -1,0 +1,6 @@
+error: WENDy iterates diverged
+warning: function name 'windy_opt' does not agree with function filename '/kaggle/working/wsindy_research/author_sources/WENDy/wendy_opt.m'
+warning: called from
+    wendy_fcn at line 96 column 12
+    run_author_octave at line 30 column 67
+

@@ -1,0 +1,46 @@
+[
+  {
+    "level": 0.001,
+    "paths": 2000,
+    "guarded_paths": 2000,
+    "linear_relative_frobenius": 0.039916917984764634,
+    "guarded_actual_relative_frobenius": 0.039982194139346734,
+    "guarded_bias_norm": 2.8695088460446578e-05,
+    "paired_linearization_relative_rms": 0.02455498888582785,
+    "gaussian_known_mean_covariance_relative_rms_floor": 0.039611233244551895,
+    "scope": "Actual covariance conditional on singular-value guard; no unconditional moment claim. Errors centred at discrete clean fit."
+  },
+  {
+    "level": 0.01,
+    "paths": 2000,
+    "guarded_paths": 2000,
+    "linear_relative_frobenius": 0.03991691798476485,
+    "guarded_actual_relative_frobenius": 0.04087484409002326,
+    "guarded_bias_norm": 0.002588521499616597,
+    "paired_linearization_relative_rms": 0.24498480626208877,
+    "gaussian_known_mean_covariance_relative_rms_floor": 0.03961123324455189,
+    "scope": "Actual covariance conditional on singular-value guard; no unconditional moment claim. Errors centred at discrete clean fit."
+  },
+  {
+    "level": 0.05,
+    "paths": 2000,
+    "guarded_paths": 2000,
+    "linear_relative_frobenius": 0.03991691798476499,
+    "guarded_actual_relative_frobenius": 0.2943520824242492,
+    "guarded_bias_norm": 0.061524544414885224,
+    "paired_linearization_relative_rms": 1.1562514956729382,
+    "gaussian_known_mean_covariance_relative_rms_floor": 0.03961123324455189,
+    "scope": "Actual covariance conditional on singular-value guard; no unconditional moment claim. Errors centred at discrete clean fit."
+  },
+  {
+    "level": 0.2,
+    "paths": 2000,
+    "guarded_paths": 2000,
+    "linear_relative_frobenius": 0.03991691798476499,
+    "guarded_actual_relative_frobenius": 0.48084502504388876,
+    "guarded_bias_norm": 0.5767864473468635,
+    "paired_linearization_relative_rms": 2.590637300404423,
+    "gaussian_known_mean_covariance_relative_rms_floor": 0.03961123324455189,
+    "scope": "Actual covariance conditional on singular-value guard; no unconditional moment claim. Errors centred at discrete clean fit."
+  }
+]

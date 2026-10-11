@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info><title>Numeric research manuscript</title><id>http://www.zotero.org/styles/wsindy-numeric</id><updated>2026-10-11T00:00:00+00:00</updated></info>
+  <citation collapse="citation-number"><sort><key variable="citation-number"/></sort><layout prefix="[" suffix="]" delimiter=", "><text variable="citation-number"/></layout></citation>
+  <bibliography entry-spacing="0" second-field-align="flush"><layout suffix=".">
+    <text variable="citation-number" prefix="[" suffix="] "/>
+    <names variable="author" suffix=". "><name initialize-with="" name-as-sort-order="all" sort-separator=" " delimiter=", "/></names>
+    <text variable="title" suffix=". "/><text variable="container-title" font-style="italic" suffix=" "/>
+    <text variable="publisher" suffix=" "/><text variable="volume" suffix=" "/>
+    <date variable="issued" prefix="(" suffix=") "><date-part name="year"/></date>
+    <text variable="page" suffix=". "/><text variable="DOI" prefix="https://doi.org/"/>
+  </layout></bibliography>
+</style>

@@ -1,0 +1,993 @@
+[
+  {
+    "key": "brunton2016",
+    "doi": "10.1073/pnas.1517384113",
+    "status": "metadata_verified",
+    "title": [
+      "Discovering governing equations from data by sparse identification of nonlinear dynamical systems"
+    ],
+    "authors": [
+      {
+        "given": "Steven L.",
+        "family": "Brunton",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Mechanical Engineering, University of Washington, Seattle, WA 98195;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Joshua L.",
+        "family": "Proctor",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Institute for Disease Modeling, Bellevue, WA 98005;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J. Nathan",
+        "family": "Kutz",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Mathematics, University of Washington, Seattle, WA 98195"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2016,
+          3,
+          28
+        ]
+      ]
+    },
+    "volume": "113",
+    "page": "3932-3937",
+    "article_number": null
+  },
+  {
+    "key": "messenger2021",
+    "doi": "10.1137/20M1343166",
+    "status": "metadata_verified",
+    "title": [
+      "Weak SINDy: Galerkin-Based Data-Driven Model Selection"
+    ],
+    "authors": [
+      {
+        "given": "Daniel A.",
+        "family": "Messenger",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1163-7317",
+        "authenticated-orcid": true,
+        "given": "David M.",
+        "family": "Bortz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "volume": "19",
+    "page": "1474-1497",
+    "article_number": null
+  },
+  {
+    "key": "messenger2025",
+    "doi": "10.1093/imanum/drae086",
+    "status": "metadata_verified",
+    "title": [
+      "Asymptotic consistency of the WSINDy algorithm in the limit of continuum data"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8275-7888",
+        "authenticated-orcid": false,
+        "given": "Daniel A",
+        "family": "Messenger",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Applied Mathematics, University of Colorado Boulder , Boulder, CO 80309-0526,",
+            "place": [
+              "USA"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1163-7317",
+        "authenticated-orcid": false,
+        "given": "David M",
+        "family": "Bortz",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Applied Mathematics, University of Colorado Boulder , Boulder, CO 80309-0526,",
+            "place": [
+              "USA"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          12
+        ]
+      ]
+    },
+    "volume": "45",
+    "page": "3264-3312",
+    "article_number": null
+  },
+  {
+    "key": "bortz2023",
+    "doi": "10.1007/s11538-023-01208-6",
+    "status": "metadata_verified",
+    "title": [
+      "Direct Estimation of Parameters in ODE Models Using WENDy: Weak-Form Estimation of Nonlinear Dynamics"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-1163-7317",
+        "authenticated-orcid": false,
+        "given": "David M.",
+        "family": "Bortz",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daniel A.",
+        "family": "Messenger",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Vanja",
+        "family": "Dukic",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          5
+        ]
+      ]
+    },
+    "volume": "85",
+    "page": null,
+    "article_number": "110"
+  },
+  {
+    "key": "lopez2026",
+    "doi": "10.1016/j.jcp.2025.114410",
+    "status": "metadata_verified",
+    "title": [
+      "Weak-form modified sparse identification of nonlinear dynamics"
+    ],
+    "authors": [
+      {
+        "given": "Cristian",
+        "family": "López",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ángel",
+        "family": "Naranjo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Diego",
+        "family": "Salazar",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2558-4105",
+        "authenticated-orcid": false,
+        "given": "Keegan J.",
+        "family": "Moore",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          1
+        ]
+      ]
+    },
+    "volume": "544",
+    "page": "114410",
+    "article_number": "114410"
+  },
+  {
+    "key": "isserlis1918",
+    "doi": "10.1093/biomet/12.1-2.134",
+    "status": "metadata_verified",
+    "title": [
+      "ON A FORMULA FOR THE PRODUCT-MOMENT COEFFICIENT OF ANY ORDER OF A NORMAL FREQUENCY DISTRIBUTION IN ANY NUMBER OF VARIABLES"
+    ],
+    "authors": [
+      {
+        "given": "L.",
+        "family": "ISSERLIS",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1918,
+          11,
+          1
+        ]
+      ]
+    },
+    "volume": "12",
+    "page": "134-139",
+    "article_number": null
+  },
+  {
+    "key": "uhlenbeck1930",
+    "doi": "10.1103/PhysRev.36.823",
+    "status": "metadata_verified",
+    "title": [
+      "On the Theory of the Brownian Motion"
+    ],
+    "authors": [
+      {
+        "given": "G. E.",
+        "family": "Uhlenbeck",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "L. S.",
+        "family": "Ornstein",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1930,
+          9,
+          1
+        ]
+      ]
+    },
+    "volume": "36",
+    "page": "823-841",
+    "article_number": null
+  },
+  {
+    "key": "stein1999",
+    "doi": "10.1007/978-1-4612-1494-6",
+    "status": "metadata_verified",
+    "title": [
+      "Interpolation of Spatial Data"
+    ],
+    "authors": [
+      {
+        "given": "Michael L.",
+        "family": "Stein",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "volume": null,
+    "page": null,
+    "article_number": null
+  },
+  {
+    "key": "ying1991",
+    "doi": "10.1016/0047-259X(91)90062-7",
+    "status": "metadata_verified",
+    "title": [
+      "Asymptotic properties of a maximum likelihood estimator with data from a Gaussian process"
+    ],
+    "authors": [
+      {
+        "given": "Zhiliang",
+        "family": "Ying",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1991,
+          2
+        ]
+      ]
+    },
+    "volume": "36",
+    "page": "280-296",
+    "article_number": null
+  },
+  {
+    "key": "zhang2004",
+    "doi": "10.1198/016214504000000241",
+    "status": "metadata_verified",
+    "title": [
+      "Inconsistent Estimation and Asymptotically Equal Interpolations in Model-Based Geostatistics"
+    ],
+    "authors": [
+      {
+        "given": "Hao",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2004,
+          3
+        ]
+      ]
+    },
+    "volume": "99",
+    "page": "250-261",
+    "article_number": null
+  },
+  {
+    "key": "cameron1944",
+    "doi": "10.2307/1969276",
+    "status": "metadata_verified",
+    "title": [
+      "Transformations of Weiner Integrals Under Translations"
+    ],
+    "authors": [
+      {
+        "given": "R. H.",
+        "family": "Cameron",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "W. T.",
+        "family": "Martin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1944,
+          4
+        ]
+      ]
+    },
+    "volume": "45",
+    "page": "386",
+    "article_number": null
+  },
+  {
+    "key": "feldman1958",
+    "doi": "10.2140/pjm.1958.8.699",
+    "status": "metadata_verified",
+    "title": [
+      "Equivalence and perpendicularity of Gaussian processes"
+    ],
+    "authors": [
+      {
+        "given": "Jacob",
+        "family": "Feldman",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1958,
+          12,
+          1
+        ]
+      ]
+    },
+    "volume": "8",
+    "page": "699-708",
+    "article_number": null
+  },
+  {
+    "key": "schaeffer2017",
+    "doi": "10.1103/PhysRevE.96.023302",
+    "status": "metadata_verified",
+    "title": [
+      "Sparse model selection via integral terms"
+    ],
+    "authors": [
+      {
+        "given": "Hayden",
+        "family": "Schaeffer",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Scott G.",
+        "family": "McCalla",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2017,
+          8,
+          2
+        ]
+      ]
+    },
+    "volume": "96",
+    "page": null,
+    "article_number": "023302"
+  },
+  {
+    "key": "reinbold2020",
+    "doi": "10.1103/PhysRevE.101.010203",
+    "status": "metadata_verified",
+    "title": [
+      "Using noisy or incomplete data to discover models of spatiotemporal dynamics"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-1575-7124",
+        "authenticated-orcid": true,
+        "given": "Patrick A. K.",
+        "family": "Reinbold",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Physics, Georgia Institute of Technology, Atlanta, Georgia 30332-0430, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daniel R.",
+        "family": "Gurevich",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Physics, Georgia Institute of Technology, Atlanta, Georgia 30332-0430, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Roman O.",
+        "family": "Grigoriev",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Physics, Georgia Institute of Technology, Atlanta, Georgia 30332-0430, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2020,
+          1,
+          22
+        ]
+      ]
+    },
+    "volume": "101",
+    "page": null,
+    "article_number": "010203"
+  },
+  {
+    "key": "fasel2022",
+    "doi": "10.1098/rspa.2021.0904",
+    "status": "metadata_verified",
+    "title": [
+      "Ensemble-SINDy: Robust sparse model discovery in the low-data, high-noise limit, with active learning and control"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-3716-686X",
+        "authenticated-orcid": true,
+        "given": "U.",
+        "family": "Fasel",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Mechanical Engineering, University of Washington, Seattle, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6004-2275",
+        "authenticated-orcid": true,
+        "given": "J. N.",
+        "family": "Kutz",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Mathematics, University of Washington, Seattle, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4831-3466",
+        "authenticated-orcid": true,
+        "given": "B. W.",
+        "family": "Brunton",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Biology, University of Washington, Seattle, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6565-5118",
+        "authenticated-orcid": true,
+        "given": "S. L.",
+        "family": "Brunton",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Mechanical Engineering, University of Washington, Seattle, WA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2022,
+          4
+        ]
+      ]
+    },
+    "volume": "478",
+    "page": null,
+    "article_number": "20210904"
+  },
+  {
+    "key": "fuller1987",
+    "doi": "10.1002/9780470316665",
+    "status": "metadata_verified",
+    "title": [
+      "Measurement Error Models"
+    ],
+    "authors": [
+      {
+        "given": "Wayne A.",
+        "family": "Fuller",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1987,
+          6,
+          30
+        ]
+      ]
+    },
+    "volume": null,
+    "page": null,
+    "article_number": null
+  },
+  {
+    "key": "ramsay2007",
+    "doi": "10.1111/j.1467-9868.2007.00610.x",
+    "status": "metadata_verified",
+    "title": [
+      "Parameter Estimation for Differential Equations: a Generalized Smoothing Approach"
+    ],
+    "authors": [
+      {
+        "given": "J. O.",
+        "family": "Ramsay",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "McGill University , Montreal , Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "G.",
+        "family": "Hooker",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "McGill University , Montreal , Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "D.",
+        "family": "Campbell",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "McGill University , Montreal , Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.",
+        "family": "Cao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "McGill University , Montreal , Canada"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2007,
+          10,
+          25
+        ]
+      ]
+    },
+    "volume": "69",
+    "page": "741-796",
+    "article_number": null
+  },
+  {
+    "key": "stefanski1989",
+    "doi": "10.1080/03610928908830159",
+    "status": "metadata_verified",
+    "title": [
+      "Unbiased estimation of a nonlinear function a normal mean with application to measurement err oorf models"
+    ],
+    "authors": [
+      {
+        "given": "Leonard A.",
+        "family": "Stefanski",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1989,
+          1
+        ]
+      ]
+    },
+    "volume": "18",
+    "page": "4335-4358",
+    "article_number": null
+  },
+  {
+    "key": "dette2016",
+    "doi": "10.1214/15-AOS1361",
+    "status": "metadata_verified",
+    "title": [
+      "Optimal designs in regression with correlated errors"
+    ],
+    "authors": [
+      {
+        "given": "Holger",
+        "family": "Dette",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Andrey",
+        "family": "Pepelyshev",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anatoly",
+        "family": "Zhigljavsky",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2016,
+          2,
+          1
+        ]
+      ]
+    },
+    "volume": "44",
+    "page": "113-152",
+    "article_number": null
+  }
+]

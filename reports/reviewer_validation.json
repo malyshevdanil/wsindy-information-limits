@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "recorded_execution_fingerprint_verified": true,
+  "output_crc_verified": true,
+  "sensitivities_checked": true,
+  "information_psd_checked": true,
+  "window_normalization_checked": true,
+  "replay_3600_fits_matches_original": true,
+  "bias_variance_identity_checked": true,
+  "publication_checked": true,
+  "nine_tables_and_main_disclosures_verified": true
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "relative MSTLS regression only, gamma=0, unit rescaling",
+  "source_url": "https://github.com/CristianLopez85/WmSINDy/blob/f1a781009a5c6adfd5650bec63ef30cc0673ae97/Fig32_Correlated%20Noise/utils_WSINDy.py",
+  "source_sha256": "8e5692ed15aea69cd82f6a78fda4bf0e84d5293fb227b4375485e4277aff1997",
+  "reference_redistributed": false,
+  "fixtures": "analytic trajectories and deterministic perturbation",
+  "records": [
+    {
+      "system": "linear",
+      "equation": 0,
+      "max_coefficient_difference": 0.0
+    },
+    {
+      "system": "damped",
+      "equation": 0,
+      "max_coefficient_difference": 0.0
+    },
+    {
+      "system": "damped",
+      "equation": 1,
+      "max_coefficient_difference": 0.0
+    },
+    {
+      "system": "vdp",
+      "equation": 0,
+      "max_coefficient_difference": 0.0
+    },
+    {
+      "system": "vdp",
+      "equation": 1,
+      "max_coefficient_difference": 0.0
+    },
+    {
+      "system": "duffing",
+      "equation": 0,
+      "max_coefficient_difference": 0.0
+    },
+    {
+      "system": "duffing",
+      "equation": 1,
+      "max_coefficient_difference": 0.0
+    }
+  ],
+  "status": "passed"
+}

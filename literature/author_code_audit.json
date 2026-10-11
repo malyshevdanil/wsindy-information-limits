@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-11",
+  "repo": "https://github.com/CristianLopez85/WmSINDy",
+  "commit": "f1a781009a5c6adfd5650bec63ef30cc0673ae97",
+  "files": [
+    {
+      "path": "Fig32_Correlated%20Noise/Fig16_Wm_corr.py",
+      "sha256": "ca7964038e614850d0dfcd0efdcd7092e68193925bf7bb93bd9d7d8747526793",
+      "lines": 482
+    },
+    {
+      "path": "Fig31_Colored_noise/Fig15_Wm_pink.py",
+      "sha256": "043c51fc8e46505207474c5e8af3b43a2369ce7f6e5f83098f343c6e011c408a",
+      "lines": 485
+    }
+  ],
+  "finding": "Fig32 generates independent-in-time multivariate Gaussian errors with cross-state covariance. Fig31 pink example uses power-law PSD generator; fixed-physical-tau OU infill not established by these files."
+}

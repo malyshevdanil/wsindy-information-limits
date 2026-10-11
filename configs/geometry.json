@@ -1,0 +1,13 @@
+{
+  "scope": "Deterministic scalar information and weak influence geometry; no new Monte Carlo paths",
+  "a": -1.0,
+  "x0": 2.0,
+  "sigma": 0.1,
+  "tau": 0.4,
+  "T": 4.0,
+  "window_center": 2.0,
+  "window_width": 3.0,
+  "reference_h": 0.0009765625,
+  "quad_epsabs": 1e-11,
+  "quad_epsrel": 1e-11
+}

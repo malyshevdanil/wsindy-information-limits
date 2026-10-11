@@ -1,0 +1,362 @@
+[
+  {
+    "outer_loop": 1,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 0.0058451686054468155
+      },
+      {
+        "step": 1000,
+        "loss": 1.643499103920476e-06
+      },
+      {
+        "step": 2000,
+        "loss": 8.240874649345642e-07
+      },
+      {
+        "step": 3000,
+        "loss": 3.019955556737841e-07
+      },
+      {
+        "step": 4000,
+        "loss": 9.121624344743395e-08
+      },
+      {
+        "step": 5000,
+        "loss": 8.046750110679568e-08
+      }
+    ],
+    "mts_before": [
+      58,
+      57
+    ],
+    "mts_after": [
+      113,
+      132
+    ],
+    "fft_corners_after": [
+      26.0,
+      22.0
+    ],
+    "active_terms": 4,
+    "seconds": 147.51828899300017,
+    "optimizer_iteration": 5000
+  },
+  {
+    "outer_loop": 2,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 0.002725194673985243
+      },
+      {
+        "step": 1000,
+        "loss": 3.728937159053203e-08
+      },
+      {
+        "step": 2000,
+        "loss": 1.929733262073796e-09
+      },
+      {
+        "step": 3000,
+        "loss": 5.2205836875707234e-11
+      },
+      {
+        "step": 4000,
+        "loss": 1.2695722077793459e-11
+      },
+      {
+        "step": 5000,
+        "loss": 9.38851414389319e-08
+      }
+    ],
+    "mts_before": [
+      113,
+      132
+    ],
+    "mts_after": [
+      122,
+      87
+    ],
+    "fft_corners_after": [
+      24.0,
+      35.0
+    ],
+    "active_terms": 4,
+    "seconds": 237.3135390030002,
+    "optimizer_iteration": 10000
+  },
+  {
+    "outer_loop": 3,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 2.4700348433270847e-09
+      },
+      {
+        "step": 1000,
+        "loss": 7.50212405761265e-14
+      },
+      {
+        "step": 2000,
+        "loss": 4.1066621132325454e-13
+      },
+      {
+        "step": 3000,
+        "loss": 1.1127851298840113e-13
+      },
+      {
+        "step": 4000,
+        "loss": 1.6533265034812672e-10
+      },
+      {
+        "step": 5000,
+        "loss": 8.119642111448222e-13
+      }
+    ],
+    "mts_before": [
+      122,
+      87
+    ],
+    "mts_after": [
+      122,
+      87
+    ],
+    "fft_corners_after": [
+      24.0,
+      35.0
+    ],
+    "active_terms": 4,
+    "seconds": 219.10661085399988,
+    "optimizer_iteration": 15000
+  },
+  {
+    "outer_loop": 4,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 8.254290805552456e-13
+      },
+      {
+        "step": 1000,
+        "loss": 2.0685935061236227e-13
+      },
+      {
+        "step": 2000,
+        "loss": 2.4358938260568563e-13
+      },
+      {
+        "step": 3000,
+        "loss": 1.5326713231900158e-09
+      },
+      {
+        "step": 4000,
+        "loss": 1.4673573770981885e-12
+      },
+      {
+        "step": 5000,
+        "loss": 3.706477902376548e-10
+      }
+    ],
+    "mts_before": [
+      122,
+      87
+    ],
+    "mts_after": [
+      122,
+      87
+    ],
+    "fft_corners_after": [
+      24.0,
+      35.0
+    ],
+    "active_terms": 4,
+    "seconds": 219.27054546399995,
+    "optimizer_iteration": 20000
+  },
+  {
+    "outer_loop": 5,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 1.0634972937018095e-11
+      },
+      {
+        "step": 1000,
+        "loss": 1.119035528303336e-12
+      },
+      {
+        "step": 2000,
+        "loss": 3.800499411704683e-13
+      },
+      {
+        "step": 3000,
+        "loss": 4.823059486513959e-12
+      },
+      {
+        "step": 4000,
+        "loss": 6.90734795749659e-12
+      },
+      {
+        "step": 5000,
+        "loss": 8.692011953942425e-13
+      }
+    ],
+    "mts_before": [
+      122,
+      87
+    ],
+    "mts_after": [
+      122,
+      87
+    ],
+    "fft_corners_after": [
+      24.0,
+      35.0
+    ],
+    "active_terms": 4,
+    "seconds": 218.8694809509998,
+    "optimizer_iteration": 25000
+  },
+  {
+    "outer_loop": 6,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 5.084139489616724e-13
+      },
+      {
+        "step": 1000,
+        "loss": 1.3627341442778995e-12
+      },
+      {
+        "step": 2000,
+        "loss": 9.44256174986724e-13
+      },
+      {
+        "step": 3000,
+        "loss": 5.109342853318322e-13
+      },
+      {
+        "step": 4000,
+        "loss": 4.958218280393112e-09
+      },
+      {
+        "step": 5000,
+        "loss": 9.64634483402449e-10
+      }
+    ],
+    "mts_before": [
+      122,
+      87
+    ],
+    "mts_after": [
+      122,
+      87
+    ],
+    "fft_corners_after": [
+      24.0,
+      35.0
+    ],
+    "active_terms": 4,
+    "seconds": 218.59850721600014,
+    "optimizer_iteration": 30000
+  },
+  {
+    "outer_loop": 7,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 2.7071494351771364e-11
+      },
+      {
+        "step": 1000,
+        "loss": 2.1520860180729295e-12
+      },
+      {
+        "step": 2000,
+        "loss": 9.001630278844541e-13
+      },
+      {
+        "step": 3000,
+        "loss": 1.5812497795517078e-12
+      },
+      {
+        "step": 4000,
+        "loss": 1.698345131195822e-09
+      },
+      {
+        "step": 5000,
+        "loss": 2.2343457379420117e-12
+      }
+    ],
+    "mts_before": [
+      122,
+      87
+    ],
+    "mts_after": [
+      122,
+      87
+    ],
+    "fft_corners_after": [
+      24.0,
+      35.0
+    ],
+    "active_terms": 4,
+    "seconds": 220.77195791300073,
+    "optimizer_iteration": 35000
+  },
+  {
+    "outer_loop": 8,
+    "training_steps": 5000,
+    "loss_checkpoints": [
+      {
+        "step": 1,
+        "loss": 1.885419121175347e-12
+      },
+      {
+        "step": 1000,
+        "loss": 2.302473533014049e-13
+      },
+      {
+        "step": 2000,
+        "loss": 2.6621695299600123e-13
+      },
+      {
+        "step": 3000,
+        "loss": 1.8528867676281813e-12
+      },
+      {
+        "step": 4000,
+        "loss": 7.180915584381609e-12
+      },
+      {
+        "step": 5000,
+        "loss": 1.2866968601699114e-09
+      }
+    ],
+    "mts_before": [
+      122,
+      87
+    ],
+    "mts_after": [
+      122,
+      87
+    ],
+    "fft_corners_after": [
+      24.0,
+      35.0
+    ],
+    "active_terms": 4,
+    "seconds": 220.76895726000112,
+    "optimizer_iteration": 40000
+  }
+]

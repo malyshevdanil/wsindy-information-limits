@@ -1,0 +1,354 @@
+[
+  {
+    "file": "kaggle\\adaptive_classical\\wsindy_adaptive_classical.ipynb",
+    "notebook_valid": true,
+    "packed_files": 50,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\adaptive_octave_smoke\\wsindy_adaptive_octave_smoke.ipynb",
+    "notebook_valid": true,
+    "packed_files": 49,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/run_full_adaptive.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py",
+      "configs/full_adaptive.json"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\adaptive_probe\\wsindy_adaptive_probe.ipynb",
+    "notebook_valid": true,
+    "packed_files": 53,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/finalize_full_adaptive.py",
+      "scripts/finish_adaptive_runs.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py",
+      "scripts/validate_full_adaptive.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": false
+  },
+  {
+    "file": "kaggle\\adaptive_smoke\\wsindy_adaptive_smoke.ipynb",
+    "notebook_valid": true,
+    "packed_files": 49,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/build_adaptive_kaggle.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/run_full_adaptive.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py",
+      "configs/full_adaptive.json"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\adaptive_wm_0\\wsindy_adaptive_wm_0.ipynb",
+    "notebook_valid": true,
+    "packed_files": 50,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\adaptive_wm_1\\wsindy_adaptive_wm_1.ipynb",
+    "notebook_valid": true,
+    "packed_files": 50,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\adaptive_wm_2\\wsindy_adaptive_wm_2.ipynb",
+    "notebook_valid": true,
+    "packed_files": 53,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/finalize_full_adaptive.py",
+      "scripts/finish_adaptive_runs.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py",
+      "scripts/validate_full_adaptive.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\adaptive_wm_3\\wsindy_adaptive_wm_3.ipynb",
+    "notebook_valid": true,
+    "packed_files": 53,
+    "workspace_differences": [
+      "scripts/analyze_full_adaptive.py",
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/finalize_full_adaptive.py",
+      "scripts/finish_adaptive_runs.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py",
+      "scripts/validate_full_adaptive.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\covariance\\wsindy_covariance.ipynb",
+    "notebook_valid": true,
+    "packed_files": 18,
+    "workspace_differences": [
+      "scripts/build_kaggle.py",
+      "scripts/build_manuscript.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\extended\\wsindy_extended.ipynb",
+    "notebook_valid": true,
+    "packed_files": 19,
+    "workspace_differences": [
+      "scripts/build_kaggle.py",
+      "scripts/build_manuscript.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\geometry\\wsindy_geometry.ipynb",
+    "notebook_valid": true,
+    "packed_files": 44,
+    "workspace_differences": [
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py",
+      "scripts/write_revision_report.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\pilot\\wsindy_pilot.ipynb",
+    "notebook_valid": true,
+    "packed_files": 18,
+    "workspace_differences": [
+      "scripts/build_kaggle.py",
+      "scripts/build_manuscript.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\replication\\wsindy_replication.ipynb",
+    "notebook_valid": true,
+    "packed_files": 22,
+    "workspace_differences": [
+      "scripts/analyze_completed_study.py",
+      "scripts/build_kaggle.py",
+      "scripts/build_manuscript.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\reviewer\\wsindy_reviewer.ipynb",
+    "notebook_valid": true,
+    "packed_files": 55,
+    "workspace_differences": [
+      "scripts/analyze_revision.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/package_publication.py",
+      "scripts/validate_artifacts.py",
+      "scripts/validate_full_adaptive.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\revision\\wsindy_revision.ipynb",
+    "notebook_valid": true,
+    "packed_files": 30,
+    "workspace_differences": [
+      "scripts/build_kaggle.py",
+      "scripts/build_manuscript.py",
+      "scripts/build_publication.py",
+      "scripts/check_mstls_parity.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": false
+  },
+  {
+    "file": "kaggle\\revision_fast\\wsindy_revision_fast.ipynb",
+    "notebook_valid": true,
+    "packed_files": 41,
+    "workspace_differences": [
+      "scripts/analyze_revision.py",
+      "scripts/build_kaggle.py",
+      "scripts/build_publication.py",
+      "scripts/check_mstls_parity.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/package_publication.py",
+      "scripts/unpack_kaggle_outputs.py",
+      "scripts/validate_artifacts.py",
+      "scripts/verify_bibliography.py",
+      "scripts/write_revision_report.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\reweighting\\wsindy_reweighting.ipynb",
+    "notebook_valid": true,
+    "packed_files": 33,
+    "workspace_differences": [
+      "scripts/build_kaggle.py",
+      "scripts/build_manuscript.py",
+      "scripts/build_publication.py",
+      "scripts/check_mstls_parity.py",
+      "scripts/download_kaggle_archive.py",
+      "scripts/manage_revision_run.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "kaggle\\smoke\\wsindy_smoke.ipynb",
+    "notebook_valid": true,
+    "packed_files": 18,
+    "workspace_differences": [
+      "scripts/build_kaggle.py",
+      "scripts/build_manuscript.py",
+      "scripts/validate_artifacts.py"
+    ],
+    "execution_snapshot_preserved": true,
+    "downloaded_manifest_matches_snapshot": true
+  },
+  {
+    "file": "manuscript\\article_en.docx",
+    "docx_reopened": true,
+    "paragraphs": 196,
+    "tables": 9,
+    "figures": 7,
+    "native_omml_equations": 186
+  },
+  {
+    "file": "manuscript\\article_revised.docx",
+    "docx_reopened": true,
+    "paragraphs": 196,
+    "tables": 9,
+    "figures": 7,
+    "native_omml_equations": 186
+  },
+  {
+    "file": "manuscript\\supplement.docx",
+    "docx_reopened": true,
+    "paragraphs": 51,
+    "tables": 0,
+    "figures": 0,
+    "native_omml_equations": 37
+  },
+  {
+    "file": "manuscript\\theory.docx",
+    "docx_reopened": true,
+    "paragraphs": 45,
+    "tables": 0,
+    "figures": 0,
+    "native_omml_equations": 95
+  },
+  {
+    "file": "reports\\research_progress_RU.docx",
+    "docx_reopened": true,
+    "paragraphs": 50,
+    "tables": 1,
+    "figures": 0,
+    "native_omml_equations": 0
+  },
+  {
+    "file": "reports\\q1_revision_results_RU.docx",
+    "docx_reopened": true,
+    "paragraphs": 16,
+    "tables": 1,
+    "figures": 0,
+    "native_omml_equations": 0
+  },
+  {
+    "file": "manuscript\\article_revised.pdf",
+    "pdf_reopened": true,
+    "pages": 22,
+    "figures_within_page": 7
+  },
+  {
+    "file": "manuscript\\supplement.pdf",
+    "pdf_reopened": true,
+    "pages": 6,
+    "figures_within_page": 0
+  },
+  {
+    "file": "manuscript\\information_theory.pdf",
+    "pdf_reopened": true,
+    "pages": 4,
+    "figures_within_page": 0
+  }
+]

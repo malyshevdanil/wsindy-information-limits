@@ -1,0 +1,92 @@
+[
+  {
+    "file": "residual_known_debias_0.05.npz",
+    "n": 4000,
+    "dimension": 60,
+    "observed_relative_frobenius": 0.06454029379535328,
+    "estimated_fourth_moment_relative_rms_floor": 0.056180092130030085,
+    "gaussian_reference_relative_rms_floor": 0.055508298169504394,
+    "affine_null_bootstrap_quantiles": [
+      0.04767167635254414,
+      0.055442465540895346,
+      0.06539624039419219
+    ],
+    "bootstrap_exceedance_fraction": 0.048,
+    "interpretation": "Approximate covariance-null calibration using empirical non-Gaussian shape; Gaussian floor is exact only for Gaussian residuals; exceedance fraction is not an exact test p-value."
+  },
+  {
+    "file": "residual_known_debias_0.2.npz",
+    "n": 4000,
+    "dimension": 60,
+    "observed_relative_frobenius": 0.06444295649483789,
+    "estimated_fourth_moment_relative_rms_floor": 0.057359927252220624,
+    "gaussian_reference_relative_rms_floor": 0.05600871599808389,
+    "affine_null_bootstrap_quantiles": [
+      0.04875127426745564,
+      0.05673866782390516,
+      0.06651760122008842
+    ],
+    "bootstrap_exceedance_fraction": 0.06,
+    "interpretation": "Approximate covariance-null calibration using empirical non-Gaussian shape; Gaussian floor is exact only for Gaussian residuals; exceedance fraction is not an exact test p-value."
+  },
+  {
+    "file": "residual_known_debias_0.5.npz",
+    "n": 4000,
+    "dimension": 60,
+    "observed_relative_frobenius": 0.06400134846935704,
+    "estimated_fourth_moment_relative_rms_floor": 0.06330669987814878,
+    "gaussian_reference_relative_rms_floor": 0.05825607317075053,
+    "affine_null_bootstrap_quantiles": [
+      0.053086725413546684,
+      0.06278859289181238,
+      0.0724554846286195
+    ],
+    "bootstrap_exceedance_fraction": 0.404,
+    "interpretation": "Approximate covariance-null calibration using empirical non-Gaussian shape; Gaussian floor is exact only for Gaussian residuals; exceedance fraction is not an exact test p-value."
+  },
+  {
+    "file": "residual_raw_0.05.npz",
+    "n": 4000,
+    "dimension": 60,
+    "observed_relative_frobenius": 0.0645453945278789,
+    "estimated_fourth_moment_relative_rms_floor": 0.056186629852596814,
+    "gaussian_reference_relative_rms_floor": 0.0555142923307304,
+    "affine_null_bootstrap_quantiles": [
+      0.04766405649208128,
+      0.05543658860285558,
+      0.06540762144121547
+    ],
+    "bootstrap_exceedance_fraction": 0.048,
+    "interpretation": "Approximate covariance-null calibration using empirical non-Gaussian shape; Gaussian floor is exact only for Gaussian residuals; exceedance fraction is not an exact test p-value."
+  },
+  {
+    "file": "residual_raw_0.2.npz",
+    "n": 4000,
+    "dimension": 60,
+    "observed_relative_frobenius": 0.06454454002546504,
+    "estimated_fourth_moment_relative_rms_floor": 0.057451345990982554,
+    "gaussian_reference_relative_rms_floor": 0.05609169234651206,
+    "affine_null_bootstrap_quantiles": [
+      0.04880661011193766,
+      0.05672144938594596,
+      0.06644398455313605
+    ],
+    "bootstrap_exceedance_fraction": 0.06,
+    "interpretation": "Approximate covariance-null calibration using empirical non-Gaussian shape; Gaussian floor is exact only for Gaussian residuals; exceedance fraction is not an exact test p-value."
+  },
+  {
+    "file": "residual_raw_0.5.npz",
+    "n": 4000,
+    "dimension": 60,
+    "observed_relative_frobenius": 0.06451947625753039,
+    "estimated_fourth_moment_relative_rms_floor": 0.0634564617313224,
+    "gaussian_reference_relative_rms_floor": 0.05841752301105058,
+    "affine_null_bootstrap_quantiles": [
+      0.05325165454876076,
+      0.06304001726917773,
+      0.07244586170295549
+    ],
+    "bootstrap_exceedance_fraction": 0.372,
+    "interpretation": "Approximate covariance-null calibration using empirical non-Gaussian shape; Gaussian floor is exact only for Gaussian residuals; exceedance fraction is not an exact test p-value."
+  }
+]

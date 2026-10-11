@@ -1,0 +1,8 @@
+{
+  "WSINDy_ODE": {"repo":"MathBioCU/WSINDy_ODE","commit":"72d8d6e5be2b80bcfe5015dced399ace1ceca43f","zip_sha256":"5cb71a0d90cbc99ab8bf377c3912497834ca8d03b693f14bfd83a197acb00c42"},
+  "WENDy": {"repo":"MathBioCU/WENDy","commit":"65c52a893b1f693cae3cd17e21854665ea814b9d","zip_sha256":"140441ecc2d8b53b7dc0dcb73d6d937458d3f4eca206f9e0e10896f1b9cb86de"},
+  "WmSINDy_vdp": {"repo":"CristianLopez85/WmSINDy","commit":"f1a781009a5c6adfd5650bec63ef30cc0673ae97","folder":"Fig7_Various_systems/VanderPol","files":{
+    "Wm_VanderPol_50_exp.py":"a7e26c304fcc910f607ea6ae4daad55c4446a2817aa953df91d5a3b821faa28c",
+    "utils_NSS_SINDy_W_VanderPol.py":"73c385bedbeff2356f994a7e3a926ffb832b746f55cb0fdf83668f3ada33697d",
+    "utils_WSINDy_VanderPol.py":"9af836ed9a867644e7eb47b32da016ae0c143d7461e58896c2e5eee10f0d4e0b"}}
+}

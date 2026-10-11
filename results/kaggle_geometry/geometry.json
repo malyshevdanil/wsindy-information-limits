@@ -1,0 +1,36 @@
+{
+  "parameters": {
+    "scope": "Deterministic scalar information and weak influence geometry; no new Monte Carlo paths",
+    "a": -1.0,
+    "x0": 2.0,
+    "sigma": 0.1,
+    "tau": 0.4,
+    "T": 4.0,
+    "window_center": 2.0,
+    "window_width": 3.0,
+    "reference_h": 0.0009765625,
+    "quad_epsabs": 1e-11,
+    "quad_epsrel": 1e-11
+  },
+  "joint_information": [
+    [
+      144.18650312733638,
+      52.42200493901265
+    ],
+    [
+      52.42200493901265,
+      122.49245209087218
+    ]
+  ],
+  "coefficient_information_known_initial": 144.18650312733638,
+  "coefficient_information_initial_nuisance": 121.75192405803023,
+  "known_initial_variance_bound": 0.006935461907394088,
+  "weak_initial_annihilation_variance_bound": 0.008213422561793547,
+  "weak_bound_inflation": 1.1842646778921804,
+  "weak_linearized_variance_reference_grid": 0.10977644570567777,
+  "weak_known_initial_information_efficiency": 0.06317805120042594,
+  "weak_nuisance_information_efficiency": 0.07481953445472811,
+  "initial_sensitivity_annihilation": -1.5125281977343608e-13,
+  "coefficient_sensitivity_normalization": 0.9999999999998965,
+  "scope": "Local Gaussian influence covariance; not variance of unguarded nonlinear ratio"
+}

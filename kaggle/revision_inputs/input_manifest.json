@@ -1,0 +1,8 @@
+{
+  "residual_known_debias_0.05.npz": "2761b001cccd88e0d4a5e4986e97614e2bd2eafdab6b6429369e40d071a5a347",
+  "residual_known_debias_0.2.npz": "9a9ce98fc61dd31dae32f38ef6ca4a65a31f7d4258819da1801198eee2be3507",
+  "residual_known_debias_0.5.npz": "781b868858ed1a21e601214198942612dd0bab1a32be638126af775c64a511ec",
+  "residual_raw_0.05.npz": "0e3f197df864287991b8f7f4cae909b70ba4958a67d5e249cf95b31b26f34930",
+  "residual_raw_0.2.npz": "7d159814f4b87584e440e7280ceeb06e46b3b2cbec51b9b169300ee154232b6f",
+  "residual_raw_0.5.npz": "464b999569eca7d70eba10a845bddd0e3e7d6c036aab07dfa79d12ff47589482"
+}

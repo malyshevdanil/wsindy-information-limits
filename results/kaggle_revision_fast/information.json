@@ -1,0 +1,112 @@
+{
+  "scalar_parameters": {
+    "a": -1.0,
+    "x0": 2.0,
+    "sigma": 0.1,
+    "tau": 0.4,
+    "T": 4.0
+  },
+  "likelihood_bounds": [
+    -2.5,
+    0.5
+  ],
+  "grid_information": [
+    {
+      "h": 0.03125,
+      "fisher_information": 144.0952214061059,
+      "cr_variance": 0.0069398553972979
+    },
+    {
+      "h": 0.015625,
+      "fisher_information": 144.16367237437518,
+      "cr_variance": 0.006936560254951913
+    },
+    {
+      "h": 0.0078125,
+      "fisher_information": 144.1807947935487,
+      "cr_variance": 0.006935736492727009
+    },
+    {
+      "h": 0.00390625,
+      "fisher_information": 144.1850760035373,
+      "cr_variance": 0.006935530553630023
+    },
+    {
+      "h": 0.001953125,
+      "fisher_information": 144.18614634386154,
+      "cr_variance": 0.006935479068947134
+    },
+    {
+      "h": 0.0009765625,
+      "fisher_information": 144.18641393131628,
+      "cr_variance": 0.006935466197781669
+    }
+  ],
+  "continuous_information": 144.1865031273364,
+  "weak_linearized_variance": 0.10977644570567777,
+  "weak_linearized_efficiency": 0.06317805120042592,
+  "duration": [
+    {
+      "T": 1.0,
+      "decay_information": 84.77579895970733,
+      "constant_mean_effective_n": 2.25
+    },
+    {
+      "T": 2.0,
+      "decay_information": 128.05803402792085,
+      "constant_mean_effective_n": 3.5
+    },
+    {
+      "T": 4.0,
+      "decay_information": 144.1865031273364,
+      "constant_mean_effective_n": 6.0
+    },
+    {
+      "T": 8.0,
+      "decay_information": 144.99914642069976,
+      "constant_mean_effective_n": 11.0
+    },
+    {
+      "T": 16.0,
+      "decay_information": 144.99999999966383,
+      "constant_mean_effective_n": 21.0
+    },
+    {
+      "T": 32.0,
+      "decay_information": 145.0,
+      "constant_mean_effective_n": 41.0
+    },
+    {
+      "T": 64.0,
+      "decay_information": 145.0,
+      "constant_mean_effective_n": 81.0
+    }
+  ],
+  "independent_recordings": [
+    {
+      "M": 1,
+      "information": 144.1865031273364
+    },
+    {
+      "M": 2,
+      "information": 288.3730062546728
+    },
+    {
+      "M": 4,
+      "information": 576.7460125093456
+    },
+    {
+      "M": 8,
+      "information": 1153.4920250186913
+    },
+    {
+      "M": 16,
+      "information": 2306.9840500373825
+    },
+    {
+      "M": 32,
+      "information": 4613.968100074765
+    }
+  ],
+  "comparison_scope": "Bounded Gaussian MLE uses known noise covariance and initial condition; neither unbiasedness nor finite-sample CR attainment is asserted. Weak ratio moments are undefined."
+}
