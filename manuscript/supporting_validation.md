@@ -168,7 +168,7 @@ A one-parameter Van der Pol model fixes a=1 and b=-1 and ties c=mu, d=-mu. Its c
 
 ### S9.8. Optimal efficiency within declared window spans
 
-The scalar parameters are those of Section S9.1. We optimize the covariance-weighted linear combination in Section 4.6, including every cross-window covariance. Family F30 contains 30 fourth-power bump windows of full width 1.6; centers range uniformly from 0.805 to 3.195. Family F120 contains 60 centers for each of widths 1.6 and 3.0, with centers 0.005 inside the admissible support range. These are declared finite families, rather than an exhaustive search over all shapes and widths. The reference single window has width three and center two.
+The scalar parameters are those of Section S9.1. We optimize the covariance-weighted linear combination in Section 5.4, including every cross-window covariance. Family F30 contains 30 fourth-power bump windows of full width 1.6; centers range uniformly from 0.805 to 3.195. Family F120 contains 60 centers for each of widths 1.6 and 3.0, with centers 0.005 inside the admissible support range. These are declared finite families, rather than an exhaustive search over all shapes and widths. The reference single window has width three and center two.
 
 Table S8. Oracle optimal local influence variance and efficiency within each scalar window span. Information references are 144.187 for known initial state and 121.752 after initial-state projection. The table uses 8192 quadrature intervals and relative covariance-eigenvalue cutoff 1e-12.
 

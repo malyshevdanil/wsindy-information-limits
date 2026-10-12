@@ -1,0 +1,47 @@
+{
+  "stage": "efficiency_lorenz",
+  "protocol": {
+    "T": 4.0,
+    "h": 0.001,
+    "tau": 0.1,
+    "initial": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "truth": [
+      10.0,
+      28.0,
+      2.6666666666666665
+    ],
+    "level": 0.005,
+    "paths": 256,
+    "seed_base": 2500000,
+    "geometry_windows": [
+      30,
+      120,
+      480
+    ],
+    "fit_windows": 120,
+    "iterations": 100,
+    "tolerance": 1e-07,
+    "basis_relative_cutoff": 1e-10,
+    "covariance_relative_relaxation": 1e-10,
+    "pilot_box": [
+      [
+        5,
+        15
+      ],
+      [
+        20,
+        35
+      ],
+      [
+        1.5,
+        4
+      ]
+    ],
+    "scope": "three independent physical Lorenz parameters with other coefficients fixed by supplied structure; independent OU coordinates; exact degree-two residual covariance"
+  },
+  "source_sha256": "68c09ff139174c6510f7f64b52f43ff35175fac0948c7476af3de41939a6607b"
+}

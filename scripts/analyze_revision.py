@@ -249,7 +249,7 @@ def run(stage='revision'):
                         'converged_count':sum(r.get('converged',False) for r in group)})
     (ROOT/'reports/revision_results.json').write_text(json.dumps(report,indent=2,allow_nan=False))
     source=BASE/'article_revised.md';text=source.read_text(encoding='utf-8');begin='<!-- REVISION_RESULTS_START -->';end='<!-- REVISION_RESULTS_END -->'
-    if 'Efficient weak-form estimation under correlated measurement error' in text:
+    if begin not in text or end not in text:
         print(json.dumps({'status':'complete','benchmark_summary_cells':len(report['sparse']),'figures':6,'manuscript_update':'use analyze_efficiency.py'}))
         return
     text=text.split(begin)[0]+begin+'\n\n'+text_results(report)+'\n\n'+end+text.split(end)[1]

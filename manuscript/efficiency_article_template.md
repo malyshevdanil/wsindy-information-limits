@@ -1,7 +1,12 @@
 ---
-title: "Efficient weak-form estimation under correlated measurement error: fixed-horizon information limits and the cost of boundary-free test functions"
+title: "Efficient weak-form estimation with correlated noise: the cost of boundary-free tests"
+author: "Danil Romanovich Malyshev"
 lang: en-US
 ---
+
+Independent researcher, Almaty, Kazakhstan
+
+Corresponding author: malyshevdanil04@gmail.com
 
 ## Abstract
 
@@ -10,6 +15,8 @@ Weak-form dynamical identification avoids differentiating noisy measurements, bu
 **Keywords:** weak-form identification; correlated measurement error; fixed-domain asymptotics; Fisher information; polynomial covariance; errors in variables.
 
 ## 1. Introduction
+
+Boundary-vanishing weak equations can lose information even when an initial state is known, as recognized by orthogonality-condition estimation [@brunel2014] and recent weak identifiability work [@heitzman2026]. We quantify this effect: the closed class of boundary-free weak influences has exactly the local information available when the initial state is treated as a nuisance parameter in the full path likelihood. For an unknown initial state, this restriction causes no additional first-order information loss; for a known initial state, the lost information is the initial-sensitivity projection, and the retained information is its Schur complement. This is a local information statement, not an identity between finite-noise estimators.
 
 Data acquisition for dynamical identification involves three choices: how often to sample, how long to observe, and how many independent recordings to acquire. These choices have different statistical effects. Sampling more frequently improves numerical integration while repeatedly observing the same correlated error path. A longer recording may encounter new noise but little additional parameter sensitivity. Independent recordings can add information even when each individual trajectory remains statistically unresolved.
 
@@ -21,11 +28,21 @@ Continuous-time regression with correlated errors has an established optimal-des
 
 The continuum-data theory of WSINDy studies uncorrelated measurement errors and library-dependent consistency [@messenger2025]. Fixed physical correlation time defines a different experiment: adjacent correlations approach one as the mesh is refined. Correlation induced by filtering independently sampled errors also requires distinguishing a physical filter scale from a fixed number of sample indices. Our analysis concerns a fixed covariance process observed at increasingly dense times.
 
-Our main result identifies the complete boundary-free adjoint influence class and constructs the influence attaining its sharp information reference in covariance-norm closure. Correct temporal covariance and dense test spans then yield a conditional, sequential small-noise efficiency result for WENDy-like estimation. An explicit OU adjoint construction and exact polynomial residual weights make the reference computable. Continuous-regression BLUE, Gaussian projection and Hermite identities are established results [@dette2016; @isserlis1918]; the contribution is their precise connection through the ODE adjoint range, including the boundary restriction and the order of limits. Two experiments test the resulting predictions.
+Our main result identifies the complete boundary-free adjoint influence class and constructs the influence attaining its sharp information reference in covariance-norm closure. Correct temporal covariance and dense test spans then yield a conditional, sequential small-noise efficiency result for WENDy-like estimation. An explicit OU adjoint construction and exact polynomial residual weights make the reference computable. Continuous-regression BLUE, Gaussian projection and Hermite identities are established results [@dette2016; @isserlis1918]; the contribution is their precise connection through the ODE adjoint range, including the boundary restriction and the order of limits. Specifically, we prove (i) the exact closed weak class, (ii) its sharp information reference and an explicit OU optimal test, (iii) conditional dense-span efficiency of correct-covariance GLS with a concrete spline density lemma, and (iv) an estimator-independent fixed-horizon limit. Three dynamical systems and paired likelihood references test the resulting predictions.
 
 ## 2. Related estimation methods
 
+Statistical ODE estimation has long used smoothing to reduce repeated forward solves: spline least squares [@varah1982], nonparametric gradient matching [@brunel2008], measurement-error regression [@liang2008] and root-$n$ smooth-and-match estimation [@gugushvili2012]. Direct integral estimators have root-$n$ consistency for suitable linear-in-function parameterizations [@dattner2015]. Orthogonality-condition estimation already supplies weak moments, GMM weighting and boundary-information adaptations [@brunel2014]. Thus neither the qualitative boundary-loss idea nor optimally weighted moments originates here.
+
+Generalized profiling can be asymptotically efficient without explicitly solving the ODE, under its approximation and i.i.d. sampling assumptions [@ramsay2007; @qi2010]. One-step likelihood refinement of an ODE pilot is also established [@dattner2018]; Dattner and Klaassen [@dattner2015] discuss such refinements as a direction beyond their direct-estimator result. We do not propose replacing these efficient full-observation methods. The question is the optimum available to boundary-free weak equations, which also provide tractable moments for library-based structural discovery. The present theorem assumes supplied identifiable structure; the one-step computation below is a likelihood reference on the same correlated-noise records. These small supplied-structure examples remain tractable for likelihood refinement; computational superiority of weak estimation is not inferred from them.
+
+Gaussian regression geometry and small-noise efficiency belong to classical statistical theory [@parzen1961; @ibragimov1981; @kutoyants1994]. Here those principles are connected to the dynamical adjoint range. The distinction from prior qualitative boundary observations is the exact covariance-dual class, its sharp Schur-complement reference and the explicit OU representative.
+
 WENDy treats weak parameter estimation as an errors-in-variables problem and iteratively updates a linearized residual covariance [@bortz2023]. It retains perturbations of both the feature matrix and the response. We use the same coupled residual and compute every Gaussian order for polynomial features under the specified OU model. First-order truncation recovers the structure motivating weak reweighting, with temporal covariance inserted explicitly. Residual covariance is distinct from the covariance of the nonlinear coefficient estimator.
+
+WENDy-MLE optimizes an approximate Gaussian weak-residual likelihood with parameter-dependent covariance and analytic derivatives [@rummel2025]. Its likelihood contains both a log determinant and a covariance-weighted residual term; it is not identical to a frozen-weight GLS update. Tran and Bortz select local test radii by estimating quadrature error [@tran2026], while Fourier Weak SINDy selects informative sinusoidal frequencies spectrally [@chen2026]. These are relevant precedents for weak likelihoods and test design. The complementary question here is the complete adjoint influence class, its sharp initial-state information loss and the explicit OU optimal representative. We do not claim weak GLS or optimized test selection themselves as new methods.
+
+Finite-noise bias and uncertainty are also studied directly for WENDy-IRLS [@chawla2026]. Our bias/dispersion reporting concerns the specified correlated-noise experiment and does not replace these broader coverage studies.
 
 Errors-in-variables effects have a substantial statistical literature [@fuller1987]. Gaussian correction of nonlinear functions of a noisy mean also precedes weak identification [@stefanski1989]. Hermite correction removes pointwise polynomial bias when marginal noise variance is known; it does not remove random design–response coupling. Generalized smoothing and profiling estimate ODE parameters through a different compromise between model fidelity and observation error [@ramsay2007]. The information bound applies to these alternatives when they observe the same path experiment.
 
@@ -39,13 +56,13 @@ $$
 x'_i=f_i(x)=\sum_{j=1}^{p}\xi^*_{ji}\vartheta_j(x),\qquad i=1,\ldots,d.
 $$
 
-The library contains all true terms. Observations are $Y(t)=x_\theta(t)+\varepsilon(t)$, with independent stationary OU coordinates [@uhlenbeck1930] and common-across-parameter covariance
+The library contains all true terms. Observations are $Y(t)=x_\theta(t)+\eta_C(t)$, with independent stationary OU coordinates [@uhlenbeck1930] and common-across-parameter covariance
 
 $$
 C_j(s,t)=\sigma_j^2\exp(-|s-t|/\tau_j),\qquad \sigma_j>0,\quad\tau_j>0.
 $$
 
-The continuous record is a statistical reference experiment; actual data are evaluations $y_n=Y(t_n)$ at mesh $h$. Initial conditions are known unless stated otherwise; unknown initial conditions would introduce nuisance sensitivities.
+The continuous record is a statistical reference experiment; actual data are evaluations $y_n=Y(t_n)$ at mesh $h$. The initial state $u=x(0)$ is known in the baseline acquisition experiment; Sections 5 and 8 compare known and unknown $u$ explicitly. The symbol $Z$ denotes its fundamental sensitivity matrix, $h$ the observation mesh, $\epsilon$ a scalar noise amplitude, and $C$ the continuous covariance operator. Finite weak covariance matrices are denoted by $\Sigma$. In Corollary 1, $C$ is the unit-amplitude covariance shape and the physical covariance is $\epsilon^2 C$.
 
 Fix $K$ test functions $\phi_k\in C_c^2(0,T)$. Their positions and full support widths $L$ remain fixed as $h$ decreases. Let $\mathcal Q_h$ be composite trapezoidal quadrature with weights $w_n$. Clean weak quantities are
 
@@ -54,7 +71,7 @@ G^0_{kj}=\int_0^T\phi_k\vartheta_j(x)\,dt,\qquad
 b^0_{ki}=-\int_0^T\phi'_kx_i\,dt,\qquad b^0=G^0\xi^*.
 $$
 
-Noisy matrices use corrected polynomial features $\widetilde\vartheta_j$, defined in Section 5:
+Noisy matrices use corrected polynomial features $\widetilde\vartheta_j$, defined in Section 6:
 
 $$
 (G_h)_{kj}=\mathcal Q_h(\phi_k\widetilde\vartheta_j(y)),\qquad
@@ -63,11 +80,11 @@ $$
 
 Physical OU infill sets $\rho(h)=\exp(-h/\tau)$ with fixed $T,\tau$. An iid discrete control has independent error of fixed per-sample variance. Fixed-index AR(1) instead keeps $\rho<1$ constant, making the physical correlation time $-h/\log\rho\to0$. These models have different continuum limits.
 
-## 4. An estimator-independent fixed-horizon limit
+## 4. Fixed-horizon information limits
 
 ### 4.1. OU translation geometry
 
-The stationary OU process satisfies $d\varepsilon_j=-\varepsilon_jdt/\tau_j+\sqrt{2\sigma_j^2/\tau_j}\,dW_j$, with an independent initial value $\varepsilon_j(0)\sim N(0,\sigma_j^2)$. Its Cameron–Martin space is $H^1([0,T];\mathbb R^d)$ as a set, with norm
+The stationary OU process satisfies $d\eta_{C,j}=-\eta_{C,j}dt/\tau_j+\sqrt{2\sigma_j^2/\tau_j}\,dW_j$, with an independent initial value $\eta_{C,j}(0)\sim N(0,\sigma_j^2)$. Its Cameron–Martin space is $H^1([0,T];\mathbb R^d)$ as a set, with norm
 
 $$
 \|g\|_{\mathcal H}^2=\sum_j\left\{\frac{g_j(0)^2}{\sigma_j^2}+
@@ -134,7 +151,7 @@ For $D_\phi=\int\phi x_a\ne0$, a scalar weak ratio has limit
 $$
 \widehat a_h=\frac{-\mathcal Q_h(\phi'Y)}{\mathcal Q_h(\phi Y)}
 \longrightarrow a+\frac{A}{D_\phi+B},\qquad
-A=\int(-\phi'-a\phi)\varepsilon,\quad B=\int\phi\varepsilon.
+A=\int(-\phi'-a\phi)\eta_C,\quad B=\int\phi\eta_C.
 $$
 
 OU path continuity gives almost sure convergence of the quadratures. The weights $\phi$ and $-\phi'-a\phi$ are independent: dependence would make a nonzero compactly supported function solve a homogeneous first-order equation. The OU kernel is strictly positive on nonzero weights, so $(A,B)$ is nondegenerate Gaussian. Positive conditional variance of $A$ given $B$ and positive denominator density at zero imply infinite absolute and squared error moments of the unguarded ratio. Its empirical summaries should use quantiles or explicit guards.
@@ -148,9 +165,11 @@ $$
 
 This efficiency concerns the Gaussian linearization; it is not the unguarded ratio's variance.
 
-### 4.3. Exact boundary-free influence class
+## 5. Boundary-free weak class and efficiency
 
-Let $J\in C^1([0,T];\mathbb R^{d\times d})$, and let the invertible fundamental matrix satisfy $Z'=JZ$, $Z(0)=I_d$. Put $A h=h'-Jh$ and $A^*\phi=-\phi'-J^T\phi$. Sensor coordinates have independent stationary OU covariance with fixed positive scales. Its Cameron–Martin space $\mathcal H$ is $H^1$ with the OU inner product. Write $\mathcal E=\mathcal H'$ for its continuous dual, equipped with the covariance norm
+### 5.1. Exact boundary-free influence class
+
+Let $J\in C^1([0,T];\mathbb R^{d\times d})$, and let the invertible fundamental matrix satisfy $Z'=JZ$, $Z(0)=I_d$. Put $\mathcal D v=v'-Jv$ and $\mathcal D^*\phi=-\phi'-J^T\phi$. Sensor coordinates have independent stationary OU covariance with fixed positive scales. Its Cameron–Martin space $\mathcal H$ is $H^1$ with the OU inner product. Write $\mathcal E=\mathcal H'$ for its continuous dual, equipped with the covariance norm
 
 $$
 \|\lambda\|_C^2=\langle\lambda,C\lambda\rangle,
@@ -158,35 +177,45 @@ $$
 \langle C^{-1}g,h\rangle=\langle g,h\rangle_{\mathcal H}.
 $$
 
-This definition includes ordinary integrated influences and endpoint evaluation measures. It is the variance norm of the associated Gaussian linear observation; the noise path itself need not belong to $\mathcal H$.
+This definition includes ordinary integrated influences and endpoint evaluation measures. General dual influences act through the $L^2(P)$ closure of integrated Gaussian observations, rather than a pathwise pairing for every distribution. Their variance norm is $\|\lambda\|_C$; the noise path itself need not belong to $\mathcal H$.
 
 **Proposition 2 (exact range and closure).** In $L^2$,
 
 $$
-A^*H_0^1
+\mathcal D^*H_0^1
 =\left\{\ell\in L^2:\int_0^T Z(t)^T\ell(t)dt=0\right\}.
 $$
 
 The range of compactly supported smooth tests is dense in this space in $L^2$. Its closure in $\mathcal E$ is exactly
 
 $$
-\mathcal M=\overline{A^*C_c^\infty}^{\|\cdot\|_C}
+\mathcal M=\overline{\mathcal D^*C_c^\infty}^{\|\cdot\|_C}
 =\{\lambda\in\mathcal E:\langle\lambda,Z_j\rangle=0, j=1,\ldots,d\}.
 $$
 
 Consequently $\mathcal M$ has codimension $d$.
 
-**Proof.** Since $Z^TA^*\phi=-(Z^T\phi)'$, zero endpoint values imply the moment constraint. Conversely, for an $L^2$ influence with zero moment,
+**Proof.** Since $Z^T\mathcal D^*\phi=-(Z^T\phi)'$, zero endpoint values imply the moment constraint. Conversely, for an $L^2$ influence with zero moment,
 
 $$
 \phi(t)=-Z(t)^{-T}\int_0^t Z(s)^T\ell(s)ds
 $$
 
-belongs to $H_0^1$ and satisfies $A^*\phi=\ell$. Approximation in $H_0^1$ by $C_c^\infty$ and continuity of $A^*:H_0^1\to L^2$ give $L^2$ density. For the stronger closure statement, a function $h\in\mathcal H$ annihilates every $A^*\phi$ if and only if $Ah=0$ distributionally, hence $h=Zc$. The Hahn–Banach annihilator characterization of a closed subspace then gives the stated closure in $\mathcal H'$. The columns of $Z$ are linearly independent elements of $\mathcal H$, so their dual constraints have rank $d$. $\square$
+belongs to $H_0^1$ and satisfies $\mathcal D^*\phi=\ell$. Approximation in $H_0^1$ by $C_c^\infty$ and continuity of $\mathcal D^*:H_0^1\to L^2$ give $L^2$ density. For the stronger closure statement, a function $v\in\mathcal H$ annihilates every $\mathcal D^*\phi$ if and only if $\mathcal D v=0$ distributionally, hence $v=Zc$. The Hahn–Banach annihilator characterization of a closed subspace then gives the stated closure in $\mathcal H'$. The columns of $Z$ are linearly independent elements of $\mathcal H$, so their dual constraints have rank $d$. $\square$
 
-Zero values at the endpoints do not imply compact support. Equality for literal compact tests, without a closure or an $H_0^1$ qualification, would be false. The relevant closure uses the covariance norm, which is equivalent to the dual Sobolev norm for this positive OU model.
+The exact range uses zero-endpoint Sobolev tests; literal compact tests require closure. The covariance norm is equivalent to the dual Sobolev norm for this positive OU model.
 
-### 4.4. Sharp information and optimal influence
+**Lemma 1 (a concrete dense test family).** Let $V_m$ be vector-valued continuous piecewise-linear splines on the nested uniform dyadic partitions of $[0,T]$, with zero values at both endpoints. Then
+
+$$
+\overline{\bigcup_m\mathcal D^*V_m}^{\|\cdot\|_C}=\mathcal M.
+$$
+
+**Proof.** Given $v\in H_0^1$, choose $\psi\in C_c^\infty$ close to $v$ in $H^1$. Its nodal interpolant $I_m\psi\in V_m$ satisfies $\|I_m\psi-\psi\|_{H^1}\leq c\Delta_m\|\psi''\|_{L^2}$, where $\Delta_m$ is the mesh width. The union of $V_m$ is therefore dense in $H_0^1$. Continuity of $\mathcal D^*:H_0^1\to L^2$ and of the embedding $L^2\hookrightarrow\mathcal H'$ transfers this approximation to the covariance norm. Proposition 2 identifies the closure of $\mathcal D^*H_0^1$ with $\mathcal M$. $\square$
+
+These splines are admissible zero-endpoint Sobolev tests; they need not vanish in an endpoint neighborhood. If literal smooth compact tests are required, approximate each spline in $H_0^1$ by such tests. Thus Lemma 1 provides an explicit family for the density condition in Corollary 1. It does not assert density of the finite multiscale bump families used in the experiments.
+
+### 5.2. Sharp information and optimal influence
 
 Let $S=[S_1,\ldots,S_p]\in\mathcal H^p$ be coefficient sensitivities, and form the joint information blocks for $S$ and $Z$. Assume $\mathcal I_{uu}$ and the Schur complement are positive definite. Set
 
@@ -221,9 +250,9 @@ $$
 
 For attainability as an infimum, approximate each column of $\Lambda_*$ by compact-test influences in covariance norm. Their normalization matrices converge to $I_p$ by continuous pairing with $S$; right-multiplication by their inverse transpose enforces exact normalization while preserving the range and covariance convergence. $\square$
 
-This is a matrix statement. Dividing a vector influence by a scalar information is valid only when $p=1$. The information loss is exactly $\mathcal I_{\theta u}\mathcal I_{uu}^{-1}\mathcal I_{u\theta}$; covariance inflation is $\mathcal I_e^{-1}-\mathcal I_{\theta\theta}^{-1}$. There is no direction-independent scalar loss percentage in general.
+For an unknown initial state, $\mathcal I_e$ is the full likelihood nuisance-adjusted information, so this weak restriction has no further first-order cost. When the initial state is known, the information loss is exactly $\mathcal I_{\theta u}\mathcal I_{uu}^{-1}\mathcal I_{u\theta}$; covariance inflation is $\mathcal I_e^{-1}-\mathcal I_{\theta\theta}^{-1}$. There is no direction-independent scalar loss percentage in general. When $u$ is known, $Y(0)-u$ also reveals the initial stationary measurement error, which remains correlated with later observations. The unrestricted score can exploit that observation while the weak influence must retain its initial-sensitivity annihilation constraint.
 
-### 4.5. Explicit optimal OU test
+### 5.3. Explicit optimal OU test
 
 For a scalar coordinate with $g\in H^2$, integration by parts in the stationary OU norm gives the dual measure
 
@@ -243,7 +272,7 @@ $$
 \left[Z(0)^Tm_0+\int_0^t Z(s)^Tm(s)ds\right].
 $$
 
-Extend it by zero outside the observation interval. Its endpoint jumps supply $m_0=-\Phi_*(0+)$ and $m_T=\Phi_*(T-)$, and distributionally $A^*\Phi_*=\Lambda_*$. These formulas include the initial atom; omitting it in the cumulative integral is incorrect. The annihilation condition supplies the terminal jump. Cutoff and smoothing approximate this generalized test in covariance norm. These measures describe a statistical reference; the implemented estimators keep compact tests and add no explicit boundary observation terms.
+Extend it by zero outside the observation interval. Its endpoint jumps supply $m_0=-\Phi_*(0+)$ and $m_T=\Phi_*(T-)$, and distributionally $\mathcal D^*\Phi_*=\Lambda_*$. These formulas include the initial atom; omitting it in the cumulative integral is incorrect. The annihilation condition supplies the terminal jump. Cutoff and smoothing approximate this generalized test in covariance norm. These measures describe a statistical reference; the implemented estimators keep compact tests and add no explicit boundary observation terms.
 
 For scalar exponential dynamics, $z=e^{at}$, $s=x_0te^{at}$, $k=\mathcal I_{au}/\mathcal I_{uu}$ and $g=e^{at}(x_0t-k)$. Define
 
@@ -266,9 +295,9 @@ $$
 
 For $a\ne0$, $F_0=\operatorname{expm1}(2at)/(2a)$ and $F_1=[e^{2at}(2at-1)+1]/(4a^2)$; their continuous limits at $a=0$ are $t$ and $t^2/2$. A pilot coefficient substitutes into this expression before a compact cutoff is applied. The explicit multivariate fundamental-matrix expression is an analytical identity, not a guarantee of stable numerical inversion of $Z(t)$; strongly contracting dynamics can make that inversion ill-conditioned.
 
-### 4.6. Correct-covariance GLS and dense spans
+### 5.4. Correct-covariance GLS and dense spans
 
-For tests $\phi_k$, put $\lambda_k=A^*\phi_k$, $D_{kr}=\langle\lambda_k,S_r\rangle$ and $\Sigma_{k\ell}=\langle\lambda_k,C\lambda_\ell\rangle$. Remove exact linear dependencies. If $D$ has full column rank, covariance-weighted weak regression has local influence and covariance
+For tests $\phi_k$, put $\lambda_k=\mathcal D^*\phi_k$, $D_{kr}=\langle\lambda_k,S_r\rangle$ and $\Sigma_{k\ell}=\langle\lambda_k,C\lambda_\ell\rangle$. Remove exact linear dependencies. If $D$ has full column rank, covariance-weighted weak regression has local influence and covariance
 
 $$
 P=(D^T\Sigma^{-1}D)^{-1}D^T\Sigma^{-1},\qquad
@@ -277,7 +306,16 @@ $$
 
 WENDy's covariance iteration motivates this construction [@bortz2023], but the released iid covariance is not the correct physical-OU covariance. Under polynomial features Proposition 3 supplies the complete coupled residual weights. Its order-one term determines the small-noise efficient influence; higher orders correct residual uncertainty at finite amplitude without by themselves removing coefficient-estimator bias.
 
-**Corollary 1 (small-noise, dense-span efficiency).** Let the noise be $\epsilon Z_C$ with known covariance shape $C$. Assume a smooth identifiable parameterization, a generating parameter interior to a compact parameter set, consistent pilots, consistent covariance-shape weights and quadrature error $o(\epsilon)$. For each fixed finite test family assume a regular local weak solution with the GLS linearization. For the covariance conclusion additionally assume uniform integrability of $\|\epsilon^{-1}(\widehat\theta_{K,\epsilon}-\theta)\|^2$. A sufficient implementation uses a uniformly stable smooth local solve, Gaussian moment control on the local Taylor remainder, and bounded fallback outside the regular region whose probability is $o(\epsilon^2)$. Then
+The same leading map arises from a parameter-dependent Gaussian weak likelihood of the form studied by WENDy-MLE [@rummel2025], provided the covariance shape is correct and the local solution is regular. For fixed dimension write $r(\theta)=\epsilon r_1+o_p(\epsilon)$, $\partial_\theta r=-D+o_p(1)$ and $\Sigma_\epsilon(\theta)=\epsilon^2\Sigma_0(\theta)$, with smooth positive definite $\Sigma_0$. The objective $\log\det\Sigma_\epsilon+r^T\Sigma_\epsilon^{-1}r$ has covariance-derivative and log-determinant score terms of order $O_p(1)$ in an $O_p(\epsilon)$ neighborhood; its mean-residual score is of order $O_p(\epsilon^{-1})$. The local score equation therefore gives
+
+$$
+\widehat\theta-\theta=\epsilon
+(D^T\Sigma_0^{-1}D)^{-1}D^T\Sigma_0^{-1}r_1+o_p(\epsilon).
+$$
+
+Thus the log determinant and covariance derivatives distinguish finite-noise weak likelihood from frozen GLS, while both share the correct-covariance leading influence under these assumptions. This connects Corollary 1 to a regular local weak-likelihood estimator; it does not supply global optimization or covariance-calibration consistency for a released implementation.
+
+**Corollary 1 (small-noise, dense-span efficiency).** Let the noise be $\epsilon\eta_C$ with known covariance shape $C$. Assume a smooth identifiable parameterization, a generating parameter interior to a compact parameter set, consistent pilots, consistent covariance-shape weights and quadrature error $o(\epsilon)$. For each fixed finite test family assume a regular local weak solution with the GLS linearization. For the covariance conclusion additionally assume uniform integrability of $\|\epsilon^{-1}(\widehat\theta_{K,\epsilon}-\theta)\|^2$. A sufficient implementation uses a uniformly stable smooth local solve, Gaussian moment control on the local Taylor remainder, and bounded fallback outside the regular region on a bad event whose probability is $o(\epsilon^2)$. Then
 
 $$
 \epsilon^{-1}(\widehat\theta_{K,\epsilon}-\theta)
@@ -293,19 +331,19 @@ $$
 
 **Proof.** For fixed $K$, a first-order expansion of the weak equations gives $D(\widehat\theta-\theta)=\epsilon r_1+o_p(\epsilon)$ with the GLS map above. Consistent pilots and weights change the leading map by $o_p(1)$; derivatives of pilot-dependent tests multiply the zero clean residual. Gaussianity gives the distributional assertion; the stated risk condition justifies covariance convergence. In the Gaussian dual space, finite-family information is the Gram matrix of the orthogonal projection of $C^{-1}R$ onto its test span. Density gives projection convergence, and nested spans give increasing information; continuity of inversion at positive definite $\mathcal I_e$ gives covariance convergence. $\square$
 
-The conclusion is sequential: first small noise and controlled quadrature for fixed $K$, then dense spans. A diagonal joint limit requires uniform remainder, conditioning and covariance-weight control that are not supplied here. This theorem concerns regular WENDy-like weak estimation with correct covariance and supplied identifiable structure, not all implementations called WENDy, finite-noise sparse selection, or a universal plateau for misspecified iid weighting. A fixed basis cutoff must be compatible with the density assumption; discarding an informative direction permanently can invalidate it.
+The conclusion is sequential: first small noise and controlled quadrature for fixed $K$, then dense spans. A diagonal joint limit requires uniform remainder, conditioning and covariance-weight control that are not supplied here. This theorem concerns regular WENDy-like weak estimation with correct covariance and supplied identifiable structure. The conditional result covers the leading GLS map, rather than an algorithm name or finite-noise support-selection procedure. A fixed basis cutoff must be compatible with the density assumption; discarding an informative direction permanently can invalidate it.
 
 
-## 5. Exact polynomial weak-residual covariance
+## 6. Exact polynomial weak-residual covariance
 
-### 5.1. Finite Hermite expansion
+### 6.1. Finite Hermite expansion
 
 Assume a common $\tau$ for independent coordinates, and set $v_j=\sigma_j^2$. Define $H_0=1$, $H_1=u$, $H_{q+1}=uH_q-qvH_{q-1}$ and corrected monomials $\widetilde\vartheta_\beta(y)=\prod_jH_{\beta_j}(y_j;v_j)$. Their expectation given $x$ is $x^\beta$. This Gaussian debiasing construction [@stefanski1989] centers the polynomial residual at the true coefficients.
 
 For continuum residual $r_{ki}=b_{ki}-(G\xi^*)_{ki}$, polynomial expansion gives
 
 $$
-r_{ki}=\sum_{1\leq|\alpha|\leq p_*}\int_0^Tc_{ki,\alpha}(t)H_\alpha(\varepsilon(t);v)dt,
+r_{ki}=\sum_{1\leq|\alpha|\leq p_*}\int_0^Tc_{ki,\alpha}(t)H_\alpha(\eta_C(t);v)dt,
 $$
 
 where $p_*\geq1$ is the relevant maximum degree, $H_\alpha=\prod_jH_{\alpha_j}$ and
@@ -330,7 +368,7 @@ $$
 
 The order-one covariance supplies the GLS weights required by Corollary 1. Higher orders refine residual weights at finite amplitude; they do not alone remove coefficient bias. Order $q$ has correlation time $\tau/q$. Higher orders need not be negligible at moderate amplitude. Different windows and equations remain correlated despite independent sensor coordinates. The covariance is exact for a supplied clean trajectory and true polynomial; plugging in estimates introduces another approximation.
 
-### 5.2. Raw features and efficient evaluation
+### 6.2. Raw features and efficient evaluation
 
 For correction variance $\widehat v$, define
 
@@ -349,40 +387,29 @@ $$
 
 with zero exterior initialization. Each multi-index costs $O(N(Kd)^2)$ time and $O(NKd+(Kd)^2)$ memory, avoiding an $N\times N$ temporal matrix. An independent fixed-variance nugget has additional diagonal-in-time covariance; its linear weak contribution is $O(h)$. The exact mixed-noise formula is in the supplement.
 
-### 5.3. Local coefficient uncertainty
-
-Fix a supplied support with full-rank clean design. In a small-noise coupling $\varepsilon=\sigma Z$, polynomial smoothness and pseudoinverse continuity give, for each fixed path near the clean design,
-
-$$
-\widehat\xi-\xi^*=\sigma P_0r_1+O_Z(\sigma^2),\qquad
-\Sigma_{\mathrm{lin}}=P_0\Sigma_{r,1}P_0^T.
-$$
-
-$P_0$ maps the joint residual ordered by window and equation to the supplied coefficient coordinates, retaining cross-equation covariance. $\Sigma_{r,1}$ contains Gaussian order one. Discrete validation subtracts the noise-free discrete fit to isolate quadrature error. This pathwise expansion defines a Gaussian surrogate, rather than an unconditional moment expansion. A singular-value guard specifies the conditional region for actual coefficient-covariance validation.
-
-## 6. Sampling and the scope of efficiency
+## 7. Sampling and the scope of efficiency
 
 Theorem 1 applies at fixed physical noise covariance and fixed horizon. Corollary 1 concerns a different limit: decreasing noise for each fixed test family, followed by dense test spans. Increasing the grid density improves the quadrature approximation; it does not replace either limit. Increasing the number of tests improves approximation of an admissible influence but cannot recover the initial-state information excluded by Proposition 2.
 
 Independent records add their sensitivity information. Longer records add useful information only while parameter sensitivities remain appreciable. For scalar decay, information approaches a finite limit as duration increases. These distinctions and numerical acquisition and aggregation checks are detailed in S9. Averaging corrected weak matrices and stacking noisy regressions are different estimating equations; the latter can retain errors-in-variables bias [@fuller1987].
 
-## 7. Two tests of the efficiency prediction
+## 8. Tests of the efficiency prediction
 
-Both experiments use known covariance shape and supplied identifiable structure. They test feasible weak-estimation components, separately from the complete author pipelines archived in S6 and S9.6. No true parameter is supplied to a feasible pilot. Deterministic geometry calculations use true parameters only as local references. All computations execute on Kaggle; protocols, seeds, source fingerprints and output archives are preserved.
+The principal comparisons use supplied identifiable structure and known covariance shape; an additional sensitivity check fits the noise shape from data. They test feasible weak-estimation components, separately from the complete author pipelines archived in S6 and S9.6. No true parameter is supplied to a feasible pilot. Deterministic geometry calculations use true parameters only as local references. Protocols, seeds, source fingerprints and output archives are preserved in the public reproducibility archive.
 
 @@NUMERICAL@@
 
-## 8. Discussion and limitations
+## 9. Discussion and limitations
 
 The adjoint-range characterization turns the initial-sensitivity constraint into an exact description of the closed influence class. Its sharp optimum follows from classical Gaussian projection, and the OU inverse covariance makes an optimal generalized test explicit. Endpoint atoms explain why compact tests generally approach the optimum without attaining it. The constructed scalar cutoff uses compact tests throughout; this article does not test an estimator with additional boundary terms.
 
 Correct covariance weighting is optimal within a fixed span. Density in the covariance norm is required to approach the class bound. A well-conditioned representation changes computation, not the underlying span. An explicit fundamental-matrix inverse may itself be ill-conditioned for a contracting dynamical direction. The multiscale calculation therefore uses a fixed, data-independent basis transformation and reports retained dimensions and numerical relaxation.
 
-Corollary 1 requires consistent pilots, correct covariance shape, a regular local estimator, controlled quadrature and risk conditions. Its limits are sequential. It does not prove a joint window-growth/noise-decay limit, global convergence of covariance iterations, efficiency after sparse support selection, or efficiency of the released iid WENDy implementation under OU noise. A finite nested family does not establish density of an infinite family. The iid comparison tests a specified misspecification and does not establish a universal limiting plateau.
+The efficiency conclusion applies to the local GLS map under the regularity and risk assumptions of Corollary 1. Global covariance-iteration behavior, sparse support selection and simultaneous test-growth/noise-decay limits require additional analysis. Lemma 1 supplies a dense spline family, while the finite bump experiment tests approximation at three declared dimensions. Its iid comparison concerns this specific misspecification.
 
-Exact residual covariance and marginal Hermite correction address distinct parts of the weak errors-in-variables problem. At finite noise, random design and pilot errors can still produce bias and excess dispersion. The numerical comparison therefore reports RMSE, bias, dispersion, stopping diagnostics and uncertainty, rather than equating a median error with a covariance bound. Supplementary complete-pipeline results use a different 16-path protocol and are not pooled with the new 128-path experiment.
+Exact residual covariance and marginal Hermite correction address distinct parts of the weak errors-in-variables problem. At finite noise, random design and pilot errors can still produce bias and excess dispersion. The numerical comparison therefore reports RMSE, bias, dispersion, stopping diagnostics and uncertainty, rather than equating a median error with a covariance bound. The separate 16-path complete-pipeline benchmark is retained as context; the matched 128-path WENDy comparison and the 2000-path small-noise weighting study address distinct practical questions.
 
-The analysis assumes fully observed deterministic ODEs and additive stationary Gaussian measurement error with known positive covariance common across parameters. Unknown covariance, partial observation and process noise are outside the theorem proved here. The scope is an information reference and its weak approximation, rather than a general ranking of identification algorithms.
+The analysis assumes fully observed deterministic ODEs and additive stationary Gaussian measurement error with known positive covariance common across parameters. Unknown covariance, partial observation and process noise are outside the theorem proved here. The feasible vector implementation uses one fitted-trajectory solve to stabilize covariance weights. It therefore tests a statistical efficiency mechanism and does not establish a forward-solve-free or runtime-optimal algorithm. The result provides a local information reference for boundary-free weak estimation. The matched finite-noise comparison and the full-pipeline benchmark illustrate its practical scope; they do not establish a general algorithm ranking.
 
 ## Declaration of generative AI and AI-assisted technologies
 

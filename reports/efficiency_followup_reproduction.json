@@ -1,0 +1,72 @@
+{
+  "completed": true,
+  "fresh_code_and_data_zip_extraction": true,
+  "all_statistics_intervals_and_manuscript_text_identical": true,
+  "files": [
+    {
+      "path": "reports/efficiency_results.json",
+      "sha256": "33e9c17951910553f8de3be925dd61943bcfaca1593ce11e31c0a46803665ed7",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/efficiency_followup_results.json",
+      "sha256": "bf73f87a93a5cc5d90d84ded06d86a12fba9079b32a510a8495e88dabfc0fbdf",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/information_followup_results.json",
+      "sha256": "1071c06bbb7aaa360c2a053e202ee6cb02a78d001d239250983e50fd6410e178",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/independent_records_results.json",
+      "sha256": "c3bd00ae019c85c3ee1a2e1ffa17272998f08d52da1f92d4736fac7de9d1776f",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/record_bootstrap_results.json",
+      "sha256": "afd2540c83291de4543409a33f5fa653bfeaf3e974de28d9321042cfcb95e1b3",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/heterogeneous_records_results.json",
+      "sha256": "d0ee407e08ef1bcee34b6375e6b3de7e9f1efc1762a27adae825168d2ec6a7c4",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/moderate_likelihood_results.json",
+      "sha256": "3e0c3843d4c1e688cfed09ed9d9b8fe189e6310e271f2e47875dcb3a6baf83e4",
+      "byte_identical": true
+    },
+    {
+      "path": "manuscript/heterogeneous_records_theory.md",
+      "sha256": "9472ec73ddc28f45423325067e6003116953f41c6608a03254128123af0ad8d8",
+      "byte_identical": true
+    },
+    {
+      "path": "manuscript/independent_records_theory.md",
+      "sha256": "f5bbe1f1610b1b9d1fe855194a26e550a233cf7712646d715771f82e7721206a",
+      "byte_identical": true
+    },
+    {
+      "path": "manuscript/article_revised.md",
+      "sha256": "6521be24a07ce9af2f6864122f41ab494a37ddbcf88750eecba00d91e26c3105",
+      "byte_identical": true
+    },
+    {
+      "path": "manuscript/supplement.md",
+      "sha256": "bdde6b6d76e9d181d51033938697235d142b156c543f7fc283a0abe81ab45302",
+      "byte_identical": true
+    },
+    {
+      "path": "manuscript/weak_efficiency_theory.md",
+      "sha256": "797fd7b772177deacf5b8c168a1cee0e66e284648e1dd52459b9ab710ab0acce",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/efficiency_followup_RU.md",
+      "sha256": "acbf7f3f32ab47ff67f6ccd6bd72cccca041f6064cc02fd91752f9a560e0e5dd",
+      "byte_identical": true
+    }
+  ]
+}

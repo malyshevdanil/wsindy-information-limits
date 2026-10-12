@@ -14,8 +14,8 @@ def scalar_information(a,x0,T,tau,sigma):
     return Iaa,Iau,Iuu,Iaa-Iau*Iau/Iuu
 
 
-def scalar_optimal_test(t,a,x0,T,tau,sigma,delta):
-    """Smooth the optimal adjoint test; no endpoint observations enter the fit."""
+def scalar_generalized_test(t,a,x0,T,tau,sigma):
+    """Interior values of the optimal test, with nonzero endpoint traces."""
     Iaa,Iau,Iuu,Ieff=scalar_information(a,x0,T,tau,sigma)
     k=Iau/Iuu
     A=(1-tau*tau*a*a)*x0/(2*sigma*sigma*tau)
@@ -30,6 +30,12 @@ def scalar_optimal_test(t,a,x0,T,tau,sigma,delta):
     phi=-np.exp(-a*t)*(atom0+A*F1+B*F0)/Ieff
     density=np.exp(a*t)*(A*t+B)/Ieff
     derivative=-a*phi-density
+    return phi,derivative
+
+
+def scalar_optimal_test(t,a,x0,T,tau,sigma,delta):
+    """Smooth the optimal adjoint test; no endpoint observations enter the fit."""
+    phi,derivative=scalar_generalized_test(t,a,x0,T,tau,sigma)
     def ramp(distance):
         z=np.clip((distance-delta/4)/(3*delta/4),0,1)
         eta=z**3*(10-15*z+6*z*z)

@@ -1,0 +1,37 @@
+{
+  "completed": true,
+  "stages": [
+    {
+      "stage": "independent_records_0",
+      "execution_fingerprint_verified": true,
+      "source_protocol_verified": true,
+      "archive_crc_and_bytes_verified": true,
+      "fixture_recomputed": true
+    },
+    {
+      "stage": "independent_records_1",
+      "execution_fingerprint_verified": true,
+      "source_protocol_verified": true,
+      "archive_crc_and_bytes_verified": true,
+      "fixture_recomputed": true
+    },
+    {
+      "stage": "independent_records_2",
+      "execution_fingerprint_verified": true,
+      "source_protocol_verified": true,
+      "archive_crc_and_bytes_verified": true,
+      "fixture_recomputed": true
+    },
+    {
+      "stage": "independent_records_3",
+      "execution_fingerprint_verified": true,
+      "source_protocol_verified": true,
+      "archive_crc_and_bytes_verified": true,
+      "fixture_recomputed": true
+    }
+  ],
+  "all_repetitions_retained": true,
+  "coverage_and_sandwich_verified": true,
+  "independent_records": 800000,
+  "planned_estimates": 15000
+}

@@ -55,7 +55,7 @@ def main(publication=False):
         import pymupdf
         article=(ROOT/'manuscript/article_revised.md').read_text(encoding='utf-8')
         supplement=(ROOT/'manuscript/supplement.md').read_text(encoding='utf-8')
-        assert '### 4.3.' in article and '### 4.4.' in article
+        assert '### 5.1.' in article and '### 5.2.' in article
         assert '## Declaration of generative AI and AI-assisted technologies' in article
         assert '## Data availability' in article
         archive=json.loads((ROOT/'configs/public_archive.json').read_text())

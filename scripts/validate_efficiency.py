@@ -68,25 +68,28 @@ def main(publication=False):
         supp=(ROOT/'manuscript/supplement.md').read_text(encoding='utf-8')
         assert not re.search(r'[\u0400-\u04ff]',text+supp), 'Corrupted non-English text in manuscript'
         assert not re.search(r'[\x00-\x08\x0b\x0c\x0e-\x1f]',text+supp), 'Control character in manuscript'
-        assert all(f'### 4.{i}.' in text for i in range(1,7))
+        assert all(f'### 4.{i}.' in text for i in range(1,3))
+        assert all(f'### 5.{i}.' in text for i in range(1,5))
+        assert '**Lemma 1 ' in text
         assert all(f'**Proposition {i} ' in text for i in range(1,4))
         assert '**Theorem 2 ' in text and '**Corollary 1 ' in text
         assert 'sequential' in text and 'uniform integrability' in text
         assert 'malyshevdanil' not in supp and 'credentials' not in supp
         assert not re.search(r'abandoned grid diagnostic|initial custom-STLS pilot|historical|earlier 4,000-path experiment|fresh validation',text,re.I)
-        assert len(Document(ROOT/'manuscript/article_revised.docx').tables)==3
-        assert len(Document(ROOT/'manuscript/article_revised.docx').inline_shapes)==2
-        assert len(Document(ROOT/'manuscript/supplement.docx').tables)==11
+        assert len(Document(ROOT/'manuscript/article_revised.docx').tables)==6
+        assert len(Document(ROOT/'manuscript/article_revised.docx').inline_shapes)==5
+        assert len(Document(ROOT/'manuscript/supplement.docx').tables)==17
+        assert '**Theorem 3 ' in text and 'Independent researcher, Almaty, Kazakhstan' in text
         tables=re.findall(r'^Table (S\d+)\.',supp,flags=re.M)
-        assert tables==[f'S{i}' for i in range(1,12)]
+        assert tables==[f'S{i}' for i in range(1,18)]
         for name in ('article_revised','supplement','weak_efficiency_theory'):
             with pymupdf.open(ROOT/f'manuscript/{name}.pdf') as pdf:
                 prose='\n'.join(p.get_text() for p in pdf)
                 assert len(prose)>2000
                 if name=='article_revised':
-                    assert all(f'Table {i}.' in prose for i in range(1,4))
+                    assert all(f'Table {i}.' in prose for i in range(1,7))
                     assert 'Data availability' in prose and 'Sharp information' in prose
-                if name=='supplement':assert all(f'Table S{i}.' in prose for i in range(1,12))
+                if name=='supplement':assert all(f'Table S{i}.' in prose for i in range(1,18))
         result['theorem_conditions_sequential_numbering_main_and_supplement_verified']=True
     (ROOT/'reports/efficiency_validation.json').write_text(json.dumps(result,indent=2))
     print(json.dumps(result))

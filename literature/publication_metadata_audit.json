@@ -989,5 +989,885 @@
     "volume": "44",
     "page": "113-152",
     "article_number": null
+  },
+  {
+    "key": "tran2026",
+    "doi": "10.1137/25M1776020",
+    "status": "metadata_verified",
+    "title": [
+      "Weak Form Scientific Machine Learning: Test Function Construction for System Identification"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0007-5319-7619",
+        "authenticated-orcid": true,
+        "given": "April",
+        "family": "Tran",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Applied Mathematics, University of Colorado, Boulder, CO 80309-0526 USA."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1163-7317",
+        "authenticated-orcid": true,
+        "given": "David M.",
+        "family": "Bortz",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Applied Mathematics, University of Colorado, Boulder, CO 80309-0526 USA."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          28
+        ]
+      ]
+    },
+    "volume": "48",
+    "page": "C890-C915",
+    "article_number": null
+  },
+  {
+    "key": "chawla2026",
+    "doi": "10.1007/978-3-032-16368-4_86",
+    "status": "metadata_verified",
+    "title": [
+      "Bias and Coverage Properties of the WENDy-IRLS Algorithm"
+    ],
+    "authors": [
+      {
+        "given": "Abhi",
+        "family": "Chawla",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "David M.",
+        "family": "Bortz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Vanja",
+        "family": "Dukic",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "volume": null,
+    "page": "1639-1746",
+    "article_number": null
+  },
+  {
+    "key": "brunel2014",
+    "doi": "10.1080/01621459.2013.841583",
+    "status": "metadata_verified",
+    "title": [
+      "Parametric Estimation of Ordinary Differential Equations With Orthogonality Conditions"
+    ],
+    "authors": [
+      {
+        "given": "Nicolas J-B.",
+        "family": "Brunel",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Quentin",
+        "family": "Clairon",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Florence",
+        "family": "d’Alché-Buc",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2014,
+          1,
+          2
+        ]
+      ]
+    },
+    "volume": "109",
+    "page": "173-185",
+    "article_number": null
+  },
+  {
+    "key": "heitzman2026",
+    "doi": "10.1007/s11538-026-01639-x",
+    "status": "metadata_verified",
+    "title": [
+      "A Practical Identifiability Criterion Leveraging Weak-Form Parameter Estimation"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-9018-7184",
+        "authenticated-orcid": false,
+        "given": "Nora",
+        "family": "Heitzman-Breen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Vanja",
+        "family": "Dukic",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "David M.",
+        "family": "Bortz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          31
+        ]
+      ]
+    },
+    "volume": "88",
+    "page": null,
+    "article_number": "70"
+  },
+  {
+    "key": "qi2010",
+    "doi": "10.1214/09-AOS724",
+    "status": "metadata_verified",
+    "title": [
+      "Asymptotic efficiency and finite-sample properties of the generalized profiling estimation of parameters in ordinary differential equations"
+    ],
+    "authors": [
+      {
+        "given": "Xin",
+        "family": "Qi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hongyu",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2010,
+          2,
+          1
+        ]
+      ]
+    },
+    "volume": "38",
+    "page": "435-481",
+    "article_number": null
+  },
+  {
+    "key": "dattner2015",
+    "doi": "10.1214/15-EJS1053",
+    "status": "metadata_verified",
+    "title": [
+      "Optimal rate of direct estimators in systems of ordinary differential equations linear in functions of the parameters"
+    ],
+    "authors": [
+      {
+        "given": "Itai",
+        "family": "Dattner",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chris A. J.",
+        "family": "Klaassen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2015,
+          1,
+          1
+        ]
+      ]
+    },
+    "volume": "9",
+    "page": "1939-1973",
+    "article_number": null
+  },
+  {
+    "key": "dattner2018",
+    "doi": "10.1111/stan.12124",
+    "status": "metadata_verified",
+    "title": [
+      "Application of one‐step method to parameter estimation in ODE models"
+    ],
+    "authors": [
+      {
+        "given": "Itai",
+        "family": "Dattner",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Statistics University of Haifa  199 Aba Khoushy Ave., Mount Carmel Haifa 3498838 Israel"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6963-295X",
+        "authenticated-orcid": false,
+        "given": "Shota",
+        "family": "Gugushvili",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Mathematical Institute Leiden University  P.O. Box 9512 2300 RA Leiden The Netherlands"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2018,
+          2,
+          22
+        ]
+      ]
+    },
+    "volume": "72",
+    "page": "126-156",
+    "article_number": null
+  },
+  {
+    "key": "varah1982",
+    "doi": "10.1137/0903003",
+    "status": "metadata_verified",
+    "title": [
+      "A Spline Least Squares Method for Numerical Parameter Estimation in Differential Equations"
+    ],
+    "authors": [
+      {
+        "given": "J. M.",
+        "family": "Varah",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1982,
+          3
+        ]
+      ]
+    },
+    "volume": "3",
+    "page": "28-46",
+    "article_number": null
+  },
+  {
+    "key": "brunel2008",
+    "doi": "10.1214/07-EJS132",
+    "status": "metadata_verified",
+    "title": [
+      "Parameter estimation of ODE’s via nonparametric estimators"
+    ],
+    "authors": [
+      {
+        "given": "Nicolas J-B.",
+        "family": "Brunel",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2008,
+          1,
+          1
+        ]
+      ]
+    },
+    "volume": "2",
+    "page": "1242-1267",
+    "article_number": null
+  },
+  {
+    "key": "liang2008",
+    "doi": "10.1198/016214508000000797",
+    "status": "metadata_verified",
+    "title": [
+      "Parameter Estimation for Differential Equation Models Using a Framework of Measurement Error in Regression Models"
+    ],
+    "authors": [
+      {
+        "given": "Hua",
+        "family": "Liang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Hua Liang is Associate Professor  and Hulin Wu is Professor , Department of Biostatistics and Computational Biology, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642. The authors would like to thank Yun Fang for her careful reading of an earlier version of this manuscript and her help in correcting an error in the theoretical results. The authors are also grateful to an associate editor and three referees for their constructive comments and suggestions. This research was..."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hulin",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Hua Liang is Associate Professor  and Hulin Wu is Professor , Department of Biostatistics and Computational Biology, University of Rochester School of Medicine and Dentistry, Rochester, NY 14642. The authors would like to thank Yun Fang for her careful reading of an earlier version of this manuscript and her help in correcting an error in the theoretical results. The authors are also grateful to an associate editor and three referees for their constructive comments and suggestions. This research was..."
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2008,
+          12,
+          1
+        ]
+      ]
+    },
+    "volume": "103",
+    "page": "1570-1583",
+    "article_number": null
+  },
+  {
+    "key": "gugushvili2012",
+    "doi": "10.3150/11-BEJ362",
+    "status": "metadata_verified",
+    "title": [
+      "$\\sqrt n$-consistent parameter estimation for systems of ordinary differential equations: bypassing numerical integration via smoothing"
+    ],
+    "authors": [
+      {
+        "given": "Shota",
+        "family": "Gugushvili",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chris A.J.",
+        "family": "Klaassen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2012,
+          8,
+          1
+        ]
+      ]
+    },
+    "volume": "18",
+    "page": "1061-1098",
+    "article_number": null
+  },
+  {
+    "key": "parzen1961",
+    "doi": "10.1214/aoms/1177704840",
+    "status": "metadata_verified",
+    "title": [
+      "An Approach to Time Series Analysis"
+    ],
+    "authors": [
+      {
+        "given": "Emanuel",
+        "family": "Parzen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1961,
+          12
+        ]
+      ]
+    },
+    "volume": "32",
+    "page": "951-989",
+    "article_number": null
+  },
+  {
+    "key": "ibragimov1981",
+    "doi": "10.1007/978-1-4899-0027-2",
+    "status": "metadata_verified",
+    "title": [
+      "Statistical Estimation"
+    ],
+    "authors": [
+      {
+        "given": "I. A.",
+        "family": "Ibragimov",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "R. Z.",
+        "family": "Has’minskii",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1981
+        ]
+      ]
+    },
+    "volume": null,
+    "page": null,
+    "article_number": null
+  },
+  {
+    "key": "kutoyants1994",
+    "doi": "10.1007/978-94-011-1020-4",
+    "status": "metadata_verified",
+    "title": [
+      "Identification of Dynamical Systems with Small Noise"
+    ],
+    "authors": [
+      {
+        "given": "Yu.",
+        "family": "Kutoyants",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    },
+    "volume": null,
+    "page": null,
+    "article_number": null
+  },
+  {
+    "key": "hansen1982",
+    "doi": "10.2307/1912775",
+    "status": "metadata_verified",
+    "title": [
+      "Large Sample Properties of Generalized Method of Moments Estimators"
+    ],
+    "authors": [
+      {
+        "given": "Lars Peter",
+        "family": "Hansen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1982,
+          7
+        ]
+      ]
+    },
+    "volume": "50",
+    "page": "1029",
+    "article_number": null
+  },
+  {
+    "key": "newey1994",
+    "doi": "10.1016/S1573-4412(05)80005-4",
+    "status": "metadata_verified",
+    "title": [
+      "Chapter 36 Large sample estimation and hypothesis testing"
+    ],
+    "authors": [
+      {
+        "given": "Whitney K.",
+        "family": "Newey",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daniel",
+        "family": "McFadden",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    },
+    "volume": null,
+    "page": "2111-2245",
+    "article_number": null
+  },
+  {
+    "key": "hall1996",
+    "doi": "10.2307/2171849",
+    "status": "metadata_verified",
+    "title": [
+      "Bootstrap Critical Values for Tests Based on Generalized-Method-of-Moments Estimators"
+    ],
+    "authors": [
+      {
+        "given": "Peter",
+        "family": "Hall",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Joel L.",
+        "family": "Horowitz",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1996,
+          7
+        ]
+      ]
+    },
+    "volume": "64",
+    "page": "891",
+    "article_number": null
+  },
+  {
+    "key": "leiner2025",
+    "doi": "10.1080/01621459.2023.2270748",
+    "status": "metadata_verified",
+    "title": [
+      "Data Fission: Splitting a Single Data Point"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-0783-5356",
+        "authenticated-orcid": false,
+        "given": "James",
+        "family": "Leiner",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Statistics and Data Science, Carnegie Mellon University",
+            "place": [
+              "Pittsburgh"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Boyan",
+        "family": "Duan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Google",
+            "place": [
+              "Mountain View"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Larry",
+        "family": "Wasserman",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Statistics and Data Science, Carnegie Mellon University",
+            "place": [
+              "Pittsburgh"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0497-311X",
+        "authenticated-orcid": false,
+        "given": "Aaditya",
+        "family": "Ramdas",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Statistics and Data Science, Carnegie Mellon University",
+            "place": [
+              "Pittsburgh"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2023,
+          12,
+          14
+        ]
+      ]
+    },
+    "volume": "120",
+    "page": "135-146",
+    "article_number": null
   }
 ]

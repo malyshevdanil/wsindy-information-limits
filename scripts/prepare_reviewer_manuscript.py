@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def prepare():
     p=ROOT/'manuscript/article_revised.md';text=p.read_text(encoding='utf-8')
-    if 'Efficient weak-form estimation under correlated measurement error' in text:
+    if 'Efficient weak-form estimation' in text:
         print('Efficiency revision uses prepare_efficiency_manuscript.py and analyze_efficiency.py')
         return
     if '### 4.3. Optimal combination within a finite window family' not in text:

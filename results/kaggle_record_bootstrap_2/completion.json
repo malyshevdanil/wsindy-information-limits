@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "repetitions": 250,
+  "rows": 1250,
+  "bootstrap_fits": 1248750,
+  "maximum_batch_fit_discrepancy": 1.283861905676531e-12,
+  "failed_or_discarded_draws": 0,
+  "elapsed_seconds": 461.09584749899994
+}

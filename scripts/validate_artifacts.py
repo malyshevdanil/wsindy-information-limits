@@ -72,7 +72,7 @@ def validate():
         metadata = json.loads((path.parent/'kernel-metadata.json').read_text())
         assert metadata['is_private'] is True
         assert metadata['enable_gpu'] is False
-        assert metadata['enable_internet'] is path.parent.name.startswith('adaptive_')
+        assert metadata['enable_internet'] is (path.parent.name.startswith('adaptive_') or path.parent.name.startswith('efficiency_match') or path.parent.name=='efficiency_matched_wendy')
         # Completed notebooks are immutable execution snapshots, not regenerated
         # after local manuscript/postprocessing changes. Record differences openly.
         records.append({'file': str(path.relative_to(ROOT)), 'notebook_valid': True,

@@ -1,0 +1,27 @@
+{
+  "title": "Boundary-free weak estimating equations under correlated noise: efficiency with nuisance initial states - code and synthetic-data archive",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Malyshev, Danil Romanovich",
+      "affiliation": "Independent researcher, Almaty, Kazakhstan",
+      "orcid": "0009-0007-0947-3866"
+    }
+  ],
+  "description": "Versioned source, frozen numerical protocols, synthetic-data outputs and manuscript artifacts for the nuisance-initial-state weak estimation study. Known-covariance model-weighted heterogeneous-record benchmarks, independent instruments and record-level calibration are distinguished from oracle local information references.",
+  "version": "v1.2.0",
+  "keywords": [
+    "weak estimating equations",
+    "correlated Gaussian noise",
+    "nuisance initial states",
+    "ODE identification",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/malyshevdanil/wsindy-information-limits",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

@@ -17,21 +17,30 @@ sources += list((ROOT/'kaggle').glob('*/*metadata.json'))
 sources += [ROOT/'kaggle/README_RU.md',ROOT/'literature/q1_revision_notes_RU.md',
             ROOT/'literature/publication_metadata_audit.json',ROOT/'literature/author_code_audit.json',
             ROOT/'reports/mstls_parity.json']
-sources += [ROOT/'literature/efficiency_notes_RU.md']
+sources += [ROOT/'literature/efficiency_notes_RU.md', ROOT/'literature/recent_weak_methods_notes.md', ROOT/'configs/information_pilots.npz', ROOT/'configs/refinement_pilots.npz']
+sources += [ROOT/'literature/independent_records_notes.md',BASE/'independent_records_theory.md']
 sources += [BASE/name for name in ('article_revised.md','supplement.md','information_theory.md',
                                  'publication_references.bib','numeric.csl')]
 sources += [BASE/name for name in ('weak_efficiency_theory.md','efficiency_article_template.md',
-            'efficiency_supplement_template.md','supporting_validation.md')]
+            'efficiency_supplement_template.md','supporting_validation.md','local_uncertainty_appendix.md')]
 sources += [BASE/'archive/pre_efficiency'/name for name in ('article_revised.md','supplement.md')]
+sources += list((BASE/'submission').glob('*.md'))
+sources += [ROOT/'.zenodo.json',ROOT/'CITATION.cff',BASE/'heterogeneous_records_theory.md']
+sources += [ROOT/'literature/nuisance_revision_notes.md']
+sources += list((BASE/'ejs').glob('*'))
+sources += [BASE/'imsart.cls',BASE/'imsart.sty']
 sources += [ROOT/'reports/full_adaptive_protocol_RU.md']
 if (ROOT/'reports/reviewer_results.json').exists():
     sources += [ROOT/'reports/reviewer_protocol_RU.md']
-sources = [p for p in sources if p.name != 'inspect_revision_live_log.py' and p.parent.name not in ('efficiency_vdp_polish_0','efficiency_vdp_polish_1')]
+sources = [p for p in sources if p.name != 'inspect_revision_live_log.py' and p.parent.name not in ('efficiency_vdp_polish_0','efficiency_vdp_polish_1','efficiency_matched_wendy','efficiency_fisher','efficiency_noise')]
 manuscripts=[BASE/('article_revised'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
 manuscripts += [BASE/('supplement'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
 manuscripts += [BASE/('weak_efficiency_theory'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
+manuscripts += [BASE/('independent_records_theory'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
 manuscripts += [BASE/'publication_references.bib',BASE/'numeric.csl',BASE/'publication_build.json']
 manuscripts += list((BASE/'figures/publication').glob('*'))+list((BASE/'submission').glob('*'))
+manuscripts += [BASE/('heterogeneous_records_theory'+suffix) for suffix in ('.md','.docx','.tex','.pdf')]
+manuscripts += [BASE/'article_ejs.tex',BASE/'article_ejs.pdf',BASE/'imsart.cls',BASE/'imsart.sty',BASE/'ejs_build.json',BASE/'ejs/LICENSE']
 data=[]
 for stage in ('revision_fast','reweighting','geometry'):
     data += list((ROOT/f'results/kaggle_{stage}').glob('*.json'))
@@ -64,6 +73,33 @@ if (ROOT/'reports/efficiency_results.json').exists():
         data.append(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip')
     data += [ROOT/'reports'/name for name in ('efficiency_results.json','efficiency_results_RU.md',
                'efficiency_results_RU.docx','efficiency_validation.json')]
+if (ROOT/'reports/efficiency_followup_results.json').exists():
+    stages=[*[f'efficiency_power_{i}' for i in range(4)],*json.loads((ROOT/'reports/efficiency_followup_results.json').read_text(encoding='utf-8'))['matched']['execution_stages'],'efficiency_fisher_v2','efficiency_noise_v2','efficiency_lorenz','efficiency_fixture','efficiency_refine_0','efficiency_refine_1']
+    for stage in stages:
+        data += [p for p in (ROOT/f'results/kaggle_{stage}').rglob('*') if p.suffix in ('.json','.npz','.log','.txt')]
+        data.append(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip')
+    data += [ROOT/'reports'/name for name in ('efficiency_followup_results.json','information_followup_results.json','efficiency_followup_validation.json','efficiency_followup_RU.md','efficiency_followup_RU.docx')]
+    if (ROOT/'reports/efficiency_followup_reproduction.json').exists():data.append(ROOT/'reports/efficiency_followup_reproduction.json')
+if (ROOT/'reports/independent_records_results.json').exists():
+    for stage in [f'independent_records_{i}' for i in range(4)]:
+        data += [p for p in (ROOT/f'results/kaggle_{stage}').rglob('*') if p.suffix in ('.json','.npz','.log','.txt')]
+        data.append(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip')
+    data += [ROOT/'reports/independent_records_results.json',ROOT/'reports/independent_records_validation.json']
+    if (ROOT/'reports/independent_records_execution_environment.json').exists():data.append(ROOT/'reports/independent_records_execution_environment.json')
+if (ROOT/'reports/record_bootstrap_results.json').exists():
+    for stage in [f'record_bootstrap_{i}' for i in range(4)]:
+        data += list((ROOT/f'results/kaggle_{stage}').glob('*.json'))
+        data.append(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip')
+    data += [ROOT/'reports/record_bootstrap_results.json',ROOT/'reports/nuisance_run_validation.json']
+if (ROOT/'reports/heterogeneous_records_results.json').exists():
+    for stage in [f'heterogeneous_records_{i}' for i in range(4)]:
+        data += list((ROOT/f'results/kaggle_{stage}').glob('*.json'))
+        data += list((ROOT/f'results/kaggle_{stage}').glob('*.npz'))
+        data.append(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip')
+    data += [ROOT/'reports/heterogeneous_records_results.json']
+if (ROOT/'reports/moderate_likelihood_results.json').exists():
+    data += list((ROOT/'results/kaggle_moderate_likelihood').glob('*.json'))
+    data += [ROOT/'results/kaggle_moderate_likelihood_download/wsindy_moderate_likelihood_outputs.zip',ROOT/'reports/moderate_likelihood_results.json']
 for name,files in [('submission_package',manuscripts),('reproducibility_code',sources),('reproducibility_data',data)]:
     path=DIST/(name+'.zip')
     with zipfile.ZipFile(path,'w',compression=zipfile.ZIP_DEFLATED) as archive:

@@ -1,0 +1,13 @@
+{
+  "protocol": "matched_five_percent_local_gaussian_likelihood_v1",
+  "paths": 128,
+  "level": 0.05,
+  "coefficient_lower": [0.5, -1.5, 0.5, -1.5],
+  "coefficient_upper": [1.5, -0.5, 1.5, -0.5],
+  "initial_lower": [-3, -3],
+  "initial_upper": [3, 3],
+  "max_nfev": 100,
+  "tolerance": 1e-9,
+  "covariance": "known, exact stationary OU innovations",
+  "scope": "bounded local nonlinear least-squares likelihood optimizer, no global optimum assertion"
+}

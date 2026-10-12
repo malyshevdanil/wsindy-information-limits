@@ -1,0 +1,85 @@
+{
+  "stage": "moderate_likelihood",
+  "protocol": {
+    "protocol": "matched_five_percent_local_gaussian_likelihood_v1",
+    "paths": 128,
+    "level": 0.05,
+    "coefficient_lower": [
+      0.5,
+      -1.5,
+      0.5,
+      -1.5
+    ],
+    "coefficient_upper": [
+      1.5,
+      -0.5,
+      1.5,
+      -0.5
+    ],
+    "initial_lower": [
+      -3,
+      -3
+    ],
+    "initial_upper": [
+      3,
+      3
+    ],
+    "max_nfev": 100,
+    "tolerance": 1e-09,
+    "covariance": "known, exact stationary OU innovations",
+    "scope": "bounded local nonlinear least-squares likelihood optimizer, no global optimum assertion"
+  },
+  "observation_protocol": {
+    "T": 20.0,
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "tau": 0.3,
+    "h": 0.005,
+    "levels": [
+      0.005,
+      0.05
+    ],
+    "paths": 128,
+    "seed_base": 2200000,
+    "window_counts": [
+      30,
+      120,
+      480
+    ],
+    "families": "nested bumps: 30 width3; add30 width1.5 +60 width0.75; add120 width0.375 +240 width0.1875",
+    "reference_basis": "H1-orthonormalized prescribed test-function span, common to both covariance models",
+    "basis_relative_cutoff": 1e-10,
+    "covariance_relative_relaxation": 1e-10,
+    "iterations": 100,
+    "tolerance": 1e-07,
+    "feature_correction": "known marginal Gaussian variance",
+    "covariance": "Prop3 exact polynomial residual covariance at a fixed pilot model trajectory, iterated coefficient weights",
+    "pilot_box": [
+      [
+        0.25,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.25
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.1
+      ]
+    ],
+    "scope": "known-support WENDy-like component, not a modification or reproduction of complete author WENDy",
+    "noise_tau_fit_bounds": [
+      0.02,
+      3.0
+    ],
+    "noise_fit": "stationary OU profile likelihood of fitted-mean residuals after one known-initial Fisher step; not a joint MLE"
+  },
+  "source_sha256": "c80dcbdb468a11d5c620e9fca2bceb3a70e581e08f63bbffa94e371d9389ea5b"
+}

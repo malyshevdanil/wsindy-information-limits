@@ -19,7 +19,7 @@ def main():
     text=text.replace(old,new)
     text=text.replace('Numerical comparisons examine full Gaussian likelihood, sparse weak regression, coefficient covariance and independent recordings.',
                       'Numerical comparisons examine full Gaussian likelihood, sparse weak regression, complete adaptive author pipelines, coefficient covariance and independent recordings.')
-    if 'Efficient weak-form estimation under correlated measurement error' not in text:
+    if 'Efficient weak-form estimation' not in text:
         path.write_text(text,encoding='utf-8')
     supplement=BASE/'supplement.md';text=supplement.read_text(encoding='utf-8')
     section='''## S6. Complete adaptive author-pipeline reproduction

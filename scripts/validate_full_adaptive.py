@@ -66,7 +66,8 @@ def main(publication=False,smoke_only=False):
             supporting='\n'.join(p.get_text() for p in pdf)
             assert 'Complete adaptive author pipelines' in supporting
         supplement_doc=Document(ROOT/'manuscript/supplement.docx')
-        assert len(supplement_doc.inline_shapes)==7
+        supplement_source=(ROOT/'manuscript/supplement.md').read_text(encoding='utf-8')
+        assert len(supplement_doc.inline_shapes)==len(re.findall(r'^!\[Figure S\d+\.',supplement_source,flags=re.M))
         for item in json.loads((ROOT/'dist/manifest.json').read_text()):
             path=ROOT/'dist'/item['file'];assert hashlib.sha256(path.read_bytes()).hexdigest()==item['sha256']
             with zipfile.ZipFile(path) as archive:

@@ -1,0 +1,83 @@
+{
+  "completed": true,
+  "protocol": {
+    "protocol": "matched_five_percent_local_gaussian_likelihood_v1",
+    "paths": 128,
+    "level": 0.05,
+    "coefficient_lower": [
+      0.5,
+      -1.5,
+      0.5,
+      -1.5
+    ],
+    "coefficient_upper": [
+      1.5,
+      -0.5,
+      1.5,
+      -0.5
+    ],
+    "initial_lower": [
+      -3,
+      -3
+    ],
+    "initial_upper": [
+      3,
+      3
+    ],
+    "max_nfev": 100,
+    "tolerance": 1e-09,
+    "covariance": "known, exact stationary OU innovations",
+    "scope": "bounded local nonlinear least-squares likelihood optimizer, no global optimum assertion"
+  },
+  "groups": [
+    {
+      "method": "known_initial",
+      "paths": 128,
+      "relative_rmse": 0.0142087509639042,
+      "relative_bias": 0.0007255406917269752,
+      "relative_dispersion": 0.01419021475027411,
+      "rmse_bootstrap_95": [
+        0.012904547988078075,
+        0.015493818313367127
+      ],
+      "bound_active_paths": 0,
+      "maximum_nfev": 8,
+      "maximum_optimality": 0.07044267427283145
+    },
+    {
+      "method": "unknown_initial",
+      "paths": 128,
+      "relative_rmse": 0.017195234296848036,
+      "relative_bias": 0.0006504169920476998,
+      "relative_dispersion": 0.017182928745122426,
+      "rmse_bootstrap_95": [
+        0.015562368152425846,
+        0.018828556225389585
+      ],
+      "bound_active_paths": 0,
+      "maximum_nfev": 9,
+      "maximum_optimality": 0.11906230282032941
+    }
+  ],
+  "paired_author_comparisons": [
+    {
+      "method": "known_initial",
+      "author_minus_likelihood_rmse": 0.009845389181842424,
+      "bootstrap_95": [
+        0.007682724338565382,
+        0.012116558449600714
+      ]
+    },
+    {
+      "method": "unknown_initial",
+      "author_minus_likelihood_rmse": 0.006858905848898589,
+      "bootstrap_95": [
+        0.004834927339351932,
+        0.008918488898223728
+      ]
+    }
+  ],
+  "observation_hashes_match_author_128": true,
+  "output_sha256": "e5b75e6b30ed9353ea3af9c7c7266c860f0a1d513ca88fd75d1a207ecc35513b",
+  "scope": "bounded local path likelihood optimization; no global optimum guarantee"
+}

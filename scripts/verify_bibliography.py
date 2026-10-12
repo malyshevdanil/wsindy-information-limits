@@ -6,7 +6,10 @@ from pathlib import Path
 import requests
 ROOT=Path(__file__).resolve().parents[1]
 bib=(ROOT/'manuscript/publication_references.bib').read_text(encoding='utf-8')
-entries=re.findall(r'@\w+\{([^,]+),.*?doi=\{([^}]+)\}',bib,re.S)
+entries=[]
+for key,body in re.findall(r'@\w+\{([^,]+),([^\n]*)',bib):
+    match=re.search(r'doi=\{([^}]+)\}',body)
+    if match:entries.append((key,match[1]))
 parser=argparse.ArgumentParser();parser.add_argument('--refresh',action='store_true')
 args=parser.parse_args()
 audit_path=ROOT/'literature/publication_metadata_audit.json'

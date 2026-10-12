@@ -1,0 +1,309 @@
+{
+  "completed": true,
+  "protocol": {
+    "protocol": "recentered_pair_bootstrap_t_v1",
+    "source_protocol": "independent_records.json",
+    "monte_carlo_repetitions": 1000,
+    "shards": 4,
+    "record_counts": [
+      50,
+      100,
+      200,
+      400,
+      800
+    ],
+    "bootstrap_draws": 999,
+    "bootstrap_seed_base": 2800000,
+    "batch_size": 64,
+    "method": "recentered studentized independent-pair bootstrap; reestimate correction variance and both GMM steps in every resample",
+    "confidence_level": 0.95
+  },
+  "groups": [
+    {
+      "n": 50,
+      "repetitions": 1000,
+      "marginal_coverage": [
+        0.974,
+        0.988,
+        0.987,
+        0.99
+      ],
+      "marginal_coverage_wilson_95": [
+        [
+          0.9621761711573101,
+          0.9821960617983837
+        ],
+        [
+          0.9791427315245017,
+          0.9931223521935965
+        ],
+        [
+          0.9778855576244203,
+          0.9923871796106489
+        ],
+        [
+          0.9816905311296853,
+          0.9945592455544707
+        ]
+      ],
+      "joint_coverage": 0.999,
+      "joint_coverage_wilson_95": [
+        0.9943574414020421,
+        0.9998234536293739
+      ],
+      "wald_joint_coverage": 0.524,
+      "paired_joint_coverage_gain": 0.475,
+      "newly_covered": 475,
+      "newly_missed": 0,
+      "mean_marginal_width": [
+        0.015833042728023643,
+        0.15437032287729277,
+        0.2501940069730444,
+        0.33979999771127456
+      ],
+      "median_marginal_width_ratio": [
+        2.170037857418441,
+        2.167169693472288,
+        2.170536743998565,
+        2.1711120280324128
+      ],
+      "joint_critical_value_quantiles": [
+        114.68716537578538,
+        149.4279586047869,
+        193.7229594546767
+      ],
+      "median_joint_volume_ratio": 248.04997112428558
+    },
+    {
+      "n": 100,
+      "repetitions": 1000,
+      "marginal_coverage": [
+        0.946,
+        0.958,
+        0.958,
+        0.954
+      ],
+      "marginal_coverage_wilson_95": [
+        [
+          0.9302078451539475,
+          0.9583786862769372
+        ],
+        [
+          0.9437155747733968,
+          0.9687791144538346
+        ],
+        [
+          0.9437155747733968,
+          0.9687791144538346
+        ],
+        [
+          0.9391877960583809,
+          0.9653375072367351
+        ]
+      ],
+      "joint_coverage": 0.972,
+      "joint_coverage_wilson_95": [
+        0.9598298168024069,
+        0.9805577231872291
+      ],
+      "wald_joint_coverage": 0.773,
+      "paired_joint_coverage_gain": 0.199,
+      "newly_covered": 199,
+      "newly_missed": 0,
+      "mean_marginal_width": [
+        0.007506960363262777,
+        0.07446099051801751,
+        0.1207029365154869,
+        0.1638934313312132
+      ],
+      "median_marginal_width_ratio": [
+        1.3029226385685457,
+        1.3114670219467837,
+        1.3142846041424852,
+        1.3133243524884688
+      ],
+      "joint_critical_value_quantiles": [
+        19.194462324238238,
+        21.02666615738891,
+        23.246886316291455
+      ],
+      "median_joint_volume_ratio": 4.911524260503345
+    },
+    {
+      "n": 200,
+      "repetitions": 1000,
+      "marginal_coverage": [
+        0.941,
+        0.949,
+        0.94,
+        0.943
+      ],
+      "marginal_coverage_wilson_95": [
+        [
+          0.9246390972285408,
+          0.9539857017871995
+        ],
+        [
+          0.9335645136552383,
+          0.9609990572247332
+        ],
+        [
+          0.9235289252086434,
+          0.953103527324068
+        ],
+        [
+          0.9268629323405141,
+          0.9557465596412841
+        ]
+      ],
+      "joint_coverage": 0.947,
+      "joint_coverage_wilson_95": [
+        0.9313253831625082,
+        0.9592534947514054
+      ],
+      "wald_joint_coverage": 0.87,
+      "paired_joint_coverage_gain": 0.077,
+      "newly_covered": 77,
+      "newly_missed": 0,
+      "mean_marginal_width": [
+        0.004770799987284305,
+        0.04712318054822946,
+        0.07630552958212188,
+        0.10371462871326327
+      ],
+      "median_marginal_width_ratio": [
+        1.1155115749504674,
+        1.1206513761413435,
+        1.118205612560681,
+        1.1190446519876303
+      ],
+      "joint_critical_value_quantiles": [
+        12.128113575994284,
+        12.93969680137975,
+        13.793391173534623
+      ],
+      "median_joint_volume_ratio": 1.860045880687631
+    },
+    {
+      "n": 400,
+      "repetitions": 1000,
+      "marginal_coverage": [
+        0.939,
+        0.948,
+        0.949,
+        0.947
+      ],
+      "marginal_coverage_wilson_95": [
+        [
+          0.9224198811757163,
+          0.9522202248739662
+        ],
+        [
+          0.93244426068072,
+          0.9601269637162226
+        ],
+        [
+          0.9335645136552383,
+          0.9609990572247332
+        ],
+        [
+          0.9313253831625082,
+          0.9592534947514054
+        ]
+      ],
+      "joint_coverage": 0.954,
+      "joint_coverage_wilson_95": [
+        0.9391877960583809,
+        0.9653375072367351
+      ],
+      "wald_joint_coverage": 0.921,
+      "paired_joint_coverage_gain": 0.033,
+      "newly_covered": 33,
+      "newly_missed": 0,
+      "mean_marginal_width": [
+        0.003248345859835875,
+        0.03204384869749409,
+        0.05202304184530061,
+        0.07063454648674787
+      ],
+      "median_marginal_width_ratio": [
+        1.0474286244047555,
+        1.0500382880607055,
+        1.0514030126522196,
+        1.0524017756259976
+      ],
+      "joint_critical_value_quantiles": [
+        10.256228009532004,
+        10.846777774151748,
+        11.56813498181555
+      ],
+      "median_joint_volume_ratio": 1.3070040672542822
+    },
+    {
+      "n": 800,
+      "repetitions": 1000,
+      "marginal_coverage": [
+        0.947,
+        0.958,
+        0.954,
+        0.954
+      ],
+      "marginal_coverage_wilson_95": [
+        [
+          0.9313253831625082,
+          0.9592534947514054
+        ],
+        [
+          0.9437155747733968,
+          0.9687791144538346
+        ],
+        [
+          0.9391877960583809,
+          0.9653375072367351
+        ],
+        [
+          0.9391877960583809,
+          0.9653375072367351
+        ]
+      ],
+      "joint_coverage": 0.952,
+      "joint_coverage_wilson_95": [
+        0.936933911349866,
+        0.963606698979192
+      ],
+      "wald_joint_coverage": 0.945,
+      "paired_joint_coverage_gain": 0.007,
+      "newly_covered": 7,
+      "newly_missed": 0,
+      "mean_marginal_width": [
+        0.0022632624060390303,
+        0.022266243320956124,
+        0.036088609554272864,
+        0.0490274626826149
+      ],
+      "median_marginal_width_ratio": [
+        1.0195383887301368,
+        1.0212447394868813,
+        1.0199181166998934,
+        1.0204491170770258
+      ],
+      "joint_critical_value_quantiles": [
+        9.55429693386515,
+        10.120252626426579,
+        10.716950977054502
+      ],
+      "median_joint_volume_ratio": 1.1377796486649236
+    }
+  ],
+  "output_sha256": {
+    "record_bootstrap_0": "6ab15042f52eabfbd71e61d323ef209470e4d864da03d59a6c606e405baf661e",
+    "record_bootstrap_1": "e329f50c2854f8fea0992bb269d6786821864b22e038fb0da3666f9f21f3cea3",
+    "record_bootstrap_2": "31aaf7c8efa9432676c47de562b860d180023a888edec87e23fd23b8c9e08daa",
+    "record_bootstrap_3": "bd29a22d06d707385ab53e50dc935c42593ee01ba0807b91761e1b51be8e239c"
+  },
+  "observations_identical_to_original_sha256": true,
+  "point_estimates_and_covariances_identical": true,
+  "bootstrap_fits": 4995000,
+  "failed_or_discarded_draws": 0,
+  "maximum_batch_fit_discrepancy": 1.283861905676531e-12
+}

@@ -11,7 +11,7 @@ def config():return json.loads((ROOT/'configs/public_archive.json').read_text())
 
 
 def git(*args,check=True):
-    process=subprocess.run(['git',*args],cwd=CHECKOUT,capture_output=True,text=True,timeout=300,
+    process=subprocess.run(['git',*args],cwd=CHECKOUT,capture_output=True,text=True,timeout=1200,
         env={**os.environ,'GIT_TERMINAL_PROMPT':'0','GCM_INTERACTIVE':'never'})
     if check and process.returncode:raise RuntimeError('Git operation failed: '+args[0])
     return process.stdout.strip()
@@ -29,9 +29,11 @@ def prepare():
                 path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(archive.read(entry))
     for source in (ROOT/'manuscript/figures/publication').glob('*'):
         target=CHECKOUT/source.relative_to(ROOT);target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(source.read_bytes())
-    for name in ('article_revised','supplement','weak_efficiency_theory'):
+    for name in ('article_revised','supplement','weak_efficiency_theory','independent_records_theory','heterogeneous_records_theory'):
         for suffix in ('.docx','.pdf','.tex'):
             source=ROOT/'manuscript'/(name+suffix);(CHECKOUT/'manuscript'/source.name).write_bytes(source.read_bytes())
+    for name in ('article_ejs.tex','article_ejs.pdf'):
+        source=ROOT/'manuscript'/name;(CHECKOUT/'manuscript'/name).write_bytes(source.read_bytes())
     (CHECKOUT/'.gitattributes').write_bytes(b'* -text\n')
     records=[]
     for path in sorted(CHECKOUT.rglob('*')):
@@ -68,12 +70,12 @@ def publish():
     assert re.fullmatch(r'v\d+\.\d+\.\d+',version)
     git('config','user.name',OWNER);git('config','user.email',OWNER+'@users.noreply.github.com')
     if git('status','--porcelain'):
-        git('-c','commit.gpgsign=false','commit','-m','Prove sharp weak efficiency and validate fitted optimal tests')
+        git('-c','commit.gpgsign=false','commit','-m','Validate paired information limits and independent-record weak GMM')
     head=git('rev-parse','HEAD')
     tags=git('tag','--list',version).splitlines()
     if tags:assert git('rev-parse',version)==head,'Never move an existing release tag'
     else:git('tag',version)
-    git('-c','http.postBuffer=104857600','push','--atomic','origin','main',version)
+    git('-c','http.version=HTTP/1.1','-c','http.postBuffer=104857600','push','--atomic','origin','main',version)
     print(json.dumps(dict(pushed=True,tag=version,commit=head)))
 
 

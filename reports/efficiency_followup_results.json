@@ -1,0 +1,235 @@
+{
+  "protocol": {
+    "protocol": "paired_efficiency_followup_v1",
+    "power": {
+      "T": 20.0,
+      "initial": [
+        2.0,
+        0.0
+      ],
+      "tau": 0.3,
+      "h": 0.005,
+      "levels": [
+        0.005
+      ],
+      "paths": 2000,
+      "seed_base": 2200000,
+      "window_counts": [
+        480
+      ],
+      "families": "nested bumps: 30 width3; add30 width1.5 +60 width0.75; add120 width0.375 +240 width0.1875",
+      "reference_basis": "H1-orthonormalized prescribed test-function span, common to both covariance models",
+      "basis_relative_cutoff": 1e-10,
+      "covariance_relative_relaxation": 1e-10,
+      "iterations": 100,
+      "tolerance": 1e-07,
+      "feature_correction": "known marginal Gaussian variance",
+      "covariance": "Prop3 exact polynomial residual covariance at a fixed pilot model trajectory, iterated coefficient weights",
+      "pilot_box": [
+        [
+          0.25,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.25
+        ],
+        [
+          0.1,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.1
+        ]
+      ],
+      "scope": "known-support WENDy-like component, not a modification or reproduction of complete author WENDy",
+      "shards": 4,
+      "prespecified_sample_size": 2000,
+      "prefix_reused_from_128_path_study": true
+    },
+    "matched": {
+      "T": 20.0,
+      "initial": [
+        2.0,
+        0.0
+      ],
+      "tau": 0.3,
+      "h": 0.005,
+      "levels": [
+        0.05
+      ],
+      "paths": 128,
+      "seed_base": 2200000,
+      "method": "complete pinned WENDy-IRLS, same compatibility adapter and adaptive test selection as prior author reproduction",
+      "scope": "complete pinned author WENDy parameter-estimation pipeline with supplied support",
+      "noise_scale": "5 percent of clean coordinate standard deviations calibrated on h=0.01, as generate() records",
+      "execution_snapshot_note": "Frozen executed notebooks retain inherited weak-component fields; these fields were not consumed by the author runner. Current configuration removes those unused fields without changing observations or author settings."
+    }
+  },
+  "power": {
+    "ou": {
+      "n": 2000,
+      "relative_rmse": 0.0016850276205274475,
+      "relative_bias": 8.339071897233845e-05,
+      "relative_dispersion": 0.0016829628842994929,
+      "bias_vector": [
+        -1.520181554899086e-05,
+        -1.3385610516709529e-05,
+        -4.6775226124235234e-05,
+        6.599863988643709e-05
+      ],
+      "median": 0.001382821275578018,
+      "rmse_bootstrap_95": [
+        0.0016471875525350386,
+        0.0017244267770552362
+      ]
+    },
+    "iid": {
+      "n": 2000,
+      "relative_rmse": 0.0017592918612124022,
+      "relative_bias": 0.00010285887132144423,
+      "relative_dispersion": 0.0017562824105247642,
+      "bias_vector": [
+        -1.6688145627718225e-05,
+        -1.2058714347617738e-05,
+        -6.265410484727072e-05,
+        7.893354014041976e-05
+      ],
+      "median": 0.0013961443021681408,
+      "rmse_bootstrap_95": [
+        0.001717906792826973,
+        0.0017994251044569833
+      ]
+    }
+  },
+  "power_paired": {
+    "n": 2000,
+    "right_minus_left_rmse": 7.42642406849547e-05,
+    "paired_bootstrap_95": [
+      5.5759313030373574e-05,
+      9.327470701815573e-05
+    ]
+  },
+  "additional_1872_paired": {
+    "n": 1872,
+    "right_minus_left_rmse": 7.682028849959706e-05,
+    "paired_bootstrap_95": [
+      5.7647873670938206e-05,
+      9.580680600528406e-05
+    ]
+  },
+  "original_128_coefficient_max_discrepancy": 0.0,
+  "all_power_converged": true,
+  "power_pilot_clips": 0,
+  "power_max_iterations": 5,
+  "intervals": "5000 seed-paired path bootstrap draws, RNG 2402600; fixed 2000 paths, including original 128; follow-up planned after inspection of original study",
+  "matched": {
+    "author_wendy": {
+      "n": 128,
+      "relative_rmse": 0.024054140145746625,
+      "relative_bias": 0.008556951251345186,
+      "relative_dispersion": 0.022480663767631987,
+      "bias_vector": [
+        -0.0003593067732944413,
+        -0.0002784827878288248,
+        -0.006087798309018483,
+        0.005996121450250776
+      ],
+      "median": 0.01854863509744869,
+      "rmse_bootstrap_95": [
+        0.021949178302499806,
+        0.026180864766175326
+      ]
+    },
+    "ou": {
+      "n": 128,
+      "relative_rmse": 0.025583420427515168,
+      "relative_bias": 0.008143078767943818,
+      "relative_dispersion": 0.02425286929313855,
+      "bias_vector": [
+        -0.00027081603858260164,
+        -3.039611888781173e-05,
+        -0.004680901791588462,
+        0.006657674142494833
+      ],
+      "median": 0.021041106800992034,
+      "rmse_bootstrap_95": [
+        0.02284026003818784,
+        0.028227245283349252
+      ]
+    },
+    "iid": {
+      "n": 128,
+      "relative_rmse": 0.025508689420855768,
+      "relative_bias": 0.008464173235916457,
+      "relative_dispersion": 0.024063478705334245,
+      "bias_vector": [
+        -0.00041460372023024777,
+        -7.36604070353075e-05,
+        -0.005351662327031742,
+        0.006544052017262722
+      ],
+      "median": 0.01942615288549225,
+      "rmse_bootstrap_95": [
+        0.022986813424271325,
+        0.028269987519773533
+      ]
+    },
+    "ou_minus_author": {
+      "n": 128,
+      "right_minus_left_rmse": 0.0015292802817685434,
+      "paired_bootstrap_95": [
+        -0.00079586428628944,
+        0.004051497323563425
+      ]
+    },
+    "iid_minus_author": {
+      "n": 128,
+      "right_minus_left_rmse": 0.0014545492751091432,
+      "paired_bootstrap_95": [
+        -0.0007252105819489954,
+        0.0036674120618604956
+      ]
+    },
+    "author_median_fit_seconds": 118.83900750199996,
+    "execution_stages": [
+      "efficiency_match_0",
+      "efficiency_match_1",
+      "efficiency_match_2",
+      "efficiency_match_3"
+    ],
+    "unique_paths": 128,
+    "duplicate_runs_not_counted": true
+  },
+  "stages": [
+    "efficiency_power_0",
+    "efficiency_power_1",
+    "efficiency_power_2",
+    "efficiency_power_3",
+    "efficiency_match_0",
+    "efficiency_match_1",
+    "efficiency_match_2",
+    "efficiency_match_3"
+  ],
+  "execution_sources": {
+    "efficiency_power_0": "332426fd0139144a796fbf3ae1b92dc12f5becd06b6434e3fc42be78c733560b",
+    "efficiency_power_1": "332426fd0139144a796fbf3ae1b92dc12f5becd06b6434e3fc42be78c733560b",
+    "efficiency_power_2": "332426fd0139144a796fbf3ae1b92dc12f5becd06b6434e3fc42be78c733560b",
+    "efficiency_power_3": "332426fd0139144a796fbf3ae1b92dc12f5becd06b6434e3fc42be78c733560b",
+    "efficiency_match_0": "037b4baddb5fe2b1b02533715e85c9ca8351f656014454ba7533dfca07213880",
+    "efficiency_match_1": "037b4baddb5fe2b1b02533715e85c9ca8351f656014454ba7533dfca07213880",
+    "efficiency_match_2": "037b4baddb5fe2b1b02533715e85c9ca8351f656014454ba7533dfca07213880",
+    "efficiency_match_3": "037b4baddb5fe2b1b02533715e85c9ca8351f656014454ba7533dfca07213880"
+  },
+  "output_sha256": {
+    "efficiency_power_0": "800b1d0c44c8530606ddfb7261b9e66a60dff2c1f45dceaf831f81f9359ce643",
+    "efficiency_power_1": "2b6505e80f157c2fbf093ef6873d4e5832884d1401a4a1325ed492f1398e9066",
+    "efficiency_power_2": "7be8c5413d4408406997e92ffccd7a31e633d46a45dff78833191bb8b492a454",
+    "efficiency_power_3": "b583571552e01a6a340af6f58c03bab4d4320bb310063a8436a3cb845d4caea3",
+    "efficiency_match_0": "4a6cb2ad0f43a65d9262de315bf92aa443bc0617f26d6c751e019945405162cf",
+    "efficiency_match_1": "4f1964684d0b08c1b4f5bd222882d334c05ef953cba24524818d5fdab418b36e",
+    "efficiency_match_2": "c80cf62822d2458e15b2b177e1423bc6580f9f075cf82309c7ea55cf46a1c2d4",
+    "efficiency_match_3": "68bc041811b6fedb9204683e5191d2a96f424d948c530b971b6b92a887e67bc9"
+  }
+}

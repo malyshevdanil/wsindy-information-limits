@@ -119,7 +119,7 @@ Table 7. Van der Pol OU relative RMS information references for the exact Sectio
     cross_reference=' Coefficient-level bias and dispersion are reported in Section 7.9; the near-equal single-record and stacked median errors alone do not identify the bias fraction.'
     text=text.replace(cross_reference,'')
     text=text.replace(phrase,phrase+cross_reference)
-    if 'Efficient weak-form estimation under correlated measurement error' not in text:
+    if 'Efficient weak-form estimation' not in text and 'information limits and independent-record inference' not in text and 'Boundary-free weak estimating equations' not in text:
         path.write_text(text,encoding='utf-8')
     ru=['# Дополнительные расчёты по замечаниям к статье','',f'Все расчёты выполнены на Kaggle. Повтор 400 блоков совпадает с прежними нормами ошибок: максимальное отклонение {difference:.3e}; это не новая независимая выборка.','',
         f'Информационная граница Van der Pol: относительная RMS-шкала {known:.6f} при известном начальном состоянии и {weak:.6f} для слабых влияний с аннулированием чувствительности к начальному состоянию.',

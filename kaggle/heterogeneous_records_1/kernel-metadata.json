@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-heterogeneous-records-1",
+  "title": "WSINDy Sampling Saturation Heterogeneous Records 1",
+  "code_file": "wsindy_heterogeneous_records_1.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

@@ -1,39 +1,44 @@
-# Efficient weak-form estimation under correlated measurement error
+# Boundary-free weak estimating equations under correlated noise: efficiency with nuisance initial states
 
-Исследование по Word-плану; журнал из §21 плана — **Applied Mathematics and Computation**. Новая редакция описывает полный boundary-free adjoint-класс, доказывает точность границы Шура и условную эффективность GLS в последовательном малошумовом пределе. Прежние вычисления сохранены в supplement и неизменных архивах исполнения.
+Statistical theory and a reproducible benchmark for boundary-free weak ODE estimation when initial states are nuisance parameters. The target format is **Electronic Journal of Statistics**. The main results are the exact adjoint influence class, its sharp initial-state Schur-complement information reference, the explicit optimal OU test and a conditional heterogeneous-record estimating-equation extension.
 
-- [Статья: Word](manuscript/article_revised.docx), [PDF](manuscript/article_revised.pdf), [исходный текст](manuscript/article_revised.md), [LaTeX](manuscript/article_revised.tex).
-- [Supplement: PDF](manuscript/supplement.pdf), [Word](manuscript/supplement.docx), [исходный текст](manuscript/supplement.md).
-- [Строгие доказательства weak-эффективности](manuscript/weak_efficiency_theory.md), [PDF](manuscript/weak_efficiency_theory.pdf).
-- [Результаты двух экспериментов](reports/efficiency_results_RU.md), [Word-отчёт](reports/efficiency_results_RU.docx), [численные результаты и интервалы](reports/efficiency_results.json), [проверка](reports/efficiency_validation.json).
-- [Литературные основания и границы новизны](literature/efficiency_notes_RU.md), [проверка 19 DOI](literature/publication_metadata_audit.json).
-- [Полные авторские методы: 448 оценок](reports/full_adaptive_results_RU.md), [проверка](reports/full_adaptive_validation.json).
-- [Информация Van der Pol, оптимальные семейства и bias/dispersion](reports/reviewer_results_RU.md).
-- [Пакет журнала и авторские поля](manuscript/submission/README_RU.md).
+- [EJS PDF](manuscript/article_ejs.pdf), [IMS LaTeX](manuscript/article_ejs.tex), [Word](manuscript/article_revised.docx), [editable manuscript](manuscript/article_revised.md).
+- [Supplement](manuscript/supplement.pdf), [weak-class proof](manuscript/weak_efficiency_theory.pdf), [heterogeneous-record proof and assumptions](manuscript/heterogeneous_records_theory.pdf).
+- [Heterogeneous-record results](reports/heterogeneous_records_results.json), [record-bootstrap audit](reports/record_bootstrap_results.json), [matched 5% likelihood](reports/moderate_likelihood_results.json).
+- [Full author-pipeline reproduction](reports/full_adaptive_results.json), [paired temporal weighting and WENDy](reports/efficiency_followup_results.json), [literature metadata](literature/publication_metadata_audit.json).
 
-Скалярный тест с fitted pilot при SD=0.1 снизил медиану ошибки с 0.2244 до 0.0598 на 1000 путях. Для Van der Pol на 128 путях OU-RMSE с 480 окнами при шуме 0.5% равна 0.001737 при weak-границе 0.001690; при 5% — 0.025583 при границе 0.016904. В локальном Gaussian расчёте OU-RMSE снижается 0.019605 → 0.017043 → 0.016938. Парные интервалы Монте-Карло для преимущества OU над iid включают ноль. Финальная серия состоит из 1536 оценок; все достигли критерия остановки. Пять-итерационный контроль использует те же пути и не добавляет независимых данных.
+Rich model-weighted heterogeneous records use known OU covariance, independent instruments and a frozen independent training pilot. Their accuracy and coverage are conditional on that training sample; n counts inference records, not the full training-plus-inference budget. The local summed-information reference and fixed-noise sandwich are distinguished. Consistency of covariance estimated from heterogeneous incidental-state residuals requires additional calibration assumptions. Common-trajectory GMM is a supporting lemma and diagnostic: Gaussian path averaging is its natural full-record reference.
 
-Эксперименты выполняются на Kaggle. Локально проводится постобработка записанных результатов и сборка документов. Снимки notebook сохраняют исполнявшийся код и конфигурацию; изменения текущих исходников не переписывают их. Все методы и амплитуды сравниваются с парными seed, которые нельзя считать независимыми репликациями. Протокол `configs/efficiency.json` и каждый manifest явно задают параметры своего исполнения. Новые IRLS-проверки относятся к WENDy-подобной компоненте с заданной структурой; полный авторский WENDy остаётся отдельным экспериментом.
-
-Публичный архив: [GitHub v1.1.0](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.1.0). Точный commit и проверка всех публичных blob записаны в `reports/public_archive_validation.json`. `release_manifest.json` в публичном снимке фиксирует SHA256 каждого файла; DOI не присвоен. Исходные авторские библиотеки скачиваются по закреплённым версиям и не перераспределяются; наши адаптеры включены.
-
-После распаковки архивов исходников и данных в одну папку:
+## Rebuild from recorded outputs
 
 ```powershell
-python -m pytest -q tests
 python scripts/analyze_revision.py --stage revision_fast
 python scripts/analyze_full_adaptive.py
 python scripts/analyze_reviewer_validation.py
 python scripts/prepare_efficiency_manuscript.py
 python scripts/analyze_efficiency.py
+python scripts/analyze_efficiency_followup.py
+python -m scripts.analyze_information_followup
+python scripts/prepare_efficiency_followup_manuscript.py
+python scripts/analyze_independent_records.py
+python scripts/prepare_independent_records_manuscript.py
+python -m scripts.analyze_record_bootstrap
+python scripts/prepare_nuisance_manuscript.py
+python -m scripts.analyze_heterogeneous_records
+python scripts/prepare_heterogeneous_results.py
+python -m scripts.analyze_moderate_likelihood
+python scripts/prepare_moderate_likelihood_results.py
 python scripts/build_publication.py
-python scripts/validate_artifacts.py
+python scripts/build_ejs.py
+python scripts/validate_nuisance_runs.py
 python scripts/validate_efficiency.py --publication
-python scripts/validate_reviewer.py --publication
+python scripts/validate_independent_records.py
 python scripts/package_publication.py
-python scripts/validate_full_adaptive.py --publication
+python scripts/reproduce_efficiency_release.py
 ```
 
-Постобработка прежних исследований создаёт их численные отчёты и фигуры, не перезаписывая новую статью. Стабильные шаблоны и supporting validation включены в архив исходников. Численные исследования повторно запускаются только на Kaggle; архивы outputs проверяются по CRC, SHA256 и fingerprint исполненного notebook. После установки `requirements-publication.txt` нужен portable Tectonic (`scripts/install_publication_tools.py` на Windows). На других ОС следует указать соответствующий Tectonic binary в сборщике. Формулы Word — редактируемые OMML. `article_en.*` совпадают с новой статьёй.
+Numerical simulations run on Kaggle only. Local scripts analyze existing outputs, check source snapshots and checksums, and rebuild documents. Immutable notebooks contain frozen execution source and configs. Archives in `dist/` separate manuscripts, code and synthetic-data outputs with SHA256 manifests. Full time series can be regenerated from seeds; sufficient-statistic fixtures and all coefficient estimates are archived. Install `requirements-publication.txt`; the document builder uses the portable Tectonic binary from `scripts/install_publication_tools.py` on Windows. Other systems require the matching binary path. Word equations use native editable OMML. The IMS class and style are unmodified official support files; the explicitly requested `[ejs]` option is still supported, while the upstream package recommends `ejsv2` for new manuscripts.
 
-В `dist/` находятся отдельные ZIP рукописей, исходников и данных с `manifest.json`. Обе версии статьи до переработки сохранены в `manuscript/archive/`. Авторские сведения остаются для заполнения; человеческая проверка содержания и деклараций перед подачей ещё требуется. Статья в журнал не отправлена.
+Author: **Danil Romanovich Malyshev**, Independent researcher, Almaty, Kazakhstan; malyshevdanil04@gmail.com; [ORCID 0009-0007-0947-3866](https://orcid.org/0009-0007-0947-3866).
+
+The paper has not been submitted. Human review, funding/conflict declarations and exclusive-submission confirmation remain administrative requirements before actual journal submission. DOI metadata is recorded only after a real Zenodo release is verified.

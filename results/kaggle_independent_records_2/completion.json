@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "stage": "independent_records_2",
+  "repetitions": 250,
+  "rows": 3750,
+  "simulated_independent_records": 200000,
+  "elapsed_seconds": 67.99440939300001,
+  "numerical_failures": 0
+}

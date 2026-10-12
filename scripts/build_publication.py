@@ -19,6 +19,9 @@ def keep_short_tables(content):
              r'\\small\\setlength\{\\tabcolsep\}\{3pt\}\n'
              r'(\\begin\{longtable\}.*?\\end\{longtable\})\n\}')
     def convert(match):
+        # The twenty-row calibration table must be allowed to span pages.
+        if match[1].startswith('Table S17.'):
+            return match[0]
         head,body=match[2].split('\\endhead\n\\bottomrule\\noalign{}\n\\endlastfoot\n',1)
         head=head.replace('\\begin{longtable}[]','\\begin{tabular}')
         body=body.replace('\\end{longtable}','\\bottomrule\n\\end{tabular}')
@@ -70,7 +73,7 @@ def build(source):
 
 
 if __name__=='__main__':
-    records=[build(BASE/name) for name in ('article_revised.md','supplement.md','information_theory.md','weak_efficiency_theory.md')]
+    records=[build(BASE/name) for name in ('article_revised.md','supplement.md','information_theory.md','weak_efficiency_theory.md','independent_records_theory.md','heterogeneous_records_theory.md')]
     for original,alias in [('article_revised','article_en'),('information_theory','theory')]:
         for suffix in ('.md','.docx','.tex','.pdf'):
             shutil.copy2(BASE/(original+suffix),BASE/(alias+suffix))
