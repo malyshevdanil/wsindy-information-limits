@@ -66,6 +66,9 @@ if (ROOT/'reports/reviewer_results.json').exists():
              ROOT/'reports/reviewer_results.json',ROOT/'reports/reviewer_results_RU.md',
              ROOT/'reports/reviewer_results_RU.docx',ROOT/'reports/reviewer_validation.json']
 archives=[]
+data += [ROOT/'reports'/name for name in ('zenodo_archive_validation.json','github_release_validation.json',
+    'doi_metadata_attachment.json','redundant_match_validation.json','nuisance_revision_summary_RU.md')
+    if (ROOT/'reports'/name).exists()]
 if (ROOT/'reports/efficiency_results.json').exists():
     for stage in ('efficiency_scalar_v3','efficiency_geometry','efficiency_geometry_v2','efficiency_vdp_0','efficiency_vdp_1',
                   'efficiency_vdp_final_0','efficiency_vdp_final_1'):

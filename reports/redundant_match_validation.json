@@ -1,0 +1,8 @@
+{
+  "completed": true,
+  "paths": 128,
+  "all_seeds_and_observation_hashes_match": true,
+  "maximum_absolute_coefficient_difference": 0.0,
+  "relative_rmse": 0.024054140145746625,
+  "scope": "redundant full execution of the same 128 paths; excluded from independent sample counts"
+}

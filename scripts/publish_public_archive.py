@@ -37,7 +37,7 @@ def prepare():
     (CHECKOUT/'.gitattributes').write_bytes(b'* -text\n')
     records=[]
     for path in sorted(CHECKOUT.rglob('*')):
-        if not path.is_file() or '.git' in path.relative_to(CHECKOUT).parts:continue
+        if not path.is_file() or any(part in ('.git','__pycache__','.pytest_cache') for part in path.relative_to(CHECKOUT).parts):continue
         name=path.relative_to(CHECKOUT).as_posix()
         if name=='release_manifest.json':continue
         data=path.read_bytes()

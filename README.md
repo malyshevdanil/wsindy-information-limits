@@ -42,3 +42,5 @@ Numerical simulations run on Kaggle only. Local scripts analyze existing outputs
 Author: **Danil Romanovich Malyshev**, Independent researcher, Almaty, Kazakhstan; malyshevdanil04@gmail.com; [ORCID 0009-0007-0947-3866](https://orcid.org/0009-0007-0947-3866).
 
 The paper has not been submitted. Human review, funding/conflict declarations and exclusive-submission confirmation remain administrative requirements before actual journal submission. DOI metadata is recorded only after a real Zenodo release is verified.
+
+The verified v1.2.0 code and data archive is preserved at [Zenodo DOI 10.5281/zenodo.23313935](https://doi.org/10.5281/zenodo.23313935).

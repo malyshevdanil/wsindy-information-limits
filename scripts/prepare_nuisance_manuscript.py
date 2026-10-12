@@ -174,6 +174,10 @@ Table S16. Common-trajectory estimated-variance GMM: nominal 95% coverage before
             s+=f"| {g['n']} | {100*g['wald_joint_coverage']:.1f}% | {100*g['joint_coverage']:.1f}% | {100*min(g['marginal_coverage']):.1f}–{100*max(g['marginal_coverage']):.1f}% | {min(g['median_marginal_width_ratio']):.2f}–{max(g['median_marginal_width_ratio']):.2f} | {g['median_joint_volume_ratio']:.2f} |\n"
         s+='\nAt 50 records the joint bootstrap region covers 99.9% and has median volume about 248 times the Wald region: the correction overcompensates for instability of estimating a 12-dimensional weight covariance from 25 independent pairs. Marginal coverage is 97.4–99.0%. At 200 records joint coverage is 94.7%, and at 800 it is 95.2%. Hence the bootstrap improves calibration at larger counts but the smallest-count construction remains excessively conservative.\n\n![Figure S9. Common-trajectory bootstrap diagnostic: coverage with Wilson Monte Carlo intervals and median marginal interval-width inflation. All methods reuse the identical 1000 repetitions.](figures/publication/record_bootstrap.png)\n\n'
         supp=supp.replace('## References',s+'## References')
+    archive=json.loads((ROOT/'configs/public_archive.json').read_text())
+    if archive.get('doi'):
+        text=text.replace('a DOI has not been assigned.',
+            'the code and data are preserved in the [Zenodo archive](https://doi.org/'+archive['doi']+').')
     p.write_text(text,encoding='utf-8');(BASE/'supplement.md').write_text(supp,encoding='utf-8')
     cover=BASE/'submission/cover_letter_draft.md'
     cover.write_text(f'''Dear Editors of the Electronic Journal of Statistics,

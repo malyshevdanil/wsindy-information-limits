@@ -3,7 +3,7 @@ import hashlib,json,subprocess,sys,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def main():
-    target=ROOT/'reports/release_check_nuisance_v1'
+    target=ROOT/'reports/release_check_nuisance_v2'
     target.mkdir(exist_ok=False)
     for name in ['reproducibility_code','reproducibility_data']:
         with zipfile.ZipFile(ROOT/f'dist/{name}.zip') as archive:
