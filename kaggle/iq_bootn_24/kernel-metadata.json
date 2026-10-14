@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-iq-bootn-24",
+  "title": "WSINDy Sampling Saturation Iq Bootn 24",
+  "code_file": "wsindy_iq_bootn_24.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

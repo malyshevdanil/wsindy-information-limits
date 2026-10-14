@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite this versioned research archive."
 type: software
 title: "The information cost of boundary-free weak estimation under correlated noise - code and synthetic-data archive"
-version: v1.3.0
+version: v1.3.1
 authors:
   - family-names: "Malyshev"
     given-names: "Danil Romanovich"

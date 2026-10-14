@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-support-extra",
+  "title": "WSINDy Sampling Saturation Support Extra",
+  "code_file": "wsindy_support_extra.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

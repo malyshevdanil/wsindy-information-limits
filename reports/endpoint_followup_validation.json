@@ -106,27 +106,27 @@
   "documents": [
     {
       "name": "article_revised",
-      "tables": 8,
-      "figures": 5
+      "tables": 7,
+      "figures": 4
     },
     {
       "name": "supplement",
-      "tables": 7,
-      "figures": 2
+      "tables": 8,
+      "figures": 3
     }
   ],
   "pdfs": [
     {
       "name": "article_ejs",
-      "pages": 25
+      "pages": 24
     },
     {
       "name": "article_revised",
-      "pages": 22
+      "pages": 21
     },
     {
       "name": "supplement",
-      "pages": 25
+      "pages": 28
     }
   ],
   "ejs_metadata_verified": true,

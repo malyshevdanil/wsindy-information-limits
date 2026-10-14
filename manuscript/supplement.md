@@ -3,7 +3,7 @@ title: "Supplementary material: information bounds, covariance validation and re
 lang: en-US
 ---
 
-The submission supplement contains the proofs and checks supporting the current paper. Historical S-labels are retained for reproducibility. Sections S2–S21, including independent-record GMM, fission, cross-fitting and incidental-state studies, are preserved separately in [Research archive](research_extensions_archive.pdf). References to those omitted labels below point to that archive.
+The submission supplement contains the proofs and checks supporting the current paper, numbered consecutively S1-S9. Independent-record GMM, fission, cross-fitting and incidental-state studies are preserved in the separate [Research archive](research_extensions_archive.pdf), whose historical labels are explicitly qualified as research-archive references below. Frozen protocols and original output files retain their original identifiers.
 
 ## S1. Continuous and discrete likelihood
 
@@ -31,13 +31,13 @@ The separate geometry execution performs deterministic sensitivity quadrature fo
 **Proof.** The mean difference belongs to the common Cameron–Martin space, making the path laws equivalent; this is the common-covariance case of Gaussian measure equivalence [@feldman1958]. Under the first law the log likelihood ratio of the second is normal with mean $-d_{\theta\eta}^2/2$ and variance $d_{\theta\eta}^2$. Their total variation is $2\Phi(d_{\theta\eta}/2)-1$. Sampling cannot increase total variation. A nearest-parameter test derived from an estimator can err only if that estimator is at least $\delta/2$ from the generating parameter. The sum of testing errors is at least one minus total variation, giving the probability bound. Multiplying the estimation probability by $\delta^2/4$ gives the risk bound. Both bounds hold at every mesh. $\square$
 
 
-## S22. Endpoint attribution and generalization protocols
+## S2. Endpoint attribution and generalization protocols
 
 The ablation configuration is `configs/boundary_ablation.json`. Its 500 paired observations are zero-based indices 32–531 of the archived Van der Pol study, with $T=20$, $h=0.005$, $\tau=0.3$, $u=(2,0)$ and 0.5% noise. Four frozen 125-path shards compare initial traces, terminal traces and initial-noise controls individually against their joint archived branch. A new Simpson boundary-free branch shares the quadrature of the endpoint branches. Thus endpoint effects are measured separately from quadrature. The same 30-window bounded covariance pilot, spectral cutoff $10^{-10}$ and full Hermite covariance are used throughout. The clean-mean relative coefficient error gate is $1.4\times10^{-5}$. New observation hashes match the paired archive, and all 500 paths are retained. The first notebook packaging exceeded the platform source-size limit; a second packaging version reduces embedded configuration files without changing the scientific configuration or seeds. Both frozen versions are preserved.
 
 Generalization uses `configs/boundary_generalization.json`. The 5% Van der Pol experiment uses all 128 paired paths from the moderate-noise archive with unchanged noise arithmetic. The Lorenz experiment uses 256 paths, $(s,r,b)=(10,28,8/3)$, $T=4$, $h=0.001$, $\tau=0.1$, $u=(1,1,1)$ and 0.5% coordinate noise. Both add twelve time-only endpoint half-windows to 480 interior windows, with half-window full widths $(3,1.5,0.75,0.375,0.1875,0.09375)$ for Van der Pol and $(0.6,0.3,0.15,0.075,0.0375,0.01875)$ for Lorenz. Initial observation controls are included in the joint branch. The known-initial Lorenz comparator fits exact discrete OU innovations by nonlinear least squares with analytical sensitivities. A positive matched weak-to-known-initial likelihood RMSE gap defines the frozen 50% recovery criterion; a nonpositive gap leaves it undefined. All intervals use 5000 paired bootstrap resamples. First-order and full-Hermite covariance calculations at the true clean design are surrogate geometry checks, distinct from empirical estimator bias and dispersion.
 
-## S23. Prespecified cubic Wald test and refined sparse-selection grid
+## S3. Prespecified cubic Wald test and refined sparse-selection grid
 
 The primary configuration is `configs/support_wald_v2.json`. A degree-one-through-three polynomial library supplies eighteen unrestricted coefficients, nine per equation. The target is the single prespecified $x^3$ coefficient in the second equation. Its magnitude grid, in units of the boundary-free full-library local two-point reference, is $(0,0.5,1,2,2.5,3,3.5,4)$, with negative signs for bounded alternatives. At each of 0.5% and 5% noise, one hundred seeds are shared across all alternatives and both procedures. Original MSTLS results and input hashes are reused at the five original grid points; the additional three grid points use the same pinned author code and settings. There are 1600 matched weak-GLS fits and 1600 author-reference outcomes, including the original 1000 archived outcomes.
 
@@ -47,9 +47,9 @@ A deterministic preflight in the original high-noise version found target bias $
 
 The plotted local Gaussian reference uses the two-sided Wald power $\Phi(-z_{0.975}-a)+1-\Phi(z_{0.975}-a)$, where $a=|\delta|\sqrt{\mathcal I^{\mathrm{eff}}_\delta}$. The parent two-point reference uses equal-prior Bayes error 0.05 and is a different criterion; one reference unit corresponds to local Wald power approximately 0.908. The null information reference is used as a local yardstick, not as a finite-amplitude power identity. Exact residual covariance at a fitted pilot is also distinct from the exact finite-noise covariance of the random-design coefficient estimator. Paired inclusion differences and Wilson intervals are reported without inferring variance ratios from threshold transitions.
 
-### S23.1. Complete rejection intervals and paired differences
+### S3.1. Complete rejection intervals and paired differences
 
-Table S19. All targeted-test and sparse-inclusion frequencies. Each count uses one hundred common noise paths. Intervals for individual frequencies are Wilson 95%; difference intervals are conservative pointwise 95% intervals obtained from Bonferroni-projected Clopper–Pearson limits for the two discordant cells. S23.2 defines them; they remain nondegenerate at extreme samples. The nominal Wald size is 5%, with a failed null-calibration gate at 5% noise. MSTLS is a selection procedure without a nominal size parameter.
+Table S1. All targeted-test and sparse-inclusion frequencies. Each count uses one hundred common noise paths. Intervals for individual frequencies are Wilson 95%; difference intervals are conservative pointwise 95% intervals obtained from Bonferroni-projected Clopper–Pearson limits for the two discordant cells. S3.2 defines them; they remain nondegenerate at extreme samples. The nominal Wald size is 5%, with a failed null-calibration gate at 5% noise. MSTLS is a selection procedure without a nominal size parameter.
 
 | Noise | Magnitude | Wald (Wilson 95%) | MSTLS (Wilson 95%) | Difference, percentage points (paired 95%) |
 |---|---:|---|---|---|
@@ -71,7 +71,9 @@ Table S19. All targeted-test and sparse-inclusion frequencies. Each count uses o
 | 5% | 4 | 95/100 (88.8–97.8%) | 70/100 (60.4–78.1%) | 25 (9.7–38.0) |
 
 
-### S23.2. Boundary-valid intervals for paired frequency differences
+![Figure S1. Paired rejection/inclusion frequencies for the added negative cubic term, with Wilson 95% intervals and 100 paths per point. The dashed curve is the two-sided Gaussian Wald reference computed from null local efficient information; the horizontal scale uses a distinct equal-prior two-point error reference. At one unit its Wald prediction is about 90.8%. The small-noise null-calibration gate passes; the 5% gate fails, so the right-panel Wald frequencies are descriptive. Finite alternatives need not follow the null-local curve.](figures/publication/support_wald_mstls.png)
+
+### S3.2. Boundary-valid intervals for paired frequency differences
 
 Let $p_{10}=P(W=1,M=0)$ and $p_{01}=P(W=0,M=1)$ for the targeted Wald
 outcome $W$ and MSTLS inclusion $M$ on the same path. Their frequency
@@ -106,11 +108,11 @@ points, now with interval 78.2–96.3 points. It compares different operating
 outcomes, not tests with common size or general structure-selection accuracy.
 
 
-## S24. Same-path null calibration with random-design and bootstrap SEs
+## S4. Same-path null calibration with random-design and bootstrap SEs
 
 The configuration `configs/wald_se_calibration.json` was frozen before any new SE outcomes; `reports/wald_se_protocol_decision.json` records its timestamp and SHA256 together with the archived-reference hash. All 100 previously evaluated null paths at 5% noise are retained. Five shards contain twenty paths each, assigned by seed modulo five. Their observed input hashes, all eighteen coefficients and nominal standard errors are replayed against the archived reference. The point estimates and $z_{0.975}$ cutoff are common to the three SE branches. No outcome-dependent SE scaling, bias correction or empirical rejection cutoff is introduced. These known null paths provide a paired diagnostic rather than independent confirmation.
 
-### S24.1. Random-design score sandwich
+### S4.1. Random-design score sandwich
 
 Let $m(\theta)=b-A\theta$, with Hermite-corrected $A$, and fix the observed weights $W=(C+\lambda I)^{-1}$ using the original relative ridge rule. The observed bread is $H=A^\top WA$. Generate OU observations from a null-imposed bounded core-five pilot trajectory $x_0$ with coefficient vector $\theta_0$ in the eighteen-dimensional library. Four fitted background coefficients are retained and the candidate is set to zero; the initial state and stationary OU covariance are supplied. Subtract the clean generating trajectory's deterministic discrete residual $d_0=b(x_0)-A(x_0)\theta_0$. For each model draw, form
 
@@ -120,15 +122,15 @@ $$
 
 Here $e_j$ selects the candidate at zero-based library index 14. The SE is the centered sample standard deviation of 999 independent $\psi^*$ draws. Random $A^*$ shares the observation noise with $b^*$, so the score variance includes their dependence and polynomial design noise. This is Monte Carlo estimation of a model score covariance, with fixed observed weights and bread. It leaves pilot-weight variability to the full-refit bootstrap branch and leaves score centering errors uncorrected. The recorded average score influence across observed paths is 0.03462; its nonzero value cautions against interpreting the sandwich as an exact finite-noise variance identity. With deterministic $A$, the influence projection reduces algebraically to the fixed-weight GLS map.
 
-### S24.2. Full-refit parametric bootstrap
+### S4.2. Full-refit parametric bootstrap
 
 For each observed path, 399 stationary OU draws are generated around the same null-imposed pilot trajectory, with the original coordinate noise scales. Each draw refits the thirty-window bounded core-five pilot, integrates its fitted trajectory, rebuilds exact Hermite residual covariance and the pilot quadrature correction, and fits all eighteen coefficients on the original 480 windows. The SE is the target's sample standard deviation with denominator $B-1$. It measures variability of this complete fitted procedure under the supplied pilot model. The mean bootstrap target averaged across paths is $-0.006910$; bootstrap bias is recorded but not subtracted from observed estimates.
 
 Bootstrap seeds are $95000000+1000s+b$ and score seeds are $96000000+1000s+b$, for observed seed $s$ and zero-based draw $b$. They occupy disjoint ranges and differ from the observation seeds. The generating pilot restriction and supplied covariance remain substantive assumptions. Any failed integration or fit stops its shard; replicates are never silently removed. A separate one-path numerical smoke with eight score draws and four bootstrap refits validates execution and replay only.
 
-### S24.3. Complete outcomes and audit
+### S4.3. Complete outcomes and audit
 
-Table S20. Null rejection on 100 paired Van der Pol paths at 5% noise. The frozen gate is inclusion of 5% in the Wilson 95% interval. The SE ratio is the median of pathwise ratios to the nominal SE. The paths were previously examined; this is a diagnostic, with independent confirmation outstanding.
+Table S2. Null rejection on 100 paired Van der Pol paths at 5% noise. The frozen gate is inclusion of 5% in the Wilson 95% interval. The SE ratio is the median of pathwise ratios to the nominal SE. The paths were previously examined; this is a diagnostic, with independent confirmation outstanding.
 
 | Standard error | Rejections | Wilson 95% | Gate | Median SE ratio |
 |---|---:|---|---|---:|
@@ -136,21 +138,21 @@ Table S20. Null rejection on 100 paired Van der Pol paths at 5% noise. The froze
 | Random-design sandwich | 2/100 | 0.6–7.0% | Pass | 2.81 |
 | Full-refit parametric bootstrap | 5/100 | 2.2–11.2% | Pass | 1.79 |
 
-Table S20 reports the full diagnostic: nominal 23/100 (Wilson 15.8–32.2%), random-design sandwich 2/100 (0.6–7.0%), and full-refit bootstrap 5/100 (2.2–11.2%). Both revised intervals include 5%, satisfying the frozen criterion. Median SEs are 0.04325, 0.12575 and 0.07862 respectively. Median paired ratios are 1, 2.812 and 1.792; ratios of marginal medians are a different statistic. All original target estimates and nominal SEs replay with zero numerical difference. All 39,900 bootstrap targets are retained, their sample SDs are recomputed, and all 300 rejection decisions are checked against the unchanged normal cutoff. All 99,900 score draws were completed. Shard runtimes range from 3.75 to 5.07 hours; aggregate bootstrap and score times are 23.23 and 0.522 aggregate hours.
+Table S2 reports the full diagnostic: nominal 23/100 (Wilson 15.8–32.2%), random-design sandwich 2/100 (0.6–7.0%), and full-refit bootstrap 5/100 (2.2–11.2%). Both revised intervals include 5%, satisfying the frozen criterion. Median SEs are 0.04325, 0.12575 and 0.07862 respectively. Median paired ratios are 1, 2.812 and 1.792; ratios of marginal medians are a different statistic. All original target estimates and nominal SEs replay with zero numerical difference. All 39,900 bootstrap targets are retained, their sample SDs are recomputed, and all 300 rejection decisions are checked against the unchanged normal cutoff. All 99,900 score draws were completed. Shard runtimes range from 3.75 to 5.07 hours; aggregate bootstrap and score times are 23.23 and 0.522 aggregate hours.
 
 The byte-preserved outputs and execution logs are in `data/wald_se_calibration/`, with a SHA256 inventory and per-stage frozen-source audits. `python scripts/finish_wald_se_calibration.py --analyze-only` verifies that inventory and regenerates results from the committed bundle without Kaggle access or ODE solves. No alternative-power samples use the new SEs. Wilson compatibility on the previously examined 100 null paths motivates independent confirmation, rather than establishing precise size, efficiency or post-selection validity.
 
-## S25. Additional numerical checks and detailed protocols
+## S5. Additional numerical checks and detailed protocols
 
 These checks preserve the supplementary numerical evidence and implementation details of the condensed main paper. They use the original archived data without new simulations or amended outcomes.
 
-### S25.1. Scalar optimal-test check
+### S5.1. Scalar optimal-test check
 
 The scalar model is $x'=ax$, with $a=-1$, $x_0=2$, $T=4$ and OU correlation time 0.4. Noise standard deviations are 0.1, 0.02 and 0.005. For each amplitude, 1000 independent OU paths are shared across tests. A 30-window weak OLS pilot, clipped to $[-2.5,0.5]$, is substituted into the explicit function of Section 5.3. A quintic cutoff is zero within a quarter of the declared width from either endpoint and reaches one at that width. Widths are 0.2, 0.1, 0.05, 0.025 and 0.0125. Simpson quadrature uses $h=1/16384$. The generating-parameter test is an oracle comparison; the fitted-pilot test receives no true coefficient.
 
-Unguarded weak ratios can have infinite population moments (Section 4.2). Reported scalar RMSE therefore uses the prespecified clipping of final estimates to $[-2.5,0.5]$; unbounded medians are also archived. The clean-moment denominator is reported solely as a diagnostic; every path is retained. Only five final estimates are clipped, all from the one-window comparator at noise SD 0.1; no oracle or fitted-optimal-test estimate is clipped. Every path enters the summaries. Full counts are listed in S8.
+Unguarded weak ratios can have infinite population moments (Section 4.2). Reported scalar RMSE therefore uses the prespecified clipping of final estimates to $[-2.5,0.5]$; unbounded medians are also archived. The clean-moment denominator is reported solely as a diagnostic; every path is retained. Only five final estimates are clipped, all from the one-window comparator at noise SD 0.1; no oracle or fitted-optimal-test estimate is clipped. Every path enters the summaries. Full counts are listed in research archive S8.
 
-Table S21. Scalar coefficient errors at cutoff width 0.0125, with 1000 paired paths per amplitude. Medians are absolute errors; RMSE uses bounded final estimates. The reference is the standard deviation of the efficient Gaussian influence, for local information comparison.
+Table S3. Scalar coefficient errors at cutoff width 0.0125, with 1000 paired paths per amplitude. Medians are absolute errors; RMSE uses bounded final estimates. The reference is the standard deviation of the efficient Gaussian influence, for local information comparison.
 
 | Noise SD | One-window median | Pilot-test median (95% interval) | Pilot-test RMSE | Weak influence SD |
 |---|---:|---:|---:|---:|
@@ -158,16 +160,16 @@ Table S21. Scalar coefficient errors at cutoff width 0.0125, with 1000 paired pa
 | 0.02 | 0.04585 | 0.01248 [0.01159, 0.01331] | 0.01818 | 0.01813 |
 | 0.005 | 0.01141 | 0.00312 [0.00289, 0.00336] | 0.00455 | 0.00453 |
 
-At noise SD 0.1, the fitted-pilot median is 0.05981, compared with 0.22443 for the fixed window. The Gaussian absolute-error median at the class bound is 0.06113. These are different statistical summaries; covariance efficiency is assessed separately by linearized variance. At the smallest noise the pilot-test bias is 0.000050 and dispersion 0.004551. The oracle local efficiency relative to the weak-class bound at width 0.0125 is 0.9864. Full width and amplitude dependence is retained in S8.
+At noise SD 0.1, the fitted-pilot median is 0.05981, compared with 0.22443 for the fixed window. The Gaussian absolute-error median at the class bound is 0.06113. These are different statistical summaries; covariance efficiency is assessed separately by linearized variance. At the smallest noise the pilot-test bias is 0.000050 and dispersion 0.004551. The oracle local efficiency relative to the weak-class bound at width 0.0125 is 0.9864. Full width and amplitude dependence is retained in research archive S8.
 
-![Figure S12. Scalar compact optimal tests at two noise amplitudes. Intervals resample independent paths; the dotted Gaussian median reference is derived from the sharp influence bound.](figures/publication/efficient_scalar.png)
+![Figure S2. Scalar compact optimal tests at two noise amplitudes. Intervals resample independent paths; the dotted Gaussian median reference is derived from the sharp influence bound.](figures/publication/efficient_scalar.png)
 
 
-### S25.2. Original 128-path nested-span check
+### S5.2. Original 128-path nested-span check
 
-The largest clean discrete GLS coefficient error is 2.82e-07, below the small-noise error scale. For the feasible test, 128 independent paths at each amplitude are shared by both weights and all three families. Hermite-corrected moments use known marginal variances. A 30-window OLS pilot is clipped to a fixed physical parameter box and integrated from the known initial state. Exact polynomial covariance is evaluated on this fitted model trajectory, and coefficient-dependent weights are updated for at most 100 iterations, with relative tolerance $10^{-7}$. The covariance uses the fitted trajectory. This is a known-support WENDy-like component; the complete author WENDy benchmark is documented separately in S6 and S9.6.
+The largest clean discrete GLS coefficient error is 2.82e-07, below the small-noise error scale. For the feasible test, 128 independent paths at each amplitude are shared by both weights and all three families. Hermite-corrected moments use known marginal variances. A 30-window OLS pilot is clipped to a fixed physical parameter box and integrated from the known initial state. Exact polynomial covariance is evaluated on this fitted model trajectory, and coefficient-dependent weights are updated for at most 100 iterations, with relative tolerance $10^{-7}$. The covariance uses the fitted trajectory. This is a known-support WENDy-like component; the complete author WENDy benchmark is documented separately in research archive S6 and research archive S9.6.
 
-Table S22. Feasible Van der Pol empirical relative RMSE and 95% path bootstrap intervals, with 128 paired paths per row. Bias and dispersion refer to the OU-weighted coefficient errors; their squares sum to empirical MSE. Final coefficient estimates are unbounded, so population moment claims require the risk conditions stated in Proposition 3.
+Table S4. Feasible Van der Pol empirical relative RMSE and 95% path bootstrap intervals, with 128 paired paths per row. Bias and dispersion refer to the OU-weighted coefficient errors; their squares sum to empirical MSE. Final coefficient estimates are unbounded; Proposition 3 concerns a distinct guarded routine and supplies no population-moment guarantee for these archived fits.
 
 | Noise | Windows | OU RMSE (95% interval) | iid RMSE (95% interval) | OU bias | OU dispersion |
 |---|---:|---:|---:|---:|---:|
@@ -180,16 +182,16 @@ Table S22. Feasible Van der Pol empirical relative RMSE and 95% path bootstrap i
 
 At 0.5% noise, OU weighting with 480 windows gives empirical RMSE 0.001737, versus the sharp reference 0.001690. At 5% noise it gives 0.025583, versus 0.016904; bias 0.008143 and dispersion 0.024253 identify finite-noise excess error. The stronger finite-noise assertion that more windows alone would reach 0.016904 is therefore not supported by this feasible implementation. The small-noise result and deterministic geometry support the conditional efficiency mechanism, while the moderate-noise result delimits it.
 
-At 0.5% noise, paired iid-minus-OU RMSE for 480 windows is 0.000038, with 95% interval [-0.000038, 0.000116]. At 5% noise, paired iid-minus-OU RMSE for 480 windows is -0.000075, with 95% interval [-0.001295, 0.001045]. These original 128-path intervals include zero. The planned 2000-path follow-up in Section 7.1 resolves the small-noise weighting comparison. Intervals are pointwise across comparisons. All 1536 final fits meet the stopping tolerance within 23 iterations, and no pilot is clipped; the finite-noise gap persists after this convergence control. Stopping counts are retained in S8; no path is excluded.
+At 0.5% noise, paired iid-minus-OU RMSE for 480 windows is 0.000038, with 95% interval [-0.000038, 0.000116]. At 5% noise, paired iid-minus-OU RMSE for 480 windows is -0.000075, with 95% interval [-0.001295, 0.001045]. These original 128-path intervals include zero. The planned 2000-path follow-up in Section 7.1 resolves the small-noise weighting comparison. Intervals are pointwise across comparisons. All 1536 final fits meet the stopping tolerance within 23 iterations, and no pilot is clipped; the finite-noise gap persists after this convergence control. Stopping counts are retained in research archive S8; no path is excluded.
 
-![Figure S13. Feasible Van der Pol RMSE as the test span grows. Dotted curves show oracle local influences and the horizontal dashed line the class reference. At 0.5% noise the dotted iid local reference nearly overlaps the empirical iid curve. Each empirical point uses the original 128 paired paths; the 2000-path 480-window comparison is reported separately.](figures/publication/efficient_vdp.png)
+![Figure S3. Feasible Van der Pol RMSE as the test span grows. Dotted curves show oracle local influences and the horizontal dashed line the class reference. At 0.5% noise the dotted iid local reference nearly overlaps the empirical iid curve. Each empirical point uses the original 128 paired paths; the 2000-path 480-window comparison is reported separately.](figures/publication/efficient_vdp.png)
 
 
-### S25.3. Matched author WENDy and moderate-noise likelihood
+### S5.3. Matched author WENDy and moderate-noise likelihood
 
 The pinned author WENDy implementation, including its own noise estimation, test-radius selection, basis construction and stopping rule, is run on exactly the 128 observations used by the feasible weak-GLS experiment at $h=0.005$. The supplied support has the same four free coefficients. This isolates the observation protocol while allowing each pipeline its declared estimator design. The same planned 128 seeds were partitioned across four CPU jobs for throughput; each seed enters the analysis once.
 
-Table S23. Matched Van der Pol comparison at 5% noise, 128 paired paths. Bootstrap intervals resample common seed indices. Bias and dispersion use all coefficient vectors.
+Table S5. Matched Van der Pol comparison at 5% noise, 128 paired paths. Bootstrap intervals resample common seed indices. Bias and dispersion use all coefficient vectors.
 
 | Estimator | RMSE (95% interval) | Bias | Dispersion |
 |---|---:|---:|---:|
@@ -197,21 +199,21 @@ Table S23. Matched Van der Pol comparison at 5% noise, 128 paired paths. Bootstr
 | OU weak GLS, 480 | 0.025583 [0.022840, 0.028227] | 0.008143 | 0.024253 |
 | iid weak GLS, 480 | 0.025509 [0.022987, 0.028270] | 0.008464 | 0.024063 |
 
-The paired OU-GLS-minus-author RMSE difference is 0.001529, with interval [-0.000796, 0.004051]. The author pipeline has a 6.0% lower point RMSE in this cohort, but the paired interval contains zero, leaving the ordering unresolved. Both estimators retain bias of roughly 0.008 in relative coefficient norm; dispersion supplies most of their squared error. The separate complete-pipeline benchmark in S9.6 uses 16 paths, different seeds and $h=0.01$; its WENDy RMSE 0.02154 and WmSINDy RMSE 0.01926 cannot be ranked against the present 128-path result. At 5% noise nonlinear residual and random-design terms, pilot error and estimator bias remain relevant (S3 and S9.3). Their effects remain under exact residual covariance. Adaptive radii and estimator-specific bias handling are possible differences, but no ablation attributes the gap to them. Small-noise efficiency is therefore not a claim of superior practical accuracy at 5%. Full WmSINDy also uses predictive and noise-reconstruction losses; its estimating equation is not restricted to the boundary-free class, so 0.016904 is not asserted as a lower bound for it.
+The paired OU-GLS-minus-author RMSE difference is 0.001529, with interval [-0.000796, 0.004051]. The author pipeline has a 6.0% lower point RMSE in this cohort, but the paired interval contains zero, leaving the ordering unresolved. Both estimators retain bias of roughly 0.008 in relative coefficient norm; dispersion supplies most of their squared error. The separate complete-pipeline benchmark in research archive S9.6 uses 16 paths, different seeds and $h=0.01$; its WENDy RMSE 0.02154 and WmSINDy RMSE 0.01926 cannot be ranked against the present 128-path result. At 5% noise nonlinear residual and random-design terms, pilot error and estimator bias remain relevant (research archive S3 and research archive S9.3). Their effects remain under exact residual covariance. Adaptive radii and estimator-specific bias handling are possible differences, but no ablation attributes the gap to them. Small-noise efficiency is therefore not a claim of superior practical accuracy at 5%. Full WmSINDy also uses predictive and noise-reconstruction losses; its estimating equation is not restricted to the boundary-free class, so 0.016904 is not asserted as a lower bound for it.
 
-A separate bounded local Gaussian path-likelihood optimization at 5% uses these identical 128 observations and exact stationary OU innovations. With the initial state known, relative RMSE is 0.01421 (95% path-bootstrap interval [0.01290, 0.01549]); jointly fitting its two coordinates gives 0.01720 ([0.01556, 0.01883]). Analytical ODE sensitivities supply the Jacobian. All fits meet the optimizer's stopping conditions, and 0 activate a declared parameter bound. These local likelihood references quantify full-path accuracy at moderate noise separately from the weak component (S19).
+A separate bounded local Gaussian path-likelihood optimization at 5% uses these identical 128 observations and exact stationary OU innovations. With the initial state known, relative RMSE is 0.01421 (95% path-bootstrap interval [0.01290, 0.01549]); jointly fitting its two coordinates gives 0.01720 ([0.01556, 0.01883]). Analytical ODE sensitivities supply the Jacobian. All fits meet the optimizer's stopping conditions, and 0 activate a declared parameter bound. These local likelihood references quantify full-path accuracy at moderate noise separately from the weak component (research archive S19).
 
 On these same 128 records at 5% noise, unknown-initial local likelihood has RMSE 0.0172, author WENDy 0.0241 and weak GLS 0.0256. The weak estimates have approximately 40% and 49% higher RMSE than likelihood, respectively. This finite-noise comparison lies within the same nuisance-initial-state information class; local small-noise efficiency alone does not predict the moderate-noise ordering.
 
 
-### S25.4. Sensitivity to supplied and fitted OU shape
+### S5.4. Sensitivity to supplied and fitted OU shape
 
-A separate 128-path Van der Pol check changes temporal weights to $\tau/2$ and $2\tau$, keeping the correction variance known. At 0.5% noise the RMSEs are 0.001747 and 0.001794, versus 0.001737 with the correct shape; at 5% they are 0.026242 and 0.026158, versus 0.025583. A stationary OU residual-profile fit using one known-initial scoring step gives RMSE 0.0017366 and 0.025183 at the two amplitudes. This check assesses a feasible residual plug-in; all fits converge (S12). Fixed-horizon infill identifies the microergodic combination $\sigma_j^2/\tau$, while separate variance and range consistency requires additional acquisition or calibration [@ying1991; @zhang2004].
-
-
+A separate 128-path Van der Pol check changes temporal weights to $\tau/2$ and $2\tau$, keeping the correction variance known. At 0.5% noise the RMSEs are 0.001747 and 0.001794, versus 0.001737 with the correct shape; at 5% they are 0.026242 and 0.026158, versus 0.025583. A stationary OU residual-profile fit using one known-initial scoring step gives RMSE 0.0017366 and 0.025183 at the two amplitudes. This check assesses a feasible residual plug-in; all fits converge (research archive S12). Fixed-horizon infill identifies the microergodic combination $\sigma_j^2/\tau$, while separate variance and range consistency requires additional acquisition or calibration [@ying1991; @zhang2004].
 
 
-### S25.5. Detailed protocols for the retained comparisons
+
+
+### S5.5. Detailed protocols for the retained comparisons
 
 **Small-noise weighting and full-path likelihood references**
 
@@ -260,7 +262,7 @@ Initial traces alone recover essentially the entire finite-family gap. This is t
 
 An additional $\delta x^3$ term in the second Van der Pol equation gives a bounded structural alternative for negative $\delta$, retaining the stabilizing $-x^2v$ term. Let $s_\delta$ be its sensitivity and let $S_{-\delta}$ collect the other coefficient sensitivities. The local composite likelihood information is $\|s_\delta-\Pi_{S_{-\delta}}s_\delta\|_{\mathcal H}^2$; the boundary-free reference additionally projects on $Z$. The local equal-prior two-point error reference $\Phi(-|\delta|\sqrt{\mathcal I^{\mathrm{eff}}_{\delta}}/2)=0.05$ gives $|\delta|_{\min}=2\Phi^{-1}(0.95)/\sqrt{\mathcal I^{\mathrm{eff}}_{\delta}}$. This profiles nuisance coefficients rather than treating them as known through a raw diagonal information entry.
 
-For the full degree-one-through-three polynomial library in both equations, profiling the 17 other coefficients gives local references 0.01928 with known initial state and 0.01941 for the boundary-free class at 0.5% noise. At 5%, these become 0.19279 and 0.19410. The small difference is direction specific; it differs from the aggregate coefficient-RMSE cost. The complete pinned author's adaptive WSINDy, with unchanged selection settings, was evaluated on 100 paired noise paths at each of five negative alternatives per amplitude. At magnitudes 0, 0.5, 1, 2 and 4 times the local weak reference, inclusion counts are 0, 0, 0, 0 and 100 at 0.5% noise, and 2, 4, 24, 58 and 70 at 5%. Full Wilson intervals and the core-five-coefficient comparison appear in S20. The local Gaussian reference describes regular composite-model information; sparse selection on a fixed background and finite-amplitude alternatives are different experiments. In particular, the large 5% alternatives require nonlinear interpretation. The author's selection curve supplies an algorithmic benchmark, rather than an equality test of the information formula.
+For the full degree-one-through-three polynomial library in both equations, profiling the 17 other coefficients gives local references 0.01928 with known initial state and 0.01941 for the boundary-free class at 0.5% noise. At 5%, these become 0.19279 and 0.19410. The small difference is direction specific; it differs from the aggregate coefficient-RMSE cost. The complete pinned author's adaptive WSINDy, with unchanged selection settings, was evaluated on 100 paired noise paths at each of five negative alternatives per amplitude. At magnitudes 0, 0.5, 1, 2 and 4 times the local weak reference, inclusion counts are 0, 0, 0, 0 and 100 at 0.5% noise, and 2, 4, 24, 58 and 70 at 5%. Full Wilson intervals and the core-five-coefficient comparison appear in research archive S20. The local Gaussian reference describes regular composite-model information; sparse selection on a fixed background and finite-amplitude alternatives are different experiments. In particular, the large 5% alternatives require nonlinear interpretation. The author's selection curve supplies an algorithmic benchmark, rather than an equality test of the information formula.
 
 **Moderate-noise endpoint confirmation**
 
@@ -274,7 +276,7 @@ At the clean design and true coefficients, the first-order covariance reference 
 
 **Lorenz endpoint confirmation**
 
-The three-state confirmation uses the supplied Lorenz structure, known $u=(1,1,1)$, 0.5% OU noise and all 256 frozen paired records. The universal family adds twelve time-only endpoint half-windows and three initial controls to 480 interior windows. Its covariance weights use the same bounded 30-window pilot as the matched compact branch. The comparator is fully optimized known-initial likelihood with exact discrete OU innovations and analytical sensitivities. All fits converge; none is excluded. Both clean-mean quadrature errors pass the fixed gate (S22).
+The three-state confirmation uses the supplied Lorenz structure, known $u=(1,1,1)$, 0.5% OU noise and all 256 frozen paired records. The universal family adds twelve time-only endpoint half-windows and three initial controls to 480 interior windows. Its covariance weights use the same bounded 30-window pilot as the matched compact branch. The comparator is fully optimized known-initial likelihood with exact discrete OU innovations and analytical sensitivities. All fits converge; none is excluded. Both clean-mean quadrature errors pass the fixed gate (S2).
 
 
 
@@ -282,11 +284,11 @@ Universal endpoints recover 95.5% of the paired compact-to-likelihood RMSE gap, 
 
 **Prespecified Wald rejection versus sparse inclusion**
 
-We refine the added-cubic grid with 2.5, 3 and 3.5 reference units and compare the author's unchanged MSTLS with a two-sided Wald test of the single prespecified $x^3$ coefficient at nominal 5%. All eighteen library coefficients are fitted without penalization by feasible weak GLS on 480 compact tests. Exact Hermite residual covariance is evaluated at a bounded core-five pilot. Original paired observations and author fits are reused, and intermediate grid points share their noise seeds. S23 documents a pilot-model correction of deterministic quadrature defects, fixed before inspecting the first version's noisy Wald outcomes. No significance or selection thresholds were tuned.
+We refine the added-cubic grid with 2.5, 3 and 3.5 reference units and compare the author's unchanged MSTLS with a two-sided Wald test of the single prespecified $x^3$ coefficient at nominal 5%. All eighteen library coefficients are fitted without penalization by feasible weak GLS on 480 compact tests. Exact Hermite residual covariance is evaluated at a bounded core-five pilot. Original paired observations and author fits are reused, and intermediate grid points share their noise seeds. S3 documents a pilot-model correction of deterministic quadrature defects, fixed before inspecting the first version's noisy Wald outcomes. No significance or selection thresholds were tuned.
 
 
 
-At 0.5% noise, null rejection is 7/100 (Wilson interval 3.4–13.7%), passing the prespecified compatibility gate for nominal 5%. One reference unit gives 91% rejection (83.8–95.2%), consistent with the 90.8% null-local Gaussian Wald prediction. MSTLS includes no target at that magnitude and reaches 46% at three units and 97% at 3.5 units. The paired one-unit difference is 91 percentage points, with conservative paired interval 78.2–96.3 points (S23.2). These supplied-candidate frequencies are consistent with the local small-noise reference; they require independent size and power confirmation. With only 100 null paths, passing the gate establishes compatibility, rather than precise size calibration or efficiency over a growing library.
+At 0.5% noise, null rejection is 7/100 (Wilson interval 3.4–13.7%), passing the prespecified compatibility gate for nominal 5%. One reference unit gives 91% rejection (83.8–95.2%), consistent with the 90.8% null-local Gaussian Wald prediction. MSTLS includes no target at that magnitude and reaches 46% at three units and 97% at 3.5 units. The paired one-unit difference is 91 percentage points, with conservative paired interval 78.2–96.3 points (S3.2). These supplied-candidate frequencies are consistent with the local small-noise reference; they require independent size and power confirmation. With only 100 null paths, passing the gate establishes compatibility, rather than precise size calibration or efficiency over a growing library.
 
 At 5% noise, null Wald rejection is 23/100 (15.8–32.2%), failing the gate. The target's empirical null RMSE is 0.07578, versus median reported standard error 0.04325; these are diagnostic scales, not an exact variance ratio. The nominal standard errors leave finite-noise random-design and pilot effects insufficiently calibrated. Higher alternative rejection therefore gives no calibrated-power advantage at this amplitude. MSTLS null inclusion is 2/100 (0.6–7.0%); it has no nominal test size parameter. Both panels are retained without repair based on their outcomes. The comparison separates prespecified statistical testing from library-wide sparse selection and post-selection inference.
 
@@ -294,11 +296,11 @@ At 5% noise, null Wald rejection is 23/100 (15.8–32.2%), failing the gate. The
 
 
 
-## S26. Supplementary local-estimation details
+## S6. Supplementary local-estimation details
 
 These details specialize classical estimating-equation and efficient-score arguments [@godambe1960; @bickel1993; @vandervaart1998]. Continuous-record linear estimation and its discrete approximation are established by Dette, Konstantinou and Zhigljavsky [@dette2017]; the main paper restricts their local regression geometry through the dynamical adjoint range.
 
-### S26.1. Scalar path information and weak-ratio diagnostics
+### S6.1. Scalar path information and weak-ratio diagnostics
 
 For $x_a(t)=x_0e^{at}$ with known $x_0$, $s(t)=x_0te^{at}$ and
 
@@ -342,7 +344,7 @@ $$
 
 This efficiency concerns the Gaussian linearization.
 
-### S26.2. Proof of the conditional dense-span proposition
+### S6.2. Proof of the conditional dense-span proposition
 
 The main proposition separates estimator regularity from projection geometry. Its sufficient assumptions are:
 
@@ -362,7 +364,7 @@ $$
 
 By (P4), $Q_Kt_i\to t_i$ in covariance norm. Cauchy–Schwarz then gives entrywise convergence to $\langle t_i,t_j\rangle_C=(\mathcal I_{e,C})_{ij}$. The nested projected information matrices increase in Loewner order, and positive definiteness makes matrix inversion continuous at the limit. Consequently $V_K\to\mathcal I_{e,C}^{-1}$. These are two sequential limits. A joint $K,\epsilon$ limit requires uniform controls absent from (P1)–(P4). The proof is a specialization of classical estimating-equation linearization and efficient-score projection [@godambe1960; @bickel1993; @vandervaart1998, Chapters 5 and 25]. $\square$
 
-### S26.3. Parameter-dependent weak likelihood
+### S6.3. Parameter-dependent weak likelihood
 
 The same leading map arises from a parameter-dependent Gaussian weak likelihood of the form studied by WENDy-MLE [@rummel2025], provided the covariance shape is correct and the local solution is regular. For fixed dimension write $r(\theta)=\epsilon r_1+o_p(\epsilon)$, $\partial_\theta r=-D+o_p(1)$ and $\Sigma_\epsilon(\theta)=\epsilon^2\Sigma_0(\theta)$, with smooth positive definite $\Sigma_0$. The objective $\log\det\Sigma_\epsilon+r^T\Sigma_\epsilon^{-1}r$ has covariance-derivative and log-determinant score terms of order $O_p(1)$ in an $O_p(\epsilon)$ neighborhood; its mean-residual score is of order $O_p(\epsilon^{-1})$. The local score equation therefore gives
 
@@ -373,7 +375,7 @@ $$
 
 Thus the log determinant and covariance derivatives distinguish finite-noise weak likelihood from frozen GLS, while both share the correct-covariance leading influence under these assumptions. This connects Proposition 3 to a regular local weak-likelihood estimator; its assumptions concern a regular local optimizer and consistent covariance calibration.
 
-### S26.4. Raw features and linear-time temporal covariance application
+### S6.4. Raw features and linear-time temporal covariance application
 
 For correction variance $\widehat v$, define
 
@@ -392,7 +394,7 @@ $$
 
 with zero exterior initialization. Each multi-index costs $O(N(Kd)^2)$ time and $O(NKd+(Kd)^2)$ memory, avoiding an $N\times N$ temporal matrix. An independent fixed-variance nugget has additional diagonal-in-time covariance; its linear weak contribution is $O(h)$. The exact mixed-noise formula is in the supplement.
 
-### S26.5. Explicit scalar OU optimal test
+### S6.5. Explicit scalar OU optimal test
 
 For scalar exponential dynamics, $z=e^{at}$, $s=x_0te^{at}$, $k=\mathcal I_{au}/\mathcal I_{uu}$ and $g=e^{at}(x_0t-k)$. Define
 
@@ -419,9 +421,9 @@ For $a\ne0$, $F_0=\operatorname{expm1}(2at)/(2a)$ and $F_1=[e^{2at}(2at-1)+1]/(4
 
 
 
-## S27. Archived regularization and a constructive guarded variant
+## S7. Archived regularization and a constructive guarded variant
 
-### S27.1. What the archived solver actually approaches
+### S7.1. What the archived solver actually approaches
 
 In `src/weak_efficiency.py`, `gls_map` adds
 $\lambda_\epsilon I=\rho\,\operatorname{tr}(\widehat\Sigma_\epsilon)I/m$
@@ -457,7 +459,7 @@ Neither uniform integrability nor exact ideal-GLS efficiency of these
 archived algorithms is claimed. Their finite mesh and fixed spectral cutoff
 also differ from the sequential limit in Proposition 3.
 
-### S27.2. A specified algorithm for which the fixed-family assumptions follow
+### S7.2. A specified algorithm for which the fixed-family assumptions follow
 
 The separate routine `src/guarded_gls.py` specifies a bounded vanishing-ridge
 variant. It retains fixed, deterministic test functions and the known sensor
@@ -470,7 +472,7 @@ same compact box. These safeguards leave a regular local solution unchanged
 asymptotically. This routine is a new analytically specified variant; none
 of the reported Monte Carlo outcomes uses it.
 
-**Proposition S27.1 (guarded fixed-family weak GLS).** Consider a correctly
+**Proposition 3 (guarded fixed-family weak GLS; detailed assumptions).** Consider a correctly
 specified polynomial vector field linear in its $p$ coefficients, known
 initial state and supplied independent-coordinate OU covariance shape
 with a common correlation time. Fix a finite deterministic family of
@@ -571,7 +573,7 @@ fixed compact box, so the fourth scaled-error contribution is bounded by
 $C\epsilon^{-4}P(M>c/\epsilon)=O(\epsilon^4)$, using $q=8$.
 Thus scaled errors have bounded fourth moments, proving uniform
 integrability of their squares and convergence of covariance. Finally,
-S26.2's projection argument proves the separate dense-family limit. $\square$
+S6.2's projection argument proves the separate dense-family limit. $\square$
 
 This result strengthens the existence of a realizable efficient procedure
 under verifiable clean-rank, trajectory and quadrature conditions. It neither
@@ -580,90 +582,216 @@ misspecified pilots or finite-noise SEs. Independent size and power studies
 remain necessary for the reported testing procedure.
 
 
-## S28. Constructive full-library efficiency under a jet condition
+### S7.3. Fixed-ridge geometry on actual archived spans
 
-### S28.0. General statement and proof of Theorem 3
+The frozen `archived_ridge_check.json` protocol uses the archived basis cutoff,
+480 compact windows, original endpoint half-window widths, covariance routines
+and quadrature rules. It evaluates first-order residual covariance at the clean
+truth for six Van der Pol families and two Lorenz families. Zero-ridge Cholesky
+is used for the ideal map; no extra eigenvalue cutoff is introduced. Unit-noise
+scaling cancels from the relative ridge comparison. This is a deterministic
+matrix calculation, without new observation paths.
 
-Let $x_0:[0,T]\to\mathbb R^d$ be an analytic polynomial ODE solution on
-the full compact interval, $T>1$. The field is linear in $m$ polynomial
-library functions in each equation; the true $dm$ coefficients are
-interior to a fixed finite box. The observation is $x_0+\epsilon\eta$,
-with known positive independent-coordinate stationary OU scales and
-range. Suppose the $m$-by-$m$ derivative matrix of the library along the
-trajectory, through order $m-1$, has nonzero determinant at some $t_*$.
+Table S6. Relative local RMSE increments for the archived relative ridge
+of $10^{-10}$. The PSD increment is computed as $(P_\rho-P_0)\Sigma_1(P_\rho-P_0)^\top$
+rather than subtracting almost equal covariance matrices.
 
-The specified algorithm uses the kernel and bandwidth of S28.1 below,
-and $w(t)=[1-((t-T/2)/(T/2-1/2))^2]_+^4$. Its $m$ feature instruments
-are $w g_j(z)$, evaluated on the smoothed linear interpolant $z$, giving
-$dm$ full-library pilot equations. Add the interior dyadic cubic spline
-family at each fixed level. Whiten its full $H^1$ Gram matrix with
-relative retention cutoff $10^{-10}\epsilon^{1/10}$. Use the exact
-polynomial Hermite covariance at the proxy and box-clipped pilot,
-relative covariance ridge $\epsilon^2$, normal-matrix and covariance
-guards $10^{-8}\epsilon^2$, and final projection to the coefficient box.
-Failed guards return its midpoint. Take $h^2=o(\epsilon)$.
+| System and family | Relative RMSE increment |
+|---|---:|
+| vdp compact trapezoid 480 | 7.041e-21 |
+| vdp compact simpson | 7.023e-21 |
+| vdp initial | 3.906e-19 |
+| vdp terminal | 6.876e-21 |
+| vdp initial control | 8.001e-20 |
+| vdp full | 4.745e-19 |
+| lorenz compact simpson | 7.882e-18 |
+| lorenz full | 6.695e-15 |
 
-We prove the conclusions of Theorem 3; no pilot-rank or weight-consistency
-assumption is added. Analyticity and the jet condition imply that a
-linear combination of library values vanishing on any open interval
-has all coefficients zero. Therefore $\int w g g^\top$ is positive
-definite and the clean pilot design has $d$ invertible copies of it.
-The combined clean test Gram is positive definite too: a relation
-between $w c^\top g$ and cubic splines makes the analytic left side a
-single cubic polynomial on the support interior. Its order-four zero
-at the left edge forces that cubic to vanish. The jet condition and
-spline independence then eliminate both sets of coefficients. The
-adjoint on zero-trace tests is injective, and positive OU covariance
-makes the first-order finite-family residual covariance positive
-definite. The final design includes the invertible pilot block.
+The largest value is $6.70\times10^{-15}$ for the Lorenz endpoint/control
+family; the largest relative map change is $9.13\times10^{-8}$.
+Normalization errors are below $4.3\times10^{-13}$.
+These negligible local increments address regularization cost, not the
+existence of finite-noise estimator moments. Tables 1?6 retain their
+original finite-sample outcomes; they are not relabelled as guarded fits.
+Original output bytes, maps and covariance matrices are preserved in
+`data/archived_ridge_check`; the frozen source audit passes for all eight
+families. The calculation took 24.3 seconds on Kaggle.
 
-With $M=\|\eta\|_\infty$, kernel moment cancellation gives proxy $C^1$
-error at most $C(b^2+h^2/b+\epsilon M/b)$ on the instrument support,
-and a $C^3$ bound $C(1+h^2/b^3+\epsilon M/b^3)$, where
-$b=\epsilon^{1/10}/4$. The proxy is uniformly consistent on the full
-interval; reflection adds only vanishing boundary bias. The clean
-weak identity holds for every such instrument, so its derivative with
-respect to the test is zero. Hence instrument estimation creates no
-standalone first-order clean residual. Taylor expansion of the finite
-polynomial library, exact Hermite correction, and OU path continuity
-give the same linear Gaussian residual and root-$\epsilon$ pilot
-expansion as in S28.3. The clean quadrature error is $o(\epsilon)$;
-noise Riemann sums converge with domination by $CM$. For any fixed
-polynomial degree, higher-order residual terms are bounded by $C\epsilon M$
-on a neighbourhood where $\epsilon M$ is small, and their first-order
-remainders vanish in $L^2$ by the finite Gaussian maximal moments.
+## S8. Constructive full-library efficiency under a jet condition
 
-Proxy and pilot consistency imply convergence of the normalized exact
-Hermite covariance to its positive first-order limit. All clean Gram
-gaps are positive at fixed level. Thus the vanishing cutoff eventually
-retains every row, the guards become inactive, and the vanishing ridge
-gives the GLS linear map in S28.3. Clipping is locally inactive because
-the true coefficients are interior. For the good event
-$\epsilon b^{-3}M\leq c$, local inverse and derivative bounds give
+### S8.1. General proof of Theorem 3
+
+Use the estimator defined in main §5.6, including even uniform grids,
+known Hermite correction variances, the specified guards and projection
+to a fixed coefficient box. Write $C$ for the unit-amplitude covariance
+of $\eta$. The true trajectory is analytic on the full compact interval,
+so it and all derivatives needed below are bounded. Constants in this
+proof may depend on the fixed spline level and trajectory, but not on
+$\epsilon$ or the observation grid. No uniform growing-level assertion
+is made.
+
+**Step 1: the jet condition gives clean rank.** Put
+$G(t)=(g_1(x_0(t)),\ldots,g_m(x_0(t)))^\top$. If $c^\top G(t)$ vanishes
+on any open subinterval, analyticity extends that identity to the whole
+interval. Differentiation at $t_*$ through order $m-1$ and the nonzero
+jet determinant give $c=0$. Since $w>0$ on $(1/2,T-1/2)$,
+
+$$
+c^\top\left(\int wGG^\top dt\right)c
+=\int w(c^\top G)^2dt>0\quad(c\ne0).
+$$
+
+The clean feature-instrument pilot design contains $d$ copies of this
+positive matrix. Hence it is invertible without a separate rank
+assumption. The final design contains this block and has full column
+rank as well.
+
+**Step 2: the combined Gram and residual covariance are positive.**
+Suppose a linear combination $w c^\top G$ equals a cubic-spline
+combination. On the support interior the former is analytic. Across
+every interior spline knot, analyticity forces adjacent cubic pieces
+to have equal derivatives of all orders, and hence to be one cubic
+polynomial. At $t=1/2$ the analytic trajectory is bounded and $w$ has
+an order-four zero. The polynomial and its first three derivatives
+therefore vanish at that edge, forcing it to be zero. Step 1 gives
+$c=0$, and independence of the cardinal splines gives zero for their
+coefficients. Thus the full clean $H^1$ Gram has a positive minimum
+eigenvalue at every fixed level.
+
+For vector tests the adjoint $D^*\phi=-\phi'-J^\top\phi$ is injective
+on $H_0^1$: a homogeneous solution with zero initial trace is zero
+by uniqueness for the linear equation. Each OU coordinate covariance
+is strictly positive on nonzero $L^2$ weights, as its spectral density
+$2\sigma_{0,j}^2\tau/(1+\tau^2\omega^2)$ is positive. Consequently the
+first-order covariance $\Sigma_1$ of any independent finite test family
+is positive definite. Both covariance and design inverse bounds are
+available in a neighbourhood of the clean data.
+
+**Step 3: proxy and raw instruments converge.** Couple the observations
+on successive grids to one continuous unit-amplitude OU path and write
+$M=\|\eta\|_\infty$. The OU representation as a Gaussian initial value
+plus a time-changed Brownian martingale and the maximal inequality give
+$E M^q<\infty$ for every finite $q$. Linear interpolation has clean
+uniform error $O(h^2)$ and noise bounded by $M$. Kernel symmetry and
+its unit mass give, on the support of $w$,
+
+$$
+\|z-x_0\|_{C^1}
+\leq C(b^2+h^2/b+\epsilon M/b),\qquad
+\|z\|_{C^3}\leq C(1+h^2/b^3+\epsilon M/b^3).
+$$
+
+The kernel never meets reflected boundaries on this support.
+On the entire interval reflection introduces only $O(b)$ clean bias,
+so the proxy remains uniformly consistent there. With
+$b=\epsilon^{1/10}/4$ and $h^2=o(\epsilon)$, the first bound tends to
+zero in every fixed finite moment. Polynomial composition and its
+chain rule imply convergence of the feature instruments to $wG$ in
+$H^1$. The cubic tests are deterministic. The combined raw Gram
+therefore converges to its positive clean Gram.
+
+**Step 4: adaptive tests contribute no clean first-order residual.**
+For every boundary-free test, including the random raw instruments,
+the continuous clean identity is exactly
+$b_\phi(x_0)-G_\phi(x_0)\theta_0=0$. Its derivative with respect to
+$\phi$ is zero. Polynomial Hermite expansion of the data residual gives
+
+$$
+m_\epsilon(\theta_0)
+=\epsilon r_{\Phi_0}(\eta)+o_{L^2}(\epsilon),\qquad
+r_\phi(\eta)=-\int(\phi'^\top\eta+\phi^\top J\eta)dt.
+$$
+
+Before whitening, replacing $\Phi_\epsilon$ by $\Phi_0$ in the linear
+term has scaled error bounded by
+$C\|\Phi_\epsilon-\Phi_0\|_{H^1}M$, whose second moment tends to zero
+by Step 3 and the Gaussian maximal moments. Higher Hermite orders are
+finite polynomials multiplied by at least $\epsilon^2$; their scaled
+remainders vanish in $L^2$. For quadrature, the clean residual defect
+is $O(h^2)$ on bounded-$C^3$ instrument neighbourhoods. Simpson weights
+have bounded total mass. OU path continuity makes noise quadrature
+errors converge to zero after scaling by $\epsilon$, with domination
+by a fixed polynomial in $M$. One may first restrict to such
+neighbourhoods and then use the Gaussian moment bounds to remove the
+restriction. Thus no rate of differentiability of the OU path is
+assumed. The clean pilot inverse from Step 1 now gives
+$\widetilde\theta-\theta_0=O_P(\epsilon)$. The pilot projection is
+locally inactive because the truth is strictly interior to its box.
+
+**Step 5: weights, cutoff and guards converge.** The normalized exact
+Hermite covariance at the proxy and pilot converges to $\Sigma_1$.
+This follows from their consistency and continuity of the polynomial
+coefficient weights and OU integrals; the order-$q\geq2$ terms carry
+$\epsilon^{2q-2}$ after normalization and vanish. By Step 2 the
+spectral cutoff eventually retains every row at fixed level.
+For analysis, whitening can use the continuous symmetric inverse
+square root of the Gram. The implemented eigenvector whitening differs
+by an orthogonal row transformation, to which GLS, trace ridge and
+the guards are invariant. Repeated eigenvalues therefore create no
+extra eigenvector-consistency hypothesis.
+
+The relative ridge and guard thresholds tend to zero, while the clean
+matrix gaps stay positive. The final map is consequently
+
+$$
+\epsilon^{-1}(\widehat\theta-\theta_0)
+=P_0 r_{\Phi_0}(\eta)+o_P(1),\qquad
+P_0=(D^\top\Sigma_1^{-1}D)^{-1}D^\top\Sigma_1^{-1}.
+$$
+
+Here $D$ and $\Phi_0$ are expressed in the same clean whitened coordinates.
+The Gaussian leading term has covariance
+$V_k=(D^\top\Sigma_1^{-1}D)^{-1}$. This derives the expansion and weight
+consistency, rather than assuming them.
+
+**Step 6: moment convergence follows from the bounded estimator.**
+For a fixed sufficiently small $c$, let the good event be
+$\epsilon b^{-3}M\leq c$. On it, proxy derivatives, clean-neighbourhood
+inverses and test transformations are uniformly bounded for sufficiently
+small $\epsilon$. Since $\epsilon M\leq c b^3$, the finite polynomial
+remainders and the quadrature bounds yield
 $\epsilon^{-1}\|\widehat\theta-\theta_0\|\leq C(1+M)$.
-On its complement the box bounds the error, and the twelfth Gaussian
-maximal moment gives $C\epsilon^{-4}\epsilon^{(7/10)12}\to0$ for the
-scaled fourth moment there. This proves uniform integrability and
-second-moment convergence, not just the distributional limit.
+The complement implies $M>C\epsilon^{-7/10}$. The box bounds the
+unscaled output error on that event, including all guard failures.
+Using the twelfth maximal moment,
 
-Finally the interior cubic spaces are nested and dense in $H_0^1$.
-Continuity of the adjoint and Proposition 2 imply density in the weak
-influence class. The full efficient information is positive definite:
-if a parameter sensitivity equals $Zc$, its zero initial value forces
-$c=0$; its differential equation and library independence force every
-parameter coefficient to be zero. Theorem 1 then gives the stated
-sequential covariance limit. The specific calculations below verify
-the general jet hypothesis and spell out all bounds for Van der Pol.
+$$
+E[\epsilon^{-4}\|\widehat\theta-\theta_0\|^4;\mathrm{bad}]
+\leq C\epsilon^{-4}\epsilon^{(7/10)12}
+=C\epsilon^{22/5}\to0.
+$$
 
-### S28.1. Verified Van der Pol instance
+The good-event fourth moment is bounded by $C E(1+M)^4$. The squared
+scaled errors are therefore uniformly integrable. Together with the
+Gaussian distributional limit, this proves the asserted second-moment
+and covariance limits.
+
+**Step 7: dense spans give the weak-class bound.** Interior cardinal
+cubic spaces are nested under their refinement relation. Approximate
+an $H_0^1$ function by a smooth compactly supported function, then
+apply cubic quasi-interpolation on a sufficiently fine mesh; its
+support remains interior. This proves density in $H_0^1$. The adjoint
+is continuous into the covariance-dual norm, so Proposition 2 gives
+density of the corresponding weak influences. Adding the fixed clean
+feature instruments preserves density. The efficient information is
+positive: if $S a=Z c$, evaluating at zero gives $c=0$, and the
+sensitivity equation and Step 1 give $a=0$. The finite-span projection
+argument of Theorem 1 therefore gives
+$V_k\to\mathcal I_{e,C}^{-1}$ after the fixed-level small-noise limit.
+All constants may depend on $k$, so this establishes a sequential
+limit, not a joint growth rate. The concrete verification below checks
+the jet hypothesis for Van der Pol; it is not used as a premise in
+this general proof.
+
+
+### S8.2. Verified Van der Pol instance
 
 This section verifies the small-noise assumptions for a specified guarded
 procedure, rather than placing them among the hypotheses. It concerns
 `src/self_instrumented_gls.py`, not the archived fixed-relative-ridge solver.
-The mathematical statement treats its formulas in exact arithmetic; the
-independent numerical study checks their floating-point implementation.
+The independent numerical study checks the specified implementation.
 
-**Proposition S28.1.** Let the true trajectory solve
+**Proposition S8.2.** Let the true trajectory solve
 $x'=v$, $v'=-x+v-x^2v$, $(x(0),v(0))=(2,0)$ on $[0,20]$.
 Observe $Y=x_0+\epsilon\eta$, where the two coordinate OU processes are
 independent, have known positive scales and known range $\tau>0$.
@@ -682,11 +810,11 @@ $$
 
 Here $V_k$ is the optimal covariance in the stated finite span of
 boundary-free tests. In the sequential limit,
-$V_k\to\mathcal I_{\theta\mid u}^{-1}$ as $k\to\infty$.
+$V_k\to\mathcal I_{e,C}^{-1}$ as $k\to\infty$.
 This is a small-noise statement at this identifiable trajectory. It gives
 neither an exact finite-noise Wald size nor a simultaneous growing-$k$ limit.
 
-### S28.1. Specified algorithm
+#### Algorithm in the verified instance
 
 Interpolate the observations linearly and convolve with
 $K_b(s)=b^{-1}(315/256)(1-(s/b)^2)_+^4$, $b=\epsilon^{1/10}/4$.
@@ -709,7 +837,7 @@ $10^{-8}\epsilon^2$; the normalized covariance has the corresponding guard.
 Any failure returns the box midpoint. Clip the final estimate to the box.
 These are the choices in the implementation, including its bounded fallback.
 
-### S28.2. Exact identifiability and existence
+### S8.3. Exact identifiability and existence
 
 Put $L=v\partial_x+(-x+v-x^2v)\partial_v$. Exact integer arithmetic gives
 
@@ -749,7 +877,7 @@ span must have zero initial value, hence zero initial-state coefficient;
 its differential equation and library independence then force its parameter
 coefficient to vanish.
 
-### S28.3. Pilot and covariance expansions
+### S8.4. Pilot and covariance expansions
 
 Write $M=\|\eta\|_\infty$. All moments of $M$ are finite, by the OU
 representation as a Gaussian initial value plus a time-changed Brownian
@@ -776,7 +904,7 @@ residual gives $\epsilon r_{\Phi_0}(\eta)+o_{L^2}(\epsilon)$.
 The random-instrument perturbation contributes only
 $\epsilon\,O(\|\Phi-\Phi_0\|_{H^1}M)$, and the Hermite terms of order
 at least two contribute $O(\epsilon^2(1+M^3))$ locally.
-The clean trapezoidal defect is $O(h^2)$ because the test derivatives
+The clean composite-quadrature defect is $O(h^2)$ because the test derivatives
 are piecewise smooth with bounded relevant derivatives. The noise
 Riemann sums converge to their continuous integrals by OU path
 continuity, with domination by $C M$. Hence their scaled errors vanish
@@ -802,7 +930,7 @@ $$
 The sign of $r$ follows the convention $b-G\theta$. This linear Gaussian
 map has covariance $V_k=(D^\top\Sigma_1^{-1}D)^{-1}$.
 
-### S28.4. Moment control and dense-span limit
+### S8.5. Moment control and dense-span limit
 
 For fixed $k$, choose a fixed small $c>0$ and the good event
 $\epsilon b^{-3}M\leq c$. For sufficiently small $\epsilon$, all inverse
@@ -836,7 +964,7 @@ The order of limits is essential: first $\epsilon\to0$ for each fixed
 level, then the level tends to infinity. No statement about the old
 fixed-ridge estimates follows from this proposition.
 
-## S29. Interpretation of the independent validation rule
+## S9. Interpretation of the independent validation rule
 
 The new calibration study uses fresh observations, unchanged estimators,
 fixed sample counts and frozen seed ranges. Its primary size rule requires
@@ -856,7 +984,7 @@ does not invalidate it. The individual intervals remain pointwise, and
 are not claimed to form a simultaneous 95% confidence set.
 
 
-### S29.1. Completed independent small-noise confirmation
+### S9.1. Completed independent small-noise confirmation
 
 The four frozen `iq_nom` shards are complete, with 1000 records each.
 Their executed-source hashes and full protocols match their frozen
@@ -866,8 +994,8 @@ The seed namespace is disjoint from the original 100-path study and
 from the two numerical smoke runs. No estimator, critical value, sample
 count or acceptance band was changed after primary outputs.
 
-Table S26. Independent Wald validation at 0.5% noise. Magnitudes refer to
-the same null-local two-point reference as Table 7; alternatives are
+Table S7. Independent Wald validation at 0.5% noise. Magnitudes refer to
+the same null-local two-point reference as the original candidate comparison; alternatives are
 negative. Exact intervals are pointwise 95% Clopper–Pearson intervals.
 The size band is 3–7%; power bands are the Gaussian prediction plus or
 minus five percentage points. Passing requires the entire interval to
@@ -891,7 +1019,7 @@ approximation. It gives no general sparse-selection or post-selection
 guarantee. The 5% bootstrap confirmation and the full five-level guarded
 geometry study remain incomplete; partial rejection rates are withheld.
 
-### S29.2. Matched geometry of the constructive estimator
+### S9.2. Matched geometry of the constructive estimator
 
 The separate deterministic protocol `guarded_geometry_reference.json`
 evaluates the limiting tests $w g_j(x_0)$ and their exact chain-rule
@@ -913,25 +1041,27 @@ The calculation took 35.0 seconds on Kaggle. Its executed-source hash
 and protocol match the frozen notebook; original bytes are preserved
 in `data/guarded_geometry_reference`.
 
-Table S27. Distinct estimator scopes. Theorem 3 does not transfer its
+Table S8. Distinct estimator scopes. Theorem 3 does not transfer its
 conclusions to either of the other procedures.
 
 | Procedure | Applicable result | Empirical evidence |
 |---|---|---|
-| Archived model-pilot weak GLS | Class bound; fixed-ridge limit in S27 | Information cost and endpoint Tables 1–6 |
-| Guarded full-library smoothed-data GLS | Constructive Theorem 3; no supplied generating support | Five-level Table 8 matched to its finite-span $V_k$ |
-| Targeted Wald with core-five pilot | Prespecified candidate test, estimator-level SE calibration | Original Table 7; independent size/power Table S26; incomplete 5% follow-up |
+| Archived model-pilot weak GLS | Class bound; fixed-ridge limit in S7 | Information cost and endpoint Tables 1–6 |
+| Guarded full-library smoothed-data GLS | Constructive Theorem 3; no supplied generating support | Five-level Table 7 matched to its finite-span $V_k$ |
+| Targeted Wald with core-five pilot | Prespecified candidate test, estimator-level SE calibration | Original Table S1; independent size/power Table S7; incomplete 5% follow-up |
 
-For Table 8, fixed-seed resampling of the 100 archived coefficient-error
+For Table 7, fixed-seed resampling of the 100 archived coefficient-error
 vectors produces pointwise risk-ratio intervals. Empirical covariance
 relative Frobenius discrepancies from $V_k$ are 0.254, 0.233, 0.167,
 0.129 and 0.176 in decreasing noise order. The corresponding mean
 reference Mahalanobis losses divided by eighteen are 5.765, 1.049,
 1.082, 0.987 and 0.978. The 100-path covariance sampling variation and
 finite-noise bias prevent interpreting these as exact matrix equality.
+At the smallest amplitude the spectral cutoff retains 133 tests on 65 paths and 132 on 35; the four other amplitudes retain 134 on all paths. The reference is for the full limiting span, so this finite-amplitude rank variation qualifies its interpretation.
+
 The lower-noise risk ratios support the stated finite-family prediction;
 they do not empirically establish a growing-span limit. Bootstrap
 resampling here is postprocessing, unrelated to the expensive full-refit
-bootstrap SE procedure in S24.
+bootstrap SE procedure in S4.
 
 ## References

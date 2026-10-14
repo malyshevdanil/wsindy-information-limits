@@ -11,6 +11,7 @@ def build(stage):
     with zipfile.ZipFile(buffer,'w',zipfile.ZIP_DEFLATED) as archive:
         for directory in ('src','scripts','tests','configs'):
             for p in sorted((ROOT/directory).rglob('*')):
+                if stage=='ridge_check_v1' and directory=='configs' and p.name!='archived_ridge_check.json':continue
                 if stage=='guarded_geometry_reference' and directory=='configs' and p.name!='guarded_geometry_reference.json':continue
                 if stage.startswith('iq_') and directory=='configs' and p.name not in ('independent_validation.json','independent_validation_v2.json','support_wald_v2.json'):
                     continue
@@ -75,6 +76,7 @@ def build(stage):
     if stage.startswith('secal_'):runner='run_wald_se_calibration.py'
     if stage.startswith('iq_'):runner='run_independent_validation.py'
     if stage=='guarded_geometry_reference':runner='run_guarded_geometry_reference.py'
+    if stage=='ridge_check_v1':runner='run_archived_ridge_check.py'
     if stage.startswith('boundary_general_'):runner='run_boundary_generalization.py'
     if stage in ('endpoint_vdp5','endpoint_lorenz'):runner='run_boundary_generalization.py'
     if stage.startswith('crossfit_records_'):runner='run_crossfit_records.py'

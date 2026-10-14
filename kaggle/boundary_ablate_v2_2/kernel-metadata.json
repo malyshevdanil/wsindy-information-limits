@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-boundary-ablate-v2-2",
+  "title": "WSINDy Sampling Saturation Boundary Ablate V2 2",
+  "code_file": "wsindy_boundary_ablate_v2_2.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

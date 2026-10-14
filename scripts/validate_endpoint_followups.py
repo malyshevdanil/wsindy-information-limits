@@ -43,7 +43,7 @@ def main():
     for stem in ['article_ejs','article_revised','supplement']:
         with pymupdf.open(ROOT/f'manuscript/{stem}.pdf') as document:
             content='\n'.join(p.get_text() for p in document)
-            assert 'Table 7.' in content if stem!='supplement' else 'Table S19.' in content
+            assert 'Table 7.' in content if stem!='supplement' else 'Table S1.' in content
             for page in document:
                 for block in page.get_text('dict')['blocks']:
                     if block['type']==1:assert page.rect.contains(pymupdf.Rect(block['bbox']))
@@ -53,8 +53,17 @@ def main():
     assert '62F12' in ejs and '62M10' in ejs and '34A55' in ejs
     main_text=(ROOT/'manuscript/article_revised.md').read_text(encoding='utf-8')
     assert '**Theorem 2 (known-initial extended influence class)' in main_text
-    assert '**Proposition 3 (conditional small-noise, dense-span efficiency)' in main_text
-    assert 'S27' in main_text
+    assert '**Proposition 3 (guarded fixed-family weak GLS)' in main_text
+    assert '**Theorem 3 (constructive attainability under a jet condition)' in main_text
+    assert '### 7.5. Prespecified testing versus sparse inclusion' not in main_text
+    assert 'S7.2' in main_text
+    supplement_text=(ROOT/'manuscript/supplement.md').read_text(encoding='utf-8')
+    assert re.findall(r'^## S(\d+)\.',supplement_text,re.M)==[str(i) for i in range(1,10)]
+    assert re.findall(r'^Table S(\d+)\.',supplement_text,re.M)==[str(i) for i in range(1,9)]
+    assert re.findall(r'^!\[Figure S(\d+)\.',supplement_text,re.M)==['1','2','3']
+    assert 'targeted selection' not in main_text
+    assert 'remain supplementary extensions' not in main_text
+    assert 'before any new endpoint outcomes' in main_text
     differences=json.loads((ROOT/'reports/support_wald_paired_intervals.json').read_text())
     assert differences['all_1600_paired_outcomes_retained'] and differences['counts_unchanged']
     assert len(differences['groups'])==16 and all(g['ci95'][0]<g['ci95'][1] for g in differences['groups'])

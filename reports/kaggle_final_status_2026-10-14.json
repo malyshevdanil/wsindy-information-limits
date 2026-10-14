@@ -1,0 +1,67 @@
+{
+  "stages": [
+    {
+      "stage": "iq_nom_0",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_nom_1",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_nom_2",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_nom_3",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_geo_0",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_geo_1",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_geo_2",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_geo_3",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_geo_4",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_bootn_00",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_bootn_01",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_bootn_02",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_bootn_03",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_bootn_04",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "iq_bootn_20",
+      "status": "COMPLETE"
+    }
+  ],
+  "auto_submission_enabled": false,
+  "unsubmitted": 54,
+  "submitted_collection_complete": true
+}

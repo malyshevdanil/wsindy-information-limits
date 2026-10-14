@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-cache-fix-v4",
+  "title": "WSINDy Sampling Saturation Cache Fix V4",
+  "code_file": "wsindy_cache_fix_v4.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

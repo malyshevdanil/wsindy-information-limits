@@ -1,0 +1,20 @@
+{
+  "original_bytes_preserved": true,
+  "files": [
+    {
+      "path": "completion.json",
+      "bytes": 84,
+      "sha256": "262bed993d406582fdc7e8d27d1f680bb51d0ca1cee9404999d74d841904a0c5"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 922,
+      "sha256": "f95ffd7bfb05ba4ff0b37478a9a91569a9fb5c0c6a385901b8da05c151898111"
+    },
+    {
+      "path": "ridge_check.json",
+      "bytes": 16768,
+      "sha256": "ffb535e4e3fad8da33a4388c53ebaea3275ab110e10f659e1b5dcaa86aaf98e9"
+    }
+  ]
+}

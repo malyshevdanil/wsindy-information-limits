@@ -1,16 +1,16 @@
 [
   {
     "source": "article_revised.md",
-    "docx_native_equations": 277,
-    "docx_tables": 8,
-    "docx_images": 5,
+    "docx_native_equations": 300,
+    "docx_tables": 7,
+    "docx_images": 4,
     "pdf_exists": true
   },
   {
     "source": "supplement.md",
-    "docx_native_equations": 373,
-    "docx_tables": 7,
-    "docx_images": 2,
+    "docx_native_equations": 407,
+    "docx_tables": 8,
+    "docx_images": 3,
     "pdf_exists": true
   },
   {

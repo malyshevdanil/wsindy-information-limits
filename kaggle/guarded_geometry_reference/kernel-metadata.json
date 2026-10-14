@@ -1,0 +1,13 @@
+{
+  "id": "malyshevdanil/wsindy-sampling-saturation-guarded-geometry-refere",
+  "title": "WSINDy Sampling Saturation Guarded Geometry Refere",
+  "code_file": "wsindy_guarded_geometry_reference.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

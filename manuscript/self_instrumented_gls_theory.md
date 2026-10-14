@@ -1,87 +1,178 @@
-## S28. Constructive full-library efficiency under a jet condition
+## S8. Constructive full-library efficiency under a jet condition
 
-### S28.0. General statement and proof of Theorem 3
+### S8.1. General proof of Theorem 3
 
-Let $x_0:[0,T]\to\mathbb R^d$ be an analytic polynomial ODE solution on
-the full compact interval, $T>1$. The field is linear in $m$ polynomial
-library functions in each equation; the true $dm$ coefficients are
-interior to a fixed finite box. The observation is $x_0+\epsilon\eta$,
-with known positive independent-coordinate stationary OU scales and
-range. Suppose the $m$-by-$m$ derivative matrix of the library along the
-trajectory, through order $m-1$, has nonzero determinant at some $t_*$.
+Use the estimator defined in main §5.6, including even uniform grids,
+known Hermite correction variances, the specified guards and projection
+to a fixed coefficient box. Write $C$ for the unit-amplitude covariance
+of $\eta$. The true trajectory is analytic on the full compact interval,
+so it and all derivatives needed below are bounded. Constants in this
+proof may depend on the fixed spline level and trajectory, but not on
+$\epsilon$ or the observation grid. No uniform growing-level assertion
+is made.
 
-The specified algorithm uses the kernel and bandwidth of S28.1 below,
-and $w(t)=[1-((t-T/2)/(T/2-1/2))^2]_+^4$. Its $m$ feature instruments
-are $w g_j(z)$, evaluated on the smoothed linear interpolant $z$, giving
-$dm$ full-library pilot equations. Add the interior dyadic cubic spline
-family at each fixed level. Whiten its full $H^1$ Gram matrix with
-relative retention cutoff $10^{-10}\epsilon^{1/10}$. Use the exact
-polynomial Hermite covariance at the proxy and box-clipped pilot,
-relative covariance ridge $\epsilon^2$, normal-matrix and covariance
-guards $10^{-8}\epsilon^2$, and final projection to the coefficient box.
-Failed guards return its midpoint. Take $h^2=o(\epsilon)$.
+**Step 1: the jet condition gives clean rank.** Put
+$G(t)=(g_1(x_0(t)),\ldots,g_m(x_0(t)))^\top$. If $c^\top G(t)$ vanishes
+on any open subinterval, analyticity extends that identity to the whole
+interval. Differentiation at $t_*$ through order $m-1$ and the nonzero
+jet determinant give $c=0$. Since $w>0$ on $(1/2,T-1/2)$,
 
-We prove the conclusions of Theorem 3; no pilot-rank or weight-consistency
-assumption is added. Analyticity and the jet condition imply that a
-linear combination of library values vanishing on any open interval
-has all coefficients zero. Therefore $\int w g g^\top$ is positive
-definite and the clean pilot design has $d$ invertible copies of it.
-The combined clean test Gram is positive definite too: a relation
-between $w c^\top g$ and cubic splines makes the analytic left side a
-single cubic polynomial on the support interior. Its order-four zero
-at the left edge forces that cubic to vanish. The jet condition and
-spline independence then eliminate both sets of coefficients. The
-adjoint on zero-trace tests is injective, and positive OU covariance
-makes the first-order finite-family residual covariance positive
-definite. The final design includes the invertible pilot block.
+$$
+c^\top\left(\int wGG^\top dt\right)c
+=\int w(c^\top G)^2dt>0\quad(c\ne0).
+$$
 
-With $M=\|\eta\|_\infty$, kernel moment cancellation gives proxy $C^1$
-error at most $C(b^2+h^2/b+\epsilon M/b)$ on the instrument support,
-and a $C^3$ bound $C(1+h^2/b^3+\epsilon M/b^3)$, where
-$b=\epsilon^{1/10}/4$. The proxy is uniformly consistent on the full
-interval; reflection adds only vanishing boundary bias. The clean
-weak identity holds for every such instrument, so its derivative with
-respect to the test is zero. Hence instrument estimation creates no
-standalone first-order clean residual. Taylor expansion of the finite
-polynomial library, exact Hermite correction, and OU path continuity
-give the same linear Gaussian residual and root-$\epsilon$ pilot
-expansion as in S28.3. The clean quadrature error is $o(\epsilon)$;
-noise Riemann sums converge with domination by $CM$. For any fixed
-polynomial degree, higher-order residual terms are bounded by $C\epsilon M$
-on a neighbourhood where $\epsilon M$ is small, and their first-order
-remainders vanish in $L^2$ by the finite Gaussian maximal moments.
+The clean feature-instrument pilot design contains $d$ copies of this
+positive matrix. Hence it is invertible without a separate rank
+assumption. The final design contains this block and has full column
+rank as well.
 
-Proxy and pilot consistency imply convergence of the normalized exact
-Hermite covariance to its positive first-order limit. All clean Gram
-gaps are positive at fixed level. Thus the vanishing cutoff eventually
-retains every row, the guards become inactive, and the vanishing ridge
-gives the GLS linear map in S28.3. Clipping is locally inactive because
-the true coefficients are interior. For the good event
-$\epsilon b^{-3}M\leq c$, local inverse and derivative bounds give
+**Step 2: the combined Gram and residual covariance are positive.**
+Suppose a linear combination $w c^\top G$ equals a cubic-spline
+combination. On the support interior the former is analytic. Across
+every interior spline knot, analyticity forces adjacent cubic pieces
+to have equal derivatives of all orders, and hence to be one cubic
+polynomial. At $t=1/2$ the analytic trajectory is bounded and $w$ has
+an order-four zero. The polynomial and its first three derivatives
+therefore vanish at that edge, forcing it to be zero. Step 1 gives
+$c=0$, and independence of the cardinal splines gives zero for their
+coefficients. Thus the full clean $H^1$ Gram has a positive minimum
+eigenvalue at every fixed level.
+
+For vector tests the adjoint $D^*\phi=-\phi'-J^\top\phi$ is injective
+on $H_0^1$: a homogeneous solution with zero initial trace is zero
+by uniqueness for the linear equation. Each OU coordinate covariance
+is strictly positive on nonzero $L^2$ weights, as its spectral density
+$2\sigma_{0,j}^2\tau/(1+\tau^2\omega^2)$ is positive. Consequently the
+first-order covariance $\Sigma_1$ of any independent finite test family
+is positive definite. Both covariance and design inverse bounds are
+available in a neighbourhood of the clean data.
+
+**Step 3: proxy and raw instruments converge.** Couple the observations
+on successive grids to one continuous unit-amplitude OU path and write
+$M=\|\eta\|_\infty$. The OU representation as a Gaussian initial value
+plus a time-changed Brownian martingale and the maximal inequality give
+$E M^q<\infty$ for every finite $q$. Linear interpolation has clean
+uniform error $O(h^2)$ and noise bounded by $M$. Kernel symmetry and
+its unit mass give, on the support of $w$,
+
+$$
+\|z-x_0\|_{C^1}
+\leq C(b^2+h^2/b+\epsilon M/b),\qquad
+\|z\|_{C^3}\leq C(1+h^2/b^3+\epsilon M/b^3).
+$$
+
+The kernel never meets reflected boundaries on this support.
+On the entire interval reflection introduces only $O(b)$ clean bias,
+so the proxy remains uniformly consistent there. With
+$b=\epsilon^{1/10}/4$ and $h^2=o(\epsilon)$, the first bound tends to
+zero in every fixed finite moment. Polynomial composition and its
+chain rule imply convergence of the feature instruments to $wG$ in
+$H^1$. The cubic tests are deterministic. The combined raw Gram
+therefore converges to its positive clean Gram.
+
+**Step 4: adaptive tests contribute no clean first-order residual.**
+For every boundary-free test, including the random raw instruments,
+the continuous clean identity is exactly
+$b_\phi(x_0)-G_\phi(x_0)\theta_0=0$. Its derivative with respect to
+$\phi$ is zero. Polynomial Hermite expansion of the data residual gives
+
+$$
+m_\epsilon(\theta_0)
+=\epsilon r_{\Phi_0}(\eta)+o_{L^2}(\epsilon),\qquad
+r_\phi(\eta)=-\int(\phi'^\top\eta+\phi^\top J\eta)dt.
+$$
+
+Before whitening, replacing $\Phi_\epsilon$ by $\Phi_0$ in the linear
+term has scaled error bounded by
+$C\|\Phi_\epsilon-\Phi_0\|_{H^1}M$, whose second moment tends to zero
+by Step 3 and the Gaussian maximal moments. Higher Hermite orders are
+finite polynomials multiplied by at least $\epsilon^2$; their scaled
+remainders vanish in $L^2$. For quadrature, the clean residual defect
+is $O(h^2)$ on bounded-$C^3$ instrument neighbourhoods. Simpson weights
+have bounded total mass. OU path continuity makes noise quadrature
+errors converge to zero after scaling by $\epsilon$, with domination
+by a fixed polynomial in $M$. One may first restrict to such
+neighbourhoods and then use the Gaussian moment bounds to remove the
+restriction. Thus no rate of differentiability of the OU path is
+assumed. The clean pilot inverse from Step 1 now gives
+$\widetilde\theta-\theta_0=O_P(\epsilon)$. The pilot projection is
+locally inactive because the truth is strictly interior to its box.
+
+**Step 5: weights, cutoff and guards converge.** The normalized exact
+Hermite covariance at the proxy and pilot converges to $\Sigma_1$.
+This follows from their consistency and continuity of the polynomial
+coefficient weights and OU integrals; the order-$q\geq2$ terms carry
+$\epsilon^{2q-2}$ after normalization and vanish. By Step 2 the
+spectral cutoff eventually retains every row at fixed level.
+For analysis, whitening can use the continuous symmetric inverse
+square root of the Gram. The implemented eigenvector whitening differs
+by an orthogonal row transformation, to which GLS, trace ridge and
+the guards are invariant. Repeated eigenvalues therefore create no
+extra eigenvector-consistency hypothesis.
+
+The relative ridge and guard thresholds tend to zero, while the clean
+matrix gaps stay positive. The final map is consequently
+
+$$
+\epsilon^{-1}(\widehat\theta-\theta_0)
+=P_0 r_{\Phi_0}(\eta)+o_P(1),\qquad
+P_0=(D^\top\Sigma_1^{-1}D)^{-1}D^\top\Sigma_1^{-1}.
+$$
+
+Here $D$ and $\Phi_0$ are expressed in the same clean whitened coordinates.
+The Gaussian leading term has covariance
+$V_k=(D^\top\Sigma_1^{-1}D)^{-1}$. This derives the expansion and weight
+consistency, rather than assuming them.
+
+**Step 6: moment convergence follows from the bounded estimator.**
+For a fixed sufficiently small $c$, let the good event be
+$\epsilon b^{-3}M\leq c$. On it, proxy derivatives, clean-neighbourhood
+inverses and test transformations are uniformly bounded for sufficiently
+small $\epsilon$. Since $\epsilon M\leq c b^3$, the finite polynomial
+remainders and the quadrature bounds yield
 $\epsilon^{-1}\|\widehat\theta-\theta_0\|\leq C(1+M)$.
-On its complement the box bounds the error, and the twelfth Gaussian
-maximal moment gives $C\epsilon^{-4}\epsilon^{(7/10)12}\to0$ for the
-scaled fourth moment there. This proves uniform integrability and
-second-moment convergence, not just the distributional limit.
+The complement implies $M>C\epsilon^{-7/10}$. The box bounds the
+unscaled output error on that event, including all guard failures.
+Using the twelfth maximal moment,
 
-Finally the interior cubic spaces are nested and dense in $H_0^1$.
-Continuity of the adjoint and Proposition 2 imply density in the weak
-influence class. The full efficient information is positive definite:
-if a parameter sensitivity equals $Zc$, its zero initial value forces
-$c=0$; its differential equation and library independence force every
-parameter coefficient to be zero. Theorem 1 then gives the stated
-sequential covariance limit. The specific calculations below verify
-the general jet hypothesis and spell out all bounds for Van der Pol.
+$$
+E[\epsilon^{-4}\|\widehat\theta-\theta_0\|^4;\mathrm{bad}]
+\leq C\epsilon^{-4}\epsilon^{(7/10)12}
+=C\epsilon^{22/5}\to0.
+$$
 
-### S28.1. Verified Van der Pol instance
+The good-event fourth moment is bounded by $C E(1+M)^4$. The squared
+scaled errors are therefore uniformly integrable. Together with the
+Gaussian distributional limit, this proves the asserted second-moment
+and covariance limits.
+
+**Step 7: dense spans give the weak-class bound.** Interior cardinal
+cubic spaces are nested under their refinement relation. Approximate
+an $H_0^1$ function by a smooth compactly supported function, then
+apply cubic quasi-interpolation on a sufficiently fine mesh; its
+support remains interior. This proves density in $H_0^1$. The adjoint
+is continuous into the covariance-dual norm, so Proposition 2 gives
+density of the corresponding weak influences. Adding the fixed clean
+feature instruments preserves density. The efficient information is
+positive: if $S a=Z c$, evaluating at zero gives $c=0$, and the
+sensitivity equation and Step 1 give $a=0$. The finite-span projection
+argument of Theorem 1 therefore gives
+$V_k\to\mathcal I_{e,C}^{-1}$ after the fixed-level small-noise limit.
+All constants may depend on $k$, so this establishes a sequential
+limit, not a joint growth rate. The concrete verification below checks
+the jet hypothesis for Van der Pol; it is not used as a premise in
+this general proof.
+
+
+### S8.2. Verified Van der Pol instance
 
 This section verifies the small-noise assumptions for a specified guarded
 procedure, rather than placing them among the hypotheses. It concerns
 `src/self_instrumented_gls.py`, not the archived fixed-relative-ridge solver.
-The mathematical statement treats its formulas in exact arithmetic; the
-independent numerical study checks their floating-point implementation.
+The independent numerical study checks the specified implementation.
 
-**Proposition S28.1.** Let the true trajectory solve
+**Proposition S8.2.** Let the true trajectory solve
 $x'=v$, $v'=-x+v-x^2v$, $(x(0),v(0))=(2,0)$ on $[0,20]$.
 Observe $Y=x_0+\epsilon\eta$, where the two coordinate OU processes are
 independent, have known positive scales and known range $\tau>0$.
@@ -100,11 +191,11 @@ $$
 
 Here $V_k$ is the optimal covariance in the stated finite span of
 boundary-free tests. In the sequential limit,
-$V_k\to\mathcal I_{\theta\mid u}^{-1}$ as $k\to\infty$.
+$V_k\to\mathcal I_{e,C}^{-1}$ as $k\to\infty$.
 This is a small-noise statement at this identifiable trajectory. It gives
 neither an exact finite-noise Wald size nor a simultaneous growing-$k$ limit.
 
-### S28.1. Specified algorithm
+#### Algorithm in the verified instance
 
 Interpolate the observations linearly and convolve with
 $K_b(s)=b^{-1}(315/256)(1-(s/b)^2)_+^4$, $b=\epsilon^{1/10}/4$.
@@ -127,7 +218,7 @@ $10^{-8}\epsilon^2$; the normalized covariance has the corresponding guard.
 Any failure returns the box midpoint. Clip the final estimate to the box.
 These are the choices in the implementation, including its bounded fallback.
 
-### S28.2. Exact identifiability and existence
+### S8.3. Exact identifiability and existence
 
 Put $L=v\partial_x+(-x+v-x^2v)\partial_v$. Exact integer arithmetic gives
 
@@ -167,7 +258,7 @@ span must have zero initial value, hence zero initial-state coefficient;
 its differential equation and library independence then force its parameter
 coefficient to vanish.
 
-### S28.3. Pilot and covariance expansions
+### S8.4. Pilot and covariance expansions
 
 Write $M=\|\eta\|_\infty$. All moments of $M$ are finite, by the OU
 representation as a Gaussian initial value plus a time-changed Brownian
@@ -194,7 +285,7 @@ residual gives $\epsilon r_{\Phi_0}(\eta)+o_{L^2}(\epsilon)$.
 The random-instrument perturbation contributes only
 $\epsilon\,O(\|\Phi-\Phi_0\|_{H^1}M)$, and the Hermite terms of order
 at least two contribute $O(\epsilon^2(1+M^3))$ locally.
-The clean trapezoidal defect is $O(h^2)$ because the test derivatives
+The clean composite-quadrature defect is $O(h^2)$ because the test derivatives
 are piecewise smooth with bounded relevant derivatives. The noise
 Riemann sums converge to their continuous integrals by OU path
 continuity, with domination by $C M$. Hence their scaled errors vanish
@@ -220,7 +311,7 @@ $$
 The sign of $r$ follows the convention $b-G\theta$. This linear Gaussian
 map has covariance $V_k=(D^\top\Sigma_1^{-1}D)^{-1}$.
 
-### S28.4. Moment control and dense-span limit
+### S8.5. Moment control and dense-span limit
 
 For fixed $k$, choose a fixed small $c>0$ and the good event
 $\epsilon b^{-3}M\leq c$. For sufficiently small $\epsilon$, all inverse
@@ -254,7 +345,7 @@ The order of limits is essential: first $\epsilon\to0$ for each fixed
 level, then the level tends to infinity. No statement about the old
 fixed-ridge estimates follows from this proposition.
 
-## S29. Interpretation of the independent validation rule
+## S9. Interpretation of the independent validation rule
 
 The new calibration study uses fresh observations, unchanged estimators,
 fixed sample counts and frozen seed ranges. Its primary size rule requires

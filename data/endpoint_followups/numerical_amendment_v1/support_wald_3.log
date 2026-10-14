@@ -1,0 +1,68 @@
+[{"stream_name":"stderr","time":8.481214836,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.48141797,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.481424659,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.4814276,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.220368624,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.220408952,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.220413052,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.220415974,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":78.92796358,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":78.928299867,"data":"  File \"/kaggle/working/wsindy_research/scripts/run_support_wald.py\", line 95, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":78.928325264,"data":"    args=parser.parse_args();run(args.stage,args.output)\n"}
+,{"stream_name":"stderr","time":78.928331897,"data":"                             ~~~^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":78.92833751,"data":"  File \"/kaggle/working/wsindy_research/scripts/run_support_wald.py\", line 54, in run\n"}
+,{"stream_name":"stderr","time":78.928343505,"data":"    if defect \u003e p['clean_mean_quadrature_coefficient_absolute_error_max']:raise RuntimeError('Candidate quadrature gate failed before Monte Carlo')\n"}
+,{"stream_name":"stderr","time":78.928349744,"data":"                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":78.928355784,"data":"RuntimeError: Candidate quadrature gate failed before Monte Carlo\n"}
+,{"stream_name":"stderr","time":79.131216317,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":79.131257674,"data":"  File \"/kaggle/working/wsindy_research/scripts/run_support_wald.py\", line 95, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":79.131277252,"data":"    args=parser.parse_args();run(args.stage,args.output)\n"}
+,{"stream_name":"stderr","time":79.131281161,"data":"                             ~~~^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":79.131284576,"data":"  File \"/kaggle/working/wsindy_research/scripts/run_support_wald.py\", line 54, in run\n"}
+,{"stream_name":"stderr","time":79.131288237,"data":"    if defect \u003e p['clean_mean_quadrature_coefficient_absolute_error_max']:raise RuntimeError('Candidate quadrature gate failed before Monte Carlo')\n"}
+,{"stream_name":"stderr","time":79.131291867,"data":"                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":79.131295432,"data":"RuntimeError: Candidate quadrature gate failed before Monte Carlo\n"}
+,{"stream_name":"stderr","time":79.131298681,"data":"\n"}
+,{"stream_name":"stderr","time":79.131301882,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":79.131305084,"data":"  File \"/kaggle/working/wsindy_research/scripts/run_support_wald.py\", line 95, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":79.131308507,"data":"    args=parser.parse_args();run(args.stage,args.output)\n"}
+,{"stream_name":"stderr","time":79.131329181,"data":"                             ~~~^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":79.131332027,"data":"  File \"/kaggle/working/wsindy_research/scripts/run_support_wald.py\", line 54, in run\n"}
+,{"stream_name":"stderr","time":79.131334903,"data":"    if defect \u003e p['clean_mean_quadrature_coefficient_absolute_error_max']:raise RuntimeError('Candidate quadrature gate failed before Monte Carlo')\n"}
+,{"stream_name":"stderr","time":79.131337718,"data":"                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":79.13134049,"data":"RuntimeError: Candidate quadrature gate failed before Monte Carlo\n"}
+,{"stream_name":"stderr","time":79.805686595,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":79.806487628,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":79.80650778,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":79.806515597,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":79.806521882,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":79.806526525,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":79.806530524,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":79.806597783,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":79.806603027,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":79.806605797,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":79.806608557,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":79.806611322,"data":"Exception encountered at \"In [2]\":\n"}
+,{"stream_name":"stderr","time":79.806614081,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":79.806617117,"data":"CalledProcessError                        Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":79.80661979,"data":"/tmp/ipykernel_16/3276048154.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":79.806622798,"data":"----\u003e 1 subprocess.run([sys.executable,'scripts/run_support_wald.py','--stage','support_wald_3','--output','/kaggle/working/results_support_wald_3'],cwd=root,check=True)\n"}
+,{"stream_name":"stderr","time":79.806625816,"data":"\n"}
+,{"stream_name":"stderr","time":79.806628273,"data":"/usr/lib/python3.13/subprocess.py in run(input, capture_output, timeout, check, *popenargs, **kwargs)\n"}
+,{"stream_name":"stderr","time":79.806630973,"data":"    575         retcode = process.poll()\n"}
+,{"stream_name":"stderr","time":79.806633521,"data":"    576         if check and retcode:\n"}
+,{"stream_name":"stderr","time":79.806636127,"data":"--\u003e 577             raise CalledProcessError(retcode, process.args,\n"}
+,{"stream_name":"stderr","time":79.806638801,"data":"    578                                      output=stdout, stderr=stderr)\n"}
+,{"stream_name":"stderr","time":79.806651711,"data":"    579     return CompletedProcess(process.args, retcode, stdout, stderr)\n"}
+,{"stream_name":"stderr","time":79.806654462,"data":"\n"}
+,{"stream_name":"stderr","time":79.80665708,"data":"CalledProcessError: Command '['/usr/bin/python3', 'scripts/run_support_wald.py', '--stage', 'support_wald_3', '--output', '/kaggle/working/results_support_wald_3']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":79.806660098,"data":"\n"}
+,{"stream_name":"stderr","time":82.711665212,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":82.711705667,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":82.921380312,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":82.921414099,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":83.868870999,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":83.973629476,"data":"[NbConvertApp] Writing 579267 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":87.230522021,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":87.891819464,"data":"[NbConvertApp] Writing 854555 bytes to __results__.html\n"}
+]

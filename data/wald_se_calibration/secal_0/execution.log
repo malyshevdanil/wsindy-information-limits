@@ -1,0 +1,337 @@
+[{"stream_name":"stderr","time":9.59076698,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.590822082,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.590829439,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.590834562,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.422589569,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.422632421,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.422638529,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.422667513,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":144.94097474,"data":"secal_0: seed 0, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":145.149037128,"data":"secal_0: seed 0, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":250.616123582,"data":"secal_0: seed 0, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":250.823920995,"data":"secal_0: seed 0, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":356.373731152,"data":"secal_0: seed 0, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":356.58117888,"data":"secal_0: seed 0, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":463.411671033,"data":"secal_0: seed 0, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":463.619517984,"data":"secal_0: seed 0, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":569.785498183,"data":"secal_0: seed 0, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":569.993487332,"data":"secal_0: seed 0, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":676.614394896,"data":"secal_0: seed 0, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":676.822372951,"data":"secal_0: seed 0, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":784.758295548,"data":"secal_0: seed 0, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":784.965821137,"data":"secal_0: seed 0, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":889.580852065,"data":"secal_0: completed seed 0; 1/20 paired records\n"}
+,{"stream_name":"stdout","time":889.788828872,"data":"secal_0: completed seed 0; 1/20 paired records\n"}
+,{"stream_name":"stdout","time":1017.433072133,"data":"secal_0: seed 5, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":1017.640911002,"data":"secal_0: seed 5, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":1124.193575189,"data":"secal_0: seed 5, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":1124.402358318,"data":"secal_0: seed 5, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":1232.257943951,"data":"secal_0: seed 5, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":1232.466549841,"data":"secal_0: seed 5, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":1340.191367859,"data":"secal_0: seed 5, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":1340.399360116,"data":"secal_0: seed 5, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":1447.24486424,"data":"secal_0: seed 5, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":1447.45260806,"data":"secal_0: seed 5, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":1554.186214313,"data":"secal_0: seed 5, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":1554.394703944,"data":"secal_0: seed 5, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":1661.123924513,"data":"secal_0: seed 5, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":1661.332120885,"data":"secal_0: seed 5, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":1767.764312844,"data":"secal_0: completed seed 5; 2/20 paired records\n"}
+,{"stream_name":"stdout","time":1767.976635822,"data":"secal_0: completed seed 5; 2/20 paired records\n"}
+,{"stream_name":"stdout","time":1897.215569719,"data":"secal_0: seed 10, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":1897.428048772,"data":"secal_0: seed 10, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":2006.80969591,"data":"secal_0: seed 10, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":2007.022480673,"data":"secal_0: seed 10, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":2116.636245539,"data":"secal_0: seed 10, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":2116.844522952,"data":"secal_0: seed 10, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":2223.566232508,"data":"secal_0: seed 10, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":2223.778298988,"data":"secal_0: seed 10, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":2331.167066606,"data":"secal_0: seed 10, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":2331.376118868,"data":"secal_0: seed 10, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":2439.897582865,"data":"secal_0: seed 10, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":2440.105764786,"data":"secal_0: seed 10, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":2550.6894927,"data":"secal_0: seed 10, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":2550.89963139,"data":"secal_0: seed 10, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":2656.734162931,"data":"secal_0: completed seed 10; 3/20 paired records\n"}
+,{"stream_name":"stdout","time":2656.942590652,"data":"secal_0: completed seed 10; 3/20 paired records\n"}
+,{"stream_name":"stdout","time":2785.769602797,"data":"secal_0: seed 15, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":2785.982685636,"data":"secal_0: seed 15, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":2892.713033214,"data":"secal_0: seed 15, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":2892.921485844,"data":"secal_0: seed 15, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":3002.52489343,"data":"secal_0: seed 15, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":3002.733287317,"data":"secal_0: seed 15, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":3110.665033543,"data":"secal_0: seed 15, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":3110.877799319,"data":"secal_0: seed 15, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":3220.00874478,"data":"secal_0: seed 15, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":3220.222640739,"data":"secal_0: seed 15, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":3328.047692366,"data":"secal_0: seed 15, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":3328.261702861,"data":"secal_0: seed 15, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":3436.251056558,"data":"secal_0: seed 15, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":3436.464567036,"data":"secal_0: seed 15, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":3543.074289638,"data":"secal_0: completed seed 15; 4/20 paired records\n"}
+,{"stream_name":"stdout","time":3543.288143032,"data":"secal_0: completed seed 15; 4/20 paired records\n"}
+,{"stream_name":"stdout","time":3674.61298269,"data":"secal_0: seed 20, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":3674.822172694,"data":"secal_0: seed 20, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":3784.525428704,"data":"secal_0: seed 20, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":3784.73477374,"data":"secal_0: seed 20, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":3894.17011871,"data":"secal_0: seed 20, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":3894.383853737,"data":"secal_0: seed 20, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":4003.4165877,"data":"secal_0: seed 20, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":4003.630834821,"data":"secal_0: seed 20, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":4113.686025767,"data":"secal_0: seed 20, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":4113.894778658,"data":"secal_0: seed 20, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":4223.463590456,"data":"secal_0: seed 20, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":4223.67261699,"data":"secal_0: seed 20, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":4331.914458561,"data":"secal_0: seed 20, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":4332.123247565,"data":"secal_0: seed 20, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":4438.775042561,"data":"secal_0: completed seed 20; 5/20 paired records\n"}
+,{"stream_name":"stdout","time":4438.983816115,"data":"secal_0: completed seed 20; 5/20 paired records\n"}
+,{"stream_name":"stdout","time":4571.081448686,"data":"secal_0: seed 25, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":4571.290464336,"data":"secal_0: seed 25, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":4680.956940153,"data":"secal_0: seed 25, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":4681.169024484,"data":"secal_0: seed 25, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":4790.763261778,"data":"secal_0: seed 25, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":4790.972571663,"data":"secal_0: seed 25, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":4901.178925057,"data":"secal_0: seed 25, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":4901.389332305,"data":"secal_0: seed 25, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":5011.791194624,"data":"secal_0: seed 25, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":5012.001252833,"data":"secal_0: seed 25, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":5122.023607195,"data":"secal_0: seed 25, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":5122.233064856,"data":"secal_0: seed 25, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":5233.147531686,"data":"secal_0: seed 25, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":5233.356815445,"data":"secal_0: seed 25, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":5340.884739618,"data":"secal_0: completed seed 25; 6/20 paired records\n"}
+,{"stream_name":"stdout","time":5341.0952111,"data":"secal_0: completed seed 25; 6/20 paired records\n"}
+,{"stream_name":"stdout","time":5475.257236866,"data":"secal_0: seed 30, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":5475.467434767,"data":"secal_0: seed 30, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":5583.968629711,"data":"secal_0: seed 30, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":5584.178401881,"data":"secal_0: seed 30, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":5693.75168296,"data":"secal_0: seed 30, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":5693.96123062,"data":"secal_0: seed 30, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":5804.35685434,"data":"secal_0: seed 30, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":5804.566775815,"data":"secal_0: seed 30, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":5915.187702428,"data":"secal_0: seed 30, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":5915.397326572,"data":"secal_0: seed 30, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":6025.457208261,"data":"secal_0: seed 30, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":6025.66772225,"data":"secal_0: seed 30, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":6136.922542531,"data":"secal_0: seed 30, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":6137.132189017,"data":"secal_0: seed 30, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":6244.682846755,"data":"secal_0: completed seed 30; 7/20 paired records\n"}
+,{"stream_name":"stdout","time":6244.892594232,"data":"secal_0: completed seed 30; 7/20 paired records\n"}
+,{"stream_name":"stdout","time":6374.165333696,"data":"secal_0: seed 35, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":6374.379866214,"data":"secal_0: seed 35, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":6482.574480517,"data":"secal_0: seed 35, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":6482.790016706,"data":"secal_0: seed 35, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":6592.935611018,"data":"secal_0: seed 35, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":6593.14512642,"data":"secal_0: seed 35, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":6701.147462739,"data":"secal_0: seed 35, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":6701.357044889,"data":"secal_0: seed 35, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":6809.736876562,"data":"secal_0: seed 35, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":6809.94654951,"data":"secal_0: seed 35, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":6919.538306574,"data":"secal_0: seed 35, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":6919.748450926,"data":"secal_0: seed 35, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":7027.636765903,"data":"secal_0: seed 35, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":7027.846682968,"data":"secal_0: seed 35, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":7134.712940932,"data":"secal_0: completed seed 35; 8/20 paired records\n"}
+,{"stream_name":"stdout","time":7134.927438882,"data":"secal_0: completed seed 35; 8/20 paired records\n"}
+,{"stream_name":"stdout","time":7264.631823887,"data":"secal_0: seed 40, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":7264.847100779,"data":"secal_0: seed 40, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":7373.835198703,"data":"secal_0: seed 40, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":7374.046021177,"data":"secal_0: seed 40, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":7481.795129911,"data":"secal_0: seed 40, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":7482.004887044,"data":"secal_0: seed 40, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":7590.118635647,"data":"secal_0: seed 40, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":7590.328721093,"data":"secal_0: seed 40, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":7696.605468465,"data":"secal_0: seed 40, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":7696.821700569,"data":"secal_0: seed 40, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":7805.317770165,"data":"secal_0: seed 40, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":7805.533577553,"data":"secal_0: seed 40, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":7914.059440537,"data":"secal_0: seed 40, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":7914.269563166,"data":"secal_0: seed 40, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":8019.279848786,"data":"secal_0: completed seed 40; 9/20 paired records\n"}
+,{"stream_name":"stdout","time":8019.495717668,"data":"secal_0: completed seed 40; 9/20 paired records\n"}
+,{"stream_name":"stdout","time":8147.311788372,"data":"secal_0: seed 45, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":8147.528361322,"data":"secal_0: seed 45, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":8254.354619409,"data":"secal_0: seed 45, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":8254.56457102,"data":"secal_0: seed 45, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":8362.522280859,"data":"secal_0: seed 45, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":8362.732230577,"data":"secal_0: seed 45, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":8470.757224239,"data":"secal_0: seed 45, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":8470.967571984,"data":"secal_0: seed 45, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":8579.373634627,"data":"secal_0: seed 45, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":8579.584774125,"data":"secal_0: seed 45, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":8695.860577459,"data":"secal_0: seed 45, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":8696.071710133,"data":"secal_0: seed 45, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":8812.658344249,"data":"secal_0: seed 45, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":8812.870396293,"data":"secal_0: seed 45, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":8926.633890851,"data":"secal_0: completed seed 45; 10/20 paired records\n"}
+,{"stream_name":"stdout","time":8926.844968507,"data":"secal_0: completed seed 45; 10/20 paired records\n"}
+,{"stream_name":"stdout","time":9068.219067534,"data":"secal_0: seed 50, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":9068.434213912,"data":"secal_0: seed 50, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":9176.215020748,"data":"secal_0: seed 50, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":9176.425432092,"data":"secal_0: seed 50, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":9287.332095032,"data":"secal_0: seed 50, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":9287.542391194,"data":"secal_0: seed 50, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":9396.764785941,"data":"secal_0: seed 50, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":9396.976890705,"data":"secal_0: seed 50, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":9505.488289927,"data":"secal_0: seed 50, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":9505.698998757,"data":"secal_0: seed 50, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":9617.664780184,"data":"secal_0: seed 50, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":9617.880461493,"data":"secal_0: seed 50, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":9726.319538686,"data":"secal_0: seed 50, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":9726.52983925,"data":"secal_0: seed 50, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":9831.784261494,"data":"secal_0: completed seed 50; 11/20 paired records\n"}
+,{"stream_name":"stdout","time":9831.995197882,"data":"secal_0: completed seed 50; 11/20 paired records\n"}
+,{"stream_name":"stdout","time":9962.324479741,"data":"secal_0: seed 55, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":9962.534766772,"data":"secal_0: seed 55, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":10072.358794773,"data":"secal_0: seed 55, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":10072.575266657,"data":"secal_0: seed 55, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":10181.381283845,"data":"secal_0: seed 55, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":10181.598604918,"data":"secal_0: seed 55, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":10290.041179315,"data":"secal_0: seed 55, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":10290.25221668,"data":"secal_0: seed 55, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":10398.381529278,"data":"secal_0: seed 55, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":10398.592146948,"data":"secal_0: seed 55, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":10507.122129877,"data":"secal_0: seed 55, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":10507.333632068,"data":"secal_0: seed 55, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":10615.253078474,"data":"secal_0: seed 55, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":10615.464176134,"data":"secal_0: seed 55, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":10720.129615558,"data":"secal_0: completed seed 55; 12/20 paired records\n"}
+,{"stream_name":"stdout","time":10720.346044549,"data":"secal_0: completed seed 55; 12/20 paired records\n"}
+,{"stream_name":"stdout","time":10848.716575203,"data":"secal_0: seed 60, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":10848.927463437,"data":"secal_0: seed 60, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":10955.906550778,"data":"secal_0: seed 60, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":10956.117828526,"data":"secal_0: seed 60, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":11063.330037116,"data":"secal_0: seed 60, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":11063.541320477,"data":"secal_0: seed 60, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":11171.905427873,"data":"secal_0: seed 60, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":11172.117182281,"data":"secal_0: seed 60, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":11279.197287083,"data":"secal_0: seed 60, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":11279.415839352,"data":"secal_0: seed 60, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":11386.456236671,"data":"secal_0: seed 60, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":11386.671983916,"data":"secal_0: seed 60, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":11493.648515326,"data":"secal_0: seed 60, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":11493.859811593,"data":"secal_0: seed 60, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":11599.996797613,"data":"secal_0: completed seed 60; 13/20 paired records\n"}
+,{"stream_name":"stdout","time":11600.214804055,"data":"secal_0: completed seed 60; 13/20 paired records\n"}
+,{"stream_name":"stdout","time":11728.29117841,"data":"secal_0: seed 65, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":11728.502237764,"data":"secal_0: seed 65, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":11836.835632017,"data":"secal_0: seed 65, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":11837.04678178,"data":"secal_0: seed 65, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":11943.842900253,"data":"secal_0: seed 65, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":11944.054631184,"data":"secal_0: seed 65, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":12051.34683609,"data":"secal_0: seed 65, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":12051.558717587,"data":"secal_0: seed 65, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":12158.726027732,"data":"secal_0: seed 65, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":12158.93715821,"data":"secal_0: seed 65, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":12264.946127902,"data":"secal_0: seed 65, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":12265.157337701,"data":"secal_0: seed 65, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":12370.340403902,"data":"secal_0: seed 65, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":12370.557371639,"data":"secal_0: seed 65, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":12475.224793636,"data":"secal_0: completed seed 65; 14/20 paired records\n"}
+,{"stream_name":"stdout","time":12475.436245801,"data":"secal_0: completed seed 65; 14/20 paired records\n"}
+,{"stream_name":"stdout","time":12603.447706885,"data":"secal_0: seed 70, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":12603.664348369,"data":"secal_0: seed 70, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":12709.451802051,"data":"secal_0: seed 70, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":12709.663342138,"data":"secal_0: seed 70, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":12815.691912883,"data":"secal_0: seed 70, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":12815.903599689,"data":"secal_0: seed 70, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":12922.367247448,"data":"secal_0: seed 70, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":12922.578698286,"data":"secal_0: seed 70, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":13028.046553621,"data":"secal_0: seed 70, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":13028.263143815,"data":"secal_0: seed 70, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":13136.202591242,"data":"secal_0: seed 70, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":13136.414304965,"data":"secal_0: seed 70, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":13248.777910639,"data":"secal_0: seed 70, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":13248.990039305,"data":"secal_0: seed 70, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":13358.114466036,"data":"secal_0: completed seed 70; 15/20 paired records\n"}
+,{"stream_name":"stdout","time":13358.327218867,"data":"secal_0: completed seed 70; 15/20 paired records\n"}
+,{"stream_name":"stdout","time":13493.479596528,"data":"secal_0: seed 75, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":13493.693423715,"data":"secal_0: seed 75, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":13600.924194481,"data":"secal_0: seed 75, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":13601.143582579,"data":"secal_0: seed 75, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":13707.232628695,"data":"secal_0: seed 75, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":13707.45162347,"data":"secal_0: seed 75, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":13814.2141641,"data":"secal_0: seed 75, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":13814.426344354,"data":"secal_0: seed 75, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":13920.314939778,"data":"secal_0: seed 75, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":13920.526832631,"data":"secal_0: seed 75, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":14027.238393013,"data":"secal_0: seed 75, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":14027.450522681,"data":"secal_0: seed 75, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":14134.210742264,"data":"secal_0: seed 75, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":14134.42739327,"data":"secal_0: seed 75, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":14239.830555534,"data":"secal_0: completed seed 75; 16/20 paired records\n"}
+,{"stream_name":"stdout","time":14240.04245555,"data":"secal_0: completed seed 75; 16/20 paired records\n"}
+,{"stream_name":"stdout","time":14370.511730161,"data":"secal_0: seed 80, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":14370.724929939,"data":"secal_0: seed 80, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":14478.035156757,"data":"secal_0: seed 80, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":14478.247536669,"data":"secal_0: seed 80, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":14584.315824877,"data":"secal_0: seed 80, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":14584.52977997,"data":"secal_0: seed 80, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":14691.458262968,"data":"secal_0: seed 80, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":14691.67054666,"data":"secal_0: seed 80, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":14798.250085694,"data":"secal_0: seed 80, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":14798.462356546,"data":"secal_0: seed 80, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":14905.347441135,"data":"secal_0: seed 80, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":14905.560069766,"data":"secal_0: seed 80, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":15012.702343986,"data":"secal_0: seed 80, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":15012.914755172,"data":"secal_0: seed 80, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":15117.810677257,"data":"secal_0: completed seed 80; 17/20 paired records\n"}
+,{"stream_name":"stdout","time":15118.023988289,"data":"secal_0: completed seed 80; 17/20 paired records\n"}
+,{"stream_name":"stdout","time":15249.460774154,"data":"secal_0: seed 85, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":15249.673368056,"data":"secal_0: seed 85, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":15358.56274912,"data":"secal_0: seed 85, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":15358.775827091,"data":"secal_0: seed 85, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":15468.886016769,"data":"secal_0: seed 85, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":15469.099023829,"data":"secal_0: seed 85, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":15579.235435145,"data":"secal_0: seed 85, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":15579.448463423,"data":"secal_0: seed 85, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":15688.324764482,"data":"secal_0: seed 85, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":15688.537423818,"data":"secal_0: seed 85, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":15797.162364351,"data":"secal_0: seed 85, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":15797.374952727,"data":"secal_0: seed 85, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":15905.839703817,"data":"secal_0: seed 85, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":15906.057223825,"data":"secal_0: seed 85, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":16011.891846611,"data":"secal_0: completed seed 85; 18/20 paired records\n"}
+,{"stream_name":"stdout","time":16012.113142375,"data":"secal_0: completed seed 85; 18/20 paired records\n"}
+,{"stream_name":"stdout","time":16142.812297367,"data":"secal_0: seed 90, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":16143.025488262,"data":"secal_0: seed 90, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":16251.053421628,"data":"secal_0: seed 90, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":16251.271270048,"data":"secal_0: seed 90, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":16361.014806426,"data":"secal_0: seed 90, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":16361.227822972,"data":"secal_0: seed 90, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":16469.668514825,"data":"secal_0: seed 90, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":16469.881362658,"data":"secal_0: seed 90, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":16578.279049553,"data":"secal_0: seed 90, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":16578.500493254,"data":"secal_0: seed 90, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":16687.273707708,"data":"secal_0: seed 90, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":16687.49160426,"data":"secal_0: seed 90, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":16795.837334269,"data":"secal_0: seed 90, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":16796.050882348,"data":"secal_0: seed 90, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":16901.504480365,"data":"secal_0: completed seed 90; 19/20 paired records\n"}
+,{"stream_name":"stdout","time":16901.725395568,"data":"secal_0: completed seed 90; 19/20 paired records\n"}
+,{"stream_name":"stdout","time":17030.663687651,"data":"secal_0: seed 95, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":17030.884426464,"data":"secal_0: seed 95, bootstrap 50/399\n"}
+,{"stream_name":"stdout","time":17139.459817772,"data":"secal_0: seed 95, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":17139.68251706,"data":"secal_0: seed 95, bootstrap 100/399\n"}
+,{"stream_name":"stdout","time":17248.792099748,"data":"secal_0: seed 95, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":17249.013479926,"data":"secal_0: seed 95, bootstrap 150/399\n"}
+,{"stream_name":"stdout","time":17358.299455387,"data":"secal_0: seed 95, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":17358.515806338,"data":"secal_0: seed 95, bootstrap 200/399\n"}
+,{"stream_name":"stdout","time":17466.773195813,"data":"secal_0: seed 95, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":17466.986531018,"data":"secal_0: seed 95, bootstrap 250/399\n"}
+,{"stream_name":"stdout","time":17575.065004411,"data":"secal_0: seed 95, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":17575.278375241,"data":"secal_0: seed 95, bootstrap 300/399\n"}
+,{"stream_name":"stdout","time":17683.734026345,"data":"secal_0: seed 95, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":17683.955849961,"data":"secal_0: seed 95, bootstrap 350/399\n"}
+,{"stream_name":"stdout","time":17790.377398329,"data":"secal_0: completed seed 95; 20/20 paired records\n"}
+,{"stream_name":"stdout","time":17790.573311359,"data":"secal_0: completed seed 95; 20/20 paired records\n"}
+,{"stream_name":"stderr","time":17794.244933992,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":17794.244976547,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":17794.511562892,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":17794.51159285,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":17795.556624457,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":17795.692718886,"data":"[NbConvertApp] Writing 585875 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":17799.076738887,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":17799.769732798,"data":"[NbConvertApp] Writing 857565 bytes to __results__.html\n"}
+]

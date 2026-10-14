@@ -21,7 +21,7 @@ Known-initial trace adaptation is attributed to Brunel and coauthors.
 Theorems concern known positive OU covariance, deterministic polynomial ODEs
 and sequential small-noise/dense-span limits. The full-library pilot uses
 smoothed observations. The older model-pilot GLS and the targeted Wald
-procedure have different theoretical scopes; see supplement Table S27.
+procedure have different theoretical scopes; see supplement Table S8.
 The independent small-noise size tolerance is met, while the full power
 tolerance check fails at half a reference unit. Moderate-noise bootstrap
 validation remains incomplete after a recorded compute-budget decision.

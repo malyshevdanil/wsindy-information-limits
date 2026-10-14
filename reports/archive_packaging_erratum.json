@@ -1,0 +1,10 @@
+{
+  "version": "v1.3.0",
+  "immutable_tag_unchanged": true,
+  "issue": "The local release manifest included frozen notebooks and logs omitted from the published Git tree because git add respected imported ignore rules.",
+  "manifest_files": 1177,
+  "published_tree_files": 941,
+  "superseded_by": "v1.3.1",
+  "repair": "Force-stage every current package member, then require exact equality of public tree and release manifest plus the manifest file; verify every published blob hash.",
+  "scientific_outputs_changed": false
+}

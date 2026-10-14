@@ -406,5 +406,11 @@
     "ref": "/code/malyshevdanil/wsindy-sampling-saturation-guarded-geometry-refere",
     "version_number": 1,
     "error": ""
+  },
+  {
+    "stage": "ridge_check_v1",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-ridge-check-v1",
+    "version_number": 1,
+    "error": ""
   }
 ]

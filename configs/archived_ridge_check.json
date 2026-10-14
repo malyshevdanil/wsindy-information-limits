@@ -1,0 +1,10 @@
+{
+  "protocol": "archived_fixed_relative_ridge_geometry_v1",
+  "relative_ridge": 1e-10,
+  "basis_relative_cutoff": 1e-10,
+  "interior_windows": 480,
+  "vdp": {"T":20.0,"h":0.005,"tau":0.3,"initial":[2.0,0.0]},
+  "lorenz": {"T":4.0,"h":0.001,"tau":0.1,"initial":[1.0,1.0,1.0],"truth":[10.0,28.0,2.6666666666666665]},
+  "scope": "deterministic first-order maps on archived time-test spans; no Monte Carlo, no claim of finite-noise moment existence for unbounded estimators",
+  "numerics": "use all archived retained rows, zero-ridge Cholesky for V0, PSD identity for stable covariance increment"
+}

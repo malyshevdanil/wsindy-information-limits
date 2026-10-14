@@ -31,7 +31,9 @@ def main():
         records.append({'path':name,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
     (DEST/'release_manifest.json').write_text(json.dumps(records,indent=2),encoding='utf-8')
     subprocess.run(['git','config','core.autocrlf','false'],cwd=DEST,check=True)
-    subprocess.run(['git','add','--all'],cwd=DEST,check=True)
+    subprocess.run(['git','add','-f','--all'],cwd=DEST,check=True)
+    tracked=set(subprocess.check_output(['git','ls-files'],cwd=DEST,text=True).splitlines())
+    assert tracked=={r['path'] for r in records}|{'release_manifest.json'},'Every manifest member must be tracked in the published tree'
     from scripts.remove_tool_branding import scan
     for record in records:scan(DEST/record['path'])
     result={'version':json.loads((ROOT/'configs/public_archive.json').read_text())['version'],'copied_tracked_files':len(copied),'manifest_files':len(records),'derived_legacy_files_pruned':pruned,'secrets_and_attribution_checked':True,'previous_tags_unchanged':True}

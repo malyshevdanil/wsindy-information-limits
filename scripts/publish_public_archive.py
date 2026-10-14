@@ -87,6 +87,7 @@ def verify():
     assert not tree['truncated']
     blobs={r['path']:r['sha'] for r in tree['tree'] if r['type']=='blob'}
     tracked=git('ls-files').splitlines();assert set(blobs)==set(tracked)
+    assert set(blobs)=={r['path'] for r in json.loads((CHECKOUT/'release_manifest.json').read_text())}|{'release_manifest.json'},'Public archive manifest must cover exactly its published files'
     for name in tracked:
         data=(CHECKOUT/name).read_bytes();actual=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
         assert actual==blobs[name],f'Public byte mismatch: {name}'
