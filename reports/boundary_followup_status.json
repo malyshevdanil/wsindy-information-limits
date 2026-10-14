@@ -1,0 +1,92 @@
+[
+  {
+    "stage": "endpoint_vdp5",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_generalization.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 128,
+      "elapsed_seconds": 511.7019209859999
+    }
+  },
+  {
+    "stage": "endpoint_lorenz",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_generalization.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 256,
+      "elapsed_seconds": 4560.162030412
+    }
+  },
+  {
+    "stage": "support_wald_v2_0",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "rows": 800,
+      "elapsed_seconds": 1259.49225336
+    }
+  },
+  {
+    "stage": "support_wald_v2_1",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "rows": 800,
+      "elapsed_seconds": 1238.362041689
+    }
+  },
+  {
+    "stage": "support_wald_v2_2",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "rows": 800,
+      "elapsed_seconds": 1351.381370756
+    }
+  },
+  {
+    "stage": "support_wald_v2_3",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "rows": 800,
+      "elapsed_seconds": 1271.620915091
+    }
+  }
+]

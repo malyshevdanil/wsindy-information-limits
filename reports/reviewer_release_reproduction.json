@@ -1,0 +1,9 @@
+{
+  "reproduced_from_archives": {
+    "manuscript/article_revised.md": true,
+    "manuscript/supplement.md": true,
+    "reports/reviewer_results.json": true,
+    "reports/full_adaptive_results.json": true,
+    "manuscript/figures/publication/full_adaptive.png": true
+  }
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "stage": "boundary_confirm_0",
+    "status": "COMPLETE",
+    "snapshot": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 492,
+      "elapsed_seconds": 1410.4684883710001
+    }
+  },
+  {
+    "stage": "boundary_confirm_1",
+    "status": "COMPLETE",
+    "snapshot": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 492,
+      "elapsed_seconds": 1418.299505375
+    }
+  },
+  {
+    "stage": "boundary_confirm_2",
+    "status": "COMPLETE",
+    "snapshot": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 492,
+      "elapsed_seconds": 1321.105119897
+    }
+  },
+  {
+    "stage": "boundary_confirm_3",
+    "status": "COMPLETE",
+    "snapshot": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 492,
+      "elapsed_seconds": 958.955700123
+    }
+  },
+  {
+    "stage": "support_extra",
+    "status": "COMPLETE",
+    "snapshot": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_extra_term.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "rows": 1000,
+      "elapsed_seconds": 2644.513521867
+    }
+  }
+]

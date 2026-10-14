@@ -1,0 +1,7 @@
+{
+  "frozen_at_utc": "2026-10-14T00:42:04.901626+00:00",
+  "protocol_sha256": "fda4f95dd0ebb3f2d906403b49dceaf5f844e8f0cd0e5e9d7cf924fa18a45ecf",
+  "before_primary_outputs": true,
+  "amendment": "Before primary submissions: use cubic splines for the self-instrumented method to match the proved dense family. Calibration estimator, observations, counts, seeds and criteria unchanged from v1. The v1 numerical smoke assessed execution only.",
+  "v1_retained": true
+}

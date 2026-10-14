@@ -413,7 +413,7 @@ The analysis assumes fully observed deterministic ODEs and additive stationary G
 
 ## Declaration of generative AI and AI-assisted technologies
 
-OpenAI Codex assisted literature searches, mathematical drafting, source development, experiment orchestration, numerical interpretation and manuscript preparation. Numerical results are derived from archived execution outputs, and figures are produced by plotting code. The tool is not an author. The human authors must review and edit the manuscript and accept responsibility for its content before submission; this statement does not assert that their review has already occurred.
+AI-assisted tools supported literature searches, mathematical drafting, source development, experiment orchestration, numerical interpretation and manuscript preparation. Numerical results are derived from archived execution outputs, and figures are produced by plotting code. The tool is not an author. The human authors must review and edit the manuscript and accept responsibility for its content before submission; this statement does not assert that their review has already occurred.
 
 ## Data availability
 

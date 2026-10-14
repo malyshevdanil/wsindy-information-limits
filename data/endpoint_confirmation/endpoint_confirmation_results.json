@@ -1,0 +1,225 @@
+{
+  "completed": true,
+  "protocol": {
+    "protocol": "endpoint_universal_paired_confirmation_v1",
+    "parent_screen": "boundary_screen_v4",
+    "T": 20.0,
+    "h": 0.005,
+    "tau": 0.3,
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "level": 0.005,
+    "seed_base": 2200000,
+    "first_seed_index": 32,
+    "last_seed_index": 1999,
+    "paths": 1968,
+    "shards": 4,
+    "holdout_scope": "Not used for endpoint-screen evaluations; original boundary-free and likelihood results already archived and published in aggregate",
+    "criteria": {
+      "model_adjoint_rmse_over_known_initial_likelihood_max": 1.05,
+      "universal_fraction_of_rmse_gap_closed_min": 0.5,
+      "gap_closed_formula": "(RMSE_boundary_free-RMSE_universal)/(RMSE_boundary_free-RMSE_likelihood), calculated on identical holdout paths",
+      "nonpositive_original_gap": "criterion not evaluable; report without claiming success",
+      "primary_decision": "point criteria, paired bootstrap uncertainty reported separately"
+    },
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 8420000,
+    "model_adjoint_updates": 3,
+    "pilot_windows": 30,
+    "pilot_box": [
+      [
+        0.25,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.25
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.1
+      ]
+    ],
+    "universal_interior_windows": 480,
+    "endpoint_half_window_full_widths": [
+      3.0,
+      1.5,
+      0.75,
+      0.375,
+      0.1875,
+      0.09375
+    ],
+    "endpoint_half_window_centers": [
+      0.0,
+      20.0
+    ],
+    "basis_relative_cutoff": 1e-10,
+    "quadrature": "composite Simpson for universal and model-adjoint branches; archived original boundary-free estimator unchanged",
+    "covariance": "exact discrete Hermite moment covariance including terminal and initial observation cross terms",
+    "covariance_pilot": "same 30-window OLS, clipped box and directly integrated model path as original weak pipeline; windows independent of model",
+    "iterations": 100,
+    "tolerance": 1e-07,
+    "covariance_relative_relaxation": 1e-10,
+    "clean_mean_quadrature_bias_max": 1.4e-05,
+    "model_cache_or_surrogate": false,
+    "stop_on_failure": true,
+    "references_file": "boundary_holdout_references.json",
+    "revised_criterion_reason": "User explicitly replaces absolute .00140 screen threshold because paired known-initial likelihood also exceeded it on that prefix; freeze relative criteria before any new endpoint fits"
+  },
+  "audits": [
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    },
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    },
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    },
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_confirmation.json"
+      ]
+    }
+  ],
+  "paired_input_fingerprints_verified": true,
+  "reference_file_sha256": "5b82e1dd517c143fe260d0d9e6bd3e23a7eb99c5f897c2095a463f51ef67d5e1",
+  "groups": [
+    {
+      "method": "model_adjoint",
+      "paths": 1968,
+      "relative_rmse": 0.0012974061551314238,
+      "relative_bias": 6.771281060924359e-05,
+      "relative_dispersion": 0.0012956379535396072,
+      "rmse_bootstrap_ci95": [
+        0.0012643594987769798,
+        0.0013300524427667503
+      ],
+      "median_online_seconds_with_pilot": 1.2522745535000013
+    },
+    {
+      "method": "universal_boundary",
+      "paths": 1968,
+      "relative_rmse": 0.0013093573454567471,
+      "relative_bias": 7.048858844738306e-05,
+      "relative_dispersion": 0.0013074586100524312,
+      "rmse_bootstrap_ci95": [
+        0.001276117014579399,
+        0.0013419923294242268
+      ],
+      "median_online_seconds_with_pilot": 1.511863809499971
+    },
+    {
+      "method": "boundary_free_480",
+      "paths": 1968,
+      "relative_rmse": 0.0016875418248870184,
+      "relative_bias": 8.679161444030337e-05,
+      "relative_dispersion": 0.0016853084662476047,
+      "rmse_bootstrap_ci95": [
+        0.0016491992242522312,
+        0.0017272622966181274
+      ]
+    },
+    {
+      "method": "known_initial_scoring",
+      "paths": 1968,
+      "relative_rmse": 0.0012979997575621198,
+      "relative_bias": 8.752739705928868e-05,
+      "relative_dispersion": 0.0012950452985881797,
+      "rmse_bootstrap_ci95": [
+        0.0012648144647343627,
+        0.0013307443654566322
+      ]
+    }
+  ],
+  "criteria": {
+    "model_adjoint_ratio": 0.9995426790897012,
+    "model_adjoint_pass": true,
+    "universal_fraction_gap_closed": 0.9708437448806921,
+    "universal_pass": true,
+    "model_adjoint_ratio_ci95": [
+      0.9981537702033089,
+      1.000864050510815
+    ],
+    "gap_closed_ci95_conditional_positive_denominator": [
+      0.955399501527169,
+      0.9860483976031714
+    ],
+    "bootstrap_nonpositive_gap_count": 0
+  },
+  "bases": [
+    {
+      "original_basis": {
+        "raw_windows": 480,
+        "retained_windows": 479,
+        "relative_cutoff": 1e-10,
+        "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+      },
+      "half_windows": 12,
+      "retained_scalar_tests": 491,
+      "basis_is_model_independent": true,
+      "relative_cutoff": 1e-10,
+      "seconds": 0.8750970910000433
+    },
+    {
+      "original_basis": {
+        "raw_windows": 480,
+        "retained_windows": 479,
+        "relative_cutoff": 1e-10,
+        "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+      },
+      "half_windows": 12,
+      "retained_scalar_tests": 491,
+      "basis_is_model_independent": true,
+      "relative_cutoff": 1e-10,
+      "seconds": 0.8752595400000018
+    },
+    {
+      "original_basis": {
+        "raw_windows": 480,
+        "retained_windows": 479,
+        "relative_cutoff": 1e-10,
+        "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+      },
+      "half_windows": 12,
+      "retained_scalar_tests": 491,
+      "basis_is_model_independent": true,
+      "relative_cutoff": 1e-10,
+      "seconds": 0.8117462050000199
+    },
+    {
+      "original_basis": {
+        "raw_windows": 480,
+        "retained_windows": 479,
+        "relative_cutoff": 1e-10,
+        "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+      },
+      "half_windows": 12,
+      "retained_scalar_tests": 491,
+      "basis_is_model_independent": true,
+      "relative_cutoff": 1e-10,
+      "seconds": 0.619630433999987
+    }
+  ],
+  "limitations": [
+    "Model-adjoint branch realizes efficient score directions in first order.",
+    "Universal windows depend on time alone; covariance pilot still uses ODE integration.",
+    "A failure of this finite family cannot rule out recovery by a richer universal family."
+  ]
+}

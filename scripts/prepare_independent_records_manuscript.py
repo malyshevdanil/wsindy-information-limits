@@ -53,8 +53,8 @@ For a fixed moment family with correct marginal correction, the independent-reco
         'Unknown covariance is treated for independent copies in Theorem 3; the single-record efficiency theorem assumes known shape. Partial observation and process noise remain outside the analysis.')
     text=text.replace('Global covariance-iteration behavior, sparse support selection and simultaneous test-growth/noise-decay limits require additional analysis.',
         'Global covariance-iteration behavior and sparse support selection require additional analysis. A simultaneous limit with growing test spans and decreasing noise, including quantitative rates controlling Gram conditioning and remainders, remains open.')
-    start=text.index('OpenAI Codex assisted');end=text.index('## Data availability',start)
-    text=text[:start]+'''OpenAI Codex was used for literature searches, mathematical derivations, code development, experiment orchestration, numerical interpretation and drafting. Simulations were executed by archived source code, and figures were generated from recorded numerical outputs. This disclosure covers assistance in the research and writing process; AI tools are not credited as authors.
+    start=text.index('AI-assisted tools supported');end=text.index('## Data availability',start)
+    text=text[:start]+'''AI-assisted tools were used for literature searches, mathematical derivations, code development, experiment orchestration, numerical interpretation and drafting. Simulations were executed by archived source code, and figures were generated from recorded numerical outputs. This disclosure covers assistance in the research and writing process; AI tools are not credited as authors.
 
 '''+text[end:]
     text=text.replace('The repository includes protocol configurations,',

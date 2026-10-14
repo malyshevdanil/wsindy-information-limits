@@ -1,0 +1,33 @@
+{
+  "decision_time_utc": "2026-10-12T17:12:25.809780+00:00",
+  "original_protocol_sha256": "aef516f2d38081d2ec4401c90ff068cb7595d49bb696490b8cb54f4b633975e8",
+  "amended_protocol_sha256": "505602bb0e8463f4301f175ecc3b1b793ed574a38defbc41099a351e85046754",
+  "evidence_used": [
+    "validated 50-repetition pilot",
+    "validated deterministic curvature",
+    "user budget instruction"
+  ],
+  "main_outcomes_inspected_for_decision": false,
+  "already_launched": [
+    "inc_main_smoke",
+    "inc_main_l0_n800_b00",
+    "inc_main_l0_n800_b01"
+  ],
+  "already_downloaded": [
+    "inc_main_smoke"
+  ],
+  "new_correction_cells": [
+    {
+      "level": 0.2,
+      "n": 400
+    },
+    {
+      "level": 0.2,
+      "n": 800
+    }
+  ],
+  "new_planned_bootstrap_refits": 20000,
+  "original_planned_bootstrap_refits": 150000,
+  "existing_jobs": "Do not retroactively relabel existing executions. Two already-running old 5%-noise jobs may finish; their corrected estimates are outside the amended comparison.",
+  "future_queue": "No further full-bootstrap execution outside the two amended cells"
+}

@@ -1,0 +1,9 @@
+# Endpoint and targeted-selection follow-ups
+
+Named-tool attribution was subsequently removed from the documentation-generating scripts embedded in notebook packages. Numerical code, configurations and execution outputs remain unchanged. `data/documentation_redactions.json` records the original and sanitized source hashes; `scripts/source_archive_audit.py` reverses these documentation substitutions in memory and verifies the original execution hash. Original notebook versions are retained in the recorded Git commit.
+
+Complete paired outputs for 500 ablation records, 128 moderate-noise Van der Pol records, 256 Lorenz records and 1600 paired Wald/MSTLS outcomes. The original 1000 MSTLS outcomes are reused; 600 refined-grid outcomes are new. All scientific configurations and embedded run source are frozen in the corresponding Kaggle notebooks.
+
+The primary Wald version corrects a deterministic pilot-model quadrature defect before inspection of the original noisy Wald results. Original versions are retained separately. Counts, null-calibration failure at 5% and failed moderate-noise endpoint recovery criteria are preserved. Author-fit scratch files and synthetic time-series arrays are omitted; seeds, source, estimates and paired SHA256 hashes suffice for reconstruction. The SHA256 manifest hashes original file bytes, with no newline conversion.
+
+For local postprocessing, copy each complete stage directory to `results/kaggle_<stage>/`, run `scripts/analyze_boundary_ablation.py`, `scripts/analyze_boundary_followups.py vdp5`, `scripts/analyze_boundary_followups.py lorenz`, `scripts/analyze_boundary_followups.py wald`, then `scripts/report_endpoint_followups.py`. Those scripts require the complete paired samples and verify the frozen notebook source. `scripts/validate_endpoint_followups.py` checks compact output hashes, notebook packages and publication files without simulations.

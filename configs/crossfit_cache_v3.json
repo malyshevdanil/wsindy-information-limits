@@ -1,0 +1,11 @@
+{
+  "representation": "total-degree Legendre approximation of normalized exact Prop3 model instruments",
+  "degree": 7,
+  "radius": 0.06,
+  "node_power": 10,
+  "node_seed": 3800000,
+  "bounds": "clip instrument-map coordinates to the approximation cube; the coefficient pilot itself retains its original box",
+  "training_records": 0,
+  "status": "repair probe required before geometry",
+  "revision_reason": "Degree-five validation failed at axis probes; same support and 5% loss threshold, more polynomial terms and design nodes"
+}

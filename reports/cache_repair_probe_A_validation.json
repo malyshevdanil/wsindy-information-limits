@@ -1,0 +1,301 @@
+{
+  "passed": true,
+  "stage": "cache_fix_a",
+  "execution_snapshot": {
+    "stage": "cache_fix_a",
+    "execution_source_and_protocol_verified": true,
+    "archive_crc_and_bytes_verified": true
+  },
+  "probe": {
+    "checks": [
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variance_loss": 0.01195794563853636
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          0.02,
+          -0.02,
+          0.02,
+          -0.02
+        ],
+        "variance_loss": 0.01210279772208711
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          -0.02,
+          0.01,
+          -0.02,
+          0.01
+        ],
+        "variance_loss": 0.007545742378771481
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          0.05,
+          -0.05,
+          0.05,
+          -0.05
+        ],
+        "variance_loss": 0.007960167528073159
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          -0.05,
+          0.03,
+          -0.02,
+          0.04
+        ],
+        "variance_loss": 0.008613854962690182
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          0.06,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variance_loss": 0.01262453977343081
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          0.0,
+          0.06,
+          0.0,
+          0.0
+        ],
+        "variance_loss": 0.014184361753878605
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          0.0,
+          0.0,
+          0.06,
+          0.0
+        ],
+        "variance_loss": 0.002954720527021948
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          0.0,
+          0.0,
+          0.0,
+          0.06
+        ],
+        "variance_loss": 0.015974731164376976
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          -0.06,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "variance_loss": 0.016487251498638056
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          -0.0,
+          -0.06,
+          -0.0,
+          -0.0
+        ],
+        "variance_loss": 0.013775478401864216
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          -0.0,
+          -0.0,
+          -0.06,
+          -0.0
+        ],
+        "variance_loss": 0.03111848501603265
+      },
+      {
+        "windows": 480,
+        "level": 0.1,
+        "offset": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.06
+        ],
+        "variance_loss": 0.006481568318916775
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variance_loss": 0.009859210201106139
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          0.02,
+          -0.02,
+          0.02,
+          -0.02
+        ],
+        "variance_loss": 0.01011691233227796
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          -0.02,
+          0.01,
+          -0.02,
+          0.01
+        ],
+        "variance_loss": 0.006122706964051039
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          0.05,
+          -0.05,
+          0.05,
+          -0.05
+        ],
+        "variance_loss": 0.005906425012290217
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          -0.05,
+          0.03,
+          -0.02,
+          0.04
+        ],
+        "variance_loss": 0.00677213898461293
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          0.06,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "variance_loss": 0.009690629581301957
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          0.0,
+          0.06,
+          0.0,
+          0.0
+        ],
+        "variance_loss": 0.010278670718373073
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          0.0,
+          0.0,
+          0.06,
+          0.0
+        ],
+        "variance_loss": 0.0023850784598293817
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          0.0,
+          0.0,
+          0.0,
+          0.06
+        ],
+        "variance_loss": 0.012812843947028307
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          -0.06,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "variance_loss": 0.01118413300608223
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          -0.0,
+          -0.06,
+          -0.0,
+          -0.0
+        ],
+        "variance_loss": 0.011001364730696572
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          -0.0,
+          -0.0,
+          -0.06,
+          -0.0
+        ],
+        "variance_loss": 0.025569983250745443
+      },
+      {
+        "windows": 480,
+        "level": 0.2,
+        "offset": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.06
+        ],
+        "variance_loss": 0.0052556825991221245
+      }
+    ],
+    "maximum_variance_loss": 0.03111848501603265,
+    "threshold": 0.05
+  }
+}

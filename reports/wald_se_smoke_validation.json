@@ -1,0 +1,23 @@
+{
+  "execution_validated": true,
+  "proof": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/wald_se_calibration.json"
+    ],
+    "stage": "secal_smoke",
+    "completion": {
+      "status": "complete",
+      "paths": 1,
+      "rows": 3,
+      "elapsed_seconds": 18.376020143000005,
+      "smoke": true
+    }
+  },
+  "timing": {
+    "score_seconds": 0.28021481700000095,
+    "bootstrap_seconds": 11.122385997000038,
+    "total_seconds": 14.372103056000014
+  },
+  "scientific_calibration_assessed": false
+}

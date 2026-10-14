@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "reason": "User stopped all five active notebooks and requested recovery of their logs and results; automatic resubmission disabled during review",
+  "read_only_collection_allowed": true
+}

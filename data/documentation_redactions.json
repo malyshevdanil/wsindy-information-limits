@@ -1,0 +1,612 @@
+{
+  "scope": "Named-tool attribution removed from documentation-generating scripts only. Original execution outputs and numerical source remain unchanged.",
+  "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3",
+  "original_execution_snapshots_preserved_in_git": true,
+  "notebooks": [
+    {
+      "notebook": "kaggle/boundary_ablate_0/wsindy_boundary_ablate_0.ipynb",
+      "original_notebook_sha256": "6210d2d702cee56586d3d1ae29b2370c5d64d7ced27334486b880ee3de05de3b",
+      "original_source_sha256": "ead7a7cdfff86d924ef0325af3b3029672ea26f607c20357218e60584071ce02",
+      "sanitized_source_sha256": "aea1b2d5c2e9e1214df48787ac07c7c83039caa60846677fb3cbcfcb35212c82",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_ablate_1/wsindy_boundary_ablate_1.ipynb",
+      "original_notebook_sha256": "55c4e970e192b5c97d5ab29c2a91d929a25c43fae446a405d1cc44f71d0bae96",
+      "original_source_sha256": "ead7a7cdfff86d924ef0325af3b3029672ea26f607c20357218e60584071ce02",
+      "sanitized_source_sha256": "aea1b2d5c2e9e1214df48787ac07c7c83039caa60846677fb3cbcfcb35212c82",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_ablate_2/wsindy_boundary_ablate_2.ipynb",
+      "original_notebook_sha256": "79bff4c4c8a981ddc82df24292de2d6625b6f541d0544e84d59454218e951a59",
+      "original_source_sha256": "ead7a7cdfff86d924ef0325af3b3029672ea26f607c20357218e60584071ce02",
+      "sanitized_source_sha256": "aea1b2d5c2e9e1214df48787ac07c7c83039caa60846677fb3cbcfcb35212c82",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_ablate_3/wsindy_boundary_ablate_3.ipynb",
+      "original_notebook_sha256": "2a535496d81858e702f7c15cdd23d1010a51054efb747d5338da7455d7df0ffc",
+      "original_source_sha256": "ead7a7cdfff86d924ef0325af3b3029672ea26f607c20357218e60584071ce02",
+      "sanitized_source_sha256": "aea1b2d5c2e9e1214df48787ac07c7c83039caa60846677fb3cbcfcb35212c82",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_ablate_v2_0/wsindy_boundary_ablate_v2_0.ipynb",
+      "original_notebook_sha256": "17c36b6fee90d7a498676578af39e44c61c2eced5d0c8fb85578e776a96ed3e6",
+      "original_source_sha256": "2b811ba5e8667ba62f0f79358094d5ff71c6f04f6406f36c7cb873f849828b83",
+      "sanitized_source_sha256": "b51ffb31fb45d050534a98d487470836b8906f937cf764f33a9929e6d27fc318",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_ablate_v2_1/wsindy_boundary_ablate_v2_1.ipynb",
+      "original_notebook_sha256": "75564c28e6a37f4ecf85fc1c19d7a9cdc732e40aaf3847c4f1c696c68877e209",
+      "original_source_sha256": "2b811ba5e8667ba62f0f79358094d5ff71c6f04f6406f36c7cb873f849828b83",
+      "sanitized_source_sha256": "b51ffb31fb45d050534a98d487470836b8906f937cf764f33a9929e6d27fc318",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_ablate_v2_2/wsindy_boundary_ablate_v2_2.ipynb",
+      "original_notebook_sha256": "cff866614d7d84b434e7a7d026ac3c74e0055535bfcb2efe61ff3f945075e9d2",
+      "original_source_sha256": "2b811ba5e8667ba62f0f79358094d5ff71c6f04f6406f36c7cb873f849828b83",
+      "sanitized_source_sha256": "b51ffb31fb45d050534a98d487470836b8906f937cf764f33a9929e6d27fc318",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_ablate_v2_3/wsindy_boundary_ablate_v2_3.ipynb",
+      "original_notebook_sha256": "3d5676b2bbee76a15a3279ace8ace1ec228020ca0ad08bb2b65895bbe75d1175",
+      "original_source_sha256": "2b811ba5e8667ba62f0f79358094d5ff71c6f04f6406f36c7cb873f849828b83",
+      "sanitized_source_sha256": "b51ffb31fb45d050534a98d487470836b8906f937cf764f33a9929e6d27fc318",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_confirm_0/wsindy_boundary_confirm_0.ipynb",
+      "original_notebook_sha256": "438c6339b1cdcc8304bfb8b1ad157a27598929305e8bb14153170fce1d6eca05",
+      "original_source_sha256": "0c9de718247b248f51216c2eb876136306e2717a85bf82e0a6bb2787a73c2e5f",
+      "sanitized_source_sha256": "36d484f1e60d0237d8b5549b2dc21e1e8771ecd845c4e5506f3776d44f138b48",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_confirm_1/wsindy_boundary_confirm_1.ipynb",
+      "original_notebook_sha256": "d20f26fd38bc3d64f467733e576fd65e976f667dd6e5f9e5752f96108e6230ab",
+      "original_source_sha256": "0c9de718247b248f51216c2eb876136306e2717a85bf82e0a6bb2787a73c2e5f",
+      "sanitized_source_sha256": "36d484f1e60d0237d8b5549b2dc21e1e8771ecd845c4e5506f3776d44f138b48",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_confirm_2/wsindy_boundary_confirm_2.ipynb",
+      "original_notebook_sha256": "c359c644951aee976669708051af41a37caa36681be65042b48d75caf473d91e",
+      "original_source_sha256": "0c9de718247b248f51216c2eb876136306e2717a85bf82e0a6bb2787a73c2e5f",
+      "sanitized_source_sha256": "36d484f1e60d0237d8b5549b2dc21e1e8771ecd845c4e5506f3776d44f138b48",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_confirm_3/wsindy_boundary_confirm_3.ipynb",
+      "original_notebook_sha256": "bc06ef60fc13e154679a140e759f7a4f3ef785ac2896a1f704b0ba608ab88566",
+      "original_source_sha256": "0c9de718247b248f51216c2eb876136306e2717a85bf82e0a6bb2787a73c2e5f",
+      "sanitized_source_sha256": "36d484f1e60d0237d8b5549b2dc21e1e8771ecd845c4e5506f3776d44f138b48",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_general_lorenz/wsindy_boundary_general_lorenz.ipynb",
+      "original_notebook_sha256": "f9a62d628c5fe6d85baf19765f281ce3dff1eaf857f7db650ff3a2bef3383442",
+      "original_source_sha256": "b24733307459ed4793af868d1ea3620c815e20fd681c8ec083333c9d379bd0c0",
+      "sanitized_source_sha256": "d9bc760245ffd68697d3d0196732b730b6b1c0ef686d487d6a2e003a15692e3a",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_general_vdp5/wsindy_boundary_general_vdp5.ipynb",
+      "original_notebook_sha256": "de94c490a462625990c65e5eb51c9c94f246e27edcec601022cbfd771f9f6dc7",
+      "original_source_sha256": "b24733307459ed4793af868d1ea3620c815e20fd681c8ec083333c9d379bd0c0",
+      "sanitized_source_sha256": "d9bc760245ffd68697d3d0196732b730b6b1c0ef686d487d6a2e003a15692e3a",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_screen/wsindy_boundary_screen.ipynb",
+      "original_notebook_sha256": "7d4de98927929721d231d507722a274443ab3dc1273ea710b1693b49ce30a0b6",
+      "original_source_sha256": "c9a8874b65f4d8602cd7b7bcd64336e4c001e3295930641106c0bbe60838c8fd",
+      "sanitized_source_sha256": "a927040d979c7aaf5698240796defa6c256a2e06ff2ed335bfbc213ddafcf532",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_screen_v2/wsindy_boundary_screen_v2.ipynb",
+      "original_notebook_sha256": "4c7cc0bea25e59aee4f9ad2eb6d348c82cecc5458f11827723e9936bf2b41fa8",
+      "original_source_sha256": "36d7bbcfd0ffe30fe04c503bc6d7889243e4523afca45c58fc97f1dfb525dd24",
+      "sanitized_source_sha256": "dfbc3c0fc208eca959e5dbe8a596f4fcc3bad767e57290ab24f35d8ba0b0db17",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_screen_v3/wsindy_boundary_screen_v3.ipynb",
+      "original_notebook_sha256": "8d6a873d7d3ae7e3aa743c8ad6259ef4ed7464d30d0468c115b92907e183fc8b",
+      "original_source_sha256": "32973927f7374cd2138df49ed1bbedf100c1db66faa11859704c14b5d1281018",
+      "sanitized_source_sha256": "d4a4ef34a9cb08a54628eff624c3955e5c09e97fdb0da264574c14f3c1ba376b",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/boundary_screen_v4/wsindy_boundary_screen_v4.ipynb",
+      "original_notebook_sha256": "edc91b9425fd1fb04b6a3a6d3617ca07c8bb8574ad138dc77ba9ae3769ba4c4b",
+      "original_source_sha256": "1fac3bb478c6d9ab998fede9ce74002df8f1d218ff1bf2ffdd23570b1c7fe118",
+      "sanitized_source_sha256": "85dae2a31bcd3b9c80bb6296ec2cc5ba8b3fe62b251e81be11c64e4cb3e6c70e",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/cache_fix_a/wsindy_cache_fix_a.ipynb",
+      "original_notebook_sha256": "14710e362433b84215c77e81e43616957c568f7d710f81e857d469684889b8e1",
+      "original_source_sha256": "ae5da1e0543b1b9e2d7a666acc20d4b5b35f109ce80930ab201078f62d1e231e",
+      "sanitized_source_sha256": "eb62a32df714d6331f9d09ec2ef9e5ecc9096d525a1344b9feb9e2119f3c03c3",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/cache_fix_probe/wsindy_cache_fix_probe.ipynb",
+      "original_notebook_sha256": "faa53ef8e208af324183beee0d8f7a88f49dda83bff1d431a6b4bda271250b0d",
+      "original_source_sha256": "00183a48e6dddf392d83ef616cf2e00bee1ec7d08da73d8d888bc2e0d90e1e6e",
+      "sanitized_source_sha256": "4ee96628ef67ec4fe473f93630b663ca93d550e0de1c469b562dab662606f081",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/cache_fix_v4/wsindy_cache_fix_v4.ipynb",
+      "original_notebook_sha256": "620b0237714877148c4a77792529238654142dad3d965ad6c1565e71f7fa6cf3",
+      "original_source_sha256": "34baeeaa643965cae027a6cd4a3cfd443e2b11290a08d0bb274e58a9a3f445b3",
+      "sanitized_source_sha256": "ba4a19b71bb5c148386c86c1bdca54592bc27a168fdb2f43d475fc106ac7b5ef",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/crossfit120_geometry/wsindy_crossfit120_geometry.ipynb",
+      "original_notebook_sha256": "a57f606a94bca1bf35fd6a33196923c031df45b7a3413dc6516135e82f2daba6",
+      "original_source_sha256": "1dec21bff64fc369590e4e42856b38bf44c4090446941eb878e8eaa65a6c3924",
+      "sanitized_source_sha256": "502c6243bf6facb5e1e7af7de8d397889123183953e2377966b68bcb9cabf33b",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/crossfitA_geometry/wsindy_crossfitA_geometry.ipynb",
+      "original_notebook_sha256": "df63a966624fa6c96d2dbcbe59e1aa771b248ec53b445fff1914e3caf1f740dd",
+      "original_source_sha256": "09c7e6140f63b547dc717d241ac39ed483ea3efa11024234031f0ecd8bd202b0",
+      "sanitized_source_sha256": "68680dfb9423b18017fda105ceef1925aa5c4dba4f6b97354614954fdc66bd67",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/crossfit_cache_probe/wsindy_crossfit_cache_probe.ipynb",
+      "original_notebook_sha256": "1cc35e3ccf864664e98c75c439ad97778149c35615c967db7eddff9381fd3b8d",
+      "original_source_sha256": "d7bee282237ed674265744a6add7090ed4444664986a305919f3ec02ebc8faa3",
+      "sanitized_source_sha256": "13bd488d61dec4b84567a91c910bf1284c9ee844546b8bd104db9a014b359c2e",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/crossfit_geometry/wsindy_crossfit_geometry.ipynb",
+      "original_notebook_sha256": "4b9a64dc292b34c5502ccc1aed2ccc4efccb34d62114e2e47ef692b4b8573663",
+      "original_source_sha256": "9ff9f61eb7e2f771653e3d5aa2d76bfca0cb0e67d63bba7c5cb109638f67982f",
+      "sanitized_source_sha256": "b01426bce0b4e9e178a2b7184890fe819df950f7f46b9b44e01b886966a4394f",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/crossfit_geometry_v2/wsindy_crossfit_geometry_v2.ipynb",
+      "original_notebook_sha256": "63d4e841f3c598ed1e8ece46c08118f8c7516ddfd85c1689c9eacdbd8692d126",
+      "original_source_sha256": "fb78f280c2cfc2062856d11c9373485b8818f99e405167f555ff56a25ea53512",
+      "sanitized_source_sha256": "9bb02fb2abe791cc8ae8ad0fad1d6dcbc3fe67517c28c5b5227ae98b39f2c805",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/crossfit_poly_probe_v2/wsindy_crossfit_poly_probe_v2.ipynb",
+      "original_notebook_sha256": "f6892eb183bcfe3aeb809e083cb979adbf202622e8ff9b26bf81ed979ac872d5",
+      "original_source_sha256": "3bcf75b05d1a0ed06506526ed30cc3cecc6ae737bf67312bab8b31ab3f9d334d",
+      "sanitized_source_sha256": "a94f62c2f3fe494cdec030c7e342f9e65f909685f99b4bd2346c669ebb634f2e",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/crossfit_polynomial_probe/wsindy_crossfit_polynomial_probe.ipynb",
+      "original_notebook_sha256": "9e08001c75532b268bb9633c146dadd2b8a7470b74856776f0ca25c93e998199",
+      "original_source_sha256": "836f033cde9f1f0380b1d460cb4efb9f47c9e02d9e16af2b9808fc71d39b4450",
+      "sanitized_source_sha256": "79be5686072e591b9348ef9f35c5a7e247521c7300f10d9c0b82e6a3d8685821",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/endpoint_lorenz/wsindy_endpoint_lorenz.ipynb",
+      "original_notebook_sha256": "5f7afeb095049aa3d4be324ec3c8598f80077556fad6de7c5440847d223b577b",
+      "original_source_sha256": "64ac0b472c5a86c9be86d71c594e92febbe5274591af618915afc21888fb0f48",
+      "sanitized_source_sha256": "f1a6194052e1c8ba238bba002fb2279ef4fee7a53460fb08e3ab1ed818730b66",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/endpoint_vdp5/wsindy_endpoint_vdp5.ipynb",
+      "original_notebook_sha256": "2e172371898d83d91af7e24f1aefc66b7a9b4d20f5457674050e4871e58fa494",
+      "original_source_sha256": "64ac0b472c5a86c9be86d71c594e92febbe5274591af618915afc21888fb0f48",
+      "sanitized_source_sha256": "f1a6194052e1c8ba238bba002fb2279ef4fee7a53460fb08e3ab1ed818730b66",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/inc_bias_check/wsindy_inc_bias_check.ipynb",
+      "original_notebook_sha256": "505ee15df8d5e03269c4ea1e64ea9996a99badcefad4dedfb3239a1f043de84b",
+      "original_source_sha256": "4e8dcc7b8e046930b39e22ab0f62d9efcd2e6a9d4fd4cd1a6e1739665aa29c62",
+      "sanitized_source_sha256": "48ea36c1519af841056425ffbf9bf8abeba876da99e5b8326f641b42717ae4a5",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/inc_forecast/wsindy_inc_forecast.ipynb",
+      "original_notebook_sha256": "3c3a6515b2f4d60dcb7bca31019128d54f168be07cbec945d92da494115bedc3",
+      "original_source_sha256": "748fd63efc1187b50f230bd687de2eb9ae5c45195ac9b3949c786253d94b86c8",
+      "sanitized_source_sha256": "da13a080e2135bf4eafba11159350f732d367127cb8dd12a9b0e40c9b36a7cb2",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/inc_main_l0_n800_b00/wsindy_inc_main_l0_n800_b00.ipynb",
+      "original_notebook_sha256": "fb441617e15f43538146b2b13cd5e51411c2db6f46b2f3c6f452f22bfb77f52e",
+      "original_source_sha256": "09c7e6140f63b547dc717d241ac39ed483ea3efa11024234031f0ecd8bd202b0",
+      "sanitized_source_sha256": "68680dfb9423b18017fda105ceef1925aa5c4dba4f6b97354614954fdc66bd67",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/inc_main_l0_n800_b01/wsindy_inc_main_l0_n800_b01.ipynb",
+      "original_notebook_sha256": "8b9faf633b66879f0da97597d98ea0b54d79ebc46e0ce2c7177a3e32d0ae2cd4",
+      "original_source_sha256": "09c7e6140f63b547dc717d241ac39ed483ea3efa11024234031f0ecd8bd202b0",
+      "sanitized_source_sha256": "68680dfb9423b18017fda105ceef1925aa5c4dba4f6b97354614954fdc66bd67",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/inc_main_smoke/wsindy_inc_main_smoke.ipynb",
+      "original_notebook_sha256": "c0c5d550f1844ec58d88102f86d29d76d3deac9d2a4a1bdcd137d20f8f899ded",
+      "original_source_sha256": "09c7e6140f63b547dc717d241ac39ed483ea3efa11024234031f0ecd8bd202b0",
+      "sanitized_source_sha256": "68680dfb9423b18017fda105ceef1925aa5c4dba4f6b97354614954fdc66bd67",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/incidental_curvature/wsindy_incidental_curvature.ipynb",
+      "original_notebook_sha256": "70101db27e750912c4b9576438e05210f3e3788c43007cf4f3060427d7b39420",
+      "original_source_sha256": "db2a8be6fcff5e1327ddda765ef9f4c2cee902996b8eb8f309731a45988f7bbe",
+      "sanitized_source_sha256": "61b076845b6fa2b4a6c7edddaf9474248f72287f7b81ff1edaadd0ec9421aa24",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/incidental_pilot_0/wsindy_incidental_pilot_0.ipynb",
+      "original_notebook_sha256": "8f15bbf568fd883306c4118b72d4588cbc5d48274e35ffd2325f3f48f2014b34",
+      "original_source_sha256": "442372d18615bd8d2b7e730d95d53be12695dcc6d7f5f557fdef647682ecb4b7",
+      "sanitized_source_sha256": "5b698fc64c80f1ed8ad2f4d9de6169d04346a21d7010dbab65f423ca8f2d1a1b",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/incidental_pilot_1/wsindy_incidental_pilot_1.ipynb",
+      "original_notebook_sha256": "e434d99918d553bd4a8053ea1e12a26ec6c05485a326bd5d5203bb0abe95c456",
+      "original_source_sha256": "442372d18615bd8d2b7e730d95d53be12695dcc6d7f5f557fdef647682ecb4b7",
+      "sanitized_source_sha256": "5b698fc64c80f1ed8ad2f4d9de6169d04346a21d7010dbab65f423ca8f2d1a1b",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/incidental_pilot_v2_0/wsindy_incidental_pilot_v2_0.ipynb",
+      "original_notebook_sha256": "1650a4b7a27e9e51896133d6cf347408429bfa3a3f8a9e9e2cea97aae55560a8",
+      "original_source_sha256": "6e9a02cd63ff96dbb0b44045c8951b8ecf80b3a875c445852f36e43ee6375fcd",
+      "sanitized_source_sha256": "d9464a582b8fb1e2516dfe9d74cb736736659e11a1e1603822e3043a0075b4fd",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/incidental_pilot_v2_1/wsindy_incidental_pilot_v2_1.ipynb",
+      "original_notebook_sha256": "df65bf2ee8b6d1dd2ae98d027730222141fb6ee1394d30e1f3551d265403ceb3",
+      "original_source_sha256": "6e9a02cd63ff96dbb0b44045c8951b8ecf80b3a875c445852f36e43ee6375fcd",
+      "sanitized_source_sha256": "d9464a582b8fb1e2516dfe9d74cb736736659e11a1e1603822e3043a0075b4fd",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/incidental_smoke/wsindy_incidental_smoke.ipynb",
+      "original_notebook_sha256": "d7fef1376d0050ae76b8996d3fc59175d09d0dad2ee9c7f890f66f81ff5be3bf",
+      "original_source_sha256": "764393a468e0a5d8cf102464b166edc230ac6d995e7263f7af173feba5619b88",
+      "sanitized_source_sha256": "644741eb97c872b65ff309001ed5daa67f7ea4d13967af81ac79c47b4d93e425",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/repair120_geometry/wsindy_repair120_geometry.ipynb",
+      "original_notebook_sha256": "dbf8d74a3e32eb9c84416bc596f364dba804717752c661acacff030e45bcdb67",
+      "original_source_sha256": "34baeeaa643965cae027a6cd4a3cfd443e2b11290a08d0bb274e58a9a3f445b3",
+      "sanitized_source_sha256": "ba4a19b71bb5c148386c86c1bdca54592bc27a168fdb2f43d475fc106ac7b5ef",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/repairA0_geometry/wsindy_repairA0_geometry.ipynb",
+      "original_notebook_sha256": "3c1b34749f2cf433723639d5853ca3c2e0710b9f760524970dc2d02b4af912b1",
+      "original_source_sha256": "34baeeaa643965cae027a6cd4a3cfd443e2b11290a08d0bb274e58a9a3f445b3",
+      "sanitized_source_sha256": "ba4a19b71bb5c148386c86c1bdca54592bc27a168fdb2f43d475fc106ac7b5ef",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/repairA1_geometry/wsindy_repairA1_geometry.ipynb",
+      "original_notebook_sha256": "af0856717df03a8ebc2da61323c08244b0995afd62f0f1df2320b2dcc91ffe0d",
+      "original_source_sha256": "34baeeaa643965cae027a6cd4a3cfd443e2b11290a08d0bb274e58a9a3f445b3",
+      "sanitized_source_sha256": "ba4a19b71bb5c148386c86c1bdca54592bc27a168fdb2f43d475fc106ac7b5ef",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/repairA2_geometry/wsindy_repairA2_geometry.ipynb",
+      "original_notebook_sha256": "baa67ba893fc58e9e0af0d83b3964e02f179f0f9dfcaee6b527b3d9846476516",
+      "original_source_sha256": "34baeeaa643965cae027a6cd4a3cfd443e2b11290a08d0bb274e58a9a3f445b3",
+      "sanitized_source_sha256": "ba4a19b71bb5c148386c86c1bdca54592bc27a168fdb2f43d475fc106ac7b5ef",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_distance/wsindy_support_distance.ipynb",
+      "original_notebook_sha256": "632ce6ee4a25e48647379bbecdf7fd8f4508c01b85a34c0c483ea28706decba7",
+      "original_source_sha256": "ddf789290fc6c42f74ae4dd6189ec47ab4d923fe1d3c33e1badc256b37479e09",
+      "sanitized_source_sha256": "ad1143a3065ba1fd17e1a596e36cc8fda2f552815e4049edf99ac6a205f0abc7",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_extra/wsindy_support_extra.ipynb",
+      "original_notebook_sha256": "9c2d18147ccf9107e54c4183e29d0bfed786eb1b195e4256ed85693c00e572ae",
+      "original_source_sha256": "6c02659ff6610c446bf4e8efe38a165b1daf0285422edd2761067b6506983ed2",
+      "sanitized_source_sha256": "6cd7f0bfe8ba780010fbaaf8541a032898a2ec218d99c0fd47e5792c422f2eae",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_0/wsindy_support_wald_0.ipynb",
+      "original_notebook_sha256": "80bad9a8c8f25cb7c95fe8a7627ba3758ddebaaebc4691d7379c23ab2d795320",
+      "original_source_sha256": "b24733307459ed4793af868d1ea3620c815e20fd681c8ec083333c9d379bd0c0",
+      "sanitized_source_sha256": "d9bc760245ffd68697d3d0196732b730b6b1c0ef686d487d6a2e003a15692e3a",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_1/wsindy_support_wald_1.ipynb",
+      "original_notebook_sha256": "74f81fec13f437de44fcfc8324062079e93c315c6b5e1a6cf5031aad22123dfd",
+      "original_source_sha256": "b24733307459ed4793af868d1ea3620c815e20fd681c8ec083333c9d379bd0c0",
+      "sanitized_source_sha256": "d9bc760245ffd68697d3d0196732b730b6b1c0ef686d487d6a2e003a15692e3a",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_2/wsindy_support_wald_2.ipynb",
+      "original_notebook_sha256": "581725c6364d8f15b6cc27e4583a1666a70ae80d301275a4c95c971b42bdc05e",
+      "original_source_sha256": "b24733307459ed4793af868d1ea3620c815e20fd681c8ec083333c9d379bd0c0",
+      "sanitized_source_sha256": "d9bc760245ffd68697d3d0196732b730b6b1c0ef686d487d6a2e003a15692e3a",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_3/wsindy_support_wald_3.ipynb",
+      "original_notebook_sha256": "2dade86abc5cf9d50bf9af9cefd8dc240789e986a76e440e338ed649dfd98001",
+      "original_source_sha256": "b24733307459ed4793af868d1ea3620c815e20fd681c8ec083333c9d379bd0c0",
+      "sanitized_source_sha256": "d9bc760245ffd68697d3d0196732b730b6b1c0ef686d487d6a2e003a15692e3a",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_v2_0/wsindy_support_wald_v2_0.ipynb",
+      "original_notebook_sha256": "2a62087b29c51003d523f3faffee13986ea39ea404c961eabdee3f8675a6702f",
+      "original_source_sha256": "783ca3501fb9ba26b08809eb4f3ddedb5c4ab6b052ca455fe829b92d272cb7ff",
+      "sanitized_source_sha256": "9c4dd03938015ef8dcd4fb264f4fe248559596499b59cdbb38afbfca2675c783",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_v2_1/wsindy_support_wald_v2_1.ipynb",
+      "original_notebook_sha256": "9c507a6fb0cbd544f246d59723eeae24f8e3e02e46af6dcd7a18796909f8c095",
+      "original_source_sha256": "783ca3501fb9ba26b08809eb4f3ddedb5c4ab6b052ca455fe829b92d272cb7ff",
+      "sanitized_source_sha256": "9c4dd03938015ef8dcd4fb264f4fe248559596499b59cdbb38afbfca2675c783",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_v2_2/wsindy_support_wald_v2_2.ipynb",
+      "original_notebook_sha256": "fc6b4db463850a6506336d272b20f006b7a7c775b3c478c80cdc05cda7b79cc3",
+      "original_source_sha256": "783ca3501fb9ba26b08809eb4f3ddedb5c4ab6b052ca455fe829b92d272cb7ff",
+      "sanitized_source_sha256": "9c4dd03938015ef8dcd4fb264f4fe248559596499b59cdbb38afbfca2675c783",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    },
+    {
+      "notebook": "kaggle/support_wald_v2_3/wsindy_support_wald_v2_3.ipynb",
+      "original_notebook_sha256": "485cc18ec894ab9390f62af9848ed3f5ae75075144afbe160689e149c9ec8e5a",
+      "original_source_sha256": "783ca3501fb9ba26b08809eb4f3ddedb5c4ab6b052ca455fe829b92d272cb7ff",
+      "sanitized_source_sha256": "9c4dd03938015ef8dcd4fb264f4fe248559596499b59cdbb38afbfca2675c783",
+      "changed_entries": [
+        "scripts/prepare_independent_records_manuscript.py",
+        "scripts/prepare_reviewer_manuscript.py"
+      ],
+      "numerical_source_unchanged": true
+    }
+  ]
+}

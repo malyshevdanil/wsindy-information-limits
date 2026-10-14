@@ -1,0 +1,10 @@
+{
+  "protocol": "pre_main_full_joint_curvature_diagnostic_v1",
+  "initial_quadrature_orders": [4, 6],
+  "record_counts": [50, 100, 200, 400, 800],
+  "levels": [0.05, 0.1, 0.2],
+  "relative_quadrature_tolerance": 0.01,
+  "relative_finite_difference_tolerance": 0.001,
+  "scope": "Finite-n joint least-squares bias through full six-coordinate Hessian plus the delta-method correction for random initial-state information and curvature averages",
+  "physical_monte_carlo_records": 0
+}

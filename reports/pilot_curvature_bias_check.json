@@ -1,0 +1,68 @@
+{
+  "completed": true,
+  "pilot_only": true,
+  "main_outcomes_used": false,
+  "execution_audits": [
+    {
+      "stage": "incidental_pilot_v2_0",
+      "execution_source_and_protocol_verified": true,
+      "archive_crc_and_bytes_verified": true
+    },
+    {
+      "stage": "incidental_pilot_v2_1",
+      "execution_source_and_protocol_verified": true,
+      "archive_crc_and_bytes_verified": true
+    }
+  ],
+  "predicted_coefficient_bias": [
+    6.053414271088481e-06,
+    -9.267628296634513e-06,
+    8.73095628858049e-05,
+    -3.8078612908729266e-05
+  ],
+  "observed_coefficient_bias": [
+    -1.8952876504991777e-05,
+    -5.302080935457809e-05,
+    9.993139691310659e-05,
+    -0.00017136333673195336
+  ],
+  "predicted_relative_bias": 4.794651523037196e-05,
+  "observed_relative_bias": 0.0001031044313030988,
+  "bias_norm_ratio_descriptive": 2.1504051088531826,
+  "vector_discrepancy_statistic": 13.34987673957482,
+  "centered_bootstrap_pvalue": 0.008349582520873956,
+  "coefficient_bias_mc_95": [
+    [
+      -0.00011524411181218185,
+      -0.00014896155814787888,
+      -7.121438865680196e-05,
+      -0.0004086295596031964
+    ],
+    [
+      7.698894842479859e-05,
+      4.030123266751022e-05,
+      0.00027904136229837316,
+      5.9326706106290945e-05
+    ]
+  ],
+  "predicted_signed_projection": 9.589303046074392e-05,
+  "observed_signed_projection": 0.00016296171071143885,
+  "signed_projection_mc_95": [
+    -7.900063255453903e-05,
+    0.0004160618215820962
+  ],
+  "caveat": "Pilot has 50 repetitions; a norm of an estimated mean is upward biased. Agreement here does not validate the fixed-noise or finite-n remainder. Repeat the vector check on the amended main comparison.",
+  "finite_n_comparison": {
+    "predicted_coefficient_bias": [
+      6.133019741029622e-06,
+      -9.40198550438614e-06,
+      8.746517586238325e-05,
+      -3.8488420594320204e-05
+    ],
+    "predicted_relative_bias": 4.8108021085499524e-05,
+    "relative_change_of_bias_norm": 0.0033684586742448452,
+    "vector_discrepancy_statistic": 13.12264147520948,
+    "centered_bootstrap_pvalue": 0.009099545022748862,
+    "conclusion": "The computed 1/n correction is too small to explain the pilot discrepancy; finite-noise remainders and Monte Carlo fluctuation remain unresolved."
+  }
+}

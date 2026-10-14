@@ -1,0 +1,36 @@
+{
+  "pdfs": [
+    {
+      "file": "article_ejs.pdf",
+      "pages": 35,
+      "three_method_results_present": true
+    },
+    {
+      "file": "article_revised.pdf",
+      "pages": 30,
+      "three_method_results_present": true
+    },
+    {
+      "file": "supplement.pdf",
+      "pages": 43,
+      "three_method_results_present": true
+    }
+  ],
+  "ejs_table11_visual_check": true,
+  "native_word_build": [
+    {
+      "source": "article_revised.md",
+      "docx_native_equations": 358,
+      "docx_tables": 11,
+      "docx_images": 7,
+      "pdf_exists": true
+    },
+    {
+      "source": "supplement.md",
+      "docx_native_equations": 390,
+      "docx_tables": 21,
+      "docx_images": 11,
+      "pdf_exists": true
+    }
+  ]
+}

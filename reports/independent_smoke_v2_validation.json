@@ -1,0 +1,14 @@
+{
+  "source_audit": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/independent_validation_v2.json"
+    ]
+  },
+  "completion": {
+    "status": "complete",
+    "rows": 2,
+    "elapsed_seconds": 8.843831886000032,
+    "smoke": true
+  }
+}

@@ -1,8 +1,9 @@
 """Build the main paper with the official, unmodified IMS class and EJS metadata."""
-import json,re,shutil,subprocess
+import json,re,shutil,subprocess,sys
 from pathlib import Path
 import pypandoc
 ROOT=Path(__file__).resolve().parents[1];BASE=ROOT/'manuscript'
+sys.path.insert(0,str(ROOT))
 
 
 def build():
@@ -20,6 +21,11 @@ def build():
     latex=latex.replace('\\begin{figure}','\\begin{figure}[p]')
     latex=latex.replace(r'\includegraphics[keepaspectratio',r'\includegraphics[width=\linewidth,keepaspectratio')
     latex=re.sub(r'\\caption\{Figure \d+\.\s*',r'\\caption{',latex)
+    # Keep compact publication tables together with their explanatory captions.
+    # The EJS text block is narrower than the generic article version.
+    from scripts.build_publication import keep_short_tables
+    latex=latex.replace('\\begin{longtable}',r'\small\setlength{\tabcolsep}{3pt}'+'\n'+r'\begin{longtable}')
+    latex=keep_short_tables(latex)
     preamble=r'''\documentclass[ejs]{imsart}
 \RequirePackage{amsmath,amssymb,graphicx,longtable,booktabs,array,calc}
 \RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
@@ -48,7 +54,7 @@ def build():
 \begin{document}
 \begin{frontmatter}
 '''
-    front='\\title{'+title+'}\n'+r'\runtitle{Weak equations with nuisance initial states}'+'\n'+r'\begin{aug}'+'\n'
+    front='\\title{'+title+'}\n'+r'\runtitle{Information cost of boundary-free estimation}'+'\n'+r'\begin{aug}'+'\n'
     front+=r'\author[A]{\fnms{Danil Romanovich}~\snm{Malyshev}\ead[label=e1]{'+a['email']+'}'+r'\orcid{'+a['orcid']+'}}\n'
     front+=r'\address[A]{Independent researcher, Almaty, Kazakhstan\printead[presep={,\ }]{e1}}'+'\n'+r'\runauthor{D. R. Malyshev}'+'\n'+r'\end{aug}'+'\n'
     front+=r'\begin{abstract}'+'\n'+pypandoc.convert_text(abstract,'latex',format='markdown+tex_math_dollars')+'\n'+r'\end{abstract}'+'\n'

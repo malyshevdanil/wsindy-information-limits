@@ -1,0 +1,13 @@
+{
+  "class_name": "imsart",
+  "option": "ejs",
+  "orcid": "0009-0007-0947-3866",
+  "primary_msc": "62F12",
+  "secondary_msc": [
+    "62M10",
+    "34A55"
+  ],
+  "class_files_unmodified": true,
+  "source": "article_ejs.tex",
+  "pdf": "article_ejs.pdf"
+}

@@ -1,0 +1,42 @@
+{
+  "protocol": "endpoint_component_ablation_v1",
+  "parent_protocol": "endpoint_universal_paired_confirmation_v1",
+  "T": 20.0,
+  "h": 0.005,
+  "tau": 0.3,
+  "initial": [2.0, 0.0],
+  "level": 0.005,
+  "seed_base": 2200000,
+  "first_seed_index": 32,
+  "last_seed_index": 531,
+  "paths": 500,
+  "shards": 4,
+  "reference_file": "boundary_ablation_references.json",
+  "pilot_windows": 30,
+  "pilot_box": [[0.25, 2.0], [-2.0, -0.25], [0.1, 2.0], [-2.0, -0.1]],
+  "endpoint_half_window_full_widths": [3.0, 1.5, 0.75, 0.375, 0.1875, 0.09375],
+  "basis_relative_cutoff": 1e-10,
+  "iterations": 100,
+  "tolerance": 1e-7,
+  "covariance_relative_relaxation": 1e-10,
+  "clean_mean_quadrature_bias_max": 0.000014,
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 8430000,
+  "branches": {
+    "initial_only": {"endpoints": ["initial"], "controls": false},
+    "terminal_only": {"endpoints": ["terminal"], "controls": false},
+    "control_only": {"endpoints": [], "controls": true},
+    "matched_boundary_free": {"endpoints": [], "controls": false}
+  },
+  "archived_branches": ["universal_boundary", "boundary_free_480", "known_initial_scoring"],
+  "criteria": {
+    "scope": "component attribution, not a new unseen-path confirmation; full-branch outcomes already known",
+    "gain_denominator": "RMSE_matched_boundary_free - RMSE_known_initial_scoring",
+    "material_component": "at least 50% of the positive matched baseline gap closed, with paired interval reported",
+    "control_specificity": "report analytical OU initial-control covariance and exact iid-zero cross-covariance for compact tests",
+    "nonpositive_gap": "fraction not evaluable",
+    "no_additivity_claim": "components interact; fractions need not sum to the full recovery"
+  },
+  "quadrature": "common composite Simpson across all new branches; archived full branch uses identical Simpson implementation",
+  "stop_on_failure": true
+}

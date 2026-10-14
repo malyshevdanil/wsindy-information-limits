@@ -1,0 +1,108 @@
+{
+  "stage": "endpoint_lorenz",
+  "protocol": {
+    "protocol": "universal_endpoint_generalization_v1",
+    "vdp5": {
+      "T": 20.0,
+      "h": 0.005,
+      "tau": 0.3,
+      "initial": [
+        2.0,
+        0.0
+      ],
+      "level": 0.05,
+      "seed_base": 2200000,
+      "paths": 128,
+      "reference_file": "boundary_vdp5_references.json",
+      "pilot_windows": 30,
+      "pilot_box": [
+        [
+          0.25,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.25
+        ],
+        [
+          0.1,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.1
+        ]
+      ],
+      "widths": [
+        3.0,
+        1.5,
+        0.75,
+        0.375,
+        0.1875,
+        0.09375
+      ]
+    },
+    "lorenz": {
+      "T": 4.0,
+      "h": 0.001,
+      "tau": 0.1,
+      "initial": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "truth": [
+        10.0,
+        28.0,
+        2.6666666666666665
+      ],
+      "level": 0.005,
+      "seed_base": 2500000,
+      "paths": 256,
+      "pilot_windows": 30,
+      "pilot_box": [
+        [
+          5.0,
+          15.0
+        ],
+        [
+          20.0,
+          35.0
+        ],
+        [
+          1.5,
+          4.0
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.3,
+        0.15,
+        0.075,
+        0.0375,
+        0.01875
+      ],
+      "likelihood": "known-initial exact OU innovation nonlinear least squares with analytical sensitivities, starting at same-record boundary-free weak estimate",
+      "likelihood_tolerance": 1e-09,
+      "likelihood_max_nfev": 100
+    },
+    "primary_interior_windows": 480,
+    "basis_relative_cutoff": 1e-10,
+    "covariance_relative_relaxation": 1e-10,
+    "iterations": 100,
+    "tolerance": 1e-07,
+    "clean_mean_quadrature_bias_max": 1.4e-05,
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 8450000,
+    "criteria": {
+      "universal_fraction_gap_closed_min": 0.5,
+      "baseline": "same Simpson, same 480 interior family, same pilot covariance; no initial controls or endpoint windows",
+      "known_initial_reference": "known-initial MLE, rather than unknown-initial benchmark, matches the endpoint experiment",
+      "oracle_geometry": "compare first-order and full Hermite fixed-clean-design covariance separately from empirical bias and dispersion",
+      "nonpositive_gap": "criterion not evaluable"
+    },
+    "stop_on_failure": true
+  },
+  "system": "lorenz",
+  "source_sha256": "64ac0b472c5a86c9be86d71c594e92febbe5274591af618915afc21888fb0f48"
+}

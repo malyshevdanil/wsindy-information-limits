@@ -1,0 +1,82 @@
+[
+  {
+    "method": "initial_only",
+    "relative_bias": 1.221057801195306e-06,
+    "original_basis": {
+      "raw_windows": 480,
+      "retained_windows": 479,
+      "relative_cutoff": 1e-10,
+      "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+    },
+    "half_windows": 6,
+    "retained_scalar_tests": 485,
+    "basis_is_model_independent": true,
+    "relative_cutoff": 1e-10,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 3.517615592183757e-12,
+    "relaxation": 4.21888186423304e-16,
+    "tests_built_from_model": false,
+    "covariance_pilot_requires_ode": true
+  },
+  {
+    "method": "terminal_only",
+    "relative_bias": 1.7946939084507815e-06,
+    "original_basis": {
+      "raw_windows": 480,
+      "retained_windows": 479,
+      "relative_cutoff": 1e-10,
+      "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+    },
+    "half_windows": 6,
+    "retained_scalar_tests": 485,
+    "basis_is_model_independent": true,
+    "relative_cutoff": 1e-10,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 3.721711671954292e-12,
+    "relaxation": 4.442285463814903e-16,
+    "tests_built_from_model": false,
+    "covariance_pilot_requires_ode": true
+  },
+  {
+    "method": "control_only",
+    "relative_bias": 6.452731414953577e-06,
+    "original_basis": {
+      "raw_windows": 480,
+      "retained_windows": 479,
+      "relative_cutoff": 1e-10,
+      "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+    },
+    "half_windows": 0,
+    "retained_scalar_tests": 479,
+    "basis_is_model_independent": true,
+    "relative_cutoff": 1e-10,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 6.056439176746163e-11,
+    "relaxation": 4.202336769246272e-16,
+    "tests_built_from_model": false,
+    "covariance_pilot_requires_ode": true
+  },
+  {
+    "method": "matched_boundary_free",
+    "relative_bias": 2.072305151581548e-06,
+    "original_basis": {
+      "raw_windows": 480,
+      "retained_windows": 479,
+      "relative_cutoff": 1e-10,
+      "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+    },
+    "half_windows": 0,
+    "retained_scalar_tests": 479,
+    "basis_is_model_independent": true,
+    "relative_cutoff": 1e-10,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 7.072365477328706e-12,
+    "relaxation": 4.103695409700655e-16,
+    "tests_built_from_model": false,
+    "covariance_pilot_requires_ode": true
+  }
+]

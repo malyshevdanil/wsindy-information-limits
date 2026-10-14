@@ -1,0 +1,662 @@
+{
+  "scope": "All completed paired 5-percent null SE calibration outputs and execution logs; frozen v1; no records or replicates omitted",
+  "stages": [
+    "secal_0",
+    "secal_1",
+    "secal_2",
+    "secal_3",
+    "secal_4"
+  ],
+  "files": [
+    {
+      "path": "secal_0/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "secal_0/completion.json",
+      "bytes": 111,
+      "sha256": "4c67f302ce7b91041e1a64e9acdf9e975bd479bd0dcde913a032b0cdd066e9a0"
+    },
+    {
+      "path": "secal_0/diagnostics_s000.json",
+      "bytes": 10997,
+      "sha256": "c56008eddebb7cb65a0ce71ed62ffad17f75f9613f85c8645058373813316354"
+    },
+    {
+      "path": "secal_0/diagnostics_s005.json",
+      "bytes": 10979,
+      "sha256": "6a922c21706fe784e35bb91d895c3ca3d95a54c4c7027a65d75ada2daaeac25c"
+    },
+    {
+      "path": "secal_0/diagnostics_s010.json",
+      "bytes": 10954,
+      "sha256": "09d73f176bc96876ccef298dad6e3fbfb074ff2127dc343d08b06184e3760542"
+    },
+    {
+      "path": "secal_0/diagnostics_s015.json",
+      "bytes": 10987,
+      "sha256": "5275de0b11c1bd08c3ae2a069ae6b84bc9073882614f5624838605bfdf310521"
+    },
+    {
+      "path": "secal_0/diagnostics_s020.json",
+      "bytes": 10916,
+      "sha256": "7ecc2c0c0af51fa8938e2bc5b7d6091a081922c2535bc1fe6f513384d61cdb35"
+    },
+    {
+      "path": "secal_0/diagnostics_s025.json",
+      "bytes": 11043,
+      "sha256": "c0647b915be7bd605827a40ffa48cb93320a2c36f02cf2f9be7e4b3ad2d625c3"
+    },
+    {
+      "path": "secal_0/diagnostics_s030.json",
+      "bytes": 11030,
+      "sha256": "92c86891715d15252dfc72ba29b53f1f0cd90260458364ecbef92de30adf0d73"
+    },
+    {
+      "path": "secal_0/diagnostics_s035.json",
+      "bytes": 11070,
+      "sha256": "b3bb1264f270478abd62f03866befca9f61c382275678370cbafe7143b429437"
+    },
+    {
+      "path": "secal_0/diagnostics_s040.json",
+      "bytes": 10990,
+      "sha256": "f02314d304d705714f0509e5e168d3ebdd23eb88626f021e0a3ce6b0d9d94695"
+    },
+    {
+      "path": "secal_0/diagnostics_s045.json",
+      "bytes": 10973,
+      "sha256": "77f7ed0b4686cccf0cf54f96ad27554e192437bab8776606032e29fb8a11ba77"
+    },
+    {
+      "path": "secal_0/diagnostics_s050.json",
+      "bytes": 11053,
+      "sha256": "f3f6233bc1af6fea140b54856585d4f034182e74768b3865d1a092e00cdede6f"
+    },
+    {
+      "path": "secal_0/diagnostics_s055.json",
+      "bytes": 11026,
+      "sha256": "05834c15c83ad8893d8f6a7c0938c2c3aa08f4d6f896f80c2b078c11363d731b"
+    },
+    {
+      "path": "secal_0/diagnostics_s060.json",
+      "bytes": 11007,
+      "sha256": "b7eee748e2b453c4e2a26c3af4c0fb31a5010318998669307848393ad2131a9b"
+    },
+    {
+      "path": "secal_0/diagnostics_s065.json",
+      "bytes": 10945,
+      "sha256": "371c1eced4e43d5b2acc1255e42ea16b6073fd86ef491cefeefd5a0f3099f464"
+    },
+    {
+      "path": "secal_0/diagnostics_s070.json",
+      "bytes": 10983,
+      "sha256": "519bfaa00bd1c26285d5f9e0e53a92ac6db91214f47f4edd82c240f866117e1f"
+    },
+    {
+      "path": "secal_0/diagnostics_s075.json",
+      "bytes": 11008,
+      "sha256": "f11e68dd232a15b97d8a3ad9994d3240457ef32c6504cde47f86518fd8785fc8"
+    },
+    {
+      "path": "secal_0/diagnostics_s080.json",
+      "bytes": 11012,
+      "sha256": "f79336dab6d9d4215d7fd3df8dd00013e878fb6e420361ce2cec4e50c6a349d0"
+    },
+    {
+      "path": "secal_0/diagnostics_s085.json",
+      "bytes": 10950,
+      "sha256": "fbfc796db1f7be8f64b82fb84a4b72ef201a1e08b626f8c7e59b4983a8981904"
+    },
+    {
+      "path": "secal_0/diagnostics_s090.json",
+      "bytes": 10965,
+      "sha256": "624ef60a3769acdf75014e8084d7d7bf34785d9d68f802e2e6de689397c64d06"
+    },
+    {
+      "path": "secal_0/diagnostics_s095.json",
+      "bytes": 10982,
+      "sha256": "feea7d04ffc5896810ee40a747eecac90aef60dd73fae6d08e3450de6f95d940"
+    },
+    {
+      "path": "secal_0/manifest.json",
+      "bytes": 2547,
+      "sha256": "75fd225656748c911194109267ad7f5c578310d21ae79f86a2a2725b88bbf890"
+    },
+    {
+      "path": "secal_0/quadrature_gate.json",
+      "bytes": 78,
+      "sha256": "564a00f5c4786ff0508e38934278fc0197118aa37ed61639ad8d7978a8c8a022"
+    },
+    {
+      "path": "secal_0/rows.json",
+      "bytes": 17911,
+      "sha256": "3aa303cec2c31e3f0bfa2e9f520109dddf07e56e34822ff5d3b9890500b7780a"
+    },
+    {
+      "path": "secal_0/execution.log",
+      "bytes": 33381,
+      "sha256": "64da66caffd53b5c5c8756cb52f587a2535110ffc9923cbfbe4ba20383530859"
+    },
+    {
+      "path": "secal_1/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "secal_1/completion.json",
+      "bytes": 111,
+      "sha256": "1cf195402e8da4732ccf730d3dda6207405d1ad1f571a6b7e7ff71572daf733a"
+    },
+    {
+      "path": "secal_1/diagnostics_s001.json",
+      "bytes": 10961,
+      "sha256": "5b9f42007df5617fde5242d89f0389f22fc62dd1010870b22cc9033c10506b32"
+    },
+    {
+      "path": "secal_1/diagnostics_s006.json",
+      "bytes": 11026,
+      "sha256": "3fec62ef3a3fbe822ebfc127c1d5dfdc3e9a859afaa07ad658cb80874f8b93dc"
+    },
+    {
+      "path": "secal_1/diagnostics_s011.json",
+      "bytes": 10942,
+      "sha256": "4d8efd431df922573795cd7878189a5fa9dfb1f7af71c22bd9b613edea2e8134"
+    },
+    {
+      "path": "secal_1/diagnostics_s016.json",
+      "bytes": 10976,
+      "sha256": "0a29d66fe0091f6b217e4f971fe88f834d500da4d988f3df0a574d79079ec78f"
+    },
+    {
+      "path": "secal_1/diagnostics_s021.json",
+      "bytes": 10892,
+      "sha256": "b07a88afc019ef972780191455b3fcb4a9754f0948fc52d11b9dca67aad555ca"
+    },
+    {
+      "path": "secal_1/diagnostics_s026.json",
+      "bytes": 10986,
+      "sha256": "6697d5fd13b31aae27523e770604205f65d76396a98145ccc33990d1450d28f2"
+    },
+    {
+      "path": "secal_1/diagnostics_s031.json",
+      "bytes": 11031,
+      "sha256": "3ae02209d152b60d7d280d1c83ebe02d6d50d172158cbd9f2a6c71cc192752cb"
+    },
+    {
+      "path": "secal_1/diagnostics_s036.json",
+      "bytes": 10952,
+      "sha256": "8b0a2a7f0394e4782b635814260628badf0cfa0202277de3f821da239f9cec25"
+    },
+    {
+      "path": "secal_1/diagnostics_s041.json",
+      "bytes": 10956,
+      "sha256": "63e87554192f676b6e7583a1367b781f16eab11ebb91a0d76f748f7c0f9866df"
+    },
+    {
+      "path": "secal_1/diagnostics_s046.json",
+      "bytes": 10980,
+      "sha256": "7484fb5db47218cb8007c58ec6c42914fe3340fab1567ef7a3a8306c67e5443e"
+    },
+    {
+      "path": "secal_1/diagnostics_s051.json",
+      "bytes": 10989,
+      "sha256": "758dfa6fa414a3c9132a6cd2e5d73acaa9790fda7324127a89f34866a33e4a38"
+    },
+    {
+      "path": "secal_1/diagnostics_s056.json",
+      "bytes": 10980,
+      "sha256": "465d17de87f70e76b9d9a760d4b412b16e39ea7354035f394f33d183465df48f"
+    },
+    {
+      "path": "secal_1/diagnostics_s061.json",
+      "bytes": 10982,
+      "sha256": "003e26559365700e5a4591a5112b0a832e1f55c4f3761658e70be93ccff4e94b"
+    },
+    {
+      "path": "secal_1/diagnostics_s066.json",
+      "bytes": 11039,
+      "sha256": "485d69894fc4950dfc7927d8fe36adaaf488e183124af283c5ac3d919fd5dfe6"
+    },
+    {
+      "path": "secal_1/diagnostics_s071.json",
+      "bytes": 10944,
+      "sha256": "ead970a1735473c7cbfa35150e6a91de84a6ab567de4f387177d12a435fc4e81"
+    },
+    {
+      "path": "secal_1/diagnostics_s076.json",
+      "bytes": 11069,
+      "sha256": "bc7cb4dce56d223e28ff710acfc8fbc6a172d66bae05fbe698be351ecf632ecd"
+    },
+    {
+      "path": "secal_1/diagnostics_s081.json",
+      "bytes": 10955,
+      "sha256": "0529b255b8bbce875a6e0ef0bc0f7aded2b894db2bfd7c9a3cfb9376ac1b4f69"
+    },
+    {
+      "path": "secal_1/diagnostics_s086.json",
+      "bytes": 10985,
+      "sha256": "64393d93b62c9bb8b6f6e6eb5d48e4d7ce9f04382df8432a038add28bd193bdd"
+    },
+    {
+      "path": "secal_1/diagnostics_s091.json",
+      "bytes": 10957,
+      "sha256": "8dbda58b087aa89899f8bf7176fa4c5a9a8e6cdd9456bd2a37c96b48bc5558f0"
+    },
+    {
+      "path": "secal_1/diagnostics_s096.json",
+      "bytes": 11024,
+      "sha256": "0989741478832af6180c6db37c6e581debc8427e1627f95a31219d5dbee5cf58"
+    },
+    {
+      "path": "secal_1/manifest.json",
+      "bytes": 2547,
+      "sha256": "874f0de8e4e76fec04bf44c10e9a3644ec6961b7417e762c9cad294192e0b187"
+    },
+    {
+      "path": "secal_1/quadrature_gate.json",
+      "bytes": 78,
+      "sha256": "564a00f5c4786ff0508e38934278fc0197118aa37ed61639ad8d7978a8c8a022"
+    },
+    {
+      "path": "secal_1/rows.json",
+      "bytes": 17938,
+      "sha256": "6115646ff34de2d85b378f650f7b2b3c22f62634fedbe201129a73d16a634824"
+    },
+    {
+      "path": "secal_1/execution.log",
+      "bytes": 33336,
+      "sha256": "ef934563f7ef264460aef837f1c54475924e793f6cf558e62d58300b6314ac2f"
+    },
+    {
+      "path": "secal_2/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "secal_2/completion.json",
+      "bytes": 111,
+      "sha256": "fd86b7d346a54205aa076c0a123083f5ba5180a29aef3a60fabd125dac23b09a"
+    },
+    {
+      "path": "secal_2/diagnostics_s002.json",
+      "bytes": 11056,
+      "sha256": "49b51be154c86e2db9169268fd37694121438a3cc6f43f84cea3281fcb866855"
+    },
+    {
+      "path": "secal_2/diagnostics_s007.json",
+      "bytes": 10993,
+      "sha256": "06062be3fc37de9ed8d57216f3d8b9607e639c5bb4f30c0f833ae8cedca91913"
+    },
+    {
+      "path": "secal_2/diagnostics_s012.json",
+      "bytes": 11056,
+      "sha256": "ad74c46879ce901db02558665fe9fa19b98e40308cd66b2c366da23420e6d61b"
+    },
+    {
+      "path": "secal_2/diagnostics_s017.json",
+      "bytes": 11047,
+      "sha256": "bb4e3982352474b65d76bff1ef3a952252dbe6a417c640fe913fb9d6752fc22d"
+    },
+    {
+      "path": "secal_2/diagnostics_s022.json",
+      "bytes": 11045,
+      "sha256": "39e0d1a319054ca443022ee01dc52ae845d2499a2748db20f8f7e2fc451f1b65"
+    },
+    {
+      "path": "secal_2/diagnostics_s027.json",
+      "bytes": 11030,
+      "sha256": "8095876aed01cc0887bdf00f8d688a66297c7560d1d61831cfd2d17fe19d0f16"
+    },
+    {
+      "path": "secal_2/diagnostics_s032.json",
+      "bytes": 11027,
+      "sha256": "222bd7d3282958b8f009f3da2da031e76cd53cd2c6021d1ccde85c778f412e35"
+    },
+    {
+      "path": "secal_2/diagnostics_s037.json",
+      "bytes": 11004,
+      "sha256": "7b4adbc20cd0cf14bc84554cde7fc6909c4f81fdbd704753b5d1e1d60ade278f"
+    },
+    {
+      "path": "secal_2/diagnostics_s042.json",
+      "bytes": 10939,
+      "sha256": "9a3dffcd527e8b7a505b7ee9a6df321e8bb40eaae1443ec52e18edc41d4fd82f"
+    },
+    {
+      "path": "secal_2/diagnostics_s047.json",
+      "bytes": 10986,
+      "sha256": "dad33540c2d490aad298b50df6919f6bedbf18a092ac13de112bd1499905dd0a"
+    },
+    {
+      "path": "secal_2/diagnostics_s052.json",
+      "bytes": 11083,
+      "sha256": "b816b3a9e60e92c62c7ea3dcda26e1e6d605c3adeccd778fc5da129fdf9cf15b"
+    },
+    {
+      "path": "secal_2/diagnostics_s057.json",
+      "bytes": 10949,
+      "sha256": "91e76369695f1b1a33c3e4144b0c4d0b3652d3232c93767f122f8d903e99a02c"
+    },
+    {
+      "path": "secal_2/diagnostics_s062.json",
+      "bytes": 10968,
+      "sha256": "79834b08c57b69317ae1c85bda571b24da9e5f925538e747582d39e6980bc043"
+    },
+    {
+      "path": "secal_2/diagnostics_s067.json",
+      "bytes": 11002,
+      "sha256": "9b96f5bb1b76edf760b09a0a1508373eb049312ed95a69fcb58814d1659c308f"
+    },
+    {
+      "path": "secal_2/diagnostics_s072.json",
+      "bytes": 11040,
+      "sha256": "899f580b0efff9ccedaedb0fbcd19ae6131c4a3b9fc0c84f904a6299121a9c18"
+    },
+    {
+      "path": "secal_2/diagnostics_s077.json",
+      "bytes": 11024,
+      "sha256": "788bf1573e47eec06b35ad1cbb1377d6e8dd45d0c3ad714c357741a64c45c82b"
+    },
+    {
+      "path": "secal_2/diagnostics_s082.json",
+      "bytes": 10976,
+      "sha256": "7f7ae8ac7e01dac248e93911f22c662879d99fc2290e5533629fb3397d277a4c"
+    },
+    {
+      "path": "secal_2/diagnostics_s087.json",
+      "bytes": 10977,
+      "sha256": "9df3213b30ecade7d0b5419d0a790df3dd8e7304edda43e6abef4ba6c472ec3c"
+    },
+    {
+      "path": "secal_2/diagnostics_s092.json",
+      "bytes": 10957,
+      "sha256": "75f62feb3119eb9806e6b2a7afdf495b2edf03f85317678ee9b4d839a3c1670c"
+    },
+    {
+      "path": "secal_2/diagnostics_s097.json",
+      "bytes": 11005,
+      "sha256": "1bc5d4f90356370e592227a851821ee24b44258fc8f0830fa5a3f8f7f4762cec"
+    },
+    {
+      "path": "secal_2/manifest.json",
+      "bytes": 2547,
+      "sha256": "11fb88f4860823c14263137973940f8d662869a1fb1bfe0a73a34de66ba05011"
+    },
+    {
+      "path": "secal_2/quadrature_gate.json",
+      "bytes": 78,
+      "sha256": "564a00f5c4786ff0508e38934278fc0197118aa37ed61639ad8d7978a8c8a022"
+    },
+    {
+      "path": "secal_2/rows.json",
+      "bytes": 17917,
+      "sha256": "fedc4bf90fea26e0b4c8180e413c5e625bfafdee2021455f05709d971a36bc2a"
+    },
+    {
+      "path": "secal_2/execution.log",
+      "bytes": 33390,
+      "sha256": "3fefedb8f849a754717999a1c1c4651a2646d1125ba03350a0aec67dd551274d"
+    },
+    {
+      "path": "secal_3/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "secal_3/completion.json",
+      "bytes": 111,
+      "sha256": "3f1c1d521be78c0bfd2b1d67059c8b57c3f1d54b72b23b76a8c412e87eed3a5d"
+    },
+    {
+      "path": "secal_3/diagnostics_s003.json",
+      "bytes": 10977,
+      "sha256": "6ede7a8ee52a56d945e6226ec1b998004fa5a166e6d460eca14e27bc16d8c692"
+    },
+    {
+      "path": "secal_3/diagnostics_s008.json",
+      "bytes": 10997,
+      "sha256": "9fe91af83ee3b5f33f5a34d3c6b010bd27cbfd581172fdbbb919de0f1757428f"
+    },
+    {
+      "path": "secal_3/diagnostics_s013.json",
+      "bytes": 10966,
+      "sha256": "17b44014132d13717d0fa3d4b2dd0ffaa22050f5a465e15dcd62adb315d1e746"
+    },
+    {
+      "path": "secal_3/diagnostics_s018.json",
+      "bytes": 11019,
+      "sha256": "383b3d74dc14582569c80df4973799b516fa374e16792196220f3d26cebd9aec"
+    },
+    {
+      "path": "secal_3/diagnostics_s023.json",
+      "bytes": 11053,
+      "sha256": "a49fa6dfb449b8321b7b189bb7cf0bcdc499d6ae1514e9959bb341be44d150c5"
+    },
+    {
+      "path": "secal_3/diagnostics_s028.json",
+      "bytes": 10973,
+      "sha256": "7db978abffcb8b735957537116137c97b518ea5f433d57fa071bc6ad10dd2d16"
+    },
+    {
+      "path": "secal_3/diagnostics_s033.json",
+      "bytes": 11037,
+      "sha256": "ef8aedd7f637e5bd04431a3d1cbf96ba3d58e92c405ffa458b91947862148e7d"
+    },
+    {
+      "path": "secal_3/diagnostics_s038.json",
+      "bytes": 10958,
+      "sha256": "43aa90c194a09a8b4629ddfec77ffafa794956bce3ba399df232790e1fe6ab63"
+    },
+    {
+      "path": "secal_3/diagnostics_s043.json",
+      "bytes": 10954,
+      "sha256": "ae8942a5477ab2605a03c281469ec8004f80e23c5d4ec3eea0f2c0fc6d4edd7f"
+    },
+    {
+      "path": "secal_3/diagnostics_s048.json",
+      "bytes": 11063,
+      "sha256": "6a53947659051f63467be61067dbb1a453b87dc9372a3b2d708dfc33c06e4501"
+    },
+    {
+      "path": "secal_3/diagnostics_s053.json",
+      "bytes": 11033,
+      "sha256": "223022a5dad2316323e3398cf44ad60fdd77c5d1c0143947ac05767c2b068423"
+    },
+    {
+      "path": "secal_3/diagnostics_s058.json",
+      "bytes": 10943,
+      "sha256": "9c2272b6c010262fdf85638e4c9d4e4c65a1fd68be959a727e91f2e2936413fc"
+    },
+    {
+      "path": "secal_3/diagnostics_s063.json",
+      "bytes": 10932,
+      "sha256": "0588ad0fe674098457753b05fd6f4c1dce4fa6d2a565743ee8ff075f50d08360"
+    },
+    {
+      "path": "secal_3/diagnostics_s068.json",
+      "bytes": 11014,
+      "sha256": "2df973fa9ce693cad2aca07fae6cac7ae105cdc72fc359b4bc5133c0d377a712"
+    },
+    {
+      "path": "secal_3/diagnostics_s073.json",
+      "bytes": 11044,
+      "sha256": "6e019ae1414aa38d96c2450c275a70dc6aa3cd0b33b025ddd695cbfc0b0c002a"
+    },
+    {
+      "path": "secal_3/diagnostics_s078.json",
+      "bytes": 10978,
+      "sha256": "f9744f8247ac061ded0b7e89cd12576b04a1e1dd2df00659b10556542624c63a"
+    },
+    {
+      "path": "secal_3/diagnostics_s083.json",
+      "bytes": 11017,
+      "sha256": "42c815c44c1b4b43502b40aaeef1ba3d1060507e939c05775c39a0ab3bbd0e3e"
+    },
+    {
+      "path": "secal_3/diagnostics_s088.json",
+      "bytes": 10969,
+      "sha256": "00327559849355bda7c2a631393e4dfde457d9640592f5e3de3a15c8a78d5bff"
+    },
+    {
+      "path": "secal_3/diagnostics_s093.json",
+      "bytes": 10996,
+      "sha256": "eca510970069ab8c866388f1e56b2dcb9e88a7e6ed749bb79ef3248e219dc3d9"
+    },
+    {
+      "path": "secal_3/diagnostics_s098.json",
+      "bytes": 10982,
+      "sha256": "9ebcc36787146f946a4b29cd43d950c8a06efa25df131f3844f8272e3f1796a2"
+    },
+    {
+      "path": "secal_3/manifest.json",
+      "bytes": 2547,
+      "sha256": "0105d484f6a8cc4041eeb0234a2ac0f3cd3c1bba74dfd600e85d14749e424c66"
+    },
+    {
+      "path": "secal_3/quadrature_gate.json",
+      "bytes": 78,
+      "sha256": "564a00f5c4786ff0508e38934278fc0197118aa37ed61639ad8d7978a8c8a022"
+    },
+    {
+      "path": "secal_3/rows.json",
+      "bytes": 17903,
+      "sha256": "1143eeee0cd12a821cef30eb97b205ebe60792c40b3b4190c18eab37e1b5f1e3"
+    },
+    {
+      "path": "secal_3/execution.log",
+      "bytes": 33376,
+      "sha256": "7a04d09090e6a2c425f8cbb70ec9fbf45bfcbb7ba32ff315108f599714cfec82"
+    },
+    {
+      "path": "secal_4/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "secal_4/completion.json",
+      "bytes": 109,
+      "sha256": "67f0191415fa0918d67ed416f8727b780da6b9c4276633cc307ae2991ac6b655"
+    },
+    {
+      "path": "secal_4/diagnostics_s004.json",
+      "bytes": 10982,
+      "sha256": "f6c2d26b219be84c4764adc9decf190318d307e40367e9a4e2a3d285bb9c0831"
+    },
+    {
+      "path": "secal_4/diagnostics_s009.json",
+      "bytes": 11027,
+      "sha256": "913ed28250bf28549fcdbe9badfeca78298d539601ae672ebd9a42256dd58ba1"
+    },
+    {
+      "path": "secal_4/diagnostics_s014.json",
+      "bytes": 10889,
+      "sha256": "417546ab9e2ce0bb35babf36cace53cd59fb28bf74d8af485e25e78c8ce48054"
+    },
+    {
+      "path": "secal_4/diagnostics_s019.json",
+      "bytes": 10950,
+      "sha256": "c3b54e6e3873c61f5099fd56a54d960c2b9681a7c1d20ab44bbf64f81b0e044a"
+    },
+    {
+      "path": "secal_4/diagnostics_s024.json",
+      "bytes": 10961,
+      "sha256": "39a592d8094642f75f5a638dbbbbe3fd9a0e7758a85691d80b9056d3c86b8fda"
+    },
+    {
+      "path": "secal_4/diagnostics_s029.json",
+      "bytes": 10968,
+      "sha256": "5d683e5b52410d2a635e15f2d087738b7f0bf1326758fa2563ddb28e6d040d4b"
+    },
+    {
+      "path": "secal_4/diagnostics_s034.json",
+      "bytes": 10971,
+      "sha256": "d14caae935e1fb8694b17dbb9559d9ed0f9d8018c246ac590e808b304eacb453"
+    },
+    {
+      "path": "secal_4/diagnostics_s039.json",
+      "bytes": 11044,
+      "sha256": "56ddc4432ab988d513e2b4f48178f680e8f6db1445a2d5a4cd36d1db3cd0edf0"
+    },
+    {
+      "path": "secal_4/diagnostics_s044.json",
+      "bytes": 10999,
+      "sha256": "ed12d76a4c9d5e09015fd8d95c5c9f1c111188cc01fd00200e8b92ed4632df58"
+    },
+    {
+      "path": "secal_4/diagnostics_s049.json",
+      "bytes": 11074,
+      "sha256": "f9bcd065b7331ab0c23cb795fb325746bb96de897737e8748f53ed9806a5d6c5"
+    },
+    {
+      "path": "secal_4/diagnostics_s054.json",
+      "bytes": 10970,
+      "sha256": "3ba24b6c457f44c38618f1c359f7a83c6f320fd15e2b5b943bc6d8828beabc3e"
+    },
+    {
+      "path": "secal_4/diagnostics_s059.json",
+      "bytes": 11010,
+      "sha256": "8813b8bd1250528eff46c05ddcbde5d7b5734ce4db5d98ffd792b128acd2d52b"
+    },
+    {
+      "path": "secal_4/diagnostics_s064.json",
+      "bytes": 10957,
+      "sha256": "790f73076e467b5761b68771a2485ce45ce9fd41f4e9bf5cf306736ed11dfeda"
+    },
+    {
+      "path": "secal_4/diagnostics_s069.json",
+      "bytes": 10976,
+      "sha256": "b1ea802364db067ad85514c3b5b364ab49df2515c4994b1c5d389721cfd29097"
+    },
+    {
+      "path": "secal_4/diagnostics_s074.json",
+      "bytes": 10951,
+      "sha256": "034ca34a47c65b6e3ad0268bdc9f645da43f6c5ada901ca84c3df4ac903fc7df"
+    },
+    {
+      "path": "secal_4/diagnostics_s079.json",
+      "bytes": 10929,
+      "sha256": "16dba2de3af6d822f5179e909046f4820b9af6702adfe1f29c879728ca2426ca"
+    },
+    {
+      "path": "secal_4/diagnostics_s084.json",
+      "bytes": 10978,
+      "sha256": "b2ef581d1ee297c0d299caec621cb592370cf0b5820bba6bbef858a6c17e3924"
+    },
+    {
+      "path": "secal_4/diagnostics_s089.json",
+      "bytes": 10952,
+      "sha256": "aaf1fea774dfd69af5b3f722c11c56b2002636042198fd042a254cbe8a86f51b"
+    },
+    {
+      "path": "secal_4/diagnostics_s094.json",
+      "bytes": 10926,
+      "sha256": "c02393edde951e33fa6cc092cd03c594a1eb00c4fc3fcdfb39ae310e4dc245a4"
+    },
+    {
+      "path": "secal_4/diagnostics_s099.json",
+      "bytes": 11061,
+      "sha256": "fe3586b69c1e6184df5826be1fd5ea1d79e1a684a941aa8fe4c5a32bd468e9a3"
+    },
+    {
+      "path": "secal_4/manifest.json",
+      "bytes": 2547,
+      "sha256": "ce84ad3c3549ca6830dec9bcdbbc42095945ac502aa94348c7f19edb26ce62df"
+    },
+    {
+      "path": "secal_4/quadrature_gate.json",
+      "bytes": 78,
+      "sha256": "564a00f5c4786ff0508e38934278fc0197118aa37ed61639ad8d7978a8c8a022"
+    },
+    {
+      "path": "secal_4/rows.json",
+      "bytes": 17876,
+      "sha256": "7e771f75cadfccbf2e10aa06b2934359a2ce6b0fdca1a5fab2c2c9adea3ee94b"
+    },
+    {
+      "path": "secal_4/execution.log",
+      "bytes": 33396,
+      "sha256": "9fd6c621c0c1fdc5c1ff3a7e652ccb673ae95a6e19ff521d73343a9aece9976e"
+    }
+  ]
+}

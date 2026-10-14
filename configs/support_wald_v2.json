@@ -1,0 +1,61 @@
+{
+  "protocol": "added_cubic_paired_wald_mstls_v2",
+  "parent_protocol_file": "support_extra_term.json",
+  "reference_file": "support_wald_references.json",
+  "shards": 4,
+  "paths_per_level": 100,
+  "multipliers": [
+    0,
+    -0.5,
+    -1,
+    -2,
+    -2.5,
+    -3,
+    -3.5,
+    -4
+  ],
+  "primary_windows": 480,
+  "pilot_windows": 30,
+  "basis_relative_cutoff": 1e-10,
+  "covariance_relative_relaxation": 1e-10,
+  "pilot_coefficient_box": [
+    [
+      0.25,
+      2.0
+    ],
+    [
+      -2.0,
+      -0.25
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      -2.0,
+      -0.1
+    ],
+    [
+      -2.0,
+      0.0
+    ]
+  ],
+  "pilot": "corrected core-five OLS on 30 compact tests, bounded coefficients, integrated trajectory; no generating coefficients supplied",
+  "estimator": "two-step feasible GLS of all 18 coefficients on 480 compact tests, exact Hermite covariance at the core-five pilot; no penalization or support pruning",
+  "alpha": 0.05,
+  "test": "two-sided pre-specified single x^3 coefficient, qhat/sqrt((P Omega P^T)[14,14]); no multiple-library or post-selection claim",
+  "clean_mean_quadrature_coefficient_absolute_error_max": 1e-05,
+  "criteria": {
+    "calibration_gate": "Wilson 95% interval of null rejection contains 0.05; otherwise do not claim calibrated efficiency",
+    "power_reference": "two-sided Wald power at matched local efficient information; parent delta_min uses equal-prior two-point error, a different criterion",
+    "primary_comparison": "paired rejection/inclusion frequencies, null rates and Wilson intervals, with paired bootstrap difference intervals",
+    "mstls_variance_loss": "do not infer a variance ratio from a threshold transition",
+    "large_perturbations": "finite-amplitude empirical outcomes; do not extend the null local Gaussian approximation to large delta"
+  },
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 8440000,
+  "stop_on_failure": true,
+  "scope": "same 1000 previous observations plus 600 paired intermediate-grid observations; adaptive author selection settings unchanged",
+  "pilot_quadrature_defect_correction": true,
+  "numerical_amendment": "v1 high-noise preflight candidate bias 1.4823e-5 at multiplier -3 exceeds unchanged 1e-5 gate; v2 subtracts deterministic pilot-model discrete residual defect from moment RHS at every amplitude, before inspecting v1 noisy Wald outcomes. Original v1 frozen notebooks/results retained. No criteria or seeds changed."
+}

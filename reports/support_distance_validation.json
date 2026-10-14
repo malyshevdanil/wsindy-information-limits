@@ -1,0 +1,233 @@
+{
+  "completed": true,
+  "snapshot": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/support_detection_screen.json"
+    ]
+  },
+  "protocol": {
+    "protocol": "fixed_horizon_vdp_support_distance_screen_v1",
+    "purpose": "deterministic null/alternative distance filter before freezing a support-recovery Monte Carlo study",
+    "system": "vdp",
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "T": 20.0,
+    "tau": 0.3,
+    "noise_level": 0.005,
+    "fixed_noise_calibration": "coordinate standard deviations of original d=-1 trajectory at h=0.01; same covariance for every alternative",
+    "null_coefficients": [
+      1.0,
+      -1.0,
+      1.0,
+      0.0
+    ],
+    "alternative_coefficient": "d=-delta, all other coefficients and initial state fixed",
+    "delta_grid": [
+      0.0,
+      1e-14,
+      1e-12,
+      1e-10,
+      1e-08,
+      1e-06,
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      0.5,
+      1.0
+    ],
+    "target_equal_prior_error": 0.05,
+    "ode_rtol": 1e-11,
+    "ode_atol": 1e-13,
+    "distance_quadrature_relative_tolerance": 1e-07,
+    "scope": "simple Gaussian hypotheses with fixed equal initial states; not composite-support recovery or a nuisance-adjusted finite-noise weak bound",
+    "cache_or_surrogate": false,
+    "no_automatic_recovery_run": true
+  },
+  "completion": {
+    "status": "complete",
+    "rows": 12,
+    "sigma": [
+      0.007177441119949897,
+      0.007170807574688304
+    ],
+    "null_terminal_state": [
+      27250.419013742438,
+      50823.62048706468
+    ],
+    "target_distance": 3.2897072539029444,
+    "elapsed_seconds": 0.8952022830000033,
+    "scope": "simple Gaussian hypotheses with fixed equal initial states; not composite-support recovery or a nuisance-adjusted finite-noise weak bound"
+  },
+  "rows": [
+    {
+      "delta": 0.0,
+      "path_distance": 0.0,
+      "equal_prior_error": 0.5,
+      "quadrature_absolute_error_integrals": [
+        0.0,
+        0.0
+      ],
+      "alternative_terminal_state": [
+        27250.419013742438,
+        50823.62048706468
+      ]
+    },
+    {
+      "delta": 1e-14,
+      "path_distance": 20.710692950939617,
+      "equal_prior_error": 1.9787554335705233e-25,
+      "quadrature_absolute_error_integrals": [
+        3.511422804001324e-11,
+        1.0630692874792234e-09
+      ],
+      "alternative_terminal_state": [
+        27250.425153474804,
+        50823.492023409715
+      ]
+    },
+    {
+      "delta": 1e-12,
+      "path_distance": 2070.874653489592,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        3.314622960548519e-07,
+        1.0825774974687619e-05
+      ],
+      "alternative_terminal_state": [
+        27251.03148311074,
+        50810.774333521964
+      ]
+    },
+    {
+      "delta": 1e-10,
+      "path_distance": 205095.6182570649,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        0.07338006922145723,
+        0.37400643717319326
+      ],
+      "alternative_terminal_state": [
+        27297.328133370836,
+        49542.15537792593
+      ]
+    },
+    {
+      "delta": 1e-08,
+      "path_distance": 7154238.227867172,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        13.671589497535024,
+        1242.0672978162766
+      ],
+      "alternative_terminal_state": [
+        17630.672009163958,
+        6412.044090000983
+      ]
+    },
+    {
+      "delta": 1e-06,
+      "path_distance": 10546551.198580792,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        185.84876988996348,
+        1043.0989450486377
+      ],
+      "alternative_terminal_state": [
+        1925.9887709053448,
+        -420.1112956296362
+      ]
+    },
+    {
+      "delta": 0.0001,
+      "path_distance": 10793354.152355043,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        60.80542473011883,
+        330.58456449614096
+      ],
+      "alternative_terminal_state": [
+        172.6229981192567,
+        -63.633283308809624
+      ]
+    },
+    {
+      "delta": 0.001,
+      "path_distance": 10801168.58748527,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        221.91841129224304,
+        542.7053498249697
+      ],
+      "alternative_terminal_state": [
+        50.52521536442261,
+        -22.895337273023657
+      ]
+    },
+    {
+      "delta": 0.01,
+      "path_distance": 10801281.231420025,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        262.82105309509507,
+        2090.4561095999347
+      ],
+      "alternative_terminal_state": [
+        14.696301580863434,
+        -8.076467198363625
+      ]
+    },
+    {
+      "delta": 0.1,
+      "path_distance": 10800484.586064126,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        1049.0757263762264,
+        2206.524804515866
+      ],
+      "alternative_terminal_state": [
+        4.581129030969156,
+        -2.5978750956373733
+      ]
+    },
+    {
+      "delta": 0.5,
+      "path_distance": 10799894.711392613,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        421.5618144880161,
+        376.6864570509888
+      ],
+      "alternative_terminal_state": [
+        2.5017241649638833,
+        -0.8537239917091635
+      ]
+    },
+    {
+      "delta": 1.0,
+      "path_distance": 10799563.077918308,
+      "equal_prior_error": 0.0,
+      "quadrature_absolute_error_integrals": [
+        74.06815060479471,
+        174.2615339152112
+      ],
+      "alternative_terminal_state": [
+        2.008149762174401,
+        -0.042508875276594936
+      ]
+    }
+  ],
+  "first_grid_crossing": [
+    0.0,
+    1e-14
+  ],
+  "caveats": [
+    "Direct numerical Gaussian-path distances, with ODE and quadrature tolerances; not symbolic exact numbers.",
+    "Simple hypotheses with fixed other coefficients and fixed equal initial states.",
+    "Anti-damped null has a growing trajectory; no extrapolation from original limit-cycle sensitivities.",
+    "No support-recovery Monte Carlo and no composite weak-class detection theorem completed."
+  ]
+}

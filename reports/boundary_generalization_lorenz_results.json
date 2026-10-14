@@ -1,0 +1,266 @@
+{
+  "completed": true,
+  "system": "lorenz",
+  "protocol": {
+    "protocol": "universal_endpoint_generalization_v1",
+    "vdp5": {
+      "T": 20.0,
+      "h": 0.005,
+      "tau": 0.3,
+      "initial": [
+        2.0,
+        0.0
+      ],
+      "level": 0.05,
+      "seed_base": 2200000,
+      "paths": 128,
+      "reference_file": "boundary_vdp5_references.json",
+      "pilot_windows": 30,
+      "pilot_box": [
+        [
+          0.25,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.25
+        ],
+        [
+          0.1,
+          2.0
+        ],
+        [
+          -2.0,
+          -0.1
+        ]
+      ],
+      "widths": [
+        3.0,
+        1.5,
+        0.75,
+        0.375,
+        0.1875,
+        0.09375
+      ]
+    },
+    "lorenz": {
+      "T": 4.0,
+      "h": 0.001,
+      "tau": 0.1,
+      "initial": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "truth": [
+        10.0,
+        28.0,
+        2.6666666666666665
+      ],
+      "level": 0.005,
+      "seed_base": 2500000,
+      "paths": 256,
+      "pilot_windows": 30,
+      "pilot_box": [
+        [
+          5.0,
+          15.0
+        ],
+        [
+          20.0,
+          35.0
+        ],
+        [
+          1.5,
+          4.0
+        ]
+      ],
+      "widths": [
+        0.6,
+        0.3,
+        0.15,
+        0.075,
+        0.0375,
+        0.01875
+      ],
+      "likelihood": "known-initial exact OU innovation nonlinear least squares with analytical sensitivities, starting at same-record boundary-free weak estimate",
+      "likelihood_tolerance": 1e-09,
+      "likelihood_max_nfev": 100
+    },
+    "primary_interior_windows": 480,
+    "basis_relative_cutoff": 1e-10,
+    "covariance_relative_relaxation": 1e-10,
+    "iterations": 100,
+    "tolerance": 1e-07,
+    "clean_mean_quadrature_bias_max": 1.4e-05,
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 8450000,
+    "criteria": {
+      "universal_fraction_gap_closed_min": 0.5,
+      "baseline": "same Simpson, same 480 interior family, same pilot covariance; no initial controls or endpoint windows",
+      "known_initial_reference": "known-initial MLE, rather than unknown-initial benchmark, matches the endpoint experiment",
+      "oracle_geometry": "compare first-order and full Hermite fixed-clean-design covariance separately from empirical bias and dispersion",
+      "nonpositive_gap": "criterion not evaluable"
+    },
+    "stop_on_failure": true
+  },
+  "audit": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/boundary_generalization.json"
+    ]
+  },
+  "quadrature_gates": [
+    {
+      "method": "universal_boundary",
+      "relative_bias": 2.8987825295729904e-06,
+      "iterations": 2,
+      "converged": true,
+      "last_change": 6.394401241532502e-11,
+      "ridge": 2.1414028490470104e-14
+    },
+    {
+      "method": "matched_boundary_free",
+      "relative_bias": 1.1054977259995634e-05,
+      "iterations": 2,
+      "converged": true,
+      "last_change": 3.785020102727112e-10,
+      "ridge": 1.2140666024720912e-14
+    }
+  ],
+  "groups": [
+    {
+      "method": "known_initial_mle",
+      "paths": 256,
+      "relative_rmse": 0.00020783870988034666,
+      "relative_bias": 2.355305470853197e-05,
+      "relative_dispersion": 0.0002064998376237226,
+      "rmse_ci95": [
+        0.00019140652053514732,
+        0.00022398524125881051
+      ]
+    },
+    {
+      "method": "matched_boundary_free",
+      "paths": 256,
+      "relative_rmse": 0.0004099365839813947,
+      "relative_bias": 2.1701090882191348e-05,
+      "relative_dispersion": 0.00040936177830967307,
+      "rmse_ci95": [
+        0.00038111185354832393,
+        0.0004389521590232412
+      ]
+    },
+    {
+      "method": "universal_boundary",
+      "paths": 256,
+      "relative_rmse": 0.00021686484353734448,
+      "relative_bias": 2.1526862096123936e-05,
+      "relative_dispersion": 0.00021579377787779553,
+      "rmse_ci95": [
+        0.00019867593293829887,
+        0.0002349259770454334
+      ]
+    }
+  ],
+  "fraction_gap_closed": 0.9553378099737714,
+  "fraction_ci95": [
+    0.9277546574996945,
+    0.9800518473729802
+  ],
+  "pass_frozen_point_rule": true,
+  "oracle_geometry": [
+    {
+      "method": "universal_boundary",
+      "first_order": true,
+      "fixed_clean_design_covariance": [
+        [
+          2.3138171598101506e-05,
+          -1.1691465055786405e-05,
+          1.15478685501494e-06
+        ],
+        [
+          -1.1691465055792033e-05,
+          1.543895410346842e-05,
+          -1.4002684030835401e-06
+        ],
+        [
+          1.1547868550156502e-06,
+          -1.4002684030833334e-06,
+          3.121482653509787e-07
+        ]
+      ],
+      "relative_rmse_surrogate": 0.00020890507386864938
+    },
+    {
+      "method": "universal_boundary",
+      "first_order": false,
+      "fixed_clean_design_covariance": [
+        [
+          2.3189920410479513e-05,
+          -1.1727309064753605e-05,
+          1.1578302104070322e-06
+        ],
+        [
+          -1.1727309064756922e-05,
+          1.55200065423609e-05,
+          -1.4056368742389305e-06
+        ],
+        [
+          1.1578302104069507e-06,
+          -1.4056368742390489e-06,
+          3.133448971599138e-07
+        ]
+      ],
+      "relative_rmse_surrogate": 0.00020926466872672774
+    },
+    {
+      "method": "matched_boundary_free",
+      "first_order": true,
+      "fixed_clean_design_covariance": [
+        [
+          9.669947475762566e-05,
+          -6.0135841248334e-06,
+          2.4809523859029126e-06
+        ],
+        [
+          -6.013584124833184e-06,
+          5.500377871266588e-05,
+          -5.175708194031982e-06
+        ],
+        [
+          2.4809523859029253e-06,
+          -5.175708194031991e-06,
+          7.227422146638748e-07
+        ]
+      ],
+      "relative_rmse_surrogate": 0.0004135838682846704
+    },
+    {
+      "method": "matched_boundary_free",
+      "first_order": false,
+      "fixed_clean_design_covariance": [
+        [
+          9.673014604586711e-05,
+          -6.015022854730904e-06,
+          2.480653396796247e-06
+        ],
+        [
+          -6.015022854730657e-06,
+          5.5006186351886066e-05,
+          -5.175062486010047e-06
+        ],
+        [
+          2.4806533967962852e-06,
+          -5.175062486010055e-06,
+          7.23539665875537e-07
+        ]
+      ],
+      "relative_rmse_surrogate": 0.00041362982483327204
+    }
+  ],
+  "limitations": [
+    "Common known-initial experiment; unknown-initial MLE is a contextual reference.",
+    "First-order/full-Hermite geometry is a fixed-clean-design surrogate, not actual estimator variance decomposition."
+  ]
+}

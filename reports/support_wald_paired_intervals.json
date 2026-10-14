@@ -1,0 +1,361 @@
+{
+  "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+  "all_1600_paired_outcomes_retained": true,
+  "counts_unchanged": true,
+  "confidence_intervals_pointwise": true,
+  "post_study_uncertainty_reanalysis": true,
+  "groups": [
+    {
+      "level": 0.005,
+      "delta_index": 0,
+      "magnitude": 0,
+      "n": 100,
+      "n00": 93,
+      "n01": 0,
+      "n10": 7,
+      "n11": 0,
+      "difference": 0.07,
+      "ci95": [
+        -0.018060429592530448,
+        0.14959506244307205
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.02,
+        0.12
+      ]
+    },
+    {
+      "level": 0.005,
+      "delta_index": 1,
+      "magnitude": 0.5,
+      "n": 100,
+      "n00": 56,
+      "n01": 0,
+      "n10": 44,
+      "n11": 0,
+      "difference": 0.44,
+      "ci95": [
+        0.2849881147320946,
+        0.5567326908312995
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.34,
+        0.54
+      ]
+    },
+    {
+      "level": 0.005,
+      "delta_index": 2,
+      "magnitude": 1,
+      "n": 100,
+      "n00": 9,
+      "n01": 0,
+      "n10": 91,
+      "n11": 0,
+      "difference": 0.91,
+      "ci95": [
+        0.7818583320206722,
+        0.962752667492734
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.85,
+        0.96
+      ]
+    },
+    {
+      "level": 0.005,
+      "delta_index": 3,
+      "magnitude": 2,
+      "n": 100,
+      "n00": 0,
+      "n01": 0,
+      "n10": 100,
+      "n11": 0,
+      "difference": 1.0,
+      "ci95": [
+        0.914251939523123,
+        1.0
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "level": 0.005,
+      "delta_index": 4,
+      "magnitude": 2.5,
+      "n": 100,
+      "n00": 0,
+      "n01": 0,
+      "n10": 100,
+      "n11": 0,
+      "difference": 1.0,
+      "ci95": [
+        0.914251939523123,
+        1.0
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "level": 0.005,
+      "delta_index": 5,
+      "magnitude": 3,
+      "n": 100,
+      "n00": 0,
+      "n01": 0,
+      "n10": 54,
+      "n11": 46,
+      "difference": 0.54,
+      "ci95": [
+        0.38072239411920217,
+        0.6533409870140575
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.44,
+        0.63
+      ]
+    },
+    {
+      "level": 0.005,
+      "delta_index": 6,
+      "magnitude": 3.5,
+      "n": 100,
+      "n00": 0,
+      "n01": 0,
+      "n10": 3,
+      "n11": 97,
+      "difference": 0.03,
+      "ci95": [
+        -0.03809642058177967,
+        0.09416146333706504
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.0,
+        0.07
+      ]
+    },
+    {
+      "level": 0.005,
+      "delta_index": 7,
+      "magnitude": 4,
+      "n": 100,
+      "n00": 0,
+      "n01": 0,
+      "n10": 0,
+      "n11": 100,
+      "difference": 0.0,
+      "ci95": [
+        -0.042874030238438526,
+        0.042874030238438526
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 0,
+      "magnitude": 0,
+      "n": 100,
+      "n00": 75,
+      "n01": 2,
+      "n10": 23,
+      "n11": 0,
+      "difference": 0.21,
+      "ci95": [
+        0.06362079426522706,
+        0.33679066463273
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.12,
+        0.3
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 1,
+      "magnitude": 0.5,
+      "n": 100,
+      "n00": 36,
+      "n01": 2,
+      "n10": 60,
+      "n11": 2,
+      "difference": 0.58,
+      "ci95": [
+        0.40436790498952246,
+        0.7075152862136339
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.47,
+        0.68
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 2,
+      "magnitude": 1,
+      "n": 100,
+      "n00": 6,
+      "n01": 4,
+      "n10": 70,
+      "n11": 20,
+      "difference": 0.66,
+      "ci95": [
+        0.47740877052276054,
+        0.7895661678162967
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.55,
+        0.76
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 3,
+      "magnitude": 2,
+      "n": 100,
+      "n00": 1,
+      "n01": 0,
+      "n10": 41,
+      "n11": 58,
+      "difference": 0.41,
+      "ci95": [
+        0.25712815841777925,
+        0.5268933423345212
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.32,
+        0.51
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 4,
+      "magnitude": 2.5,
+      "n": 100,
+      "n00": 0,
+      "n01": 0,
+      "n10": 32,
+      "n11": 68,
+      "difference": 0.32,
+      "ci95": [
+        0.1761036000604955,
+        0.43485208845555134
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.23,
+        0.41
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 5,
+      "magnitude": 3,
+      "n": 100,
+      "n00": 1,
+      "n01": 0,
+      "n10": 30,
+      "n11": 69,
+      "difference": 0.3,
+      "ci95": [
+        0.1586635635410297,
+        0.4138436193634015
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.22,
+        0.39
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 6,
+      "magnitude": 3.5,
+      "n": 100,
+      "n00": 0,
+      "n01": 2,
+      "n10": 22,
+      "n11": 76,
+      "difference": 0.2,
+      "ci95": [
+        0.05544411240612561,
+        0.325760204753827
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.11,
+        0.29
+      ]
+    },
+    {
+      "level": 0.05,
+      "delta_index": 7,
+      "magnitude": 4,
+      "n": 100,
+      "n00": 3,
+      "n01": 2,
+      "n10": 27,
+      "n11": 68,
+      "difference": 0.25,
+      "ci95": [
+        0.0970338849002141,
+        0.38023207737809933
+      ],
+      "method": "Bonferroni-projected Clopper-Pearson discordant-cell intervals",
+      "coverage_at_least": 0.95,
+      "simultaneous_across_grid": false,
+      "archived_bootstrap_ci95": [
+        0.1597500000000001,
+        0.34
+      ]
+    }
+  ]
+}

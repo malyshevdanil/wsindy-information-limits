@@ -1,0 +1,20 @@
+{
+  "original_bytes_preserved": true,
+  "files": [
+    {
+      "path": "completion.json",
+      "bytes": 135,
+      "sha256": "10a3df67d2b4f5dc59552d99be5e36d1f4c5589f3a5376bf76de58bffba3afc4"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 964,
+      "sha256": "b11c8a62803ae183432b206027732e0a48e11aeab27c05c2a82cea9d354c0caf"
+    },
+    {
+      "path": "reference.json",
+      "bytes": 33218,
+      "sha256": "17ddf37ab2181c9bae2313ceafb53a43153ac3d90f40612b6353ac298425de13"
+    }
+  ]
+}

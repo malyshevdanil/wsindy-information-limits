@@ -1,0 +1,11 @@
+{
+  "representation": "total-degree Legendre approximation of normalized exact Prop3 model instruments",
+  "degree": 7,
+  "radius": 0.06,
+  "node_power": 11,
+  "node_seed": 3800000,
+  "node_distribution": "chebyshev",
+  "training_records": 0,
+  "status": "repair probe required before geometry",
+  "revision_reason": "Low-noise 480-window uniform-node probe lost 6.13% variance at a cube boundary; enrich boundary sampling and double numerical design nodes, preserving support and 5% threshold"
+}

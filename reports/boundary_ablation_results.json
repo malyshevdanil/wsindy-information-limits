@@ -1,0 +1,582 @@
+{
+  "completed": true,
+  "protocol": {
+    "protocol": "endpoint_component_ablation_v1",
+    "parent_protocol": "endpoint_universal_paired_confirmation_v1",
+    "T": 20.0,
+    "h": 0.005,
+    "tau": 0.3,
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "level": 0.005,
+    "seed_base": 2200000,
+    "first_seed_index": 32,
+    "last_seed_index": 531,
+    "paths": 500,
+    "shards": 4,
+    "reference_file": "boundary_ablation_references.json",
+    "pilot_windows": 30,
+    "pilot_box": [
+      [
+        0.25,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.25
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.1
+      ]
+    ],
+    "endpoint_half_window_full_widths": [
+      3.0,
+      1.5,
+      0.75,
+      0.375,
+      0.1875,
+      0.09375
+    ],
+    "basis_relative_cutoff": 1e-10,
+    "iterations": 100,
+    "tolerance": 1e-07,
+    "covariance_relative_relaxation": 1e-10,
+    "clean_mean_quadrature_bias_max": 1.4e-05,
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 8430000,
+    "branches": {
+      "initial_only": {
+        "endpoints": [
+          "initial"
+        ],
+        "controls": false
+      },
+      "terminal_only": {
+        "endpoints": [
+          "terminal"
+        ],
+        "controls": false
+      },
+      "control_only": {
+        "endpoints": [],
+        "controls": true
+      },
+      "matched_boundary_free": {
+        "endpoints": [],
+        "controls": false
+      }
+    },
+    "archived_branches": [
+      "universal_boundary",
+      "boundary_free_480",
+      "known_initial_scoring"
+    ],
+    "criteria": {
+      "scope": "component attribution, not a new unseen-path confirmation; full-branch outcomes already known",
+      "gain_denominator": "RMSE_matched_boundary_free - RMSE_known_initial_scoring",
+      "material_component": "at least 50% of the positive matched baseline gap closed, with paired interval reported",
+      "control_specificity": "report analytical OU initial-control covariance and exact iid-zero cross-covariance for compact tests",
+      "nonpositive_gap": "fraction not evaluable",
+      "no_additivity_claim": "components interact; fractions need not sum to the full recovery"
+    },
+    "quadrature": "common composite Simpson across all new branches; archived full branch uses identical Simpson implementation",
+    "stop_on_failure": true
+  },
+  "audits": [
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    },
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    },
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    },
+    {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    }
+  ],
+  "quadrature_gates": [
+    [
+      {
+        "method": "initial_only",
+        "relative_bias": 1.221057801195306e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.517615592183757e-12,
+        "relaxation": 4.21888186423304e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "terminal_only",
+        "relative_bias": 1.7946939084507815e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.721711671954292e-12,
+        "relaxation": 4.442285463814903e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "control_only",
+        "relative_bias": 6.452731414953577e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 6.056439176746163e-11,
+        "relaxation": 4.202336769246272e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "matched_boundary_free",
+        "relative_bias": 2.072305151581548e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 7.072365477328706e-12,
+        "relaxation": 4.103695409700655e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      }
+    ],
+    [
+      {
+        "method": "initial_only",
+        "relative_bias": 1.221057801195306e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.517615592183757e-12,
+        "relaxation": 4.21888186423304e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "terminal_only",
+        "relative_bias": 1.7946939084507815e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.721711671954292e-12,
+        "relaxation": 4.442285463814903e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "control_only",
+        "relative_bias": 6.452731414953577e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 6.056439176746163e-11,
+        "relaxation": 4.202336769246272e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "matched_boundary_free",
+        "relative_bias": 2.072305151581548e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 7.072365477328706e-12,
+        "relaxation": 4.103695409700655e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      }
+    ],
+    [
+      {
+        "method": "initial_only",
+        "relative_bias": 1.221057801195306e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.517615592183757e-12,
+        "relaxation": 4.21888186423304e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "terminal_only",
+        "relative_bias": 1.7946939084507815e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.721711671954292e-12,
+        "relaxation": 4.442285463814903e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "control_only",
+        "relative_bias": 6.452731414953577e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 6.056439176746163e-11,
+        "relaxation": 4.202336769246272e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "matched_boundary_free",
+        "relative_bias": 2.072305151581548e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 7.072365477328706e-12,
+        "relaxation": 4.103695409700655e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      }
+    ],
+    [
+      {
+        "method": "initial_only",
+        "relative_bias": 1.221057801195306e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.517615592183757e-12,
+        "relaxation": 4.21888186423304e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "terminal_only",
+        "relative_bias": 1.7946939084507815e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 6,
+        "retained_scalar_tests": 485,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 3.721711671954292e-12,
+        "relaxation": 4.442285463814903e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "control_only",
+        "relative_bias": 6.452731414953577e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 6.056439176746163e-11,
+        "relaxation": 4.202336769246272e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      },
+      {
+        "method": "matched_boundary_free",
+        "relative_bias": 2.072305151581548e-06,
+        "original_basis": {
+          "raw_windows": 480,
+          "retained_windows": 479,
+          "relative_cutoff": 1e-10,
+          "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+        },
+        "half_windows": 0,
+        "retained_scalar_tests": 479,
+        "basis_is_model_independent": true,
+        "relative_cutoff": 1e-10,
+        "iterations": 2,
+        "converged": true,
+        "last_change": 7.072365477328706e-12,
+        "relaxation": 4.103695409700655e-16,
+        "tests_built_from_model": false,
+        "covariance_pilot_requires_ode": true
+      }
+    ]
+  ],
+  "paired_fingerprints_verified": true,
+  "groups": [
+    {
+      "method": "initial_only",
+      "paths": 500,
+      "relative_rmse": 0.0013244530394274363,
+      "relative_bias": 3.339131467477035e-05,
+      "relative_dispersion": 0.0013240320516335186,
+      "rmse_ci95": [
+        0.0012574209396950086,
+        0.001390373086315189
+      ],
+      "fraction_matched_gap_closed": 0.9893012460863175,
+      "fraction_closed_ci95": [
+        0.9511630440278507,
+        1.0265147035928912
+      ],
+      "material_by_frozen_point_rule": true
+    },
+    {
+      "method": "terminal_only",
+      "paths": 500,
+      "relative_rmse": 0.001644928194548619,
+      "relative_bias": 4.404745880679794e-05,
+      "relative_dispersion": 0.0016443383431014565,
+      "rmse_ci95": [
+        0.0015693659536710589,
+        0.001716763052160363
+      ],
+      "fraction_matched_gap_closed": -0.0030291218819953137,
+      "fraction_closed_ci95": [
+        -0.018384744902512254,
+        0.011648854868388566
+      ],
+      "material_by_frozen_point_rule": false
+    },
+    {
+      "method": "control_only",
+      "paths": 500,
+      "relative_rmse": 0.0015979452052718658,
+      "relative_bias": 5.2888371681271304e-05,
+      "relative_dispersion": 0.001597069722708514,
+      "rmse_ci95": [
+        0.001525835181115585,
+        0.0016660710996384857
+      ],
+      "fraction_matched_gap_closed": 0.14245063307630107,
+      "fraction_closed_ci95": [
+        0.0694607182087488,
+        0.2137337380901647
+      ],
+      "material_by_frozen_point_rule": false
+    },
+    {
+      "method": "matched_boundary_free",
+      "paths": 500,
+      "relative_rmse": 0.0016439499333401053,
+      "relative_bias": 4.9192475073480134e-05,
+      "relative_dispersion": 0.0016432137668985986,
+      "rmse_ci95": [
+        0.0015693984826044966,
+        0.0017157788114669343
+      ],
+      "fraction_matched_gap_closed": 0.0,
+      "fraction_closed_ci95": [
+        0.0,
+        0.0
+      ],
+      "material_by_frozen_point_rule": false
+    },
+    {
+      "method": "universal_boundary",
+      "paths": 500,
+      "relative_rmse": 0.0013245276252318707,
+      "relative_bias": 3.404361685637764e-05,
+      "relative_dispersion": 0.0013240900506210729,
+      "rmse_ci95": [
+        0.0012572745163825086,
+        0.0013906102041499073
+      ],
+      "fraction_matched_gap_closed": 0.9890702960186546,
+      "fraction_closed_ci95": [
+        0.9510954572899774,
+        1.026210624671088
+      ],
+      "material_by_frozen_point_rule": true
+    },
+    {
+      "method": "boundary_free_480",
+      "paths": 500,
+      "relative_rmse": 0.0016434331470779517,
+      "relative_bias": 4.6935087113700426e-05,
+      "relative_dispersion": 0.0016427627967884376,
+      "rmse_ci95": [
+        0.0015688753821437964,
+        0.0017154295952652135
+      ],
+      "fraction_matched_gap_closed": 0.0016001948777898615,
+      "fraction_closed_ci95": [
+        9.242406830185683e-05,
+        0.0032175900699133817
+      ],
+      "material_by_frozen_point_rule": false
+    },
+    {
+      "method": "known_initial_scoring",
+      "paths": 500,
+      "relative_rmse": 0.0013209978546112036,
+      "relative_bias": 2.6767172773349758e-05,
+      "relative_dispersion": 0.0013207266372528134,
+      "rmse_ci95": [
+        0.001252717472662565,
+        0.001387755265143669
+      ],
+      "fraction_matched_gap_closed": 1.0,
+      "fraction_closed_ci95": [
+        1.0,
+        1.0
+      ],
+      "material_by_frozen_point_rule": true
+    }
+  ],
+  "bootstrap_nonpositive_gap_count": 0,
+  "all_minus_initial_rmse": 7.458580443433886e-08,
+  "all_minus_initial_rmse_ci95": [
+    -7.177159029562714e-07,
+    8.547519421590341e-07
+  ],
+  "limitations": [
+    "Attribution on already evaluated records, not an unseen-data confirmation.",
+    "Component gains interact and are not additive.",
+    "Terminal-only extension still annihilates initial sensitivity in the closed local class.",
+    "Initial controls exploit correlated measurement noise; known u is required."
+  ]
+}

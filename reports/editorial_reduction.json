@@ -1,0 +1,57 @@
+{
+  "method": "word tokens in Markdown after removing math, citation tokens and image captions; includes tables and headings",
+  "before": 9340,
+  "after": 5638,
+  "reduction_fraction": 0.3963597430406852,
+  "abstract_words": 161,
+  "experimental_subsections_before": 12,
+  "experimental_subsections_after": 6,
+  "main_tables": 7,
+  "main_figures": 5,
+  "all_numerical_outputs_unchanged": true,
+  "main_table_mapping": {
+    "1": "S21",
+    "2": "1",
+    "3": "S22",
+    "4": "2",
+    "5": "S23",
+    "6": "3",
+    "7": "4",
+    "8": "5",
+    "9": "6",
+    "10": "7",
+    "11": "S20"
+  },
+  "main_figure_mapping": {
+    "1": "1",
+    "2": "S12",
+    "3": "S13",
+    "4": "2",
+    "5": "3",
+    "6": "4",
+    "7": "5"
+  },
+  "notation_checks_passed": true,
+  "statement_and_numbering_checks_passed": true,
+  "all_citations_resolve": true,
+  "pdfs": [
+    {
+      "file": "article_revised.pdf",
+      "pages": 21,
+      "four_classical_sources_present": true
+    },
+    {
+      "file": "article_ejs.pdf",
+      "pages": 24,
+      "four_classical_sources_present": true
+    },
+    {
+      "file": "supplement.pdf",
+      "pages": 54,
+      "four_classical_sources_present": true
+    }
+  ],
+  "all_numerical_output_hashes_unchanged": true,
+  "supplementary_tables_sequential": true,
+  "ejs_title_and_selection_table_visual_check": true
+}

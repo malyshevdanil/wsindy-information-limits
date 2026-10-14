@@ -1,0 +1,26 @@
+{
+  "stage": "boundary_screen",
+  "snapshot": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/boundary_weak_screen.json"
+    ]
+  },
+  "completion": {
+    "status": "numerical_gate_failed",
+    "relative_bias": 2.809674937558237e-05
+  },
+  "quadrature_gate": {
+    "clean_coefficients": [
+      1.0000046836453294,
+      -0.9999950116819036,
+      0.9999458067132423,
+      -0.9999868099612854
+    ],
+    "relative_bias": 2.809674937558237e-05,
+    "threshold": 1.4e-05,
+    "moment_covariance_condition": 252604.25609402035,
+    "initial_atom_norm": 0.00010767526743558888
+  },
+  "no_noisy_results_inspected": true
+}

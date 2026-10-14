@@ -1,0 +1,15 @@
+{
+  "relative_bias": 9.677086903900155e-07,
+  "coefficients": [
+    1.0000007556333113,
+    -0.9999992110436585,
+    0.9999987816690676,
+    -0.999998966522198
+  ],
+  "iterations": 2,
+  "converged": true,
+  "last_change": 2.3610506315292882e-12,
+  "relaxation": 4.64725695696434e-16,
+  "tests_built_from_model": false,
+  "covariance_pilot_requires_ode": true
+}

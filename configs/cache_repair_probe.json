@@ -1,0 +1,17 @@
+{
+  "protocol": "degree_seven_cache_repair_probe_v1",
+  "families": [
+    120,
+    480
+  ],
+  "levels": [
+    0.005,
+    0.05
+  ],
+  "initial": [
+    2.25,
+    0.25
+  ],
+  "threshold": 0.05,
+  "validation": "zero, four prescribed offsets, and all eight axis endpoints; unchanged parameter support"
+}

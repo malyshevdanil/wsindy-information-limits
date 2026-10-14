@@ -18,7 +18,7 @@ def main():
     record=response.json();metadata=record['metadata']
     assert record['doi']==doi and metadata['version']==cfg['version']
     assert any(c.get('orcid')=='0009-0007-0947-3866' for c in metadata['creators'])
-    assert 'nuisance initial states' in metadata['title']
+    assert metadata['title']==json.loads((ROOT/'.zenodo.json').read_text())['title']
     result=dict(doi_verified=True,doi=doi,url='https://doi.org/'+doi,record_url='https://zenodo.org/records/'+record_id,
         version=metadata['version'],creator_orcid_verified=True,public_metadata_verified=True)
     (ROOT/'reports/zenodo_archive_validation.json').write_text(json.dumps(result,indent=2))

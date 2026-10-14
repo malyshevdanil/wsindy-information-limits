@@ -39,15 +39,15 @@ def integrate(t,q,initial,sensitivities=False):
     return (sol.y[:3].T,sol.y[3:].T.reshape(len(t),3,6)) if sensitivities else sol.y.T
 
 
-def moments(t,y,phi,der):
-    w=quadrature_weights(t);u,v,z=y.T;K=len(phi)
+def moments(t,y,phi,der,weights=None):
+    w=quadrature_weights(t) if weights is None else weights;u,v,z=y.T;K=len(phi)
     A=np.zeros((3*K,3));A[0::3,0]=(phi*w)@(v-u);A[1::3,1]=(phi*w)@u;A[2::3,2]=-(phi*w)@z
     b=-(der*w)@y;b[:,1]+=(phi*w)@(v+u*z);b[:,2]-=(phi*w)@(u*v)
     return A,b.ravel()
 
 
-def blocks(t,model,phi,der,sigma,tau,first_order=False):
-    J=jacobians(model);N=len(t);K=len(phi);w=quadrature_weights(t);B={}
+def blocks(t,model,phi,der,sigma,tau,first_order=False,weights=None):
+    J=jacobians(model);N=len(t);K=len(phi);w=quadrature_weights(t) if weights is None else weights;B={}
     rho=np.exp(-(t[1]-t[0])/tau)
     for coordinate in range(3):
         arrays={}

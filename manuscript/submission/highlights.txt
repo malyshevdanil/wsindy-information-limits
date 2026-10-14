@@ -1,0 +1,5 @@
+Exact adjoint ranges quantify the initial-state information cost of weak equations.
+A jet condition gives constructive full-library small-noise efficiency.
+The full Van der Pol library satisfies the jet condition in exact arithmetic.
+Established initial-trace adaptations recover most small-noise empirical loss.
+Independent Wald size validation passes; power agreement has a finite-noise limit.

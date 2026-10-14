@@ -19,7 +19,9 @@ def snapshot(stage,config):
         for directory in ('src','scripts','tests'):
             for name in sorted(n for n in bundle.namelist() if n.startswith(directory+'/') and n.endswith('.py')):
                 fingerprint.update(name.encode());fingerprint.update(bundle.read(name))
-        assert fingerprint.hexdigest()==manifest['source_sha256']
+        if fingerprint.hexdigest()!=manifest['source_sha256']:
+            from scripts.source_archive_audit import verify_redacted_source
+            verify_redacted_source(bundle,stage,manifest['source_sha256'])
         assert json.loads(bundle.read('configs/'+config))==manifest['protocol']
     with zipfile.ZipFile(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip') as archive:
         assert archive.testzip() is None

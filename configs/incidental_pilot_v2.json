@@ -1,0 +1,63 @@
+{
+  "protocol": "shared_coefficient_profile_likelihood_incidental_pilot_v2",
+  "truth": [
+    1.0,
+    -1.0,
+    1.0,
+    -1.0
+  ],
+  "initial_center": [
+    2.0,
+    0.0
+  ],
+  "initial_half_width": 0.25,
+  "T": 20.0,
+  "h": 0.01,
+  "tau": 0.3,
+  "level": 0.05,
+  "records": 800,
+  "repetitions": 50,
+  "shards": 2,
+  "pilot_seed_base": 4100000,
+  "reserved_main_seed_range": [
+    4000000,
+    4000199
+  ],
+  "reserved_parametric_bootstrap_seed_base": 4200000,
+  "covariance": "known stationary OU covariance; marginal scales fixed from baseline calibration",
+  "start": "six wide Hermite-corrected weak moments averaged over the same observations; noisy first observations for initial states",
+  "escalation": "if norm of relative coefficient bias / mean Fisher relative standard error at n=800 is below 0.3, include 10% and 20% in a separately frozen main protocol",
+  "escalation_threshold": 0.3,
+  "coefficient_lower": [
+    0.5,
+    -1.5,
+    0.5,
+    -1.5
+  ],
+  "coefficient_upper": [
+    1.5,
+    -0.5,
+    1.5,
+    -0.5
+  ],
+  "initial_lower": [
+    -3.0,
+    -3.0
+  ],
+  "initial_upper": [
+    3.0,
+    3.0
+  ],
+  "ode_rtol": 1e-09,
+  "ode_atol": 1e-11,
+  "initial_damping": 1e-06,
+  "maximum_damping": 1000000.0,
+  "maximum_iterations": 50,
+  "maximum_line_search": 12,
+  "step_tolerance": 1e-09,
+  "objective_tolerance": 1e-14,
+  "optimizer": "bounded local joint Gaussian likelihood, block Gauss-Newton with nuisance Schur elimination",
+  "failed_fit_policy": "retain diagnostic and stop promotion; no Monte Carlo repetition excluded",
+  "refinement_reason": "Two of fifty profile fits had remaining initial-coordinate Newton increments above 1e-5; repeat all pilot fits on unchanged physical seeds under tighter stopping",
+  "previous_protocol": "incidental_pilot.json"
+}

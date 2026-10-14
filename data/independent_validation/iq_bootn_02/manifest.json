@@ -1,0 +1,91 @@
+{
+  "stage": "iq_bootn_02",
+  "protocol": {
+    "protocol": "independent_size_power_and_self_instrumented_geometry_v2",
+    "parent_protocol_file": "support_wald_v2.json",
+    "T": 20.0,
+    "h": 0.005,
+    "tau": 0.3,
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "windows": 480,
+    "bootstrap_draws": 399,
+    "alpha": 0.05,
+    "small_level": 0.005,
+    "moderate_level": 0.05,
+    "small_null_paths": 2000,
+    "small_power_paths": 1000,
+    "small_power_multipliers": [
+      0.5,
+      1.0
+    ],
+    "moderate_null_paths": 1000,
+    "moderate_power_paths": 200,
+    "moderate_power_multiplier": 1.0,
+    "delta_reference_small": 0.01940965128794474,
+    "delta_reference_moderate": 0.19409651287944782,
+    "observation_seed_small": 110005000,
+    "observation_seed_moderate": 110050000,
+    "bootstrap_seed_base": 200000000,
+    "bootstrap_seed_stride": 10000,
+    "bootstrap_cell_offset": 5000,
+    "nominal_shards": 4,
+    "bootstrap_paths_per_shard": 20,
+    "maximum_concurrent_jobs": 5,
+    "bootstrap_generation": "unchanged null-imposed bounded core-five model, original covariance and initial state; full estimator refit in every replicate",
+    "criteria": {
+      "small_nominal_size": "Clopper-Pearson 95% interval entirely within [0.03,0.07]; also report Wilson compatibility with 0.05",
+      "moderate_bootstrap_size": "Clopper-Pearson 95% interval entirely within [0.03,0.07]; also report Wilson compatibility with 0.05",
+      "small_power": "Clopper-Pearson 95% interval for rejection entirely within +/-0.05 of the null-local Gaussian prediction; assessed only if independent small-noise size passes",
+      "moderate_power": "descriptive empirical power conditional on size validation; no equality with the null-local approximation at finite amplitude",
+      "selection_scope": "one prespecified coefficient only, no general MSTLS-superiority claim",
+      "failures": "preserve partial outputs and halt failed study; no silently dropped observations, fits or resamples",
+      "no_adaptive_counts_or_thresholds": true,
+      "no_early_calibration_analysis": true
+    },
+    "geometry": {
+      "levels": [
+        0.05,
+        0.005,
+        0.001,
+        0.0005,
+        0.0001
+      ],
+      "paths_per_level": 100,
+      "windows": 120,
+      "mesh_rule": "h=0.005/2^max(0,ceil(0.75*log2(0.005/epsilon))); hence h^2=o(epsilon)",
+      "seed_base": 150000000,
+      "level_stride": 10000,
+      "coefficient_box": [
+        -3.0,
+        3.0
+      ],
+      "methods": [
+        "original_guarded",
+        "self_instrumented_guarded"
+      ],
+      "metrics": [
+        "bias",
+        "dispersion",
+        "RMSE divided by epsilon",
+        "fourth scaled error moment",
+        "fallback and clipping frequencies",
+        "clean design and covariance eigenvalues"
+      ],
+      "scope": "finite-family consistency diagnostic, not a numerical proof of uniform integrability or a joint growing-family limit",
+      "self_family_level": 7,
+      "self_instrumented_family": "125 C2 dyadic cardinal cubic splines at level 7 plus nine smoothed-data feature instruments; full degree-one-through-three library, no supplied generating support"
+    },
+    "smoke": {
+      "seed": 110999999,
+      "bootstrap_seed": 210999999,
+      "bootstrap_draws": 4,
+      "geometry_paths": 1,
+      "scope": "execution checks only; disjoint from all primary seeds"
+    },
+    "amendment": "Before primary submissions: use cubic splines for the self-instrumented method to match the proved dense family. Calibration estimator, observations, counts, seeds and criteria unchanged from v1. The v1 numerical smoke assessed execution only."
+  },
+  "source_sha256": "12116027bdfa3746da272cfe163231390bd13f8ea84c8b3c7aac5218aaa2ccfa"
+}

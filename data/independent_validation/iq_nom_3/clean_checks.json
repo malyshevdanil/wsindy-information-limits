@@ -1,0 +1,14 @@
+[
+  {
+    "cell": 0,
+    "candidate_discrete_defect": 2.4823629426999303e-08
+  },
+  {
+    "cell": 1,
+    "candidate_discrete_defect": 2.4914274271392776e-08
+  },
+  {
+    "cell": 2,
+    "candidate_discrete_defect": 2.4812979001787486e-08
+  }
+]

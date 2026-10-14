@@ -16,17 +16,17 @@ This identity follows by taking expectations of the corrected polynomial and app
 
 ### S16.1. Numbered assumptions and fixed-noise estimating equations
 
-**(A1)** The coefficient vector has fixed dimension $p$ and belongs to an open identifiable neighborhood. Trajectories and their first coefficient/initial-state sensitivities exist on $[0,T]$. Initial states lie in a compact set on which the selected moments have uniformly bounded moments of order $2+\delta$ for some $\delta>0$.
+**(A1)** The coefficient vector has fixed dimension $p$ and belongs to an open identifiable neighborhood. Trajectories and their first coefficient/initial-state sensitivities exist on $[0,T]$. Initial states lie in a compact set. For some $\delta>0$, the instrumented derivative matrices $B_r$ and scores $\psi_r$ defined below have uniformly bounded $4+\delta$ moments, conditional on the independent training data. Matrix norms are Frobenius norms. These are bounds on the products, rather than separate second-moment bounds on instruments and residuals.
 
 **(A2)** Records and any auxiliary randomizations are independent across $r$. Noise is Gaussian with known positive covariance $C_{\nu_0}$. Weak tests and quadrature rules are fixed independently of each record's noise. The coefficient structure is supplied.
 
 **(A3)** For every record there are two conditionally independent views $Y_r^+$ and $Y_r^-$ with mean $x_{\theta_0,u_r}$ and covariance $2C_{\nu_0}$. An instrument $L_r^\pm$ is measurable with respect to its own view and independent auxiliary training data. Corrected moments $m_r^\pm$ use the variance of their own view. The instrument map is fixed conditional on that training data and has the moment bounds required in (A1).
 
-**(A4)** Put $B_r=(L_r^+G_r^-+L_r^-G_r^+)/2$, $a_r=(L_r^+b_r^-+L_r^-b_r^+)/2$ and $\psi_r=a_r-B_r\theta_0$. Conditional on the training data, $n^{-1}\sum E B_r\to B$ with $B$ nonsingular, and $n^{-1}\sum\operatorname{Var}(\psi_r)\to V_\psi$ positive definite. A law of large numbers holds for $B_r$ and the Lindeberg condition holds for $\psi_r$.
+**(A4)** Put $B_r=(L_r^+G_r^-+L_r^-G_r^+)/2$, $a_r=(L_r^+b_r^-+L_r^-b_r^+)/2$ and $\psi_r=a_r-B_r\theta_0$. Conditional on the training data, $n^{-1}\sum E B_r\to B$ with $B$ nonsingular, and $n^{-1}\sum\operatorname{Var}(\psi_r)\to V_\psi$ positive definite. For a deterministic initial-state array these are limits of array averages, not assumptions of identical record distributions.
 
-**(A5)** Exact integration is used, or the average instrumented quadrature defect is $o(n^{-1/2})$. This condition concerns centered continuous-parameter inference. A vanishing average defect alone suffices for consistency.
+**(A5)** Exact integration is used, or the instrumented numerical score means $\mu_{r,h}(q)=E\psi_{r,h}(q)$ satisfy $n^{-1}\sum_r\sup_{q\in Q}\|\mu_{r,h}(q)\|=o(n^{-1/2})$ for the compact instrument-pilot set $Q$. The moment bounds and limits in (A1) and (A4) apply to the numerical scores as well. With external training, the bound is conditional on that training. This uniform bound controls the mean contribution even for a random complement pilot. A fixed integration step can leave a nonzero defect and then fails this centered continuous-parameter condition. An $o(1)$ bound suffices for consistency alone.
 
-**Theorem 3 (heterogeneous-record weak estimating equations).** Under (A1)–(A5), conditional on the independent training data,
+**Theorem 3 (heterogeneous-record weak estimating equations).** With known sensor covariance $C_{\nu_0}$ and under (A1)–(A5), conditional on the independent training data,
 
 $$
 \widehat\theta_n=\left(\sum_{r=1}^n B_r\right)^{-1}\sum_{r=1}^n a_r
@@ -46,7 +46,17 @@ E(\psi_r\mid u_r,\text{training})
 \tfrac12 E L_r^-\,E m_r^+=0.
 $$
 
-The exact identity $\widehat\theta_n-\theta_0=\bar B_n^{-1}\bar\psi_n$ gives consistency by the law of large numbers, followed by the displayed CLT by Lindeberg and Slutsky. The empirical score covariance converges to $V_\psi$: each conditional mean is zero, so variation of the deterministic trajectories creates no between-record mean term. Replacing $\theta_0$ by the consistent estimate changes this covariance by $o_P(1)$ under the moment conditions. The quadrature assumption makes its centered contribution $o_P(1)$ after multiplication by $\sqrt n$. This is the standard estimating-equation/GMM argument [@hansen1982; @newey1994], with the independent-instrument identity addressing the incidental-initial-state setting. $\square$
+By independence and (A1), $E\|n^{-1}\sum_r(B_r-E B_r)\|^2\le C/n$, so (A4) gives $\bar B_n\to_P B$. Likewise $\bar\psi_n\to_P0$. For any fixed vector $c$, the Lyapunov numerator for the centered sum of $c^\top\psi_r$ is at most $Cn$, whereas its variance to power $1+\delta/2$ has order $n^{1+\delta/2}$. The ratio tends to zero. The scalar Lyapunov CLT and Cramer--Wold therefore yield $n^{-1/2}\sum_r(\psi_r-E\psi_r)\Rightarrow N(0,V_\psi)$. Assumption (A5) makes $n^{-1/2}\sum_rE\psi_r=o(1)$. The exact identity $\widehat\theta_n-\theta_0=\bar B_n^{-1}\bar\psi_n$ and Slutsky prove both limits.
+
+For the sandwich, put $\widehat\psi_r=a_r-B_r\widehat\theta_n$. Independence and the fourth-moment bound give $n^{-1}\sum_r\{\psi_r\psi_r^\top-E(\psi_r\psi_r^\top)\}\to_P0$. Exact mean zero, or (A5) with bounded means, implies that its limit is $V_\psi$. Writing $d=\widehat\theta_n-\theta_0=O_P(n^{-1/2})$, Cauchy--Schwarz bounds the change caused by substituting $\widehat\psi_r=\psi_r-B_rd$ by
+
+$$
+2\|d\|\left(n^{-1}\sum_r\|B_r\|^2\right)^{1/2}
+\left(n^{-1}\sum_r\|\psi_r\|^2\right)^{1/2}
++\|d\|^2 n^{-1}\sum_r\|B_r\|^2=o_P(1).
+$$
+
+The fitted score mean is zero by the pooled estimating equation. Thus its empirical centered covariance, with optional factor $n/(n-1)$, converges to $V_\psi$; multiplication by $\bar B_n^{-1}$ on both sides gives the consistent covariance of the scaled estimator. This direct argument accommodates independent nonidentical records. In the iid case, the corresponding GMM results are Newey--McFadden Theorems 2.6 (consistency), 3.4 (normality) and 4.5 (variance estimation); their iid uniform laws are not invoked for arbitrary deterministic arrays [@hansen1982; @newey1994]. $\square$
 
 ### S16.2. Gaussian construction and local information reference
 
@@ -87,6 +97,42 @@ For an independently calibrated covariance estimate $\widehat\nu$, asymptotic li
 
 Uncorrected residual-profile estimates from separate fixed-horizon trajectory fits need not be consistent as records accumulate: each fit estimates a new initial state with nonvanishing error. Even in a linear Gaussian model, fitting a mean projects part of the error out of the residual and changes its expected quadratic form. A residual estimator therefore requires a demonstrated bias correction or a separate consistent calibration scheme. Pair differences eliminate the mean only for equal trajectories. These facts prevent transferring the common-trajectory pair estimator to heterogeneous initial states.
 
-If all records instead share one initial state and known covariance, the Gaussian path average is sufficient for the mean parameter: the sample contrasts are parameter-free independent Gaussian observations. Applying a single-record procedure to the path average reduces covariance to $C/n$. For a nonlinear polynomial, a Hermite covariance term of order $q$ then scales as $n^{-q}$, whereas averaging separate corrected moments retains its fixed-amplitude contribution divided by $n$. Path averaging is the natural reference in this common-trajectory experiment. The old fixed-family GMM calculation is retained as Lemma 2 and a calibration diagnostic, rather than as an efficiency contribution.
+If all records instead share one initial state and known covariance, the Gaussian path average is sufficient for the mean parameter: the sample contrasts are parameter-free independent Gaussian observations. Applying a single-record procedure to the path average reduces covariance to $C/n$. For a nonlinear polynomial, a Hermite covariance term of order $q$ then scales as $n^{-q}$, whereas averaging separate corrected moments retains its fixed-amplitude contribution divided by $n$. Path averaging is the natural reference in this common-trajectory experiment. The old fixed-family GMM calculation is retained as Lemma S14.1 and a calibration diagnostic, rather than as an efficiency contribution.
+
+### S16.4. Cross-fitting across independent records
+
+Partition the record indices into $K$ deterministic folds $I_k$, fixed before observing the data, with $K$ fixed and $|I_k|/n\to\pi_k\in(0,1)$. Fit a coefficient pilot $\widehat q_{-k}$ using only records outside $I_k$. For $r\in I_k$, set
+
+$$
+\psi_r(q)=\tfrac12\{L_r^+(q)m_r^-(\theta_0,\nu_0)+L_r^-(q)m_r^+(\theta_0,\nu_0)\},
+\qquad L_r^\pm(q)=L(q,Y_r^\pm).
+$$
+
+Here the sensor covariance remains known. The instrument uses its own view, while the residual uses the independent opposite view. Conditional on the complement of fold $k$ and on the initial states in $I_k$,
+
+$$
+E\{\psi_r(\widehat q_{-k})\mid (Y_s^+,Y_s^-)_{s\notin I_k},u_r\}=0.
+$$
+
+The population score mean is zero for every admissible coefficient pilot, including an imperfect one. This exact identity concerns the instrument pilot; covariance plug-in in Hermite corrections requires additional analysis. Cross-fitting is an established way to reuse records while preserving the training/inference separation [@chernozhukov2018].
+
+**(A6)** For every fold, $\widehat q_{-k}\to_P q_*$ for a deterministic $q_*$ in the compact set $Q$; pilots are restricted to $Q$. Uniformly in $r$ and deterministic $q,q'\in Q$, both maps $F_r=\psi_r$ and $F_r=B_r$ satisfy $E\|F_r(q)-F_r(q')\|^2\le C\|q-q'\|^2$. The envelopes $\sup_{q\in Q}\|F_r(q)\|$ have uniformly bounded $4+\delta$ moments. Condition (A4) holds at $q_*$, and (A5) holds uniformly on $Q$. These conditions concern the implemented instrument map, including any bounded interpolation or clipping.
+
+**Corollary 2 (record-wise cross-fitting).** Under (A1), (A2), (A4)--(A6), using the independent views in (A3) and replacing auxiliary training data by each fold complement, the pooled cross-fitted estimator has the same first-order distribution and consistent record-score sandwich as the deterministic instrument map at $q_*$. Every record enters the pooled estimating equation once; no external pilot sample is required.
+
+**Proof.** Write $\Delta_{r,k}=\psi_r(\widehat q_{-k})-\psi_r(q_*)$ for $r\in I_k$, and condition only on the complement of this fold. The held-out terms are conditionally independent. With numerical integration their means may be nonzero, so first subtract their conditional means. The centered conditional second moment gives
+
+$$
+E\left[\left\|n^{-1/2}\sum_{r\in I_k}(\Delta_{r,k}-E[\Delta_{r,k}\mid\mathcal F_{-k}])\right\|^2\,middle|\,\mathcal F_{-k}\right]
+\le C\frac{|I_k|}{n}\|\widehat q_{-k}-q_*\|^2.
+$$
+
+Here $\mathcal F_{-k}$ is generated by the complement views. For a fixed tolerance $\varepsilon$, conditional Chebyshev on $\|\widehat q_{-k}-q_*\|\le t$ bounds the exceedance probability by $Ct^2/\varepsilon^2$; pilot consistency bounds its complement. Letting $n\to\infty$ and then $t\downarrow0$ proves an $o_P(1)$ centered difference. The conditional mean sum has norm bounded by $2n^{-1/2}\sum_r\sup_{q\in Q}\|\mu_{r,h}(q)\|=o(1)$ by (A5). Summing the fixed number of folds therefore gives an $o_P(1)$ difference of normalized scores.
+
+For the derivative, conditional Cauchy--Schwarz bounds $n^{-1}\sum_{r\in I_k}E[\|B_r(\widehat q_{-k})-B_r(q_*)\|\mid\mathcal F_{-k}]$ by $C(|I_k|/n)\|\widehat q_{-k}-q_*\|$. Conditional Markov and the same event decomposition imply an $o_P(1)$ derivative difference. Conditional Markov applied to the squared score differences also gives $n^{-1}\sum_r\|\psi_r(\widehat q_{-k(r)})-\psi_r(q_*)\|^2=o_P(1)$. The uniform envelopes make the average squared scores and derivatives $O_P(1)$. Cauchy--Schwarz then makes the score outer-product difference $o_P(1)$. Theorem 3 at the deterministic map $q_*$ supplies its CLT and variance limit; the pooled linear identity and Slutsky give the cross-fitted limit. Finally, substituting the fitted coefficient in the scores uses precisely the preceding sandwich bound. Each conditional argument uses one fold complement separately; conditioning on all fitted pilots together would generally destroy held-out independence. $\square$
+
+The limiting pilot may be a pseudo-true point of the pilot procedure: exact score centering preserves consistency of the target estimator, while instrument quality determines its limiting variance. Consistency of the pilot suffices here because its score-mean effect vanishes identically; no generic $n^{-1/4}$ rate is asserted for other nuisance parameters. Fixed-span variance and local information efficiency remain distinct claims.
+
+For finite-sample calibration, resample physical records within their original folds and refit every complement pilot in every bootstrap draw. Keeping copies in the original fold excludes every copy of a held-out physical record from its complement. Compute studentized marginal pivots and a quadratic joint pivot from each refitted estimate and its record-score sandwich. This procedure propagates pilot uncertainty that a frozen-instrument bootstrap omits. Its coverage is assessed numerically; the asymptotic result alone supplies no finite-sample 95% guarantee. Bootstrap validity additionally requires regularity of the pilot and estimating-equation functionals and an appropriate within-fold bootstrap limit; arbitrary heterogeneous deterministic arrays need separate justification. The simulation uses iid initial-state draws and balanced folds.
 
 ## References

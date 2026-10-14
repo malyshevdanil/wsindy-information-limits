@@ -1,0 +1,25 @@
+{
+  "main_word_count": 5769,
+  "relative_reduction_from_original": 0.3823340471092077,
+  "abstract_word_count": 163,
+  "new_independent_experiments": false,
+  "guarded_variant_used_in_archived_runs": false,
+  "algebra_and_boundary_tests_passed": 5,
+  "paired_intervals": 16,
+  "all_citations_resolve": true,
+  "pdfs": [
+    {
+      "file": "article_ejs.pdf",
+      "pages": 24
+    },
+    {
+      "file": "article_revised.pdf",
+      "pages": 21
+    },
+    {
+      "file": "supplement.pdf",
+      "pages": 57
+    }
+  ],
+  "original_output_byte_hashes_unchanged": true
+}

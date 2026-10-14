@@ -1,0 +1,43 @@
+{
+  "inferential_results_used": false,
+  "threshold": 0.05,
+  "failures": [
+    {
+      "windows": 120,
+      "maximum_variance_loss": 0.12549631094520586,
+      "worst_check": {
+        "level": 0.005,
+        "initial": [
+          2.25,
+          0.25
+        ],
+        "offset": [
+          -0.06,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "variance_loss": 0.12549631094520586
+      }
+    },
+    {
+      "windows": 480,
+      "maximum_variance_loss": 0.10373143606444768,
+      "worst_check": {
+        "level": 0.005,
+        "initial": [
+          2.25,
+          0.25
+        ],
+        "offset": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.06
+        ],
+        "variance_loss": 0.10373143606444768
+      }
+    }
+  ],
+  "repair": "degree 7, 1024 nodes, unchanged support and 5% threshold; verification pending"
+}

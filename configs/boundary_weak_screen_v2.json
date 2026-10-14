@@ -1,0 +1,60 @@
+{
+  "protocol": "known_initial_boundary_weak_direct_screen_v2",
+  "decision_frozen_before_execution": true,
+  "parent_observation_protocol": "configs/efficiency_followup.json:power",
+  "system": "vdp",
+  "T": 20.0,
+  "h": 0.005,
+  "tau": 0.3,
+  "initial": [
+    2.0,
+    0.0
+  ],
+  "level": 0.005,
+  "seed_base": 2200000,
+  "screen_seed_indices": [
+    0,
+    31
+  ],
+  "full_seed_indices_if_screen_passes": [
+    0,
+    1999
+  ],
+  "screen_paths": 32,
+  "success_relative_rmse_max": 0.0014,
+  "screen_success_is_provisional": true,
+  "clean_relative_quadrature_bias_max": 1.4e-05,
+  "method": "four direct OU adjoint vector tests, terminal observations, two known-initial observation controls, exact discrete Hermite GLS",
+  "initial_control_scope": "Y(0)-u belongs to the covariance-norm closure of endpoint-enabled weak moments; reported as an explicit finite implementation",
+  "pilot_windows": 30,
+  "pilot_box": [
+    [
+      0.25,
+      2.0
+    ],
+    [
+      -2.0,
+      -0.25
+    ],
+    [
+      0.1,
+      2.0
+    ],
+    [
+      -2.0,
+      -0.1
+    ]
+  ],
+  "updates": 3,
+  "known_covariance": true,
+  "oracle_diagnostic": true,
+  "cache_or_polynomial_surrogate": false,
+  "no_automatic_full_run": true,
+  "stop_on_numerical_failure": true,
+  "reference_values_are_existing_full_sample_results": {
+    "boundary_free": 0.00168503,
+    "known_initial_mle": 0.001301
+  },
+  "quadrature": "composite Simpson, identical weights in moments and exact covariance",
+  "supersedes_numerical_failure_only": "v1 clean error 2.809674937558237e-05 exceeded unchanged 1.4e-05 gate; zero noisy fits inspected"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "stage": "boundary_ablate_v2_0",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 125,
+      "elapsed_seconds": 817.078255415
+    }
+  },
+  {
+    "stage": "boundary_ablate_v2_1",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 125,
+      "elapsed_seconds": 719.0194066899999
+    }
+  },
+  {
+    "stage": "boundary_ablate_v2_2",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 125,
+      "elapsed_seconds": 515.267965947
+    }
+  },
+  {
+    "stage": "boundary_ablate_v2_3",
+    "status": "COMPLETE",
+    "audit": {
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ]
+    },
+    "completion": {
+      "status": "complete",
+      "paths": 125,
+      "elapsed_seconds": 741.712235823
+    }
+  }
+]

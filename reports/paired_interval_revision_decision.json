@@ -1,0 +1,10 @@
+{
+  "date_utc": "2026-10-14T00:01:36.579748+00:00",
+  "change": "Post-study correction of uncertainty estimates for paired binary frequency differences",
+  "method": "Two 97.5% Clopper-Pearson intervals for discordant probabilities, projected by subtraction; Bonferroni coverage at least 95% per grid cell",
+  "outcomes_previously_known": true,
+  "counts_and_calibration_gate_unchanged": true,
+  "simultaneous_across_grid": false,
+  "new_simulations": false,
+  "archived_bootstrap_intervals_preserved": true
+}

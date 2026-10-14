@@ -1,0 +1,13 @@
+{
+  "original_basis": {
+    "raw_windows": 480,
+    "retained_windows": 479,
+    "relative_cutoff": 1e-10,
+    "minimum_retained_relative_eigenvalue": 2.1017977054482028e-05
+  },
+  "half_windows": 12,
+  "retained_scalar_tests": 491,
+  "basis_is_model_independent": true,
+  "relative_cutoff": 1e-10,
+  "seconds": 0.8750970910000433
+}

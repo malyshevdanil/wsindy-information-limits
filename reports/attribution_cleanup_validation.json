@@ -1,0 +1,11 @@
+{
+  "scope": "current tracked repository files, rendered PDFs, Word XML and decoded notebook source packages",
+  "tracked_files_scanned": 673,
+  "remaining_named_tool_mentions": 0,
+  "documentation_packages_sanitized": 55,
+  "original_execution_source_hashes_reconstructed_and_verified": 55,
+  "numerical_results_unchanged": true,
+  "main_author": "Danil Romanovich Malyshev",
+  "git_history_rewritten": false,
+  "generic_ai_assistance_disclosure_retained": true
+}

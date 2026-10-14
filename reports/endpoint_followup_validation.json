@@ -1,0 +1,134 @@
+{
+  "archive_files": 56,
+  "sha256_all_verified": true,
+  "frozen_source_audits": [
+    {
+      "stage": "boundary_ablate_v2_0",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "boundary_ablate_v2_1",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "boundary_ablate_v2_2",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "boundary_ablate_v2_3",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_ablation.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "endpoint_vdp5",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_generalization.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "endpoint_lorenz",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/boundary_generalization.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "support_wald_v2_0",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "support_wald_v2_1",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "support_wald_v2_2",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    },
+    {
+      "stage": "support_wald_v2_3",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/support_wald_v2.json"
+      ],
+      "archive_documentation_sanitized": true,
+      "executed_source_reconstructed_and_verified": true,
+      "original_snapshot_commit": "5dfe5c686c23d696d779bfb0b545d23a59eff2c3"
+    }
+  ],
+  "documents": [
+    {
+      "name": "article_revised",
+      "tables": 8,
+      "figures": 5
+    },
+    {
+      "name": "supplement",
+      "tables": 7,
+      "figures": 2
+    }
+  ],
+  "pdfs": [
+    {
+      "name": "article_ejs",
+      "pages": 25
+    },
+    {
+      "name": "article_revised",
+      "pages": 22
+    },
+    {
+      "name": "supplement",
+      "pages": 25
+    }
+  ],
+  "ejs_metadata_verified": true,
+  "public_identifier_for_current_revision_pending": true
+}

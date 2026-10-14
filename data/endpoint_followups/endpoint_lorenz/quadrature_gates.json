@@ -1,0 +1,18 @@
+[
+  {
+    "method": "universal_boundary",
+    "relative_bias": 2.8987825295729904e-06,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 6.394401241532502e-11,
+    "ridge": 2.1414028490470104e-14
+  },
+  {
+    "method": "matched_boundary_free",
+    "relative_bias": 1.1054977259995634e-05,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 3.785020102727112e-10,
+    "ridge": 1.2140666024720912e-14
+  }
+]

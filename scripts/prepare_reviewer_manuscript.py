@@ -43,7 +43,7 @@ This follows either from a Lagrange multiplier or covariance Cauchy–Schwarz. W
     text=text.replace('The earlier grid diagnostic did not establish general accuracy preservation and is documented as a negative supplementary result. Historical replication is exploratory. ','')
     disclosures='''## Declaration of generative AI and AI-assisted technologies
 
-OpenAI Codex assisted literature searches, mathematical drafting, source development, experiment orchestration, numerical interpretation and manuscript preparation. Numerical results are derived from archived execution outputs, and figures are produced by plotting code. The tool is not an author. The human authors must review and edit the manuscript and accept responsibility for its content before submission; this statement does not assert that their review has already occurred.
+AI-assisted tools supported literature searches, mathematical drafting, source development, experiment orchestration, numerical interpretation and manuscript preparation. Numerical results are derived from archived execution outputs, and figures are produced by plotting code. The tool is not an author. The human authors must review and edit the manuscript and accept responsibility for its content before submission; this statement does not assert that their review has already occurred.
 
 ## Data availability
 
@@ -67,7 +67,7 @@ Code, synthetic data, frozen execution notebooks and numerical outputs are prepa
 '''+text[end:]
     text=text.replace('The new seed ranges','Seed ranges').replace('Earlier exploratory ranges are disjoint. ','Other experiment ranges are disjoint. ')
     text=text.replace('Seven original correctness tests','Seven correctness tests').replace('The five original completed notebooks remain immutable snapshots. ','Completed notebooks remain immutable snapshots. ')
-    ai_start=text.index('OpenAI Codex assisted') if 'OpenAI Codex assisted' in text else -1
+    ai_start=text.index('AI-assisted tools supported') if 'AI-assisted tools supported' in text else -1
     if ai_start>=0:
         ai_end=text.index('## S5.',ai_start)
         text=text[:ai_start]+text[ai_end:]

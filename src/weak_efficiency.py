@@ -73,8 +73,8 @@ def vdp_pilot_trajectory(t,q,initial,box):
     return sol.y.T,constrained
 
 
-def vdp_moments(t,y,phi,der,sigma):
-    w=quadrature_weights(t);x,v=y.T
+def vdp_moments(t,y,phi,der,sigma,weights=None):
+    w=quadrature_weights(t) if weights is None else weights;x,v=y.T
     K=len(phi);A=np.zeros((2*K,4));b=-(der*w)@y
     A[0::2,0]=(phi*w)@v
     A[1::2,1]=(phi*w)@x;A[1::2,2]=(phi*w)@v
@@ -82,9 +82,9 @@ def vdp_moments(t,y,phi,der,sigma):
     return A,b.ravel()
 
 
-def covariance_blocks(t,model,phi,der,sigma,tau):
+def covariance_blocks(t,model,phi,der,sigma,tau,weights=None):
     """Precompute the exact Prop3 covariance polynomial in four coefficients."""
-    w=quadrature_weights(t);h=t[1]-t[0];x,v=model.T
+    w=quadrature_weights(t) if weights is None else weights;h=t[1]-t[0];x,v=model.T
     arrays={'A':(phi*w).T,'B':(der*w).T,'V':(phi*(x*v*w)).T,'X':(phi*(x*x*w)).T}
     def apply(U,order=1):
         return U if tau is None else exponential_apply(U,np.exp(-order*h/tau))

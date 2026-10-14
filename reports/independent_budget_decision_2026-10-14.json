@@ -1,0 +1,20 @@
+{
+  "decision_at_utc": "2026-10-14T05:34:47.132325+00:00",
+  "trigger": "User questions necessity and runtime of remaining computations",
+  "reason": "Measured one 20-path bootstrap shard at 11729 seconds; theoretical core and independent small-noise size already checked",
+  "new_submissions_enabled": false,
+  "remote_running_jobs_cancelled": false,
+  "already_submitted_bootstrap_stages": [
+    "iq_bootn_00",
+    "iq_bootn_01",
+    "iq_bootn_02",
+    "iq_bootn_03",
+    "iq_bootn_04",
+    "iq_bootn_20"
+  ],
+  "unsubmitted_stages": 54,
+  "original_protocol_unchanged": true,
+  "primary_bootstrap_1000_path_validation_incomplete": true,
+  "partial_bootstrap_acceptance_rates_not_examined": true,
+  "retained_subsets_not_presented_as_completed_primary_validation": true
+}

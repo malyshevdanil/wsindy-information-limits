@@ -1,0 +1,23 @@
+[
+  {
+    "source": "article_revised.md",
+    "docx_native_equations": 277,
+    "docx_tables": 8,
+    "docx_images": 5,
+    "pdf_exists": true
+  },
+  {
+    "source": "supplement.md",
+    "docx_native_equations": 373,
+    "docx_tables": 7,
+    "docx_images": 2,
+    "pdf_exists": true
+  },
+  {
+    "source": "research_extensions_archive.md",
+    "docx_native_equations": 333,
+    "docx_tables": 20,
+    "docx_images": 11,
+    "pdf_exists": true
+  }
+]

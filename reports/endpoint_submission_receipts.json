@@ -1,0 +1,410 @@
+[
+  {
+    "stage": "support_wald_v2_2",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-support-wald-v2-2",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "support_wald_v2_1",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-support-wald-v2-1",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "support_wald_v2_3",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-support-wald-v2-3",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "secal_smoke",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-secal-smoke",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "secal_0",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-secal-0",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "secal_1",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-secal-1",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "secal_3",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-secal-3",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "secal_2",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-secal-2",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "secal_4",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-secal-4",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_smoke",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-smoke",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_smoke_v2",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-smoke-v2",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_nom_0",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-nom-0",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_nom_1",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-nom-1",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_nom_2",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-nom-2",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_nom_3",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-nom-3",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_geo_0",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-geo-0",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_geo_2",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_geo_3",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_geo_4",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_01",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_03",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_04",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_05",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_06",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_07",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_08",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_09",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_10",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_11",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_12",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_13",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_14",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_15",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_16",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_17",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_18",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_19",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_20",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-bootn-20",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_geo_2",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-geo-2",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_geo_3",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-geo-3",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_geo_4",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-geo-4",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_bootn_00",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-bootn-00",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_bootn_01",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-bootn-01",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "",
+    "version_number": 0,
+    "error": "Maximum batch CPU session count of 5 reached."
+  },
+  {
+    "stage": "iq_bootn_02",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-bootn-02",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_bootn_03",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-bootn-03",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "iq_bootn_04",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-iq-bootn-04",
+    "version_number": 1,
+    "error": ""
+  },
+  {
+    "stage": "guarded_geometry_reference",
+    "ref": "/code/malyshevdanil/wsindy-sampling-saturation-guarded-geometry-refere",
+    "version_number": 1,
+    "error": ""
+  }
+]

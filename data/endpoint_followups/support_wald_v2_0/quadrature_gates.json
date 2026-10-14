@@ -1,0 +1,74 @@
+[
+  {
+    "delta_index": 0,
+    "delta": 0.0,
+    "candidate_absolute_bias": 1.7355761920069177e-11,
+    "uncorrected_candidate_bias": 2.5301013331400817e-06,
+    "all_coefficients_maximum_absolute_bias": 7.193268203309344e-11,
+    "covariance_ridge": 4.1037123575247127e-16,
+    "scaled_design_condition": 90.02203208791131
+  },
+  {
+    "delta_index": 1,
+    "delta": -0.00970482564397237,
+    "candidate_absolute_bias": 1.4117601185303918e-11,
+    "uncorrected_candidate_bias": 3.6628467132981957e-06,
+    "all_coefficients_maximum_absolute_bias": 6.220068904383425e-11,
+    "covariance_ridge": 4.192901104680445e-16,
+    "scaled_design_condition": 91.14070828528159
+  },
+  {
+    "delta_index": 2,
+    "delta": -0.01940965128794474,
+    "candidate_absolute_bias": 5.295056060283798e-12,
+    "uncorrected_candidate_bias": 3.333199068512871e-06,
+    "all_coefficients_maximum_absolute_bias": 3.3390956666323746e-11,
+    "covariance_ridge": 4.260600035478084e-16,
+    "scaled_design_condition": 91.94040268822584
+  },
+  {
+    "delta_index": 3,
+    "delta": -0.03881930257588948,
+    "candidate_absolute_bias": 6.393774398816277e-13,
+    "uncorrected_candidate_bias": 1.165024564195316e-06,
+    "all_coefficients_maximum_absolute_bias": 4.6689776461825323e-11,
+    "covariance_ridge": 4.354145115205498e-16,
+    "scaled_design_condition": 93.14323870593998
+  },
+  {
+    "delta_index": 4,
+    "delta": -0.04852412821986185,
+    "candidate_absolute_bias": 1.544828848176749e-11,
+    "uncorrected_candidate_bias": 1.7555055951343213e-06,
+    "all_coefficients_maximum_absolute_bias": 7.086986553161978e-11,
+    "covariance_ridge": 4.387613230889002e-16,
+    "scaled_design_condition": 93.25346868256402
+  },
+  {
+    "delta_index": 5,
+    "delta": -0.058228953863834226,
+    "candidate_absolute_bias": 1.2305573227067157e-12,
+    "uncorrected_candidate_bias": 8.503044293950435e-07,
+    "all_coefficients_maximum_absolute_bias": 2.555888833910558e-11,
+    "covariance_ridge": 4.4163891559979645e-16,
+    "scaled_design_condition": 93.71010326587657
+  },
+  {
+    "delta_index": 6,
+    "delta": -0.06793377950780659,
+    "candidate_absolute_bias": 5.920194889874608e-12,
+    "uncorrected_candidate_bias": 6.080014151935154e-06,
+    "all_coefficients_maximum_absolute_bias": 3.340394627571186e-11,
+    "covariance_ridge": 4.442685413202066e-16,
+    "scaled_design_condition": 93.38529330016273
+  },
+  {
+    "delta_index": 7,
+    "delta": -0.07763860515177896,
+    "candidate_absolute_bias": 4.8722137435674995e-12,
+    "uncorrected_candidate_bias": 5.061376215267921e-06,
+    "all_coefficients_maximum_absolute_bias": 3.152913909500784e-11,
+    "covariance_ridge": 4.468943106826773e-16,
+    "scaled_design_condition": 93.3772483868611
+  }
+]

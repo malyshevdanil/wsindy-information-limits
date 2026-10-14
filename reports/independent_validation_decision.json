@@ -1,0 +1,8 @@
+{
+  "frozen_at_utc": "2026-10-14T00:35:47.847737+00:00",
+  "protocol_sha256": "f7f5f3395b1f9bb6b7d74446c6ba86477b0812b7062037da52ba5d3e530b5379",
+  "before_any_new_outputs": true,
+  "primary_decision": "CP intervals wholly inside declared size/power bands; same counts and method settings throughout; no early stopping",
+  "previous_diagnostic_paths_reused": false,
+  "smoke_disjoint": true
+}

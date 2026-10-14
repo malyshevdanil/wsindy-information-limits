@@ -1,9 +1,0 @@
-{
-  "status": "complete",
-  "repetitions": 100,
-  "rows": 3000,
-  "elapsed_seconds": 2603.746752515,
-  "records_simulated": 80000,
-  "levels_paired": true,
-  "discarded_records_or_bootstrap_fits": 0
-}

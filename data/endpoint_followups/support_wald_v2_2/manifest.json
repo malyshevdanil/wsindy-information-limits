@@ -1,0 +1,120 @@
+{
+  "stage": "support_wald_v2_2",
+  "protocol": {
+    "protocol": "added_cubic_paired_wald_mstls_v2",
+    "parent_protocol_file": "support_extra_term.json",
+    "reference_file": "support_wald_references.json",
+    "shards": 4,
+    "paths_per_level": 100,
+    "multipliers": [
+      0,
+      -0.5,
+      -1,
+      -2,
+      -2.5,
+      -3,
+      -3.5,
+      -4
+    ],
+    "primary_windows": 480,
+    "pilot_windows": 30,
+    "basis_relative_cutoff": 1e-10,
+    "covariance_relative_relaxation": 1e-10,
+    "pilot_coefficient_box": [
+      [
+        0.25,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.25
+      ],
+      [
+        0.1,
+        2.0
+      ],
+      [
+        -2.0,
+        -0.1
+      ],
+      [
+        -2.0,
+        0.0
+      ]
+    ],
+    "pilot": "corrected core-five OLS on 30 compact tests, bounded coefficients, integrated trajectory; no generating coefficients supplied",
+    "estimator": "two-step feasible GLS of all 18 coefficients on 480 compact tests, exact Hermite covariance at the core-five pilot; no penalization or support pruning",
+    "alpha": 0.05,
+    "test": "two-sided pre-specified single x^3 coefficient, qhat/sqrt((P Omega P^T)[14,14]); no multiple-library or post-selection claim",
+    "clean_mean_quadrature_coefficient_absolute_error_max": 1e-05,
+    "criteria": {
+      "calibration_gate": "Wilson 95% interval of null rejection contains 0.05; otherwise do not claim calibrated efficiency",
+      "power_reference": "two-sided Wald power at matched local efficient information; parent delta_min uses equal-prior two-point error, a different criterion",
+      "primary_comparison": "paired rejection/inclusion frequencies, null rates and Wilson intervals, with paired bootstrap difference intervals",
+      "mstls_variance_loss": "do not infer a variance ratio from a threshold transition",
+      "large_perturbations": "finite-amplitude empirical outcomes; do not extend the null local Gaussian approximation to large delta"
+    },
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 8440000,
+    "stop_on_failure": true,
+    "scope": "same 1000 previous observations plus 600 paired intermediate-grid observations; adaptive author selection settings unchanged",
+    "pilot_quadrature_defect_correction": true,
+    "numerical_amendment": "v1 high-noise preflight candidate bias 1.4823e-5 at multiplier -3 exceeds unchanged 1e-5 gate; v2 subtracts deterministic pilot-model discrete residual defect from moment RHS at every amplitude, before inspecting v1 noisy Wald outcomes. Original v1 frozen notebooks/results retained. No criteria or seeds changed."
+  },
+  "parent_protocol": {
+    "protocol": "vdp_added_cubic_local_information_and_author_wsindy_v1",
+    "T": 20.0,
+    "h": 0.005,
+    "information_refinement_h": 0.0025,
+    "tau": 0.3,
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "levels": [
+      0.005,
+      0.05
+    ],
+    "null": "original Van der Pol; candidate x^3 in v' has zero coefficient",
+    "alternative": "v'=-x+v-x^2*v+delta*x^3; x'=v",
+    "delta_multipliers_of_weak_reference": [
+      0.0,
+      -0.5,
+      -1.0,
+      -2.0,
+      -4.0
+    ],
+    "negative_direction_reason": "Restoring cubic perturbation keeps trajectories bounded; sign chosen before added-term outcomes",
+    "noise_calibration": "fixed original VdP coordinate standard deviations at h=.01; same covariance across alternatives",
+    "information_target": "x^3 coefficient in v', equation-major index 14",
+    "primary_nuisance_library": "All other coefficients in the author degree 1:3 polynomial dictionary, both equations: 17 coefficients plus 2 initial coordinates for boundary-free reference",
+    "secondary_nuisance_library": "Original four coefficients plus candidate: core5",
+    "initial_information_references": [
+      "known initial/full likelihood",
+      "unknown initial likelihood=local boundary-free limit"
+    ],
+    "target_equal_prior_error": 0.05,
+    "delta_reference_constant": "2*Phi^-1(0.95); local equal-prior two-point benchmark, not a finite-amplitude support guarantee",
+    "information_svd_cutoffs": [
+      1e-09,
+      1e-10,
+      1e-11
+    ],
+    "primary_svd_cutoff": 1e-10,
+    "relative_information_refinement_tolerance": 0.01,
+    "relative_svd_sensitivity_tolerance": 0.01,
+    "paths_per_delta_per_level": 100,
+    "seed_base": 9000000,
+    "level_seed_stride": 10000,
+    "shared_noise_across_delta_grid": true,
+    "maximum_clean_state_abs": 10.0,
+    "method": "complete pinned WSINDy_ODE author pipeline via existing Octave compatibility adapter, adaptive windows, smoothing, MSTLS selection",
+    "author_pin_file": "author_pins.json",
+    "inclusion_definition": "author selected x^3 coefficient in v' is nonzero",
+    "report_null_false_inclusion": true,
+    "report_wilson_confidence_intervals": true,
+    "no_threshold_tuning_from_this_study": true,
+    "stop_before_mc_if_information_or_boundedness_gate_fails": true
+  },
+  "source_sha256": "783ca3501fb9ba26b08809eb4f3ddedb5c4ab6b052ca455fe829b92d272cb7ff"
+}

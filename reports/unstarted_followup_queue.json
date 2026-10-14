@@ -1,0 +1,23 @@
+{
+  "pending": [],
+  "states": {
+    "endpoint_vdp5": "TRANSPORT_UNCERTAIN",
+    "endpoint_lorenz": "RUNNING",
+    "support_wald_v2_0": "COMPLETE",
+    "support_wald_v2_1": "NO_RUN",
+    "support_wald_v2_2": "RUNNING",
+    "support_wald_v2_3": "NO_RUN",
+    "support_wald_0": "COMPLETE",
+    "support_wald_1": "COMPLETE"
+  },
+  "legacy_queues_untouched": true,
+  "final_verified_primary_states": {
+    "endpoint_vdp5": "COMPLETE",
+    "endpoint_lorenz": "COMPLETE",
+    "support_wald_v2_0": "COMPLETE",
+    "support_wald_v2_1": "COMPLETE",
+    "support_wald_v2_2": "COMPLETE",
+    "support_wald_v2_3": "COMPLETE"
+  },
+  "all_declared_primary_studies_complete": true
+}

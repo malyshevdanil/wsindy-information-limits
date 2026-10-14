@@ -1,0 +1,13 @@
+{
+  "protocol": "deterministic_pre_main_crossing_forecast_v1",
+  "reference_protocol": "crossfit_records.json",
+  "curvature_validation": "reports/incidental_curvature_validation.json",
+  "initial_quadrature_orders": [4, 6],
+  "families": [120, 480],
+  "levels": [0.05, 0.1, 0.2],
+  "quadrature_relative_tolerance": 0.02,
+  "threshold_n": 800,
+  "scope": "Oracle weak original/fission exact Hermite covariance; new feasible cross-fitting variance remains a separate comparison",
+  "fixed_noise_mle_variance": "leading small-noise information approximation",
+  "physical_monte_carlo_records": 0
+}

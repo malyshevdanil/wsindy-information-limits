@@ -1,0 +1,864 @@
+{
+  "collected_at_utc": "2026-10-12T17:29:04.764425+00:00",
+  "automatic_submission_stopped": true,
+  "requested_stages": [
+    "inc_main_l0_n800_b00",
+    "inc_main_l0_n800_b01",
+    "crossfitA_geometry",
+    "repair120_geometry",
+    "repairA2_geometry"
+  ],
+  "runs": [
+    {
+      "stage": "inc_main_l0_n800_b00",
+      "status": "CANCEL_ACKNOWLEDGED",
+      "log_file": "reports\\stopped_inc_main_l0_n800_b00.log",
+      "log_bytes": 3472,
+      "download_error": null,
+      "output_files": 5,
+      "output_bytes": 1164851,
+      "outputs": [
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b00\\wsindy-sampling-saturation-inc-main-l0-n800-b00.log",
+          "bytes": 3472,
+          "sha256": "b0253dc5cf51422e6717372d7ca10f2b7d49ac04ccabd5e1d38eda6f17adcc20"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b00\\results_inc_main_l0_n800_b00\\bootstrap_fits.json",
+          "bytes": 456190,
+          "sha256": "94404ab949321c91ca71ecebb7d043195335473eae1e27ef7f6edd98822f99a9"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b00\\results_inc_main_l0_n800_b00\\input_hashes.json",
+          "bytes": 1172,
+          "sha256": "da3acb2076f30bbd4074774420810fb8cf3686725dabec0ca853624abc9b3b97"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b00\\results_inc_main_l0_n800_b00\\manifest.json",
+          "bytes": 3144,
+          "sha256": "834ceb6a9fe5ab48fb2f07dad2d7d418ea9231e7b98a99fa3a412e0691fa4cf8"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b00\\results_inc_main_l0_n800_b00\\rows.json",
+          "bytes": 700873,
+          "sha256": "64b99619196c72c037f5e7a770eba003a7d1ed1f221894185a8857f272954a98"
+        }
+      ],
+      "statistical_promotion": false,
+      "snapshot": {
+        "source_sha256_verified": true,
+        "matching_protocol_files": [
+          "configs/incidental_main.json"
+        ]
+      },
+      "saved_method_rows": 32,
+      "method_counts": {
+        "bias_corrected_likelihood": 10,
+        "oracle_likelihood": 11,
+        "profile_likelihood": 11
+      },
+      "saved_repetitions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "successful_saved_fit_rows": 32,
+      "saved_bootstrap_refits": 535,
+      "bootstrap_refits_per_repetition": {
+        "0": 50,
+        "1": 50,
+        "2": 50,
+        "3": 50,
+        "4": 50,
+        "5": 50,
+        "6": 50,
+        "7": 50,
+        "8": 50,
+        "9": 50,
+        "10": 35
+      },
+      "saved_cache_checkpoints": 0
+    },
+    {
+      "stage": "inc_main_l0_n800_b01",
+      "status": "CANCEL_ACKNOWLEDGED",
+      "log_file": "reports\\stopped_inc_main_l0_n800_b01.log",
+      "log_bytes": 3715,
+      "download_error": null,
+      "output_files": 5,
+      "output_bytes": 1276444,
+      "outputs": [
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b01\\wsindy-sampling-saturation-inc-main-l0-n800-b01.log",
+          "bytes": 3715,
+          "sha256": "f2e43e0bea99426ba5c1e13ba2465a0f60571a5e96dcb34da2029a3a6cee0c11"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b01\\results_inc_main_l0_n800_b01\\bootstrap_fits.json",
+          "bytes": 503686,
+          "sha256": "dec98eed855c72cf635439f8f0705cc0aa123b97bf1b945d920834c7fb5e597a"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b01\\results_inc_main_l0_n800_b01\\input_hashes.json",
+          "bytes": 1300,
+          "sha256": "34e727e423647e0f09fa9f4afbdf35967fc317b152287fc38b99f417e17bc167"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b01\\results_inc_main_l0_n800_b01\\manifest.json",
+          "bytes": 3154,
+          "sha256": "547310010c070ccd89a46715951cf043ace122b990677a858eb4cf5af9b7add9"
+        },
+        {
+          "path": "results\\stopped_inc_main_l0_n800_b01\\results_inc_main_l0_n800_b01\\rows.json",
+          "bytes": 764589,
+          "sha256": "1354eaae2052940b3d258a671bac951bf797e02e6084ef8fca9656352419521d"
+        }
+      ],
+      "statistical_promotion": false,
+      "snapshot": {
+        "source_sha256_verified": true,
+        "matching_protocol_files": [
+          "configs/incidental_main.json"
+        ]
+      },
+      "saved_method_rows": 35,
+      "method_counts": {
+        "bias_corrected_likelihood": 11,
+        "oracle_likelihood": 12,
+        "profile_likelihood": 12
+      },
+      "saved_repetitions": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "successful_saved_fit_rows": 35,
+      "saved_bootstrap_refits": 590,
+      "bootstrap_refits_per_repetition": {
+        "20": 50,
+        "21": 50,
+        "22": 50,
+        "23": 50,
+        "24": 50,
+        "25": 50,
+        "26": 50,
+        "27": 50,
+        "28": 50,
+        "29": 50,
+        "30": 50,
+        "31": 40
+      },
+      "saved_cache_checkpoints": 0
+    },
+    {
+      "stage": "crossfitA_geometry",
+      "status": "CANCEL_ACKNOWLEDGED",
+      "log_file": "reports\\stopped_crossfitA_geometry.log",
+      "log_bytes": 10132,
+      "download_error": null,
+      "output_files": 3,
+      "output_bytes": 20728,
+      "outputs": [
+        {
+          "path": "results\\stopped_crossfitA_geometry\\wsindy-sampling-saturation-crossfita-geometry.log",
+          "bytes": 10132,
+          "sha256": "9a31c64064a16083fe205bf9bd5f9c213514cf670e62ac69f3439a367f3c29a2"
+        },
+        {
+          "path": "results\\stopped_crossfitA_geometry\\results_crossfitA_geometry\\checks.json",
+          "bytes": 7221,
+          "sha256": "9b1d3d229fc1084825afdf72c52946e109d86882fc967fb8f39585da804bbd7e"
+        },
+        {
+          "path": "results\\stopped_crossfitA_geometry\\results_crossfitA_geometry\\manifest.json",
+          "bytes": 3375,
+          "sha256": "64ae2e7d6aed6b4bce5069a86cf248fd4b204c5662e9be597d92f08dd6e01546"
+        }
+      ],
+      "statistical_promotion": false,
+      "snapshot": {
+        "source_sha256_verified": true,
+        "matching_protocol_files": [
+          "configs/incidental_weak.json"
+        ]
+      },
+      "saved_cache_checkpoints": 0,
+      "checks": [
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.04513661284428383
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.050103278249073124
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.053631237747262084
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            0.02,
+            -0.02,
+            0.02,
+            -0.02
+          ],
+          "variance_loss": 0.0182346080509308
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            0.02,
+            -0.02,
+            0.02,
+            -0.02
+          ],
+          "variance_loss": 0.01914765832047305
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            0.02,
+            -0.02,
+            0.02,
+            -0.02
+          ],
+          "variance_loss": 0.021666682869368126
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            -0.02,
+            0.01,
+            -0.02,
+            0.01
+          ],
+          "variance_loss": 0.021600700613670698
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            -0.02,
+            0.01,
+            -0.02,
+            0.01
+          ],
+          "variance_loss": 0.023439415004418374
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            -0.02,
+            0.01,
+            -0.02,
+            0.01
+          ],
+          "variance_loss": 0.025632478810952763
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            0.05,
+            -0.05,
+            0.05,
+            -0.05
+          ],
+          "variance_loss": 0.019802028604546384
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            0.05,
+            -0.05,
+            0.05,
+            -0.05
+          ],
+          "variance_loss": 0.026907573412833452
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            0.05,
+            -0.05,
+            0.05,
+            -0.05
+          ],
+          "variance_loss": 0.04140388072973211
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            -0.05,
+            0.03,
+            -0.02,
+            0.04
+          ],
+          "variance_loss": 0.00971490958133936
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            -0.05,
+            0.03,
+            -0.02,
+            0.04
+          ],
+          "variance_loss": 0.009167899974813487
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            -0.05,
+            0.03,
+            -0.02,
+            0.04
+          ],
+          "variance_loss": 0.007290601538326058
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            0.06,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.022885352641040413
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            0.06,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.02317398802111592
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            0.06,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.020884097046507177
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.06,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.023705262227957435
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.06,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.02475135641549442
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            0.0,
+            0.06,
+            0.0,
+            0.0
+          ],
+          "variance_loss": 0.02570389609435031
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.06,
+            0.0
+          ],
+          "variance_loss": 0.02578044232555321
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.06,
+            0.0
+          ],
+          "variance_loss": 0.026190343039292463
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.06,
+            0.0
+          ],
+          "variance_loss": 0.030457849034352114
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.06
+          ],
+          "variance_loss": 0.028160533323491332
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.06
+          ],
+          "variance_loss": 0.03449415341739792
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.06
+          ],
+          "variance_loss": 0.04030468454470859
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            -0.06,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "variance_loss": 0.06533086176856528
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            -0.06,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "variance_loss": 0.06787590140660127
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            -0.06,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "variance_loss": 0.06450590879940621
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            -0.0,
+            -0.06,
+            -0.0,
+            -0.0
+          ],
+          "variance_loss": 0.014443445176344882
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            -0.0,
+            -0.06,
+            -0.0,
+            -0.0
+          ],
+          "variance_loss": 0.01570934974975824
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            -0.0,
+            -0.06,
+            -0.0,
+            -0.0
+          ],
+          "variance_loss": 0.017784752928048153
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            -0.0,
+            -0.0,
+            -0.06,
+            -0.0
+          ],
+          "variance_loss": 0.03126091908733275
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            -0.0,
+            -0.0,
+            -0.06,
+            -0.0
+          ],
+          "variance_loss": 0.04268116885711426
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            -0.0,
+            -0.0,
+            -0.06,
+            -0.0
+          ],
+          "variance_loss": 0.05419648712927372
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            1.75,
+            0.0
+          ],
+          "offset": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.06
+          ],
+          "variance_loss": 0.08095065787477007
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.0,
+            0.0
+          ],
+          "offset": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.06
+          ],
+          "variance_loss": 0.08574205852352423
+        },
+        {
+          "level": 0.05,
+          "initial": [
+            2.25,
+            0.25
+          ],
+          "offset": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.06
+          ],
+          "variance_loss": 0.0888323444197221
+        }
+      ]
+    },
+    {
+      "stage": "repairA2_geometry",
+      "status": "CANCEL_ACKNOWLEDGED",
+      "log_file": "reports\\stopped_repairA2_geometry.log",
+      "log_bytes": 1311,
+      "download_error": null,
+      "output_files": 3,
+      "output_bytes": 9704322,
+      "outputs": [
+        {
+          "path": "results\\stopped_repairA2_geometry\\wsindy-sampling-saturation-repaira2-geometry.log",
+          "bytes": 1311,
+          "sha256": "e05c86900e4f909510bdbb312eef75aa2189cf16913d3f0dd2734c2c3c2f27e7"
+        },
+        {
+          "path": "results\\stopped_repairA2_geometry\\results_repairA2_geometry\\checkpoint_0.2_0_0.npz",
+          "bytes": 9699318,
+          "sha256": "2825f0e23819ec72290eb39d36a466568d4b76260d0660daf0ed7a4704417dbc"
+        },
+        {
+          "path": "results\\stopped_repairA2_geometry\\results_repairA2_geometry\\manifest.json",
+          "bytes": 3693,
+          "sha256": "1325de2705e6b016bea1b53901346b5719bdd019ca6d987079ffde4af725a8b1"
+        }
+      ],
+      "statistical_promotion": false,
+      "snapshot": {
+        "source_sha256_verified": true,
+        "matching_protocol_files": [
+          "configs/repairA2_records.json"
+        ]
+      },
+      "saved_cache_checkpoints": 1
+    },
+    {
+      "stage": "repair120_geometry",
+      "status": "CANCEL_ACKNOWLEDGED",
+      "log_file": "reports\\stopped_repair120_geometry.log",
+      "log_bytes": 3197,
+      "download_error": null,
+      "output_files": 11,
+      "output_bytes": 21854513,
+      "outputs": [
+        {
+          "path": "results\\stopped_repair120_geometry\\wsindy-sampling-saturation-repair120-geometry.log",
+          "bytes": 3197,
+          "sha256": "0c6f5296d3aefdeeaa88add0d4cc9e5dd3a274754f499b52f2143a9b2d277058"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_0_0.npz",
+          "bytes": 2427320,
+          "sha256": "c4a149bb43110c38001ad4336bd6eb477f33faee7ec51a578ec7c8c6a024d6c4"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_0_1.npz",
+          "bytes": 2427333,
+          "sha256": "8915538452abfac5ee83534b2472fb9dffa6061b7480443423e7987366112a5c"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_0_2.npz",
+          "bytes": 2427425,
+          "sha256": "d6ed4d4470613b340ac6ca0e1971c7b82c55c4e16e90d3958049541e17518b52"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_0_3.npz",
+          "bytes": 2427533,
+          "sha256": "e07cd47a2869e37ab8667156a39898e608fa1ef0cc3ce3df7250ac9310afe18b"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_0_4.npz",
+          "bytes": 2427606,
+          "sha256": "8620bbf175c34c0caef2ef5ca0e5bc2d766a6feef24350f2f96f9b5918d832a2"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_1_0.npz",
+          "bytes": 2427359,
+          "sha256": "920515f0b4313b624c98a6e4b395fa891fc482fba314f8a9bf176903081bba37"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_1_1.npz",
+          "bytes": 2427705,
+          "sha256": "1ad7c5bfb70ca9834cde74abd6b06de901ad03c515f913a8b0889abdb7353ce1"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_1_2.npz",
+          "bytes": 2427880,
+          "sha256": "2324d5853ec8a73f1b2613a12c20c5f81c6e7e2b7ae4e5421e7ee9ac39028c44"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\checkpoint_0.005_1_3.npz",
+          "bytes": 2427630,
+          "sha256": "87d50a355f6b1061a83a288fda36087b815a3b5257ca4c5e5c72d68ec6ff74d4"
+        },
+        {
+          "path": "results\\stopped_repair120_geometry\\results_repair120_geometry\\manifest.json",
+          "bytes": 3525,
+          "sha256": "601e77498515910cb8c1d638fb3faa1a611f771285f97f878fe4a775b50ffdf7"
+        }
+      ],
+      "statistical_promotion": false,
+      "snapshot": {
+        "source_sha256_verified": true,
+        "matching_protocol_files": [
+          "configs/repair120_records.json"
+        ]
+      },
+      "saved_cache_checkpoints": 9
+    }
+  ],
+  "failures": [],
+  "note": "Partial outputs are retained as recovery artifacts; incomplete selected repetitions are never interpreted as a completed Monte Carlo experiment.",
+  "collection_complete": true
+}

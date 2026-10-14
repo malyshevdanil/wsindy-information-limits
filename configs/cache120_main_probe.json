@@ -1,0 +1,13 @@
+{
+  "families": [
+    120
+  ],
+  "levels": [
+    0.1
+  ],
+  "initial": [
+    2.25,
+    0.25
+  ],
+  "threshold": 0.05
+}

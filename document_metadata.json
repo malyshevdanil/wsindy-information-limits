@@ -1,0 +1,25 @@
+{
+  "T": 10.0,
+  "tau": 0.5,
+  "continuous_variance": 0.09500000001030577,
+  "effective_samples_mean": 10.52631578833177,
+  "n_values": [
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192
+  ],
+  "docx": "D:\\new_state\\research_sampling_wsindy\\Sampling_Saturation_WSINDy_Research_Plan_RU.docx",
+  "size_bytes": 202346,
+  "sections": 26,
+  "tables": 7,
+  "paragraphs": 212,
+  "word_count_source": 5866,
+  "checks": "DOCX reopened; ZIP CRC valid; headings/tables/image/hyperlinks verified"
+}

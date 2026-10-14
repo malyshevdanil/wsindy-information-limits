@@ -1,0 +1,133 @@
+{
+  "protocol": "compact_120_repairBa",
+  "truth": [
+    1.0,
+    -1.0,
+    1.0,
+    -1.0
+  ],
+  "initial_center": [
+    2.0,
+    0.0
+  ],
+  "initial_half_width": 0.25,
+  "T": 20.0,
+  "h": 0.01,
+  "tau": 0.3,
+  "levels": [
+    0.005,
+    0.05
+  ],
+  "record_counts": [
+    100,
+    800
+  ],
+  "folds": 5,
+  "fold_assignment": "record index modulo five, fixed before observations",
+  "monte_carlo_repetitions": 200,
+  "shards": 4,
+  "seed_base": 7200000,
+  "extra_record_seed_base": 7400000,
+  "bootstrap_seed_base": 820000000,
+  "bootstrap_draws": 999,
+  "confidence_level": 0.95,
+  "pilot_box": [
+    [
+      0.5,
+      1.5
+    ],
+    [
+      -1.5,
+      -0.5
+    ],
+    [
+      0.5,
+      1.5
+    ],
+    [
+      -1.5,
+      -0.5
+    ]
+  ],
+  "pilot_tests": "same six wide tests, corrected moments averaged outside the held-out fold",
+  "pilot_amplitude": "same as the inference observations",
+  "external_training_records": 0,
+  "windows": 120,
+  "basis_relative_cutoff": 1e-10,
+  "covariance_relative_relaxation": 1e-10,
+  "instrument_grid": {
+    "x": [
+      1.5,
+      1.75,
+      2.0,
+      2.25,
+      2.5
+    ],
+    "v": [
+      -0.5,
+      -0.25,
+      0.0,
+      0.25,
+      0.5
+    ]
+  },
+  "instrument_cache": "degree-seven Legendre map, 1024 fixed uniform Sobol nodes; 5% trace-variance gate",
+  "cache_anchor": "midpoint of the predeclared parameter box, no training data",
+  "cache_difference_step": 0.001,
+  "cache_validation_offsets": [
+    [
+      0.02,
+      -0.02,
+      0.02,
+      -0.02
+    ],
+    [
+      -0.02,
+      0.01,
+      -0.02,
+      0.01
+    ],
+    [
+      0.05,
+      -0.05,
+      0.05,
+      -0.05
+    ],
+    [
+      -0.05,
+      0.03,
+      -0.02,
+      0.04
+    ]
+  ],
+  "cache_validation_initials": [
+    [
+      1.75,
+      0.0
+    ],
+    [
+      2.0,
+      0.0
+    ],
+    [
+      2.25,
+      0.25
+    ]
+  ],
+  "maximum_cache_variance_loss": 0.05,
+  "covariance_status": "known OU covariance; no incidental residual calibration claim",
+  "bootstrap": "fixed-fold stratified record bootstrap, all complement pilots refitted; copies retain their physical record fold",
+  "budget_comparison": "200 repetitions, 120 tests, fivefold cross-fitting, no external training sample or split diagnostic",
+  "cache_kernel_source": "malyshevdanil/wsindy-sampling-saturation-repairba-geometry",
+  "smoke_record_counts": [
+    100,
+    800
+  ],
+  "include_oracle_fission_comparison": true,
+  "previous_protocol": "repair120_records.json",
+  "cache_protocol_file": "crossfit_cache_v3.json",
+  "include_split_diagnostic": false,
+  "compare_frozen_bootstrap": false,
+  "bootstrap_amplitude_index": 0,
+  "matched_incidental_main": false
+}

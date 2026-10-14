@@ -1,0 +1,103 @@
+{
+  "all_100_paths_retained": true,
+  "method_rows": 300,
+  "bootstrap_refits": 39900,
+  "score_draws": 99900,
+  "max_target_replay_error": 0.0,
+  "max_nominal_se_relative_replay_error": 0.0,
+  "protocol_and_references_unchanged": true,
+  "all_bootstrap_se_recomputed": true,
+  "all_rejection_decisions_recomputed": true,
+  "stage_audits": [
+    {
+      "stage": "secal_0",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/wald_se_calibration.json"
+      ],
+      "completion": {
+        "status": "complete",
+        "paths": 20,
+        "rows": 60,
+        "elapsed_seconds": 17775.763841643,
+        "smoke": false
+      },
+      "quadrature_gate": {
+        "candidate_absolute_error": 2.4669357675350875e-12,
+        "threshold": 1e-05
+      }
+    },
+    {
+      "stage": "secal_1",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/wald_se_calibration.json"
+      ],
+      "completion": {
+        "status": "complete",
+        "paths": 20,
+        "rows": 60,
+        "elapsed_seconds": 13514.692721675,
+        "smoke": false
+      },
+      "quadrature_gate": {
+        "candidate_absolute_error": 2.4669357675350875e-12,
+        "threshold": 1e-05
+      }
+    },
+    {
+      "stage": "secal_2",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/wald_se_calibration.json"
+      ],
+      "completion": {
+        "status": "complete",
+        "paths": 20,
+        "rows": 60,
+        "elapsed_seconds": 18223.060105017,
+        "smoke": false
+      },
+      "quadrature_gate": {
+        "candidate_absolute_error": 2.4669357675350875e-12,
+        "threshold": 1e-05
+      }
+    },
+    {
+      "stage": "secal_3",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/wald_se_calibration.json"
+      ],
+      "completion": {
+        "status": "complete",
+        "paths": 20,
+        "rows": 60,
+        "elapsed_seconds": 17966.024030703,
+        "smoke": false
+      },
+      "quadrature_gate": {
+        "candidate_absolute_error": 2.4669357675350875e-12,
+        "threshold": 1e-05
+      }
+    },
+    {
+      "stage": "secal_4",
+      "source_sha256_verified": true,
+      "matching_protocol_files": [
+        "configs/wald_se_calibration.json"
+      ],
+      "completion": {
+        "status": "complete",
+        "paths": 20,
+        "rows": 60,
+        "elapsed_seconds": 18255.4039019,
+        "smoke": false
+      },
+      "quadrature_gate": {
+        "candidate_absolute_error": 2.4669357675350875e-12,
+        "threshold": 1e-05
+      }
+    }
+  ]
+}

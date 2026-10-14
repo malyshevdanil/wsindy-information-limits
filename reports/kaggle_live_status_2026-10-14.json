@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-10-14T02:36:23.531444+00:00",
+  "active_jobs": [
+    {
+      "stage": "iq_geo_4",
+      "status": "RUNNING",
+      "log_available": false,
+      "completed_geometry": null,
+      "completed_observations": null,
+      "latest_bootstrap_progress": null
+    },
+    {
+      "stage": "iq_bootn_00",
+      "status": "RUNNING",
+      "log_available": false,
+      "completed_geometry": null,
+      "completed_observations": null,
+      "latest_bootstrap_progress": null
+    },
+    {
+      "stage": "iq_bootn_01",
+      "status": "RUNNING",
+      "log_available": false,
+      "completed_geometry": null,
+      "completed_observations": null,
+      "latest_bootstrap_progress": null
+    },
+    {
+      "stage": "iq_bootn_02",
+      "status": "RUNNING",
+      "log_available": false,
+      "completed_geometry": null,
+      "completed_observations": null,
+      "latest_bootstrap_progress": null
+    },
+    {
+      "stage": "iq_bootn_20",
+      "status": "RUNNING",
+      "log_available": false,
+      "completed_geometry": null,
+      "completed_observations": null,
+      "latest_bootstrap_progress": null
+    }
+  ],
+  "previously_verified_completed": 8
+}

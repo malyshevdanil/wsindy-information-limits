@@ -1,0 +1,20 @@
+{
+  "universal": {
+    "original_basis": {
+      "raw_windows": 480,
+      "retained_windows": 382,
+      "relative_cutoff": 1e-10,
+      "minimum_retained_relative_eigenvalue": 1.709078722995105e-10
+    },
+    "half_windows": 12,
+    "retained_scalar_tests": 394,
+    "basis_is_model_independent": true,
+    "relative_cutoff": 1e-10
+  },
+  "free": {
+    "raw_windows": 480,
+    "retained_windows": 382,
+    "relative_cutoff": 1e-10,
+    "minimum_retained_relative_eigenvalue": 1.709078722995105e-10
+  }
+}

@@ -24,15 +24,15 @@ def main():
     assert user.status_code==200 and user.json()['login']==owner
     response=session.get(base+'/releases/tags/'+cfg['version'],timeout=30)
     if response.status_code==404:
-        notes='''Theory and reproducible benchmarks for boundary-free weak ODE estimation with nuisance initial states.
+        notes='''The information cost of boundary-free weak estimation under correlated noise.
 
-Includes exact weak-class and local-information results; full polynomial covariance; independent-instrument heterogeneous-record simulations with 120/480 tests, 400 repetitions and record-bootstrap inference; matched 128-path likelihood at 5% noise; author-method comparisons and all frozen Kaggle execution snapshots.
+Includes exact adjoint-range characterizations and initial-state information cost; a constructive full-library small-noise efficiency theorem under a checkable jet condition; its exact Van der Pol verification; a deterministic finite-span covariance reference; and paired boundary and testing benchmarks.
 
-The heterogeneous-record benchmark uses known OU covariance and conditions on a separate frozen training sample. At 5% noise its feasible 480-test scaled RMSE remains above the local reference; at 0.5% and 800 records joint coverage is 92.25%. The archive preserves these limitations and every planned result. It makes no claim of journal acceptance or submission.
+Independent small-noise Wald validation retains 2000 null observations and 1000 observations for each of two alternatives. The size tolerance passes; the full power tolerance check fails at half a reference unit. All five guarded-estimator noise levels and their matched covariance reference are retained. Moderate-noise bootstrap validation is incomplete following a recorded compute-budget decision; unsubmitted frozen notebooks are protocol artifacts, not completed results.
 
-The manuscript uses the official IMS EJS class. Creator ORCID: https://orcid.org/0009-0007-0947-3866. Code and data are accompanied by SHA256 manifests and verified replay scripts.'''
+The main manuscript uses the official IMS EJS class. Core proofs are in a shortened submission supplement; independent-record, fission, cross-fitting and incidental-state extensions are preserved separately. Source and original-byte outputs carry SHA-256 manifests. This archive makes no claim of journal submission or acceptance. Creator ORCID: https://orcid.org/0009-0007-0947-3866.'''
         response=session.post(base+'/releases',json=dict(tag_name=cfg['version'],target_commitish=verified['commit'],
-            name=cfg['version']+' - nuisance initial states and record-level inference',body=notes,
+            name=cfg['version']+' - constructive efficiency and information cost',body=notes,
             draft=False,prerelease=False),timeout=60)
     if response.status_code not in (200,201):
         raise RuntimeError('GitHub release request failed with HTTP '+str(response.status_code))

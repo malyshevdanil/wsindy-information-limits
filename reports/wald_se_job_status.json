@@ -1,0 +1,32 @@
+{
+  "statuses": [
+    {
+      "stage": "secal_0",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "secal_1",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "secal_2",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "secal_3",
+      "status": "COMPLETE"
+    },
+    {
+      "stage": "secal_4",
+      "status": "COMPLETE"
+    }
+  ],
+  "completed": [
+    "secal_0",
+    "secal_1",
+    "secal_2",
+    "secal_3",
+    "secal_4"
+  ],
+  "automatic_resubmission": false
+}

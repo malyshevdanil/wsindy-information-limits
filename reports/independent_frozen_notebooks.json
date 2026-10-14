@@ -1,0 +1,557 @@
+{
+  "stages": 69,
+  "files": [
+    {
+      "path": "kaggle/iq_nom_0/kernel-metadata.json",
+      "sha256": "11263d8d3a45cc05b0e7c733f71f2c81471077a4474fca98a89ec45a6e7fcb8b"
+    },
+    {
+      "path": "kaggle/iq_nom_0/wsindy_iq_nom_0.ipynb",
+      "sha256": "6a4402d842e7b89ba2b10f5e8608a3888bd32f567d503f9bb3c9d1e86671e33f"
+    },
+    {
+      "path": "kaggle/iq_nom_1/kernel-metadata.json",
+      "sha256": "777feea538a102eb280c1f72594d441921003b9d8f30885ac45b0b43b193c277"
+    },
+    {
+      "path": "kaggle/iq_nom_1/wsindy_iq_nom_1.ipynb",
+      "sha256": "2c5f7a800ee54f8f5819603140012b9b4b35556b6c495f1407f5b45ae6f673c5"
+    },
+    {
+      "path": "kaggle/iq_nom_2/kernel-metadata.json",
+      "sha256": "f9479c96b1978b96d10d3ba8ee2ccc4cd892a902b60465782248574cc096e203"
+    },
+    {
+      "path": "kaggle/iq_nom_2/wsindy_iq_nom_2.ipynb",
+      "sha256": "22695631e306d55ec8fc54556fc2d019fcf091cf2a0a7f657c7af06df8100d15"
+    },
+    {
+      "path": "kaggle/iq_nom_3/kernel-metadata.json",
+      "sha256": "ef618978c9c79a5e86a9c65d16ab5241ffb6aa74c6a61bf3d636b3ac995a198e"
+    },
+    {
+      "path": "kaggle/iq_nom_3/wsindy_iq_nom_3.ipynb",
+      "sha256": "aa7d2dffac329096904ed01a59ffba3d2f4f10583ee8cb31246965c49020ab06"
+    },
+    {
+      "path": "kaggle/iq_geo_0/kernel-metadata.json",
+      "sha256": "5eaefe32c46141420e63302e4b5e6201bbad145e3e38e91e48d35b4bf8719f02"
+    },
+    {
+      "path": "kaggle/iq_geo_0/wsindy_iq_geo_0.ipynb",
+      "sha256": "a68cd418e251a9506eb60fb7e8a9bb46bd7fc0a7f1cd9ce43897f8164f0a081e"
+    },
+    {
+      "path": "kaggle/iq_geo_1/kernel-metadata.json",
+      "sha256": "2870f0e14566247fba1a61ab53132a1fe62ae82c5f49abd3435035dae2a45e99"
+    },
+    {
+      "path": "kaggle/iq_geo_1/wsindy_iq_geo_1.ipynb",
+      "sha256": "fad10c354434b67f65ea4822f00c95d43d6a2528ef5d105ce1023d157aefc024"
+    },
+    {
+      "path": "kaggle/iq_geo_2/kernel-metadata.json",
+      "sha256": "d175645ece9333f397d391bfc4298663659fed7d55316c545c2dbad8542d7473"
+    },
+    {
+      "path": "kaggle/iq_geo_2/wsindy_iq_geo_2.ipynb",
+      "sha256": "c5bc26b47887f0a28a565c513eeb2c4457491bbd17d1907ac1d49b226f081701"
+    },
+    {
+      "path": "kaggle/iq_geo_3/kernel-metadata.json",
+      "sha256": "266d4093f0e20fb7196a13a58e2d6d5880d1b96ad9ae66e54a21a33d40648238"
+    },
+    {
+      "path": "kaggle/iq_geo_3/wsindy_iq_geo_3.ipynb",
+      "sha256": "bde2e30ceb4a2d9fb8edb86714d25fe36517e903ed4cbf63ac890db4db062928"
+    },
+    {
+      "path": "kaggle/iq_geo_4/kernel-metadata.json",
+      "sha256": "a43a39087c9f84d657393614b38264540a88bd2b8fb0164109259f70b5bbf10d"
+    },
+    {
+      "path": "kaggle/iq_geo_4/wsindy_iq_geo_4.ipynb",
+      "sha256": "e2f68035af162741f145fd92bc84f827058da41e1a11db040175c1c7415277cf"
+    },
+    {
+      "path": "kaggle/iq_bootn_00/kernel-metadata.json",
+      "sha256": "44ce3429f6b8b88c2fe81b5ebaa4e79c89de91a3ab0a7ae867148e6edde4d2d0"
+    },
+    {
+      "path": "kaggle/iq_bootn_00/wsindy_iq_bootn_00.ipynb",
+      "sha256": "fc3d6fac2cce34928ffd46e987bd6336ad736c1df8f886c660f03c3c90ac2c8d"
+    },
+    {
+      "path": "kaggle/iq_bootn_01/kernel-metadata.json",
+      "sha256": "9a0ff89feeea7c24eb8ffb91ddfd896e4de933d731dc813d6f4443793bdea034"
+    },
+    {
+      "path": "kaggle/iq_bootn_01/wsindy_iq_bootn_01.ipynb",
+      "sha256": "a61e99d37695839e26fffb6dcc71f97532da88550a005dc97f4cb82332e1d6cd"
+    },
+    {
+      "path": "kaggle/iq_bootn_02/kernel-metadata.json",
+      "sha256": "08a13f6cc28c78a64c7f744179166c0dd0c5cf499dae8b3eb22fdeeaba0296ed"
+    },
+    {
+      "path": "kaggle/iq_bootn_02/wsindy_iq_bootn_02.ipynb",
+      "sha256": "d4ef4566faa31addd02001767c96191aaa43b7445f8da1d2d0edeebf201b6ff1"
+    },
+    {
+      "path": "kaggle/iq_bootn_03/kernel-metadata.json",
+      "sha256": "dcfd6de8579127703b2d7d00ab59cc8f499c00e4d6b6d46fa4893272071150bf"
+    },
+    {
+      "path": "kaggle/iq_bootn_03/wsindy_iq_bootn_03.ipynb",
+      "sha256": "5e67d99d59ddefac1234cac50912334238672e5c4ff991c1dc204a391b1763ac"
+    },
+    {
+      "path": "kaggle/iq_bootn_04/kernel-metadata.json",
+      "sha256": "cbcbcc053b2ad4082feecc791e5a2ed0e1002393db9fd20a66cd0718e1f6adac"
+    },
+    {
+      "path": "kaggle/iq_bootn_04/wsindy_iq_bootn_04.ipynb",
+      "sha256": "45360e23e6efeb8d233a0471c33ca7ab8db039f3ebcda4cca1d468835e4759c6"
+    },
+    {
+      "path": "kaggle/iq_bootn_05/kernel-metadata.json",
+      "sha256": "24cb1f47b3b239f76792b320b5c805608e6334d2f3113e7ae58d2b69b7e84c3d"
+    },
+    {
+      "path": "kaggle/iq_bootn_05/wsindy_iq_bootn_05.ipynb",
+      "sha256": "84d45f01200e0a92bc8bb12c2fa0778867d9d0e91df434933d31bbaf758fb065"
+    },
+    {
+      "path": "kaggle/iq_bootn_06/kernel-metadata.json",
+      "sha256": "907018b9e85c4209b700301365189403a5597ece52ea6f231d1858caf1e1d90d"
+    },
+    {
+      "path": "kaggle/iq_bootn_06/wsindy_iq_bootn_06.ipynb",
+      "sha256": "23adeb8c9ae2b537a5b4d6f82c95c332da3cc9463e0c206fb1305088c2f9c030"
+    },
+    {
+      "path": "kaggle/iq_bootn_07/kernel-metadata.json",
+      "sha256": "109824af5a6c17e12a96da67bf34f0ce75e489405699b818037a36e5acba3e7c"
+    },
+    {
+      "path": "kaggle/iq_bootn_07/wsindy_iq_bootn_07.ipynb",
+      "sha256": "ea91a1d67c0288110a7be76036924c3a812363066aad26bac6926f13c3308c19"
+    },
+    {
+      "path": "kaggle/iq_bootn_08/kernel-metadata.json",
+      "sha256": "cd610d60dc1daff2cf0e2ef39198193c7452b31eccd9e5c996acaa7724094dfd"
+    },
+    {
+      "path": "kaggle/iq_bootn_08/wsindy_iq_bootn_08.ipynb",
+      "sha256": "44ed86cfeb5b730769ecb723df5e0e533e911ac342215fb38b9dae13ed7608f3"
+    },
+    {
+      "path": "kaggle/iq_bootn_09/kernel-metadata.json",
+      "sha256": "9c4074cd08a13838e872db2c6e03a07f5c92f4de0e195bfd92c82f789700b009"
+    },
+    {
+      "path": "kaggle/iq_bootn_09/wsindy_iq_bootn_09.ipynb",
+      "sha256": "0d1c8ff81739648f2de655b39efa55b4c8cbab3f5542b2bea08d4d3ae906762d"
+    },
+    {
+      "path": "kaggle/iq_bootn_10/kernel-metadata.json",
+      "sha256": "3185df3acb908b6fb51065672faf37941afca6a9b747734fd6ccc34bc31ee651"
+    },
+    {
+      "path": "kaggle/iq_bootn_10/wsindy_iq_bootn_10.ipynb",
+      "sha256": "22bef16451124eb15cddbc82921bd12e16b096e21547b307ee07d4e0f8703699"
+    },
+    {
+      "path": "kaggle/iq_bootn_11/kernel-metadata.json",
+      "sha256": "91228818a397cec38321dae8009be5916e54c1a0c72e7e7313a9c231d448e8c9"
+    },
+    {
+      "path": "kaggle/iq_bootn_11/wsindy_iq_bootn_11.ipynb",
+      "sha256": "bcb843ff6e07ee12305261fdffe4c43b5fad71a985053c1db3f943788d6b0364"
+    },
+    {
+      "path": "kaggle/iq_bootn_12/kernel-metadata.json",
+      "sha256": "6926bb4b160fabd3edda5be0df8add7d8d94f1a02e9993a4b74947092ecebbf6"
+    },
+    {
+      "path": "kaggle/iq_bootn_12/wsindy_iq_bootn_12.ipynb",
+      "sha256": "6135ccf7a50df336f8045ec6df9f63d91cb5b16fa32c2db2fd279152829cbba0"
+    },
+    {
+      "path": "kaggle/iq_bootn_13/kernel-metadata.json",
+      "sha256": "f19028f497715d7294c23fd6bd56474ee53abc7e8962459e3018165caf06183b"
+    },
+    {
+      "path": "kaggle/iq_bootn_13/wsindy_iq_bootn_13.ipynb",
+      "sha256": "a7ae7e815b8be8eac872d4e3816b08acec8e76ecee44c4d918c4aec94d7a507c"
+    },
+    {
+      "path": "kaggle/iq_bootn_14/kernel-metadata.json",
+      "sha256": "02c56362c22cd7a74a0db9e0bd178b836c58a5470a13b09b8c39947edbe9bd33"
+    },
+    {
+      "path": "kaggle/iq_bootn_14/wsindy_iq_bootn_14.ipynb",
+      "sha256": "9b7f4719aaba293ab664be05f983b89b355f4f7286a1f1f7b7b252ae5801fb0d"
+    },
+    {
+      "path": "kaggle/iq_bootn_15/kernel-metadata.json",
+      "sha256": "ec8d377c5c424e938ba6dbb94bada28fce738373b7298451febc8b6d029e64cd"
+    },
+    {
+      "path": "kaggle/iq_bootn_15/wsindy_iq_bootn_15.ipynb",
+      "sha256": "1a342c22eeeafb8c4445b29edf49256abe635de177d0d3bd41a34afa2905fdf9"
+    },
+    {
+      "path": "kaggle/iq_bootn_16/kernel-metadata.json",
+      "sha256": "54355b348cddf6a84b9b89af10d081ae3b4c897d4f7ed9c5dd723d17fd46c80c"
+    },
+    {
+      "path": "kaggle/iq_bootn_16/wsindy_iq_bootn_16.ipynb",
+      "sha256": "f4c0eacfeca3cbe66631603418aeb1aba979eb8fcf55ee18d99e6f5f48f7ec7a"
+    },
+    {
+      "path": "kaggle/iq_bootn_17/kernel-metadata.json",
+      "sha256": "018d6d671e358babe11c20f4739338eec36b412149ae36038fb7d80ba00d1199"
+    },
+    {
+      "path": "kaggle/iq_bootn_17/wsindy_iq_bootn_17.ipynb",
+      "sha256": "74ea12adb4f2231ed697a3429c6b9c9d2e54461dc350bd3d62ebd3d25f658738"
+    },
+    {
+      "path": "kaggle/iq_bootn_18/kernel-metadata.json",
+      "sha256": "f156726ce2f6842c0233c401f6b079e5349f9d75dc9970535e87941bdf28be4d"
+    },
+    {
+      "path": "kaggle/iq_bootn_18/wsindy_iq_bootn_18.ipynb",
+      "sha256": "2c872de920421a86b6af3bc573bd46f4ff781db60af45e5d56b0f59083e62b62"
+    },
+    {
+      "path": "kaggle/iq_bootn_19/kernel-metadata.json",
+      "sha256": "a82767ad356d0fb992aaea237a662ab1a67b4908e53384183c1ad82069db6fe4"
+    },
+    {
+      "path": "kaggle/iq_bootn_19/wsindy_iq_bootn_19.ipynb",
+      "sha256": "cac186b538dd2320bb35df103840040516ca54a2c5216e338eb232d14aee359a"
+    },
+    {
+      "path": "kaggle/iq_bootn_20/kernel-metadata.json",
+      "sha256": "31e55a4c739b699802389e1e2e425c8762eb28f2da02fc19d525e269cc2ad3da"
+    },
+    {
+      "path": "kaggle/iq_bootn_20/wsindy_iq_bootn_20.ipynb",
+      "sha256": "09c78e96ea22313050b9cbca20b08cbb07a27e71390270e0a7e747152a9d52a7"
+    },
+    {
+      "path": "kaggle/iq_bootn_21/kernel-metadata.json",
+      "sha256": "90e5bc6c33a144a89eba699191cba9be7288181d32d09c05c23ce8686c0a3416"
+    },
+    {
+      "path": "kaggle/iq_bootn_21/wsindy_iq_bootn_21.ipynb",
+      "sha256": "0e2e628ed59df9fb3f3cdfca4c656b4eaaf0e5d7c45e1b77f6d84e9f8388124b"
+    },
+    {
+      "path": "kaggle/iq_bootn_22/kernel-metadata.json",
+      "sha256": "2a2f358dd0144ae50a3eebcc4855a4e5883340c51acc3f9497096139602eccc2"
+    },
+    {
+      "path": "kaggle/iq_bootn_22/wsindy_iq_bootn_22.ipynb",
+      "sha256": "53095aa1a311dc5abbedd958c0ab1e5416dbfa5f4575e5652a028721f394469c"
+    },
+    {
+      "path": "kaggle/iq_bootn_23/kernel-metadata.json",
+      "sha256": "5738b97f6756357e6f6f5acd233ed250e7f03fc83ac70f293f489094d03cce38"
+    },
+    {
+      "path": "kaggle/iq_bootn_23/wsindy_iq_bootn_23.ipynb",
+      "sha256": "2c7086f8f92cb036c65103683e9a5e8c5b5b782c870f838adc38903c99462f4b"
+    },
+    {
+      "path": "kaggle/iq_bootn_24/kernel-metadata.json",
+      "sha256": "b3abc966191ab37dc25c051616495f1e841ca5f8dfb2748f4277c5338fe67aeb"
+    },
+    {
+      "path": "kaggle/iq_bootn_24/wsindy_iq_bootn_24.ipynb",
+      "sha256": "d9699a101f7eb9b887a75ea472863940eac3fab333accff691d1613661cdcca8"
+    },
+    {
+      "path": "kaggle/iq_bootn_25/kernel-metadata.json",
+      "sha256": "27b38cc502088247438d0493d626486b4ef83cce8e73f395691f1b2a317b3533"
+    },
+    {
+      "path": "kaggle/iq_bootn_25/wsindy_iq_bootn_25.ipynb",
+      "sha256": "90383ec891ee57353060a4c8847b5e8d90e918820aac62796b80dfbf3c99e149"
+    },
+    {
+      "path": "kaggle/iq_bootn_26/kernel-metadata.json",
+      "sha256": "60af27b23d0a9172995d76c9c1be68935f8bf26f003bec8a374c754294757d26"
+    },
+    {
+      "path": "kaggle/iq_bootn_26/wsindy_iq_bootn_26.ipynb",
+      "sha256": "c815723f02812d314c7541c62605919b26527d95bdfa1dfe8fae604629fa716a"
+    },
+    {
+      "path": "kaggle/iq_bootn_27/kernel-metadata.json",
+      "sha256": "d79cc005f3b0d736483d9f6ea14882b1ec257fac75ab36bddbc66f7bd12f6cd0"
+    },
+    {
+      "path": "kaggle/iq_bootn_27/wsindy_iq_bootn_27.ipynb",
+      "sha256": "f649bde72b266b8d277db48a32171ae386508a2a04de4d57c9c26479e496b3bd"
+    },
+    {
+      "path": "kaggle/iq_bootn_28/kernel-metadata.json",
+      "sha256": "22b378ecca10613ff6fa8a26cbd866575d2b1d971ecf9baa7b64d9a7b68340ff"
+    },
+    {
+      "path": "kaggle/iq_bootn_28/wsindy_iq_bootn_28.ipynb",
+      "sha256": "de6975687b35847cb306c3ddea331295c84f38bb49971ed5292752ccc621e026"
+    },
+    {
+      "path": "kaggle/iq_bootn_29/kernel-metadata.json",
+      "sha256": "a4ad6c5b9ea4972e24247ab1a540553221e7169e4717d72403da677e056b825a"
+    },
+    {
+      "path": "kaggle/iq_bootn_29/wsindy_iq_bootn_29.ipynb",
+      "sha256": "4fe0299d3e67274f845dc4de235bfc4b49b00038197b47f8f0b6cc95bd3c12df"
+    },
+    {
+      "path": "kaggle/iq_bootn_30/kernel-metadata.json",
+      "sha256": "bf759744441c0e244b2db4a7bada667b0e7d6335613c931e60c4c2c589d6f0be"
+    },
+    {
+      "path": "kaggle/iq_bootn_30/wsindy_iq_bootn_30.ipynb",
+      "sha256": "412d7f3cbe31a41e244bb7c62cb70ee646f74a9ee8141cd0126229040feb84db"
+    },
+    {
+      "path": "kaggle/iq_bootn_31/kernel-metadata.json",
+      "sha256": "069096325b13fd75da262be9738c044b8e1bbd2eeb10f5b57703a349fe9a00b4"
+    },
+    {
+      "path": "kaggle/iq_bootn_31/wsindy_iq_bootn_31.ipynb",
+      "sha256": "e9eb3d045e1e57017ffb1eb1d365a10317aeea48db1ff16adaedccd3f832668e"
+    },
+    {
+      "path": "kaggle/iq_bootn_32/kernel-metadata.json",
+      "sha256": "c9655c7fb6f0c56c0dfbb83dadcdf64067d3a48f86ae9f650a5bd29110587e04"
+    },
+    {
+      "path": "kaggle/iq_bootn_32/wsindy_iq_bootn_32.ipynb",
+      "sha256": "67c9d3c00e49fa87470514ab0a3e976f3d2e86ab0d19adae7f37abfa4541057e"
+    },
+    {
+      "path": "kaggle/iq_bootn_33/kernel-metadata.json",
+      "sha256": "d4b2be379090baada502b5f6c3c22c22748f9115be4906f89c7b9db5c42c06c8"
+    },
+    {
+      "path": "kaggle/iq_bootn_33/wsindy_iq_bootn_33.ipynb",
+      "sha256": "8929a765334537d5e9547415de4fdc60fd0b17ba6082f6f79bea288c6a5cec25"
+    },
+    {
+      "path": "kaggle/iq_bootn_34/kernel-metadata.json",
+      "sha256": "6f0aa9ef09b44b6cab9e8acc911f509c35ca70b5f2e895fe5e8611ccc52deea8"
+    },
+    {
+      "path": "kaggle/iq_bootn_34/wsindy_iq_bootn_34.ipynb",
+      "sha256": "caaa915de607a494cb4d2177a27c2ad8d1638934a0c797bed1774be29405173d"
+    },
+    {
+      "path": "kaggle/iq_bootn_35/kernel-metadata.json",
+      "sha256": "373200f932ac3cf03ff10ba9e633c32358897d97d22df680a24b11879014fba7"
+    },
+    {
+      "path": "kaggle/iq_bootn_35/wsindy_iq_bootn_35.ipynb",
+      "sha256": "8fae5e6e5cbb76e88889c3500babd86f67fb8ee253cdc7d436af4c655efa17fd"
+    },
+    {
+      "path": "kaggle/iq_bootn_36/kernel-metadata.json",
+      "sha256": "2bc614fa53dab0cd5cac457430e91591d8079e883a049c1235ab2e884ad0691e"
+    },
+    {
+      "path": "kaggle/iq_bootn_36/wsindy_iq_bootn_36.ipynb",
+      "sha256": "0d937955c4fa28596e0e60fb7b3cf8e566729660afc0e86245fa51dab68f0021"
+    },
+    {
+      "path": "kaggle/iq_bootn_37/kernel-metadata.json",
+      "sha256": "eb5c1191ab4fadf0c4a01a110911900fe890e2a966ed74e30eed03f69a56a28d"
+    },
+    {
+      "path": "kaggle/iq_bootn_37/wsindy_iq_bootn_37.ipynb",
+      "sha256": "f66e370743aa364b85df6746557f4ef636975bbfec2f5fa74f3fdd92cc59338e"
+    },
+    {
+      "path": "kaggle/iq_bootn_38/kernel-metadata.json",
+      "sha256": "228ec2e13c61c8f1419a281e676bb5acac1dd2d2a59a63c8aa795de5d599e139"
+    },
+    {
+      "path": "kaggle/iq_bootn_38/wsindy_iq_bootn_38.ipynb",
+      "sha256": "cf72600cb6e8cc33485f2ffc7be930c1a14286c4fdd3d155e85ead09e64eb17c"
+    },
+    {
+      "path": "kaggle/iq_bootn_39/kernel-metadata.json",
+      "sha256": "1b702989620dc921c740a4b5c60a4ac85315737dce13a55d004c5f8b8644f139"
+    },
+    {
+      "path": "kaggle/iq_bootn_39/wsindy_iq_bootn_39.ipynb",
+      "sha256": "9493f0b407ca75cf58aee199ecf3296b36dd3742a4bf708233998a6c800844ff"
+    },
+    {
+      "path": "kaggle/iq_bootn_40/kernel-metadata.json",
+      "sha256": "2bb7e0f3ca7022423d9ad725606b907b1d01a75445f968331b4dc6f764f86df4"
+    },
+    {
+      "path": "kaggle/iq_bootn_40/wsindy_iq_bootn_40.ipynb",
+      "sha256": "b6b5f66f2a935e1c60ca423d18b7f8d753dc94e221d2144ac34da0371a96b6a9"
+    },
+    {
+      "path": "kaggle/iq_bootn_41/kernel-metadata.json",
+      "sha256": "bf64f9652547c75509a76f197133fc7fa1a77806e81fa183aa34e5e7758e070b"
+    },
+    {
+      "path": "kaggle/iq_bootn_41/wsindy_iq_bootn_41.ipynb",
+      "sha256": "90b6c02c82ce49a99836d03a8826d5c66160bd298a1e29b679f19f6d8ed2f53b"
+    },
+    {
+      "path": "kaggle/iq_bootn_42/kernel-metadata.json",
+      "sha256": "c9417fce80c18fb1bb4c5669304728f410c204c6898defbe13407fa273d2727a"
+    },
+    {
+      "path": "kaggle/iq_bootn_42/wsindy_iq_bootn_42.ipynb",
+      "sha256": "fff1503c830250fde72e3932ddf7c9325b5b54c82e026c441fb84712328afed8"
+    },
+    {
+      "path": "kaggle/iq_bootn_43/kernel-metadata.json",
+      "sha256": "8b49bbd6f2779ef037ee74cf4325205359b72517b450d881b56e83e9927ec8ab"
+    },
+    {
+      "path": "kaggle/iq_bootn_43/wsindy_iq_bootn_43.ipynb",
+      "sha256": "48d8d9b336340f5030efc16326137da8082e5fded9f5090670942440242d84a7"
+    },
+    {
+      "path": "kaggle/iq_bootn_44/kernel-metadata.json",
+      "sha256": "864b9ad965f55cc359c7ea0fec605144e4158d8700b737d4f50680ab03c5beaa"
+    },
+    {
+      "path": "kaggle/iq_bootn_44/wsindy_iq_bootn_44.ipynb",
+      "sha256": "6d779f5c34a3bc3fe1808723e26118c4fe99a1644cbc49d3cde6311ee9f18be6"
+    },
+    {
+      "path": "kaggle/iq_bootn_45/kernel-metadata.json",
+      "sha256": "2cc9bed9a9308e2c1e1ed88b466b30207ff9ea9e2e993005574a891b5f4ec310"
+    },
+    {
+      "path": "kaggle/iq_bootn_45/wsindy_iq_bootn_45.ipynb",
+      "sha256": "2f7574c22ffadc930e25ada8adf8b379865d76da576ea41707c47424b6e0e82c"
+    },
+    {
+      "path": "kaggle/iq_bootn_46/kernel-metadata.json",
+      "sha256": "60f492cdbb06dd5e6594f74922b029271005645c120972e7cf55c00116a0f3b3"
+    },
+    {
+      "path": "kaggle/iq_bootn_46/wsindy_iq_bootn_46.ipynb",
+      "sha256": "6805f766c0d69817924ca6a18c0dc5d972448baee1384ae8622d6fa23efd3b42"
+    },
+    {
+      "path": "kaggle/iq_bootn_47/kernel-metadata.json",
+      "sha256": "facb3d1844a7b8fb220bde5ade7935080a5180862ad498fa6ace27ae78d8a6ad"
+    },
+    {
+      "path": "kaggle/iq_bootn_47/wsindy_iq_bootn_47.ipynb",
+      "sha256": "4cbaea0ab248d3bcbaa37ae5bdcd7b33db0546dab8442b35591a980252e7560f"
+    },
+    {
+      "path": "kaggle/iq_bootn_48/kernel-metadata.json",
+      "sha256": "1c411e8367dddff769aba59a7b69ebfcefe0e372c151a70c73f05cabebf79fb8"
+    },
+    {
+      "path": "kaggle/iq_bootn_48/wsindy_iq_bootn_48.ipynb",
+      "sha256": "36fa9aa444eba7c4a1d55ce1a32bf936118226858c70795f8c6e56131c6bb686"
+    },
+    {
+      "path": "kaggle/iq_bootn_49/kernel-metadata.json",
+      "sha256": "dd37c20431c5bfe23009e5137f9aa8db9fbc8e43fd830fb75fb87e4ea712cf23"
+    },
+    {
+      "path": "kaggle/iq_bootn_49/wsindy_iq_bootn_49.ipynb",
+      "sha256": "4b3582bfacaa17c4dc0c7eb8a1c221d68210beab129c7211976ca26239a6710b"
+    },
+    {
+      "path": "kaggle/iq_bootp_00/kernel-metadata.json",
+      "sha256": "f948089cecfd07d4fc12a87a0144cdc6f98a08fc374dd31148ce5f6c7dbf2697"
+    },
+    {
+      "path": "kaggle/iq_bootp_00/wsindy_iq_bootp_00.ipynb",
+      "sha256": "877c88c1bc422b7a92eb838db55119f5b30dbd266bf34a767e50148b87af41d1"
+    },
+    {
+      "path": "kaggle/iq_bootp_01/kernel-metadata.json",
+      "sha256": "3aff4305e3ea2428a9bd4bc5dc76265832b5f1e7aff663433f379113679a59b2"
+    },
+    {
+      "path": "kaggle/iq_bootp_01/wsindy_iq_bootp_01.ipynb",
+      "sha256": "ed6717661e894604000bffdc824b00af0296b5e1188e494a7871143d314dd610"
+    },
+    {
+      "path": "kaggle/iq_bootp_02/kernel-metadata.json",
+      "sha256": "f838b61152a09d3e7308c75f98694541474e7d4ff0a96b58b862583adcc7750a"
+    },
+    {
+      "path": "kaggle/iq_bootp_02/wsindy_iq_bootp_02.ipynb",
+      "sha256": "de8aa6bde8fb39bbaf39e3d346c87b80e9c4fe68cb26d4c967abae3e9394033f"
+    },
+    {
+      "path": "kaggle/iq_bootp_03/kernel-metadata.json",
+      "sha256": "2d052f12ab2ddeffd0b58217f9ef5c073ae2da59217c7eb23e691473d2ec3c4c"
+    },
+    {
+      "path": "kaggle/iq_bootp_03/wsindy_iq_bootp_03.ipynb",
+      "sha256": "89eef198d227b0069ce3c337ebb6820fbf159792fa9e9263dcbbeead46fc043b"
+    },
+    {
+      "path": "kaggle/iq_bootp_04/kernel-metadata.json",
+      "sha256": "5e97b32c5e2ed74cb7ad87a0dab90c5eb0218e8631568a54e5d618e9941a8cf4"
+    },
+    {
+      "path": "kaggle/iq_bootp_04/wsindy_iq_bootp_04.ipynb",
+      "sha256": "6e1ca8c9ed4e7d26501de067d7d91d5c79c0a170e5430f1c78af1ed9804df663"
+    },
+    {
+      "path": "kaggle/iq_bootp_05/kernel-metadata.json",
+      "sha256": "f49d583d7d684f9908404b9940170bba94ab7384cdf0a1ef0e0745b8d4783209"
+    },
+    {
+      "path": "kaggle/iq_bootp_05/wsindy_iq_bootp_05.ipynb",
+      "sha256": "9a6192279029ea727adc5b394a0532e77633c6421d6e1d6ac71c23aebbfc303e"
+    },
+    {
+      "path": "kaggle/iq_bootp_06/kernel-metadata.json",
+      "sha256": "45088d4b23ab0f672bd60733aac00182493eedfc74ed1430e58a94f7c0af0669"
+    },
+    {
+      "path": "kaggle/iq_bootp_06/wsindy_iq_bootp_06.ipynb",
+      "sha256": "f79a402e9af63cb9bd3a1954ed1799fd86634bf90a62229030b950f0233b7459"
+    },
+    {
+      "path": "kaggle/iq_bootp_07/kernel-metadata.json",
+      "sha256": "1c123b7d756bc4795e78fc37a74390f3f9ca8eff7e788035ed038d9fbee768fb"
+    },
+    {
+      "path": "kaggle/iq_bootp_07/wsindy_iq_bootp_07.ipynb",
+      "sha256": "5ec2e444253de06efcc4023c32f1041b83a379c43c7fa11187e40ff65ac6bfc7"
+    },
+    {
+      "path": "kaggle/iq_bootp_08/kernel-metadata.json",
+      "sha256": "68c552ee467a4016299790b550edde4740b6e15609a82bc2c315b28c04028905"
+    },
+    {
+      "path": "kaggle/iq_bootp_08/wsindy_iq_bootp_08.ipynb",
+      "sha256": "81108694aadd223dd8679c665879695eba9da6698c3a12d1b0d453a8cb4c46e0"
+    },
+    {
+      "path": "kaggle/iq_bootp_09/kernel-metadata.json",
+      "sha256": "0515792aed4880b4d9b0371c011e41fbc29ec9b1f3630eb241e7c95b5c65b2a6"
+    },
+    {
+      "path": "kaggle/iq_bootp_09/wsindy_iq_bootp_09.ipynb",
+      "sha256": "d8a138cfa420a430e402ef953107f433d0c63d4729f401181cce265de1a5a5b1"
+    }
+  ]
+}

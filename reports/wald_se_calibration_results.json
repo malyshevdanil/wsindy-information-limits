@@ -1,0 +1,49 @@
+{
+  "protocol": "vdp5_null_paired_wald_se_v1",
+  "complete_paths": 100,
+  "methods": {
+    "nominal": {
+      "paths": 100,
+      "rejections": 23,
+      "rejection_rate": 0.23,
+      "wilson95": [
+        0.15843265880303448,
+        0.3215438302287378
+      ],
+      "compatible_with_5_percent": false,
+      "median_se": 0.043250078300596996,
+      "median_se_ratio_to_nominal": 1.0
+    },
+    "design_noise_sandwich": {
+      "paths": 100,
+      "rejections": 2,
+      "rejection_rate": 0.02,
+      "wilson95": [
+        0.00550196755016235,
+        0.07001179072854388
+      ],
+      "compatible_with_5_percent": true,
+      "median_se": 0.12574901231783725,
+      "median_se_ratio_to_nominal": 2.8123117270496785
+    },
+    "parametric_bootstrap": {
+      "paths": 100,
+      "rejections": 5,
+      "rejection_rate": 0.05,
+      "wilson95": [
+        0.02154367915436796,
+        0.11175046923191913
+      ],
+      "compatible_with_5_percent": true,
+      "median_se": 0.07862245728072467,
+      "median_se_ratio_to_nominal": 1.792375006895173
+    }
+  },
+  "all_source_snapshots_verified": true,
+  "diagnostic_previously_seen_null_paths": true,
+  "independent_confirmation": false,
+  "score_seconds_total": 1878.0030898639907,
+  "bootstrap_seconds_total": 83623.600428994,
+  "mean_bootstrap_bias": -0.006910124458683188,
+  "mean_score_influence": 0.034616601910561276
+}

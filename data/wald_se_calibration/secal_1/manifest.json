@@ -1,0 +1,44 @@
+{
+  "stage": "secal_1",
+  "protocol": {
+    "protocol": "vdp5_null_paired_wald_se_v1",
+    "parent_protocol_file": "support_wald_v2.json",
+    "observation_protocol_file": "support_extra_term.json",
+    "reference_file": "wald_se_references.json",
+    "paths": 100,
+    "shards": 5,
+    "level": 0.05,
+    "delta": 0.0,
+    "alpha": 0.05,
+    "primary_windows": 480,
+    "score_draws": 999,
+    "bootstrap_draws": 399,
+    "score_seed_base": 96000000,
+    "bootstrap_seed_base": 95000000,
+    "resampling_seed_stride": 1000,
+    "bootstrap_generation": "null-impose the target in the bounded core-five pilot, preserve the other four fitted coefficients, known initial state and supplied OU covariance",
+    "nominal": "unchanged archived standard error and identical point estimate",
+    "design_noise_sandwich": "observed fixed-weight GLS bread H=A'WA; model score meat Var(Astar'W mstar), including stochastic polynomial design. Estimate target variance by centered MC influences e14'H^-1 Astar'W mstar under null-imposed pilot, with fixed observed covariance weights; correct deterministic generating-model quadrature defect. This branch holds covariance pilot weights fixed.",
+    "bootstrap": "sample SD (ddof=1) of the full estimator target over parametric OU replicates generated from the null-imposed pilot; rebuild the 30-window pilot, ODE trajectory, Hermite covariance, quadrature correction and final 18-coefficient GLS in every replicate",
+    "criteria": {
+      "primary": "Wilson 95% interval for null rejection contains 0.05 separately for each method",
+      "wald_test": "same observed coefficient / method SE, two-sided z0.975; no bias correction, empirical rejection cutoffs or SE multipliers",
+      "scope": "prespecified diagnostic on the same previously evaluated 100 null paths; not independent holdout confirmation",
+      "all_paths_retained": true,
+      "failures": "stop shard and preserve outputs; no silent resample dropping or count changes",
+      "power": "no calibrated-power claim until independent validation; no power runs authorized in this diagnostic"
+    },
+    "coefficient_replay_absolute_tolerance": 1e-08,
+    "se_replay_relative_tolerance": 1e-08,
+    "clean_mean_quadrature_gate": 1e-05,
+    "numerical_smoke": {
+      "paths": 1,
+      "score_draws": 8,
+      "bootstrap_draws": 4,
+      "seed": 0,
+      "scope": "execution correctness only; not used for calibration conclusions"
+    }
+  },
+  "source_sha256": "676862088a25c2f9fe86ad4d7d94f229e1fdd4016de667949876980b168804cc",
+  "smoke": false
+}

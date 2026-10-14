@@ -1,0 +1,8 @@
+{
+  "families": [480],
+  "levels": [0.005],
+  "initial": [2.25, 0.25],
+  "threshold": 0.05,
+  "cache_protocol_file": "crossfit_cache_v4.json",
+  "extra_validation_offsets": [[0.04,0.04,-0.04,-0.04],[-0.04,-0.04,0.04,0.04],[0.055,-0.035,-0.055,0.035],[-0.055,0.035,0.055,-0.035]]
+}

@@ -5,6 +5,7 @@ import io
 import json
 import hashlib
 import re
+import sys
 from pathlib import Path
 import zipfile
 import nbformat
@@ -13,6 +14,7 @@ from lxml import etree
 import pymupdf
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 
 
 def validate():
@@ -67,12 +69,14 @@ def validate():
                 else:
                     calculated=(hashlib.sha256(archive.read('scripts/run_extended_validation.py')).hexdigest()
                                 if stage=='extended' else fingerprint.hexdigest())
-                    assert calculated==manifest['source_sha256'], f'Execution source hash mismatch: {stage}'
+                    if calculated!=manifest['source_sha256']:
+                        from scripts.source_archive_audit import verify_redacted_source
+                        verify_redacted_source(archive,stage,manifest['source_sha256'])
                 snapshot_verified=True
         metadata = json.loads((path.parent/'kernel-metadata.json').read_text())
         assert metadata['is_private'] is True
         assert metadata['enable_gpu'] is False
-        assert metadata['enable_internet'] is (path.parent.name.startswith('adaptive_') or path.parent.name.startswith('efficiency_match') or path.parent.name=='efficiency_matched_wendy')
+        assert metadata['enable_internet'] is (path.parent.name.startswith(('adaptive_','efficiency_match','support_wald_')) or path.parent.name in ('efficiency_matched_wendy','support_extra'))
         # Completed notebooks are immutable execution snapshots, not regenerated
         # after local manuscript/postprocessing changes. Record differences openly.
         records.append({'file': str(path.relative_to(ROOT)), 'notebook_valid': True,

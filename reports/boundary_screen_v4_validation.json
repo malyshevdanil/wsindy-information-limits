@@ -1,0 +1,97 @@
+{
+  "stage": "boundary_screen_v4",
+  "api_status": "COMPLETE",
+  "snapshot": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/boundary_weak_screen_v4.json"
+    ]
+  },
+  "completion": {
+    "status": "complete",
+    "paths": 32,
+    "relative_rmse": 0.0014700577266254433,
+    "provisional_screen_pass": false,
+    "threshold": 0.0014,
+    "elapsed_seconds": 39.27441406
+  },
+  "quadrature_gate": {
+    "clean_coefficients": [
+      0.9999999999995453,
+      -0.9999999992713811,
+      0.9999999980198027,
+      -0.9999999975992182
+    ],
+    "relative_bias": 1.598109860425454e-09,
+    "threshold": 1.4e-05,
+    "moment_covariance_condition": 252601.78960812895,
+    "initial_atom_norm": 0.00010767526743558888
+  },
+  "full_2000_path_experiment_completed": false,
+  "paired_inputs_verified": true,
+  "groups": [
+    {
+      "method": "feasible_boundary_weak",
+      "paths": 32,
+      "relative_rmse": 0.0014700577266254433,
+      "relative_bias": 0.00016464790941319161,
+      "relative_dispersion": 0.0014608082644676653
+    },
+    {
+      "method": "oracle_boundary_weak",
+      "paths": 32,
+      "relative_rmse": 0.0014691539995483332,
+      "relative_bias": 0.0001649037368782582,
+      "relative_dispersion": 0.0014598699366561562
+    }
+  ],
+  "caveat": "32-path screen; threshold result is provisional and not a 2000-path validation.",
+  "paired_prefix_comparison": {
+    "groups": [
+      {
+        "method": "endpoint_weak",
+        "paths": 32,
+        "relative_rmse": 0.0014700577266254433,
+        "bootstrap_rmse_ci95": [
+          0.0012532169242421105,
+          0.001674097885017784
+        ]
+      },
+      {
+        "method": "known_initial_scoring",
+        "paths": 32,
+        "relative_rmse": 0.0014631692784134425,
+        "bootstrap_rmse_ci95": [
+          0.0012499597290148328,
+          0.001662485820684303
+        ]
+      },
+      {
+        "method": "boundary_free_480",
+        "paths": 32,
+        "relative_rmse": 0.0015224451913220037,
+        "bootstrap_rmse_ci95": [
+          0.0013230953522743174,
+          0.0017085438896386105
+        ]
+      }
+    ],
+    "difference_rmse_ci95": {
+      "known_initial_scoring": [
+        -2.4590747187903786e-06,
+        1.6861683133694354e-05
+      ],
+      "boundary_free_480": [
+        -0.0001857193889086949,
+        6.388384266601716e-05
+      ]
+    },
+    "bootstrap_draws": 20000,
+    "bootstrap_seed": 8400000,
+    "threshold_decision_unchanged": "32-path point RMSE exceeds frozen .00140 screen threshold; no full run triggered"
+  },
+  "online_seconds": {
+    "median_three_updates": 0.8863211649999982,
+    "scope": "Three directly integrated adjoint updates; preliminary 30-window pilot excluded."
+  }
+}

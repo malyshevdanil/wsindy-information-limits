@@ -1,0 +1,10 @@
+{
+  "representation": "total-degree Legendre approximation of normalized exact Prop3 model instruments",
+  "degree": 5,
+  "radius": 0.06,
+  "node_power": 9,
+  "node_seed": 3800000,
+  "bounds": "clip instrument-map coordinates to the approximation cube; the coefficient pilot itself retains its original box",
+  "training_records": 0,
+  "status": "awaiting prespecified exact-GLS accuracy validation; not approved for inferential runs"
+}

@@ -1,0 +1,9 @@
+{
+  "frozen_at_utc": "2026-10-13T07:59:31.764469+00:00",
+  "protocol_sha256": "f00695a85eb05610d7039fc8bc1ea787e6fa369f0a4aff41b2742ae732d3152c",
+  "reference_sha256": "eb26c70b208d39a48e6c856e42981c3b7d66bdf83e592ab24691c72fc12c2000",
+  "before_any_new_se_outputs": true,
+  "baseline_null_rejections": 23,
+  "baseline_previously_observed": true,
+  "decision": "Compare SE estimators only, on all original 100 null paths; no changes after inspecting new calibration outcomes. Numerical smoke cannot be used for scientific calibration."
+}

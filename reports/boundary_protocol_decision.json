@@ -1,0 +1,67 @@
+{
+  "latest_screen": "boundary_screen_v4",
+  "frozen_relative_rmse_threshold": 0.0014,
+  "screen_paths": 32,
+  "full_paths": 2000,
+  "full_run_authorization": "user direction 1, conditional on literature and direct numerical screen",
+  "legacy_queues_remain_held": true,
+  "revisions": [
+    {
+      "stage": "boundary_screen",
+      "outcome": "deterministic gate failure; no Monte Carlo",
+      "repair": "Simpson quadrature; thresholds unchanged"
+    },
+    {
+      "stage": "boundary_screen_v2",
+      "outcome": "deterministic gate failure; no Monte Carlo",
+      "repair": "expectation of corrected Gaussian features equals uncorrected clean features; retain actual covariance"
+    },
+    {
+      "stage": "boundary_screen_v3",
+      "outcome": "completed numerical screen; archived input SHA mismatch; statistical summaries withheld",
+      "repair": "restore original order of floating-point noise scaling before inspecting outcome summaries"
+    },
+    {
+      "protocol": "endpoint_universal_paired_confirmation_v1",
+      "authorized_by": "user message 2026-10-13",
+      "reason": "absolute prefix threshold incorrectly calibrated on full-sample likelihood; likelihood itself failed on prefix",
+      "criteria_file": "configs/boundary_confirmation.json",
+      "evaluation_seed_indices": [
+        32,
+        1999
+      ],
+      "criteria_frozen_before_new_endpoint_outcomes": true,
+      "model_adjoint_branch_scope": "score-direction realization, not independent evidence for model-free weak tests",
+      "main_branch": "universal_endpoint_tests"
+    }
+  ],
+  "followup_protocols": [
+    {
+      "protocol": "endpoint_component_ablation_v1",
+      "frozen_before_submission_utc": "2026-10-13T05:21:05.899705+00:00",
+      "new_outputs_inspected": false,
+      "paths": 500,
+      "scope": "attribution on previously evaluated paired records, not new holdout confirmation",
+      "extra_control": "common Simpson baseline isolates quadrature from endpoint changes",
+      "primary_fraction_threshold": 0.5
+    }
+  ],
+  "endpoint_followup_completion": {
+    "all_declared_primary_studies_complete": true,
+    "ablation_paths": 500,
+    "vdp5_paths": 128,
+    "lorenz_paths": 256,
+    "wald_mstls_paired_paths_by_grid": 1600,
+    "full_paired_input_fingerprints_verified": true,
+    "source_and_embedded_configuration_audit": "reports/boundary_ablation_results.json; reports/boundary_followup_status.json",
+    "scientific_configurations": [
+      "configs/boundary_ablation.json",
+      "configs/boundary_generalization.json",
+      "configs/support_wald_v2.json"
+    ],
+    "packaging_changes": "ablation v2 reduces embedded configs after source-size rejection; generalization uses shorter endpoint slugs after API errors; scientific protocols unchanged",
+    "numerical_amendment": "v1 high-noise preflight candidate bias 1.4823e-5 at multiplier -3 exceeds unchanged 1e-5 gate; v2 subtracts deterministic pilot-model discrete residual defect from moment RHS at every amplitude, before inspecting v1 noisy Wald outcomes. Original v1 frozen notebooks/results retained. No criteria or seeds changed.",
+    "outcome_scope": "null gate passes at 0.5%, fails at 5%; universal endpoint recovery passes Lorenz, fails VdP5; no outcome-based repairs",
+    "legacy_queues_remain_held": true
+  }
+}

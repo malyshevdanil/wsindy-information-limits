@@ -1,0 +1,25 @@
+{
+  "updated_utc": "2026-10-11T14:30:39.913310+00:00",
+  "phase": "complete",
+  "stages": {
+    "adaptive_smoke": "DOWNLOADED",
+    "adaptive_classical": "DOWNLOADED",
+    "adaptive_wm_0": "DOWNLOADED",
+    "adaptive_wm_1": "DOWNLOADED",
+    "adaptive_wm_2": "DOWNLOADED",
+    "adaptive_wm_3": "DOWNLOADED"
+  },
+  "download_error_resolved": true,
+  "comparative_fits": 448,
+  "failed_fits": 0,
+  "publication_checked": true,
+  "release_checked": true,
+  "postprocessing_reproduced": true,
+  "outputs": [
+    "manuscript/article_revised.docx",
+    "manuscript/article_revised.pdf",
+    "manuscript/supplement.pdf",
+    "reports/full_adaptive_results_RU.docx",
+    "dist/submission_package.zip"
+  ]
+}

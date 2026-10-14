@@ -1,8 +1,9 @@
 """Check archived efficiency experiments, score constraints and publication."""
-import argparse,ast,base64,hashlib,io,json,re,zipfile
+import argparse,ast,base64,hashlib,io,json,re,zipfile,sys
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 
 
 def main(publication=False):
@@ -25,7 +26,9 @@ def main(publication=False):
             for directory in ('src','scripts','tests'):
                 for name in sorted(n for n in bundle.namelist() if n.startswith(directory+'/') and n.endswith('.py')):
                     fingerprint.update(name.encode());fingerprint.update(bundle.read(name))
-            assert fingerprint.hexdigest()==manifest['source_sha256']
+            if fingerprint.hexdigest()!=manifest['source_sha256']:
+                from scripts.source_archive_audit import verify_redacted_source
+                verify_redacted_source(bundle,stage,manifest['source_sha256'])
             assert json.loads(bundle.read('configs/efficiency.json'))==manifest['protocol']
         path=ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip'
         with zipfile.ZipFile(path) as archive:
@@ -78,10 +81,11 @@ def main(publication=False):
         assert not re.search(r'abandoned grid diagnostic|initial custom-STLS pilot|historical|earlier 4,000-path experiment|fresh validation',text,re.I)
         assert len(Document(ROOT/'manuscript/article_revised.docx').tables)==6
         assert len(Document(ROOT/'manuscript/article_revised.docx').inline_shapes)==5
-        assert len(Document(ROOT/'manuscript/supplement.docx').tables)==17
+        supplement_count=18 if '## S20. Cross-fitting protocol' in supp else 17
+        assert len(Document(ROOT/'manuscript/supplement.docx').tables)==supplement_count
         assert '**Theorem 3 ' in text and 'Independent researcher, Almaty, Kazakhstan' in text
         tables=re.findall(r'^Table (S\d+)\.',supp,flags=re.M)
-        assert tables==[f'S{i}' for i in range(1,18)]
+        assert tables==[f'S{i}' for i in range(1,supplement_count+1)]
         for name in ('article_revised','supplement','weak_efficiency_theory'):
             with pymupdf.open(ROOT/f'manuscript/{name}.pdf') as pdf:
                 prose='\n'.join(p.get_text() for p in pdf)
@@ -89,7 +93,7 @@ def main(publication=False):
                 if name=='article_revised':
                     assert all(f'Table {i}.' in prose for i in range(1,7))
                     assert 'Data availability' in prose and 'Sharp information' in prose
-                if name=='supplement':assert all(f'Table S{i}.' in prose for i in range(1,18))
+                if name=='supplement':assert all(f'Table S{i}.' in prose for i in range(1,supplement_count+1))
         result['theorem_conditions_sequential_numbering_main_and_supplement_verified']=True
     (ROOT/'reports/efficiency_validation.json').write_text(json.dumps(result,indent=2))
     print(json.dumps(result))

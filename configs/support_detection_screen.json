@@ -1,0 +1,20 @@
+{
+  "protocol": "fixed_horizon_vdp_support_distance_screen_v1",
+  "purpose": "deterministic null/alternative distance filter before freezing a support-recovery Monte Carlo study",
+  "system": "vdp",
+  "initial": [2.0, 0.0],
+  "T": 20.0,
+  "tau": 0.3,
+  "noise_level": 0.005,
+  "fixed_noise_calibration": "coordinate standard deviations of original d=-1 trajectory at h=0.01; same covariance for every alternative",
+  "null_coefficients": [1.0, -1.0, 1.0, 0.0],
+  "alternative_coefficient": "d=-delta, all other coefficients and initial state fixed",
+  "delta_grid": [0.0, 1e-14, 1e-12, 1e-10, 1e-8, 1e-6, 0.0001, 0.001, 0.01, 0.1, 0.5, 1.0],
+  "target_equal_prior_error": 0.05,
+  "ode_rtol": 1e-11,
+  "ode_atol": 1e-13,
+  "distance_quadrature_relative_tolerance": 1e-7,
+  "scope": "simple Gaussian hypotheses with fixed equal initial states; not composite-support recovery or a nuisance-adjusted finite-noise weak bound",
+  "cache_or_surrogate": false,
+  "no_automatic_recovery_run": true
+}

@@ -1869,5 +1869,300 @@
     "volume": "120",
     "page": "135-146",
     "article_number": null
+  },
+  {
+    "key": "chernozhukov2018",
+    "doi": "10.1111/ectj.12097",
+    "status": "metadata_verified",
+    "title": [
+      "Double/debiased machine learning for treatment and structural parameters"
+    ],
+    "authors": [
+      {
+        "given": "Victor",
+        "family": "Chernozhukov",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology, 50 Memorial Drive, Cambridge, MA 02139, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Denis",
+        "family": "Chetverikov",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of California Los Angeles, 315 Portola Plaza, Los Angeles, CA 90095, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Mert",
+        "family": "Demirer",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology, 50 Memorial Drive, Cambridge, MA 02139, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Esther",
+        "family": "Duflo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology, 50 Memorial Drive, Cambridge, MA 02139, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Christian",
+        "family": "Hansen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Chicago, 5807 S. Woodlawn Ave., Chicago, IL 60637, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Whitney",
+        "family": "Newey",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology, 50 Memorial Drive, Cambridge, MA 02139, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "James",
+        "family": "Robins",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Harvard University, 677 Huntington Avenue, Boston, MA 02115, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2018,
+          1,
+          16
+        ]
+      ]
+    },
+    "volume": "21",
+    "page": "C1-C68",
+    "article_number": null
+  },
+  {
+    "key": "neyman1948",
+    "doi": "10.2307/1914288",
+    "status": "metadata_verified",
+    "title": [
+      "Consistent Estimates Based on Partially Consistent Observations"
+    ],
+    "authors": [
+      {
+        "given": "J.",
+        "family": "Neyman",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Elizabeth L.",
+        "family": "Scott",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1948,
+          1
+        ]
+      ]
+    },
+    "volume": "16",
+    "page": "1",
+    "article_number": null
+  },
+  {
+    "key": "lancaster2000",
+    "doi": "10.1016/S0304-4076(99)00044-5",
+    "status": "metadata_verified",
+    "title": [
+      "The incidental parameter problem since 1948"
+    ],
+    "authors": [
+      {
+        "given": "Tony",
+        "family": "Lancaster",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2000,
+          4
+        ]
+      ]
+    },
+    "volume": "95",
+    "page": "391-413",
+    "article_number": null
+  },
+  {
+    "key": "hahn2004",
+    "doi": "10.1111/j.1468-0262.2004.00533.x",
+    "status": "metadata_verified",
+    "title": [
+      "Jackknife and Analytical Bias Reduction for Nonlinear Panel Models"
+    ],
+    "authors": [
+      {
+        "given": "Jinyong",
+        "family": "Hahn",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Whitney",
+        "family": "Newey",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2004,
+          7
+        ]
+      ]
+    },
+    "volume": "72",
+    "page": "1295-1319",
+    "article_number": null
+  },
+  {
+    "key": "arellano2007",
+    "doi": "10.1017/CBO9780511607547.013",
+    "status": "metadata_verified",
+    "title": [
+      "Understanding Bias in Nonlinear Panel Models: Some Recent Developments"
+    ],
+    "authors": [
+      {
+        "given": "Manuel",
+        "family": "Arellano",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jinyong",
+        "family": "Hahn",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": null,
+    "volume": null,
+    "page": "381-409",
+    "article_number": null
   }
 ]

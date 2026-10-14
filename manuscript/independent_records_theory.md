@@ -11,7 +11,7 @@ $$
 
 where $\nu$ contains the marginal variances used in the correction and any covariance-shape parameters. The expectation identity follows by the Gaussian heat/Hermite identity at every time, Fubini, and the deterministic weak ODE identity. It is exact at fixed noise; it does not assert that the ratio or least-squares estimator from one record is unbiased.
 
-**Lemma 2 (fixed-noise independent-record GMM).** Suppose $D$ has column rank $p$, the covariance $\Omega=\operatorname{Cov}(m_r(\theta_0,\nu_0))$ is positive definite, and moments have finite second moments. With known $\nu_0$ and random positive-definite $W_n\to_p W$, define
+**Lemma S14.1 (fixed-noise independent-record GMM).** Suppose $D$ has column rank $p$, the covariance $\Omega=\operatorname{Cov}(m_r(\theta_0,\nu_0))$ is positive definite, and moments have finite second moments. With known $\nu_0$ and random positive-definite $W_n\to_p W$, define
 
 $$
 \widehat\theta_n=(\bar G_n^\top W_n\bar G_n)^{-1}\bar G_n^\top W_n\bar b_n,

@@ -1,5 +1,5 @@
 {
-  "title": "Boundary-free weak estimating equations under correlated noise: efficiency with nuisance initial states - code and synthetic-data archive",
+  "title": "The information cost of boundary-free weak estimation under correlated noise - code and synthetic-data archive",
   "upload_type": "software",
   "creators": [
     {
@@ -8,12 +8,12 @@
       "orcid": "0009-0007-0947-3866"
     }
   ],
-  "description": "Versioned source, frozen numerical protocols, synthetic-data outputs and manuscript artifacts for the nuisance-initial-state weak estimation study. Known-covariance model-weighted heterogeneous-record benchmarks, independent instruments and record-level calibration are distinguished from oracle local information references.",
-  "version": "v1.2.0",
+  "description": "Exact weak adjoint-range geometry, a constructive full-library small-noise efficiency theorem under a nonzero jet condition, and reproducible correlated-noise benchmarks. Includes core submission supplement and separate historical research extensions. Frozen independent small-noise size and power checks retain all successful and failed criteria. Moderate-noise bootstrap validation is incomplete following a recorded compute-budget decision. No journal submission or acceptance is asserted.",
+  "version": "v1.3.0",
   "keywords": [
     "weak estimating equations",
     "correlated Gaussian noise",
-    "nuisance initial states",
+    "constructive efficiency",
     "ODE identification",
     "reproducible research"
   ],

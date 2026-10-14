@@ -1,0 +1,357 @@
+{
+  "completed": true,
+  "protocol": {
+    "protocol": "vdp_added_cubic_local_information_and_author_wsindy_v1",
+    "T": 20.0,
+    "h": 0.005,
+    "information_refinement_h": 0.0025,
+    "tau": 0.3,
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "levels": [
+      0.005,
+      0.05
+    ],
+    "null": "original Van der Pol; candidate x^3 in v' has zero coefficient",
+    "alternative": "v'=-x+v-x^2*v+delta*x^3; x'=v",
+    "delta_multipliers_of_weak_reference": [
+      0.0,
+      -0.5,
+      -1.0,
+      -2.0,
+      -4.0
+    ],
+    "negative_direction_reason": "Restoring cubic perturbation keeps trajectories bounded; sign chosen before added-term outcomes",
+    "noise_calibration": "fixed original VdP coordinate standard deviations at h=.01; same covariance across alternatives",
+    "information_target": "x^3 coefficient in v', equation-major index 14",
+    "primary_nuisance_library": "All other coefficients in the author degree 1:3 polynomial dictionary, both equations: 17 coefficients plus 2 initial coordinates for boundary-free reference",
+    "secondary_nuisance_library": "Original four coefficients plus candidate: core5",
+    "initial_information_references": [
+      "known initial/full likelihood",
+      "unknown initial likelihood=local boundary-free limit"
+    ],
+    "target_equal_prior_error": 0.05,
+    "delta_reference_constant": "2*Phi^-1(0.95); local equal-prior two-point benchmark, not a finite-amplitude support guarantee",
+    "information_svd_cutoffs": [
+      1e-09,
+      1e-10,
+      1e-11
+    ],
+    "primary_svd_cutoff": 1e-10,
+    "relative_information_refinement_tolerance": 0.01,
+    "relative_svd_sensitivity_tolerance": 0.01,
+    "paths_per_delta_per_level": 100,
+    "seed_base": 9000000,
+    "level_seed_stride": 10000,
+    "shared_noise_across_delta_grid": true,
+    "maximum_clean_state_abs": 10.0,
+    "method": "complete pinned WSINDy_ODE author pipeline via existing Octave compatibility adapter, adaptive windows, smoothing, MSTLS selection",
+    "author_pin_file": "author_pins.json",
+    "inclusion_definition": "author selected x^3 coefficient in v' is nonzero",
+    "report_null_false_inclusion": true,
+    "report_wilson_confidence_intervals": true,
+    "no_threshold_tuning_from_this_study": true,
+    "stop_before_mc_if_information_or_boundedness_gate_fails": true
+  },
+  "audit": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/support_extra_term.json"
+    ]
+  },
+  "information_references": [
+    {
+      "h": 0.0025,
+      "level": 0.005,
+      "cutoff": 1e-10,
+      "label": "full_library_known_initial",
+      "delta_min_local": 0.01927943568008597,
+      "information": 29115.608395681433,
+      "standard_deviation": 0.005860532318555896,
+      "nuisance_rank": 17,
+      "nuisance_columns": 17,
+      "nuisance_minimum_relative_singular_value": 0.000320216831174889
+    },
+    {
+      "h": 0.0025,
+      "level": 0.005,
+      "cutoff": 1e-10,
+      "label": "full_library_boundary_free",
+      "delta_min_local": 0.01940965128794474,
+      "information": 28726.256828592508,
+      "standard_deviation": 0.005900115052765537,
+      "nuisance_rank": 19,
+      "nuisance_columns": 19,
+      "nuisance_minimum_relative_singular_value": 0.0002902454165831049
+    },
+    {
+      "h": 0.0025,
+      "level": 0.005,
+      "cutoff": 1e-10,
+      "label": "core5_known_initial",
+      "delta_min_local": 0.007240204661594428,
+      "information": 206449.01704953087,
+      "standard_deviation": 0.0022008659442278853,
+      "nuisance_rank": 4,
+      "nuisance_columns": 4,
+      "nuisance_minimum_relative_singular_value": 0.025603425283531375
+    },
+    {
+      "h": 0.0025,
+      "level": 0.005,
+      "cutoff": 1e-10,
+      "label": "core5_boundary_free",
+      "delta_min_local": 0.007269410457108178,
+      "information": 204793.4782274209,
+      "standard_deviation": 0.0022097438756848867,
+      "nuisance_rank": 6,
+      "nuisance_columns": 6,
+      "nuisance_minimum_relative_singular_value": 0.01593305272850193
+    },
+    {
+      "h": 0.0025,
+      "level": 0.05,
+      "cutoff": 1e-10,
+      "label": "full_library_known_initial",
+      "delta_min_local": 0.19279435680085957,
+      "information": 291.15608395681477,
+      "standard_deviation": 0.058605323185558916,
+      "nuisance_rank": 17,
+      "nuisance_columns": 17,
+      "nuisance_minimum_relative_singular_value": 0.000320216831174887
+    },
+    {
+      "h": 0.0025,
+      "level": 0.05,
+      "cutoff": 1e-10,
+      "label": "full_library_boundary_free",
+      "delta_min_local": 0.19409651287944782,
+      "information": 287.26256828592375,
+      "standard_deviation": 0.0590011505276555,
+      "nuisance_rank": 19,
+      "nuisance_columns": 19,
+      "nuisance_minimum_relative_singular_value": 0.00029024541658310586
+    },
+    {
+      "h": 0.0025,
+      "level": 0.05,
+      "cutoff": 1e-10,
+      "label": "core5_known_initial",
+      "delta_min_local": 0.0724020466159443,
+      "information": 2064.4901704953077,
+      "standard_deviation": 0.02200865944227886,
+      "nuisance_rank": 4,
+      "nuisance_columns": 4,
+      "nuisance_minimum_relative_singular_value": 0.025603425283531364
+    },
+    {
+      "h": 0.0025,
+      "level": 0.05,
+      "cutoff": 1e-10,
+      "label": "core5_boundary_free",
+      "delta_min_local": 0.07269410457108169,
+      "information": 2047.9347822742136,
+      "standard_deviation": 0.02209743875684884,
+      "nuisance_rank": 6,
+      "nuisance_columns": 6,
+      "nuisance_minimum_relative_singular_value": 0.015933052728501953
+    }
+  ],
+  "groups": [
+    {
+      "level": 0.005,
+      "delta_index": 0,
+      "delta": 0.0,
+      "magnitude_over_local_weak_reference": 0.0,
+      "paths": 100,
+      "included": 0,
+      "inclusion_fraction": 0.0,
+      "wilson_ci95": [
+        3.469446951953614e-18,
+        0.03699349820698568
+      ],
+      "median_fit_seconds": 2.7887669615000164
+    },
+    {
+      "level": 0.005,
+      "delta_index": 1,
+      "delta": -0.00970482564397237,
+      "magnitude_over_local_weak_reference": 0.5,
+      "paths": 100,
+      "included": 0,
+      "inclusion_fraction": 0.0,
+      "wilson_ci95": [
+        3.469446951953614e-18,
+        0.03699349820698568
+      ],
+      "median_fit_seconds": 2.8175670795000087
+    },
+    {
+      "level": 0.005,
+      "delta_index": 2,
+      "delta": -0.01940965128794474,
+      "magnitude_over_local_weak_reference": 1.0,
+      "paths": 100,
+      "included": 0,
+      "inclusion_fraction": 0.0,
+      "wilson_ci95": [
+        3.469446951953614e-18,
+        0.03699349820698568
+      ],
+      "median_fit_seconds": 2.644878128500011
+    },
+    {
+      "level": 0.005,
+      "delta_index": 3,
+      "delta": -0.03881930257588948,
+      "magnitude_over_local_weak_reference": 2.0,
+      "paths": 100,
+      "included": 0,
+      "inclusion_fraction": 0.0,
+      "wilson_ci95": [
+        3.469446951953614e-18,
+        0.03699349820698568
+      ],
+      "median_fit_seconds": 2.5639083980000237
+    },
+    {
+      "level": 0.005,
+      "delta_index": 4,
+      "delta": -0.07763860515177896,
+      "magnitude_over_local_weak_reference": 4.0,
+      "paths": 100,
+      "included": 100,
+      "inclusion_fraction": 1.0,
+      "wilson_ci95": [
+        0.9630065017930143,
+        1.0
+      ],
+      "median_fit_seconds": 2.509921454999983
+    },
+    {
+      "level": 0.05,
+      "delta_index": 0,
+      "delta": 0.0,
+      "magnitude_over_local_weak_reference": 0.0,
+      "paths": 100,
+      "included": 2,
+      "inclusion_fraction": 0.02,
+      "wilson_ci95": [
+        0.00550196755016235,
+        0.07001179072854388
+      ],
+      "median_fit_seconds": 2.6098004985000216
+    },
+    {
+      "level": 0.05,
+      "delta_index": 1,
+      "delta": -0.09704825643972391,
+      "magnitude_over_local_weak_reference": 0.5,
+      "paths": 100,
+      "included": 4,
+      "inclusion_fraction": 0.04,
+      "wilson_ci95": [
+        0.01566330399154762,
+        0.0983707143588792
+      ],
+      "median_fit_seconds": 2.5576077764999354
+    },
+    {
+      "level": 0.05,
+      "delta_index": 2,
+      "delta": -0.19409651287944782,
+      "magnitude_over_local_weak_reference": 1.0,
+      "paths": 100,
+      "included": 24,
+      "inclusion_fraction": 0.24,
+      "wilson_ci95": [
+        0.16691325556948772,
+        0.33232336349814473
+      ],
+      "median_fit_seconds": 2.543686520499932
+    },
+    {
+      "level": 0.05,
+      "delta_index": 3,
+      "delta": -0.38819302575889564,
+      "magnitude_over_local_weak_reference": 2.0,
+      "paths": 100,
+      "included": 58,
+      "inclusion_fraction": 0.58,
+      "wilson_ci95": [
+        0.4820648670304296,
+        0.6720161732564526
+      ],
+      "median_fit_seconds": 2.5817694604997996
+    },
+    {
+      "level": 0.05,
+      "delta_index": 4,
+      "delta": -0.7763860515177913,
+      "magnitude_over_local_weak_reference": 4.0,
+      "paths": 100,
+      "included": 70,
+      "inclusion_fraction": 0.7,
+      "wilson_ci95": [
+        0.6041514536665332,
+        0.7810511470506724
+      ],
+      "median_fit_seconds": 2.5951054304999843
+    }
+  ],
+  "author_provenance": {
+    "repo": "MathBioCU/WSINDy_ODE",
+    "commit": "72d8d6e5be2b80bcfe5015dced399ace1ceca43f",
+    "zip_sha256": "5cb71a0d90cbc99ab8bf377c3912497834ca8d03b693f14bfd83a197acb00c42",
+    "files_sha256": {
+      "get_tf_support.m": "493debbbdd94a9218cda6928b888dc3ecf3c6e08f7f9426f0429924d3c596d6b",
+      "get_smoothing_weights.m": "cbd5846954da980853719c987cfdfdb823f05166f8a18d3a3f073d076889074c",
+      "wsindy_script_multiexp.m": "ff0bf84849610d4b8b09df8474f364c20c1e0bf21c219609b018d725a2142a7c",
+      "findcorners.m": "f6a0c36b6b28aff8b85c3dc0a304737df47dd856737a16dfcf165ed6dc607b83",
+      "display_results.m": "d4ac551d367a0976d5d4375f102b0fd4d8cae3bc56183cb0bd1e117b0ef92548",
+      "wsindy_pde_RGLS_seq.m": "3189ae0421a13736e01183b5e9a26a035ef4051c41f75a3adfb5c50124bb1a03",
+      "run_custom_ddd.m": "c6f76c561d6da56ae76d13b85f3bc0a2044ee6e4653bb50aef9b56ab837912a1",
+      "get_optimal_SMAF.m": "b8721bce61ad14c4f1479c6173f8feab79df1b0fcf301af7a866ad63aadddcd8",
+      "sumlib.m": "d050ac3a2626cd0e11b748e96f0c28d541fff7321dd017bc52ecb358dce6bc0f",
+      "poolDataGen.m": "0f9310b62e7be3086d5428a69218a73be689172cba54656695bfba907513c2ae",
+      "build_trig_lib.m": "e0010cded5a553cc0c4fd8ba961a1dea06e779e3973ad877f548f7f3261c7085",
+      "build_vector_field.m": "e6eab5e397b9d1ad525a8b460ab66d8ad81a3cc6190d543b176f361d6dfaf999",
+      "sim_ode.m": "eedb94d8f6f85bee7fe019864c027956561cf4bb0d80bb2122e19f915ae2d42f",
+      "README.md": "206a94cc4c996a5419ee4767697e6d790c9674e54e88dd65f9ea17329ed26703",
+      "partitions.m": "e82a6fe166ef0f137db012c41449c027e73fca6a65f6de061a7ad6032c229a73",
+      "partitionNk.m": "1e78985f3403235a4f4e72f296117f0dc67ab8d490a213e6d0724a146e3a9ab4",
+      "complib.m": "fd5a2af706d1f6fd541f6f1da4b72968ad90531705f5ea16430bc2cc867839a5",
+      "TVRegDiff.m": "7f756f58d86d8c38a5a8842ae831806fde510efc1fac9206b35282848346e97b",
+      "build_poly_lib.m": "a999f34ba4744cc4989da50fee00bc6439ce151d0d353bfabc13ac7be826432b",
+      "nrm.m": "fb6a863713d72bf1941029bf123883e40f60300cdc7248ae47228f6e7d0a785d",
+      "get_tags.m": "08625cc2ab677a092b9866dc1102bcca71e3918ebc94fddd901004deb1b7c459",
+      "view_ddd_fcn.m": "5fca41852ff3917f5a13b62c0ba6f909e7049a6c1dbc2843fbb9613786641e66",
+      "fdcoeffF.m": "475ac87a888827efffc39163111ec8dfb4242f6ec8bb42cbe001ba542c169223",
+      "build_theta.m": "088860de7f155e82485cc09ed3214b8e5c275bfdfdd9128605cee67b01d85e31",
+      "wsindy_ode_fun.m": "390281de3b0d70e77346f4696e195a16aaadf60001d02d3ee28e21cdb47c3aa8",
+      "prodlib.m": "d3af057998a5c4138ec4a4dd989efd618b7fa55b8b0668e7c08aa95d6ec2d57d",
+      "sparsifyDynamics.m": "ba35c21761141bc31687b83622163778a4e671d5e08ef683ba28a465d0c359c0",
+      "arrayfunvec.m": "1cf0c98e3d4a6bcdbc5f56b36eafa7f6d5c818fcee5e907fdf64e672e431978c",
+      "phi_int_weights.m": "87a2304d2afcddef31971fb72e734e1e2fafc3f2660620fa7f89c9786099b66d",
+      "test_fcn_param_whm.m": "6368dae5a3253ded2717c1414a582874f11e40013bb8226a12762f9187e72165",
+      "gen_data.m": "ab13416f6be5e63ea0ce08bfaef5e1a58457881846812017a03292ac5b89b11b",
+      "gen_noise.m": "1605b838e90040913bcb541940768d66670415af7c26c17a9a5ff2fff186855e",
+      "wsindy_ode_script.m": "a23c6e41cce0fa3b0ea71c379b15311fee727686946d2e3b93ea8a143824e426",
+      "get_true_weights.m": "d395739cb12fcf2fef6db6b8c2a9928018f14ec0ff97ff5eb087aa25ab7223e0",
+      "tpscore.m": "90e2be263324f97bb62c3df2f7bc29cf0b44bf65985dec84eea74c07090ca8cf",
+      "findcornerpts.m": "2c0eda4aa7b75475e815b6a7f4ccda2afe483b302e89d37b8fb018d81539073b",
+      "phi_weights.m": "640a728e179922c3daabadcbdc5a005ac5f93599c77d6aabca578e244c43d00c",
+      "estimate_sigma.m": "8cd4bf0812a63e69799a4dd652aa8a8cd7d95fa8046450c4b1fb5eaefeba1af8",
+      "generate_ddd.m": "f04213c7a02d9614db0dac8a4c278447073c4bcd91d19a75e93a43af473ee1e6",
+      "add_noise.m": "d13f2b552b2220b34dae91eb11fde2d373ec3893ba4aecf33d37950769873e3c"
+    }
+  },
+  "limitations": [
+    "Local Gaussian two-point reference; not an exact finite-perturbation support guarantee.",
+    "Full author adaptive selection has no prescribed 5% false-inclusion calibration here; report the null rate.",
+    "Information uses matched dictionary nuisance coefficients, not the unprofiled diagonal of a Fisher matrix.",
+    "Negative restoring cubic alternatives; no conclusion about unstable large positive perturbations."
+  ]
+}

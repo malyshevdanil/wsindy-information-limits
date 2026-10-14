@@ -1,0 +1,36 @@
+{
+  "decision_time_utc": "2026-10-12T17:38:48.329219+00:00",
+  "user_directed": true,
+  "previous_protocols_preserved": true,
+  "main_numerical_outcomes_used_to_select_scope": false,
+  "pilot_and_deterministic_checks_used": true,
+  "protocol_sha256": {
+    "incidental_compact.json": "9fd5278c892f311592eccb312b7e7e192b8ac98ca4de1dbc9d5b678f0807f2d0",
+    "repairBa_records.json": "09274392589902e1c820fc5348abe06825bf3a582af84e2d52558ce0bd12bcbd",
+    "repairAa_records.json": "a554cce8e2e9208e1530a1876fdcc3f9b01a87e3a48721809ae39fca2b7c0393",
+    "repairAb_records.json": "07eab3d7e9fc3b58ef7ea97c4794d1e3ed325fc7bfea1263955b835dafdf56ce",
+    "cache120_main_probe.json": "1ed641be11bf7b407a266a829738e02254ee3b36608a7c16fd90e3351dd73ff1"
+  },
+  "physical_seeds_A": [
+    7100000,
+    7100199
+  ],
+  "physical_seeds_B": [
+    7200000,
+    7200199
+  ],
+  "planned_mle_bootstrap_refits": 0,
+  "planned_profile_fits": 1200,
+  "planned_oracle_fits": 1200,
+  "replicas": 200,
+  "weak_windows": 120,
+  "known_covariance": true,
+  "reuse": "A 5%-noise instruments reuse the fully validated B cache; physical A and B data have disjoint seeds",
+  "excluded_scope": [
+    "20%-noise main comparison",
+    "480-window new MC",
+    "MLE bootstrap correction",
+    "external 1000-record training diagnostic"
+  ],
+  "publication_rule": "No empirical claim of absence of a crossing until matched comparison is complete; analytic crossing is labelled a local order-of-magnitude forecast"
+}

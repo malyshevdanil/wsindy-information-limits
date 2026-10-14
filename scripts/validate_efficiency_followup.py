@@ -1,8 +1,9 @@
 """Verify frozen sources, downloaded bytes and all follow-up seed counts."""
-import ast,base64,hashlib,io,json,zipfile
+import ast,base64,hashlib,io,json,zipfile,sys
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 def load(p):return json.loads(p.read_text(encoding='utf-8'))
 def main():
     follow=load(ROOT/'reports/efficiency_followup_results.json');info=load(ROOT/'reports/information_followup_results.json')
@@ -19,7 +20,9 @@ def main():
             fingerprint=hashlib.sha256()
             for directory in ['src','scripts','tests']:
                 for name in sorted(n for n in bundle.namelist() if n.startswith(directory+'/') and n.endswith('.py')):fingerprint.update(name.encode());fingerprint.update(bundle.read(name))
-            assert fingerprint.hexdigest()==manifest['source_sha256']
+            if fingerprint.hexdigest()!=manifest['source_sha256']:
+                from scripts.source_archive_audit import verify_redacted_source
+                verify_redacted_source(bundle,stage,manifest['source_sha256'])
             if 'pilot_files' in manifest:
                 for name,digest in manifest['pilot_files'].items():assert hashlib.sha256(bundle.read(name)).hexdigest()==digest
             if 'pilot_sha256' in manifest:assert hashlib.sha256(bundle.read('configs/refinement_pilots.npz')).hexdigest()==manifest['pilot_sha256']

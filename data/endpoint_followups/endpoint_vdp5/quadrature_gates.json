@@ -1,0 +1,22 @@
+[
+  {
+    "method": "universal_boundary",
+    "relative_bias": 5.915737397880756e-07,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 6.142868581835231e-13,
+    "relaxation": 4.656104582281002e-14,
+    "tests_built_from_model": false,
+    "covariance_pilot_requires_ode": true
+  },
+  {
+    "method": "matched_boundary_free",
+    "relative_bias": 2.0661262278622554e-06,
+    "iterations": 2,
+    "converged": true,
+    "last_change": 7.090100472863564e-12,
+    "relaxation": 4.111732552060312e-14,
+    "tests_built_from_model": false,
+    "covariance_pilot_requires_ode": true
+  }
+]

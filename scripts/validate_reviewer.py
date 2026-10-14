@@ -7,9 +7,11 @@ import io
 import json
 from pathlib import Path
 import re
+import sys
 import zipfile
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 
 
 def main(publication=False):
@@ -29,7 +31,9 @@ def main(publication=False):
         for folder in ('src','scripts','tests'):
             for name in sorted(n for n in bundle.namelist() if n.startswith(folder+'/') and n.endswith('.py')):
                 fingerprint.update(name.encode());fingerprint.update(bundle.read(name))
-        assert fingerprint.hexdigest()==manifest['source_sha256']
+        if fingerprint.hexdigest()!=manifest['source_sha256']:
+            from scripts.source_archive_audit import verify_redacted_source
+            verify_redacted_source(bundle,'reviewer',manifest['source_sha256'])
         assert json.loads(bundle.read('configs/reviewer.json'))==manifest['protocol']
     with zipfile.ZipFile(ROOT/'results/kaggle_reviewer_download/wsindy_reviewer_outputs.zip') as archive:
         assert archive.testzip() is None

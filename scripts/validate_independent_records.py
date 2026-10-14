@@ -23,7 +23,9 @@ def main():
             assert archive.testzip() is None;digest=hashlib.sha256()
             for directory in ['src','scripts','tests']:
                 for name in sorted(n for n in archive.namelist() if n.startswith(directory+'/') and n.endswith('.py')):digest.update(name.encode());digest.update(archive.read(name))
-            assert digest.hexdigest()==manifest['source_sha256']
+            if digest.hexdigest()!=manifest['source_sha256']:
+                from scripts.source_archive_audit import verify_redacted_source
+                verify_redacted_source(archive,stage,manifest['source_sha256'])
             assert json.loads(archive.read('configs/independent_records.json'))==p==manifest['protocol']
         with zipfile.ZipFile(ROOT/f'results/kaggle_{stage}_download/wsindy_{stage}_outputs.zip') as archive:
             assert archive.testzip() is None

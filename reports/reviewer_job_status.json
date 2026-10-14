@@ -1,0 +1,11 @@
+{
+  "phase": "complete",
+  "updated_utc": "2026-10-11T15:03:02.408913+00:00",
+  "reviewer_calculations_completed": true,
+  "publication_checked": true,
+  "public_archive": "https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.0.1",
+  "commit": "8ab89cc40ea582a76af9562a1c3e3845972175e3",
+  "article": "manuscript/article_revised.docx",
+  "pdf": "manuscript/article_revised.pdf",
+  "response": "reports/reviewer_response_RU.docx"
+}

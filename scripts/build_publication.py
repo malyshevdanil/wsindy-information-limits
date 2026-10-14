@@ -51,9 +51,11 @@ def build(source):
     # Float-only figure placement avoids longtable's output routine clipping
     # deferred figures. Short captions retain LaTeX's automatic numbering.
     content=content.replace('\\begin{figure}','\\begin{figure}[p]')
-    content=re.sub(r'\\caption\{Figure S?\d+\.\s*',lambda _:r'\caption{',content)
-    if source.stem=='supplement':
+    if source.stem in ('supplement','research_extensions_archive'):
+        content=re.sub(r'\\caption\{Figure S(\d+)\.\s*',lambda m:r'\setcounter{figure}{'+str(int(m[1])-1)+'}\n'+r'\caption{',content)
         content=content.replace('\\begin{document}',r'\renewcommand{\thefigure}{S\arabic{figure}}'+'\n'+r'\begin{document}')
+    else:
+        content=re.sub(r'\\caption\{Figure S?\d+\.\s*',lambda _:r'\caption{',content)
     content=content.replace('\\begin{longtable}',r'\small\setlength{\tabcolsep}{3pt}'+'\n'+r'\begin{longtable}')
     content=keep_short_tables(content)
     content=content.replace('\\section{References}',r'\clearpage'+'\n'+r'\section{References}')
@@ -73,8 +75,8 @@ def build(source):
 
 
 if __name__=='__main__':
-    records=[build(BASE/name) for name in ('article_revised.md','supplement.md','information_theory.md','weak_efficiency_theory.md','independent_records_theory.md','heterogeneous_records_theory.md')]
-    for original,alias in [('article_revised','article_en'),('information_theory','theory')]:
+    records=[build(BASE/name) for name in ('article_revised.md','supplement.md','research_extensions_archive.md')]
+    for original,alias in [('article_revised','article_en')]:
         for suffix in ('.md','.docx','.tex','.pdf'):
             shutil.copy2(BASE/(original+suffix),BASE/(alias+suffix))
     (BASE/'publication_build.json').write_text(json.dumps(records,indent=2))

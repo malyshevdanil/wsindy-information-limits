@@ -1,0 +1,43 @@
+{
+  "stage": "guarded_geometry_reference",
+  "protocol": {
+    "protocol": "self_instrumented_finite_span_reference_v1",
+    "T": 20.0,
+    "initial": [
+      2.0,
+      0.0
+    ],
+    "tau": 0.3,
+    "spline_level": 7,
+    "reference_steps": [
+      0.005,
+      0.00015625,
+      7.8125e-05
+    ],
+    "coefficients": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0
+    ],
+    "test_limit": "nine w*g_j on exact clean trajectory plus all 125 cubic splines; no smoothed-proxy bandwidth",
+    "regularization": "none; no rank truncation; fail if covariance or normal matrix is not numerically positive definite",
+    "scope": "deterministic finite-family covariance only; no new Monte Carlo observations",
+    "refinement_check_relative_tolerance": 0.005
+  },
+  "source_sha256": "082d25aafe098ba4f0a191aaa6757027c9c253af21632c8da1006c22ce4979a6"
+}

@@ -1,0 +1,34 @@
+{
+  "protocol_unchanged_since_freeze": true,
+  "python_syntax_passed": true,
+  "target_scaling_matches_direct_physical_bread": true,
+  "fixed_design_score_projection_equals_gls_map": true,
+  "wilson_baseline_fails": true,
+  "numerical_smoke_execution_and_archived_replay_passed": true,
+  "all_primary_notebooks_frozen": [
+    {
+      "stage": "secal_smoke",
+      "sha256": "5fb72f8b0fd173f60e6aee346fc7c70c3aa59b9b5595df02ee3d216184e17da1"
+    },
+    {
+      "stage": "secal_0",
+      "sha256": "96a9090c8feded804bd35c729c400d8c314a5bbf5d0c884057d22eedcd643f97"
+    },
+    {
+      "stage": "secal_1",
+      "sha256": "0c1077a6c6e9575138b5e63e3d1ffbce1b1f93af5d2a42f27dff2bbf63325cfd"
+    },
+    {
+      "stage": "secal_2",
+      "sha256": "8aef4c87133da4e13c01045da2efbc78cf8900b7901db1c6d8ef761e26261b22"
+    },
+    {
+      "stage": "secal_3",
+      "sha256": "40bd35cb8ef9e9755b0121e5b84e4245f9427c097e960e3d2f7702f4e8aa3930"
+    },
+    {
+      "stage": "secal_4",
+      "sha256": "62ec6c56ca5e1717d075e52876f5f6298082856f06a443acd8f06738a5dad1d0"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "scope": "complete endpoint ablation/generalization and primary amended Wald study; all paired records retained; failed v1 preflight diagnostics quarantined",
+  "stages": [
+    "boundary_ablate_v2_0",
+    "boundary_ablate_v2_1",
+    "boundary_ablate_v2_2",
+    "boundary_ablate_v2_3",
+    "endpoint_vdp5",
+    "endpoint_lorenz",
+    "support_wald_v2_0",
+    "support_wald_v2_1",
+    "support_wald_v2_2",
+    "support_wald_v2_3"
+  ],
+  "files": [
+    {
+      "path": "boundary_ablate_v2_0/manifest.json",
+      "bytes": 2551,
+      "sha256": "92f744ede7d80cf0681b2c19a8f7ea693b29960d2ecb107c7f2036f1126e2bad"
+    },
+    {
+      "path": "boundary_ablate_v2_0/completion.json",
+      "bytes": 78,
+      "sha256": "4867d0548458ec35e84fd99fe8dad8a856cb1d52350cef86745a68a29c9ab1f7"
+    },
+    {
+      "path": "boundary_ablate_v2_0/rows.json",
+      "bytes": 455496,
+      "sha256": "97da78667062207d58a6966effa911c654c4d081a3dacac6f2ba09a182429c54"
+    },
+    {
+      "path": "boundary_ablate_v2_0/quadrature_gates.json",
+      "bytes": 2432,
+      "sha256": "e9c7180eefa6a1c112fb4af58fea81a878d66f655954f6605c64ab85471cd6c8"
+    },
+    {
+      "path": "boundary_ablate_v2_1/manifest.json",
+      "bytes": 2551,
+      "sha256": "c1edd11ae56632d55ede3804132f5f9526891d1dc63ef4fcf18d681733f291cf"
+    },
+    {
+      "path": "boundary_ablate_v2_1/completion.json",
+      "bytes": 82,
+      "sha256": "ccfb43e914ede4184c10f2226facd49dc53a6a8ed96a0294706598e08d67ee2f"
+    },
+    {
+      "path": "boundary_ablate_v2_1/rows.json",
+      "bytes": 455513,
+      "sha256": "2054039c3ff2ffa35c2916bd15e9e35b0447bce230f0ea2a97259189abb07db0"
+    },
+    {
+      "path": "boundary_ablate_v2_1/quadrature_gates.json",
+      "bytes": 2432,
+      "sha256": "e9c7180eefa6a1c112fb4af58fea81a878d66f655954f6605c64ab85471cd6c8"
+    },
+    {
+      "path": "boundary_ablate_v2_2/manifest.json",
+      "bytes": 2551,
+      "sha256": "468f5f147cfafc722e56cbcb62b0cb335eb984cc4ecb307d5da31f883d1fd681"
+    },
+    {
+      "path": "boundary_ablate_v2_2/completion.json",
+      "bytes": 78,
+      "sha256": "3a9adf61eaf5b3b538128eae816ad1db10eb67f5cb273404eb7bd1fd7ed069fa"
+    },
+    {
+      "path": "boundary_ablate_v2_2/rows.json",
+      "bytes": 455577,
+      "sha256": "051712e446fd0fbe6a873dfce31debd7cfde4fa0e345efa2ba59adcbb5eddf0b"
+    },
+    {
+      "path": "boundary_ablate_v2_2/quadrature_gates.json",
+      "bytes": 2432,
+      "sha256": "e9c7180eefa6a1c112fb4af58fea81a878d66f655954f6605c64ab85471cd6c8"
+    },
+    {
+      "path": "boundary_ablate_v2_3/manifest.json",
+      "bytes": 2551,
+      "sha256": "be79dcb1defa57acbe2c7f99ac6eb80c11bdc5d00bea5afc660dffc75b5b8b52"
+    },
+    {
+      "path": "boundary_ablate_v2_3/completion.json",
+      "bytes": 78,
+      "sha256": "f5050c18cc368c8213f7c96b63d8e0265526bf3cdd8c87bf9e454b6a87ae1373"
+    },
+    {
+      "path": "boundary_ablate_v2_3/rows.json",
+      "bytes": 455561,
+      "sha256": "92a615e344950b3923cbdefd15741e0272579aa81e4f61885dbff86962a20e58"
+    },
+    {
+      "path": "boundary_ablate_v2_3/quadrature_gates.json",
+      "bytes": 2432,
+      "sha256": "e9c7180eefa6a1c112fb4af58fea81a878d66f655954f6605c64ab85471cd6c8"
+    },
+    {
+      "path": "endpoint_vdp5/manifest.json",
+      "bytes": 2506,
+      "sha256": "65a7c62c2cbe99059e818684c480b49142e9e9f57a9ed8b6e4e880e1c98fa9c7"
+    },
+    {
+      "path": "endpoint_vdp5/completion.json",
+      "bytes": 82,
+      "sha256": "f2e96e98952ba975c2370329d55a7a3669a84dc672f9bef4e28314599d5efc56"
+    },
+    {
+      "path": "endpoint_vdp5/rows.json",
+      "bytes": 407593,
+      "sha256": "0ee5012bd00f9c77cb1fcbfa9d61e11bbc100ceff5c86385b2b084802b78a866"
+    },
+    {
+      "path": "endpoint_vdp5/quadrature_gates.json",
+      "bytes": 596,
+      "sha256": "5d2bad98a75d9200c583fc55dd82687c1a1b3878d866148d2afa1477896ba6fc"
+    },
+    {
+      "path": "endpoint_vdp5/basis.json",
+      "bytes": 507,
+      "sha256": "91fe60c36e03a287f0a0ff9f2c8750e78d43f28575717ed0334bde9bb27a0fd7"
+    },
+    {
+      "path": "endpoint_vdp5/oracle_geometry.json",
+      "bytes": 2955,
+      "sha256": "7e2e0eca572d0790d19ea56270ed83a80b39547f2348d4b48cf4bf8ab6822f01"
+    },
+    {
+      "path": "endpoint_lorenz/manifest.json",
+      "bytes": 2510,
+      "sha256": "9d795c4a2845a6c28690f83a47c5a2cf19d6e8ca6088ab750709f87feb858b83"
+    },
+    {
+      "path": "endpoint_lorenz/completion.json",
+      "bytes": 79,
+      "sha256": "11e86acd267da970080d3383604cdec2d686bdc9897fdf58a0a2531ac03dc3b0"
+    },
+    {
+      "path": "endpoint_lorenz/rows.json",
+      "bytes": 340262,
+      "sha256": "557002c06e3fda77429c3dd168f77e1004cfa465d864b999421c56afab0a8b56"
+    },
+    {
+      "path": "endpoint_lorenz/quadrature_gates.json",
+      "bytes": 429,
+      "sha256": "cb587cf2c48ca21025c63d07b78cb116f9eaceee4299d225a7f3d1df0523e134"
+    },
+    {
+      "path": "endpoint_lorenz/basis.json",
+      "bytes": 505,
+      "sha256": "cec353ac97fb5104cfacffafc9d0595dbc98ea817c5bc021f74c2e0429f9deaa"
+    },
+    {
+      "path": "endpoint_lorenz/oracle_geometry.json",
+      "bytes": 2021,
+      "sha256": "fa271f2b4d45fa53523d3db55e3c3663a566a6dd5f7f116f72add56f96021d10"
+    },
+    {
+      "path": "endpoint_lorenz/information.json",
+      "bytes": 845,
+      "sha256": "34a675f6d378980e93e134ac7d18f80a4bd7d636522fb9c06e3d6b54864a5eaf"
+    },
+    {
+      "path": "support_wald_v2_0/manifest.json",
+      "bytes": 5010,
+      "sha256": "ff424669922ed0136c33177827e9e683ac936f26b63ce74c1b5de813cdc85af7"
+    },
+    {
+      "path": "support_wald_v2_0/completion.json",
+      "bytes": 77,
+      "sha256": "57b5de7b12fb016eceb08b3ca9a9ed0578614ee7e71fbed0ceecae4cf5ed4a6a"
+    },
+    {
+      "path": "support_wald_v2_0/rows.json",
+      "bytes": 572969,
+      "sha256": "d81e72baeb9f14d7e458cd3107d2f9cb169602bec586740fb40e9bd33e64aac7"
+    },
+    {
+      "path": "support_wald_v2_0/quadrature_gates.json",
+      "bytes": 2732,
+      "sha256": "04c3c347b06ccba7c875fd3a4920500394ba6276e32dd87d5af05f6bead53029"
+    },
+    {
+      "path": "support_wald_v2_0/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "support_wald_v2_0/author_provenance.json",
+      "bytes": 176,
+      "sha256": "0b054508294ad7d2f31d4a1326a18f408dd3c4219e2e600c71437c2f479072d0"
+    },
+    {
+      "path": "support_wald_v2_1/manifest.json",
+      "bytes": 5010,
+      "sha256": "d5362b4aff01fb67394c492894dd04b302421db341e027766512cf162fb36c30"
+    },
+    {
+      "path": "support_wald_v2_1/completion.json",
+      "bytes": 78,
+      "sha256": "a83b84ea961f0f0fc2fb01b58100f050489afc0bb0a82c16b0abb74a8d93eb91"
+    },
+    {
+      "path": "support_wald_v2_1/rows.json",
+      "bytes": 572951,
+      "sha256": "9b6e873140fa58ead16f944bdc2fe1404eed6864b5a933732f6462d7657f9c11"
+    },
+    {
+      "path": "support_wald_v2_1/quadrature_gates.json",
+      "bytes": 2732,
+      "sha256": "04c3c347b06ccba7c875fd3a4920500394ba6276e32dd87d5af05f6bead53029"
+    },
+    {
+      "path": "support_wald_v2_1/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "support_wald_v2_1/author_provenance.json",
+      "bytes": 176,
+      "sha256": "0b054508294ad7d2f31d4a1326a18f408dd3c4219e2e600c71437c2f479072d0"
+    },
+    {
+      "path": "support_wald_v2_2/manifest.json",
+      "bytes": 5010,
+      "sha256": "de10540c836367f10cf201f47efd19caad974b5034b88d18d2288d94ad9c6d0e"
+    },
+    {
+      "path": "support_wald_v2_2/completion.json",
+      "bytes": 78,
+      "sha256": "5340f304358e1e434f7cfea5c1eb51bc86209aee9fcf04a041ba0948e7c45d91"
+    },
+    {
+      "path": "support_wald_v2_2/rows.json",
+      "bytes": 567023,
+      "sha256": "52c051e907c1970009f36d64b40fe127280441584757550893cbcdfeff871d43"
+    },
+    {
+      "path": "support_wald_v2_2/quadrature_gates.json",
+      "bytes": 2734,
+      "sha256": "30d9d1b7e51b25dcfa8198c284344164c7a4c54f51eb46ff4ea2e017083abe65"
+    },
+    {
+      "path": "support_wald_v2_2/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "support_wald_v2_2/author_provenance.json",
+      "bytes": 176,
+      "sha256": "0b054508294ad7d2f31d4a1326a18f408dd3c4219e2e600c71437c2f479072d0"
+    },
+    {
+      "path": "support_wald_v2_3/manifest.json",
+      "bytes": 5010,
+      "sha256": "e3a4a4378f21de49cfcba86369a4c6149dc4a8ab85fba0431dca8ed0fc99c1ac"
+    },
+    {
+      "path": "support_wald_v2_3/completion.json",
+      "bytes": 78,
+      "sha256": "3bf0700ac40062077d8558b47e89313df73d67a7506483a1b68125a4085dbf98"
+    },
+    {
+      "path": "support_wald_v2_3/rows.json",
+      "bytes": 566674,
+      "sha256": "ef8ae22d0408f711e8faf0c9254adc2c3517ae652e7dfccb2a118ccb5bd6ad6d"
+    },
+    {
+      "path": "support_wald_v2_3/quadrature_gates.json",
+      "bytes": 2734,
+      "sha256": "30d9d1b7e51b25dcfa8198c284344164c7a4c54f51eb46ff4ea2e017083abe65"
+    },
+    {
+      "path": "support_wald_v2_3/basis.json",
+      "bytes": 145,
+      "sha256": "bd71afb9e4bd6944295a97ed4a2d9671dbc2bd239aec18748d2cbf6457f39fba"
+    },
+    {
+      "path": "support_wald_v2_3/author_provenance.json",
+      "bytes": 176,
+      "sha256": "0b054508294ad7d2f31d4a1326a18f408dd3c4219e2e600c71437c2f479072d0"
+    },
+    {
+      "path": "numerical_amendment_v1/high_noise_preflight_gates.json",
+      "bytes": 1700,
+      "sha256": "e6a4bd83dcefe3fa11db511de3b49778870b7339fd9313304b1132aec02a4df6"
+    },
+    {
+      "path": "numerical_amendment_v1/support_wald_2.log",
+      "bytes": 9193,
+      "sha256": "5d74a10a02a2056c0d0fa75324f4a56842bf87bd462f7af8615664b7ec7bdc03"
+    },
+    {
+      "path": "numerical_amendment_v1/support_wald_3.log",
+      "bytes": 9203,
+      "sha256": "8d58ea46f059fa0a37eb25d8fbf4b5be40b50212b0d91573fd885477ffceeb30"
+    }
+  ],
+  "frozen_notebooks": "../../kaggle/<stage>/; embedded source is authoritative for each run",
+  "observations": "regenerate using frozen configurations; SHA256 observation hashes preserved in rows",
+  "previous_archive": "../endpoint_confirmation/; preceding benchmark is separate"
+}

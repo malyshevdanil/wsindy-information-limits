@@ -70,7 +70,7 @@ def publish():
     assert re.fullmatch(r'v\d+\.\d+\.\d+',version)
     git('config','user.name',OWNER);git('config','user.email',OWNER+'@users.noreply.github.com')
     if git('status','--porcelain'):
-        git('-c','commit.gpgsign=false','commit','-m','Validate paired information limits and independent-record weak GMM')
+        git('-c','commit.gpgsign=false','commit','-m','Archive constructive weak efficiency and independent validation')
     head=git('rev-parse','HEAD')
     tags=git('tag','--list',version).splitlines()
     if tags:assert git('rev-parse',version)==head,'Never move an existing release tag'

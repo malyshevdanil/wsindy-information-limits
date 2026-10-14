@@ -1,0 +1,30 @@
+{
+  "stage": "boundary_screen_v3",
+  "api_status": "COMPLETE",
+  "snapshot": {
+    "source_sha256_verified": true,
+    "matching_protocol_files": [
+      "configs/boundary_weak_screen_v3.json"
+    ]
+  },
+  "completion": {
+    "status": "complete",
+    "paths": 32
+  },
+  "quadrature_gate": {
+    "clean_coefficients": [
+      0.9999999999995453,
+      -0.9999999992713811,
+      0.9999999980198027,
+      -0.9999999975992182
+    ],
+    "relative_bias": 1.598109860425454e-09,
+    "threshold": 1.4e-05,
+    "moment_covariance_condition": 252601.78960812895,
+    "initial_atom_norm": 0.00010767526743558888
+  },
+  "full_2000_path_experiment_completed": false,
+  "paired_inputs_verified": false,
+  "statistical_promotion": false,
+  "reason": "Archived paired input fingerprint mismatch; no coefficient-error summaries promoted."
+}

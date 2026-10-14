@@ -1,0 +1,17 @@
+{
+  "completed": true,
+  "comparative_fits": 0,
+  "paired_cases": 0,
+  "full_wm_budget_verified": true,
+  "stages": [
+    {
+      "stage": "adaptive_smoke",
+      "fits": 3,
+      "failed": 0,
+      "manifest_verified": true,
+      "source_pins_verified": true,
+      "input_hashes_verified": true
+    }
+  ],
+  "publication_checked": false
+}

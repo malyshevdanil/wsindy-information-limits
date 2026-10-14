@@ -1,0 +1,22 @@
+[
+  {
+    "stage": "secal_0",
+    "status": "RUNNING"
+  },
+  {
+    "stage": "secal_1",
+    "status": "RUNNING"
+  },
+  {
+    "stage": "secal_2",
+    "status": "RUNNING"
+  },
+  {
+    "stage": "secal_3",
+    "status": "RUNNING"
+  },
+  {
+    "stage": "secal_4",
+    "status": "RUNNING"
+  }
+]

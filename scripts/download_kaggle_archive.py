@@ -4,14 +4,15 @@ from pathlib import Path
 import time
 import zipfile
 import requests
-from kaggle.api.kaggle_api_extended import KaggleApi
-from kagglesdk.kernels.types.kernels_api_service import ApiListKernelSessionOutputRequest
 
 
-def download(stage):
-    api=KaggleApi()
-    api.authenticate()
-    slug=f"wsindy-sampling-saturation-{stage.replace('_','-')}"
+def download(stage,kernel_ref=None,api=None):
+    from kagglesdk.kernels.types.kernels_api_service import ApiListKernelSessionOutputRequest
+    if api is None:
+        from kaggle.api.kaggle_api_extended import KaggleApi
+        api=KaggleApi()
+        api.authenticate()
+    slug=(kernel_ref.split('/',1)[1] if kernel_ref else f"wsindy-sampling-saturation-{stage.replace('_','-').lower()}")
     folder=(Path(__file__).resolve().parents[1]/f'results/kaggle_{stage}_download').resolve()
     folder.mkdir(parents=True,exist_ok=True)
     target=folder/f'wsindy_{stage}_outputs.zip'
@@ -27,7 +28,7 @@ def download(stage):
     pages=0
     while True:
         request=ApiListKernelSessionOutputRequest()
-        request.user_name='malyshevdanil'
+        request.user_name=kernel_ref.split('/',1)[0] if kernel_ref else 'malyshevdanil'
         request.kernel_slug=slug
         api._set_paging(request,200,token)
         for attempt in range(10):

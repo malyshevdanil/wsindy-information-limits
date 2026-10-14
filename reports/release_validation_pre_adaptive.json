@@ -1,0 +1,32 @@
+[
+  {
+    "file": "submission_package.zip",
+    "sha256": "62dfb7e95b1b6142129625e11390df07ff104e521e18dee95b3d9f446ff5533e",
+    "crc_verified": true,
+    "credential_scan_passed": true
+  },
+  {
+    "file": "reproducibility_code.zip",
+    "sha256": "f60668fe51fddce8315f97f92f40d05a8911f7ea06d6e3c6211383a4540f4a8f",
+    "crc_verified": true,
+    "credential_scan_passed": true
+  },
+  {
+    "file": "reproducibility_data.zip",
+    "sha256": "e1aff7b57a87678c0390c797717638699d5b58fe5182a3d4b77962d81ab6cb62",
+    "crc_verified": true,
+    "credential_scan_passed": true
+  },
+  {
+    "postprocessing_reproduced_from_archives": {
+      "reports/revision_results.json": true,
+      "manuscript/article_revised.md": true,
+      "manuscript/figures/publication/coefficient_covariance.png": true,
+      "manuscript/figures/publication/covariance_null.png": true,
+      "manuscript/figures/publication/heterogeneous_recordings.png": true,
+      "manuscript/figures/publication/information_and_likelihood.png": true,
+      "manuscript/figures/publication/sparse_refinement.png": true,
+      "manuscript/figures/publication/support_conditional.png": true
+    }
+  }
+]
