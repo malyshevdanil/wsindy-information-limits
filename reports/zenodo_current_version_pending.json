@@ -1,0 +1,9 @@
+{
+  "version": "v1.3.1",
+  "github_release_published": true,
+  "github_release_url": "https://github.com/malyshevdanil/wsindy-information-limits/releases/tag/v1.3.1",
+  "current_doi_verified": false,
+  "observed_problem": "Repeated public Zenodo requests timed out during TLS connection; no current-version DOI has been asserted.",
+  "next_check": "python scripts/check_zenodo_archive.py",
+  "attachment_after_verification": "python scripts/attach_archive_doi.py; rebuild publication artifacts; preserve immutable tags."
+}

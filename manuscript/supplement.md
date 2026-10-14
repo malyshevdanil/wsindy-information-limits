@@ -346,7 +346,7 @@ This efficiency concerns the Gaussian linearization.
 
 ### S6.2. Proof of the conditional dense-span proposition
 
-The main proposition separates estimator regularity from projection geometry. Its sufficient assumptions are:
+This auxiliary conditional statement separates estimator regularity from projection geometry. Proposition 3 derives its fixed-family conclusions from primitive conditions; the assumptions below serve only to state the separate projection argument:
 
 - (P1) For each fixed finite family, the corrected weak solution has expansion $\widehat\theta_{K,\epsilon}-\theta=\epsilon P_K r_K+o_p(\epsilon)$, with $r_K$ centered Gaussian of covariance $\Sigma_K$, and full-column-rank $D_K$.
 - (P2) Feasible pilots and covariance weights change $P_K=(D_K^\top\Sigma_K^{-1}D_K)^{-1}D_K^\top\Sigma_K^{-1}$ by $o_p(1)$. Deterministic quadrature error is $o(\epsilon)$.
