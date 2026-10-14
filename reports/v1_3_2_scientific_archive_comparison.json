@@ -1,0 +1,21 @@
+{
+  "base_version": "v1.3.1",
+  "groups": {
+    "src/": {
+      "files": 29,
+      "changed": []
+    },
+    "data/": {
+      "files": 422,
+      "changed": []
+    },
+    "configs/": {
+      "files": 65,
+      "changed": []
+    },
+    "kaggle/": {
+      "files": 268,
+      "changed": []
+    }
+  }
+}

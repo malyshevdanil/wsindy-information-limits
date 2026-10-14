@@ -8,8 +8,8 @@
       "orcid": "0009-0007-0947-3866"
     }
   ],
-  "description": "Exact weak adjoint-range geometry, a constructive full-library small-noise efficiency theorem under a nonzero jet condition, and reproducible correlated-noise benchmarks. Includes core submission supplement and separate historical research extensions. Frozen independent small-noise size and power checks retain all successful and failed criteria. Moderate-noise bootstrap validation is incomplete following a recorded compute-budget decision. No journal submission or acceptance is asserted.",
-  "version": "v1.3.1",
+  "description": "Revised journal manuscript and supporting code and synthetic-data archive. Core scientific source, numerical data, experiment configurations and frozen notebooks are unchanged from v1.3.1. This version updates the manuscript, figures and publication metadata. The manuscript discloses AI assistance. No journal submission or acceptance is asserted.",
+  "version": "v1.3.2",
   "keywords": [
     "weak estimating equations",
     "correlated Gaussian noise",

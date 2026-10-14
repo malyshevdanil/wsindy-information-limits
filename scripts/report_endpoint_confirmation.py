@@ -25,13 +25,15 @@ def main():
     ax.set_yticks(np.arange(4), labels)
     ax.invert_yaxis()
     ax.set_xlabel('Relative RMSE (10$^{-3}$); paired-bootstrap 95% intervals')
-    ax.set_title('Van der Pol, known initial state, 0.5% OU noise; 1968 paired records')
+    # The caption carries the record count; a shorter title fits the panel width.
+    ax.set_title('Van der Pol, known initial state, 0.5% OU noise')
     ax.grid(axis='x', alpha=.2)
     fig.tight_layout()
     destination = ROOT / 'reports/figures'
     destination.mkdir(exist_ok=True)
     for ext in ('pdf', 'png'):
         fig.savefig(destination / f'endpoint_confirmation.{ext}', dpi=200)
+        fig.savefig(ROOT / f'manuscript/figures/publication/endpoint_confirmation.{ext}', dpi=200)
     criteria = result['criteria']
     lines = ['# Подтверждающий граничный эксперимент', '',
              'Полная выборка: пути 33–2000 (1968 записей), Van der Pol, '

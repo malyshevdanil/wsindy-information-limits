@@ -68,9 +68,15 @@ def main():
     report['execution_sources']={s:load(ROOT/f'results/kaggle_{s}/manifest.json')['source_sha256'] for s in stages}
     report['output_sha256']={s:hashlib.sha256((ROOT/f'results/kaggle_{s}_download/wsindy_{s}_outputs.zip').read_bytes()).hexdigest() for s in stages}
     (ROOT/'reports/information_followup_results.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf-8')
+    plot_likelihood_comparison(report)
+    print(json.dumps({k:report[k] for k in ['fisher','noise','lorenz']}))
+
+
+def plot_likelihood_comparison(report):
+    # Short two-line labels keep adjacent tick labels from running together.
     fig,ax=plt.subplots(figsize=(6.4,3.3))
     methods=['fisher_known_initial','fisher_unknown_initial','ou','iid']
-    labels=['One step\nknown initial','One step\nunknown initial','Weak GLS\nOU, 480 windows','Weak GLS\niid, 480 windows']
+    labels=['One step\nknown initial','One step\nunknown initial','Weak GLS\nOU weights','Weak GLS\niid weights']
     plotted=dict(report['fisher'])
     if 'refinement' in report:
         methods.insert(2,'joint_step_3');labels.insert(2,'Three steps\nunknown initial');plotted.update(report['refinement'])
@@ -83,6 +89,5 @@ def main():
     ax.set_ylim(1.1,2.03);ax.legend(fontsize=7);ax.spines[['top','right']].set_visible(False);fig.tight_layout()
     for suffix in ['png','pdf']:fig.savefig(ROOT/f'manuscript/figures/publication/likelihood_comparison.{suffix}',dpi=250,bbox_inches='tight')
     plt.close(fig)
-    print(json.dumps({k:report[k] for k in ['fisher','noise','lorenz']}))
 
 if __name__=='__main__':main()

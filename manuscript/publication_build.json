@@ -1,14 +1,14 @@
 [
   {
     "source": "article_revised.md",
-    "docx_native_equations": 308,
+    "docx_native_equations": 314,
     "docx_tables": 7,
     "docx_images": 4,
     "pdf_exists": true
   },
   {
     "source": "supplement.md",
-    "docx_native_equations": 482,
+    "docx_native_equations": 485,
     "docx_tables": 8,
     "docx_images": 3,
     "pdf_exists": true

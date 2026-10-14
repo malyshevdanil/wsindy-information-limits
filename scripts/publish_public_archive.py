@@ -75,7 +75,7 @@ def publish():
     tags=git('tag','--list',version).splitlines()
     if tags:assert git('rev-parse',version)==head,'Never move an existing release tag'
     else:git('tag',version)
-    git('-c','http.version=HTTP/1.1','-c','http.postBuffer=104857600','push','--atomic','origin','main',version)
+    git('-c','http.version=HTTP/1.1','-c','http.postBuffer=104857600','-c','http.lowSpeedLimit=1','-c','http.lowSpeedTime=45','push','--ipv4','--atomic','origin','main',version)
     print(json.dumps(dict(pushed=True,tag=version,commit=head)))
 
 

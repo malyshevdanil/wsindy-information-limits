@@ -57,4 +57,6 @@ protocols. Pinned download specifications identify original author sources.
 The preceding v1.2.0 archive remains at
 [its Zenodo DOI](https://doi.org/10.5281/zenodo.23313935); the current version
 has separate metadata in `configs/public_archive.json`.
-Current reproducibility archive: [v1.3.1](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.3.1), [Zenodo DOI 10.5281/zenodo.23366538](https://doi.org/10.5281/zenodo.23366538).
+
+Current reproducibility archive: [v1.3.2](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.3.2).
+Previous software and data snapshot: [v1.3.1](https://doi.org/10.5281/zenodo.23366538).

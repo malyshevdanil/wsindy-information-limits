@@ -118,11 +118,11 @@
   "pdfs": [
     {
       "name": "article_ejs",
-      "pages": 25
+      "pages": 22
     },
     {
       "name": "article_revised",
-      "pages": 21
+      "pages": 19
     },
     {
       "name": "supplement",
@@ -130,5 +130,5 @@
     }
   ],
   "ejs_metadata_verified": true,
-  "public_identifier_for_current_revision_pending": false
+  "public_identifier_for_current_revision_pending": true
 }

@@ -1,0 +1,10 @@
+{
+  "doi_verified": true,
+  "doi": "10.5281/zenodo.23366538",
+  "url": "https://doi.org/10.5281/zenodo.23366538",
+  "record_url": "https://zenodo.org/records/23366538",
+  "version": "v1.3.1",
+  "creator_orcid_verified": true,
+  "public_metadata_verified": true,
+  "retrieval_method": "Public Zenodo API via curl IPv4 HTTP/1.1"
+}

@@ -33,6 +33,10 @@ def build():
 \RequirePackage{xurl}
 \RequirePackage[english]{babel}
 \setlength{\emergencystretch}{2em}
+% Latin Modern has no italic small caps; set float labels upright as the
+% class itself does for its sans-serif layouts.
+\setpkgattr{figurename}{size}{\upshape\scshape}
+\setpkgattr{tablename}{size}{\upshape\scshape}
 \newcounter{none}
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \providecommand{\pandocbounded}[1]{#1}

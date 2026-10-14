@@ -1,10 +1,9 @@
 {
   "repository": "https://github.com/malyshevdanil/wsindy-information-limits",
-  "version": "v1.3.1",
-  "version_url": "https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.3.1",
+  "version": "v1.3.2",
+  "version_url": "https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.3.2",
   "scope": "Code, synthetic observations, recorded outputs and reproducibility scripts",
-  "previous_version": "v1.2.0",
-  "previous_doi": "10.5281/zenodo.23313935",
-  "publication_title": "The information cost of boundary-free weak estimation under correlated noise",
-  "doi": "10.5281/zenodo.23366538"
+  "previous_version": "v1.3.1",
+  "previous_doi": "10.5281/zenodo.23366538",
+  "publication_title": "The information cost of boundary-free weak estimation under correlated noise"
 }

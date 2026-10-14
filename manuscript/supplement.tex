@@ -185,14 +185,14 @@ paths and is not an additional Monte Carlo replication.
 Cameron--Martin space, making the path laws equivalent; this is the
 common-covariance case of Gaussian measure equivalence {[}2{]}. Under
 the first law the log likelihood ratio of the second is normal with mean
-\(-d_{\theta\eta}^2/2\) and variance \(d_{\theta\eta}^2\). Their total
-variation is \(2\Phi(d_{\theta\eta}/2)-1\). Sampling cannot increase
-total variation. A nearest-parameter test derived from an estimator can
-err only if that estimator is at least \(\delta/2\) from the generating
-parameter. The sum of testing errors is at least one minus total
-variation, giving the probability bound. Multiplying the estimation
-probability by \(\delta^2/4\) gives the risk bound. Both bounds hold at
-every mesh. \(\square\)
+\(-d_{\theta\theta'}^2/2\) and variance \(d_{\theta\theta'}^2\). Their
+total variation is \(2\Phi(d_{\theta\theta'}/2)-1\). Sampling cannot
+increase total variation. A nearest-parameter test derived from an
+estimator can err only if that estimator is at least \(\kappa/2\) from
+the generating parameter. The sum of testing errors is at least one
+minus total variation, giving the probability bound. Multiplying the
+estimation probability by \(\kappa^2/4\) gives the risk bound. Both
+bounds hold at every mesh. \(\square\)
 
 \subsection{S2. Endpoint attribution and generalization
 protocols}\label{s2.-endpoint-attribution-and-generalization-protocols}
@@ -1275,14 +1275,14 @@ approaches}\label{s7.1.-what-the-archived-solver-actually-approaches}
 Write \(q=\dim(\widehat\Sigma_\epsilon)\) for the number of residual
 moments, distinct from the library size. In
 \texttt{src/weak\_efficiency.py}, \texttt{gls\_map} adds
-\(\lambda_\epsilon I=\rho\,\operatorname{tr}(\widehat\Sigma_\epsilon)I/q\)
+\(\lambda_\epsilon I=\varrho\,\operatorname{tr}(\widehat\Sigma_\epsilon)I/q\)
 to the physical residual covariance, with fixed relative
-\(\rho=10^{-10}\) in the primary protocols. If
+\(\varrho=10^{-10}\) in the primary protocols. If
 \(\epsilon^{-2}\widehat\Sigma_\epsilon\to\Sigma_1>0\), its normalized
 limit is
 
 \[
-W_\rho=\left[\Sigma_1+\rho\operatorname{tr}(\Sigma_1)I/q\right]^{-1}.
+W_\varrho=\left[\Sigma_1+\varrho\operatorname{tr}(\Sigma_1)I/q\right]^{-1}.
 \]
 
 Thus fixed relative ridge is not removed by small-noise scaling.
@@ -1290,24 +1290,25 @@ Whenever a regular local expansion exists, the corresponding leading map
 and covariance are
 
 \[
-P_\rho=(D^\top W_\rho D)^{-1}D^\top W_\rho,\qquad
-V_\rho=P_\rho\Sigma_1P_\rho^\top.
+P_\varrho=(D^\top W_\varrho D)^{-1}D^\top W_\varrho,\qquad
+V_\varrho=P_\varrho\Sigma_1P_\varrho^\top.
 \]
 
-For the ideal map \(P_0\), both maps satisfy \(P_\rho D=P_0D=I\) and
+For the ideal map \(P_0\), both maps satisfy \(P_\varrho D=P_0D=I\) and
 
 \[
-V_\rho-V_0=(P_\rho-P_0)\Sigma_1(P_\rho-P_0)^\top\succeq0.
+V_\varrho-V_0=(P_\varrho-P_0)\Sigma_1(P_\varrho-P_0)^\top\succeq0.
 \]
 
 Indeed, \(P_0\Sigma_1=V_0D^\top\) annihilates the cross terms because
-\((P_\rho-P_0)D=0\). Equality holds only when the two maps coincide; a
-small numerical ridge alone gives no theorem-level equality. Its impact
-also depends on conditioning. The archived final fits are unbounded and
-their bounded covariance pilots do not control inverse random-design
-tails. Neither uniform integrability nor exact ideal-GLS efficiency of
-these archived algorithms is claimed. Their finite mesh and fixed
-spectral cutoff also differ from the sequential limit in Proposition 3.
+\((P_\varrho-P_0)D=0\). Equality holds only when the two maps coincide;
+a small numerical ridge alone gives no theorem-level equality. Its
+impact also depends on conditioning. The archived final fits are
+unbounded and their bounded covariance pilots do not control inverse
+random-design tails. Neither uniform integrability nor exact ideal-GLS
+efficiency of these archived algorithms is claimed. Their finite mesh
+and fixed spectral cutoff also differ from the sequential limit in
+Proposition 3.
 
 \subsubsection{S7.2. A specified algorithm for which the fixed-family
 assumptions
@@ -1317,7 +1318,7 @@ The separate routine \texttt{src/guarded\_gls.py} specifies a bounded
 vanishing-ridge variant. It retains fixed, deterministic test functions
 and the known sensor covariance model. It divides physical residual
 covariance by \(\epsilon^2\), uses relative ridge
-\(\rho_\epsilon=\epsilon^2\), and rejects a numerical solve when
+\(\varrho_\epsilon=\epsilon^2\), and rejects a numerical solve when
 normalized covariance or column-scaled normal-matrix relative minimum
 eigenvalues fall below \(10^{-8}\epsilon^2\). A rejected solve returns
 the fixed coefficient-box midpoint. A successful solve is projected onto
@@ -1377,8 +1378,10 @@ covariance reference of Theorem 1. This is a sequential result; it
 supplies no uniform rate in family size and no conclusion for an
 unchanged fixed mesh or ridge.
 
-\textbf{Proof.} Write \(Y=x+\epsilon\eta\) and \(M=\|\eta\|_\infty\).
-For each OU coordinate,
+\textbf{Proof.} Write \(Y=x+\epsilon\eta\) and \(M=\|\eta\|_\infty\),
+and let \(\sigma_{0,j}\) denote the unit-amplitude scale of \(\eta_j\),
+so that the physical scale is \(\epsilon\sigma_{0,j}\). For each OU
+coordinate,
 
 \[
 \eta_j(t)=e^{-t/\tau_j}
@@ -1464,8 +1467,8 @@ deterministic matrix calculation, without new observation paths.
 \begin{minipage}{\linewidth}
 Table S6. Relative local RMSE increments for the archived relative ridge
 of \(10^{-10}\). The PSD increment is computed as
-\((P_\rho-P_0)\Sigma_1(P_\rho-P_0)^\top\) rather than subtracting almost
-equal covariance matrices.
+\((P_\varrho-P_0)\Sigma_1(P_\varrho-P_0)^\top\) rather than subtracting
+almost equal covariance matrices.
 
 \small\setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lr@{}}

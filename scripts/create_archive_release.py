@@ -31,6 +31,12 @@ Includes exact adjoint-range characterizations and initial-state information cos
 Independent small-noise Wald validation retains 2000 null observations and 1000 observations for each of two alternatives. The size tolerance passes; the full power tolerance check fails at half a reference unit. All five guarded-estimator noise levels and their matched covariance reference are retained. Moderate-noise bootstrap validation is incomplete following a recorded compute-budget decision; unsubmitted frozen notebooks are protocol artifacts, not completed results.
 
 The main manuscript uses the official IMS EJS class. Core proofs are in a shortened submission supplement; independent-record, fission, cross-fitting and incidental-state extensions are preserved separately. Source and original-byte outputs carry SHA-256 manifests. This archive makes no claim of journal submission or acceptance. Creator ORCID: https://orcid.org/0009-0007-0947-3866.'''
+        if cfg['version']=='v1.3.2':
+            notes='''Revised journal manuscript and supporting reproducibility archive.
+
+This version preserves the author's revised manuscript and updated figure presentation. All 29 core source files, 422 data files, 65 scientific configurations and 268 frozen notebook files are byte-identical to v1.3.1. Publication and figure-generation helpers have been updated. No new simulations were run.
+
+The manuscript includes the agreed disclosure of AI assistance and uses the official IMS EJS class. Core proofs and earlier research extensions remain available separately. Earlier commits and release tags remain unchanged. SHA-256 manifests cover the archive. No journal submission or acceptance is asserted. Creator ORCID: https://orcid.org/0009-0007-0947-3866.'''
         response=session.post(base+'/releases',json=dict(tag_name=cfg['version'],target_commitish=verified['commit'],
             name=cfg['version']+' - constructive efficiency and information cost',body=notes,
             draft=False,prerelease=False),timeout=60)
