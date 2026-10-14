@@ -55,6 +55,17 @@ class CalibrationRepairs(unittest.TestCase):
         np.testing.assert_allclose(excess,difference@shape@difference.T,atol=1e-12)
         self.assertGreater(float(excess[0,0]),0)
 
+    def test_ridge_divisor_counts_moments_not_coefficients(self):
+        # Six residual moments and two coefficients: the divisor must be six.
+        A=np.array([[1.,0.],[0.,1.],[1.,1.],[2.,1.],[1.,2.],[2.,-1.]])
+        truth=np.array([.2,-.4]);epsilon=.1
+        shape=np.diag([1.,2.,3.,4.,5.,6.])
+        estimate,diag=guarded_gls(A,A@truth,epsilon**2*shape,epsilon,[[-1.,1.],[-1.,1.]])
+        self.assertFalse(diag['fallback'])
+        np.testing.assert_allclose(estimate,truth,atol=1e-12)
+        self.assertAlmostEqual(diag['normalized_covariance_ridge'],epsilon**2*3.5)
+        self.assertAlmostEqual(diag['physical_covariance_ridge'],epsilon**4*3.5)
+
     def test_full_pipeline_failed_pilot_returns_bounded_fallback(self):
         from src.guarded_gls import fit_guarded_polynomial
         t=np.array([0.,.5,1.]);y=np.array([[1.],[.8],[.6]])

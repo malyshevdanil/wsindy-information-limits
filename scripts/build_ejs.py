@@ -17,7 +17,8 @@ def build():
     latex=re.sub(r'\\subsubsection\{\d+\.\d+\.\s*',r'\\subsection{',latex)
     latex=re.sub(r'\\subsection\{\d+\.\s*',r'\\section{',latex)
     for header in ('Declaration of generative AI and AI-assisted technologies','Data availability','References'):
-        latex=latex.replace('\\subsection{'+header+'}', '\\section*{'+header+'}')
+        pattern=r'\\subsection\{'+re.escape(header).replace(r'\ ',r'\s+')+r'\}'
+        latex=re.sub(pattern,lambda _: '\\section*{'+header+'}',latex)
     latex=latex.replace('\\begin{figure}','\\begin{figure}[p]')
     latex=latex.replace(r'\includegraphics[keepaspectratio',r'\includegraphics[width=\linewidth,keepaspectratio')
     latex=re.sub(r'\\caption\{Figure \d+\.\s*',r'\\caption{',latex)

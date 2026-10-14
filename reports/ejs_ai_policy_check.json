@@ -1,0 +1,11 @@
+{
+  "requests": [
+    "https://imstat.org/journals-and-publications/electronic-journal-of-statistics/electronic-journal-of-statistics-manuscript-submission/",
+    "https://imstat.org/journals-and-publications/"
+  ],
+  "public_page_retrieval": "ConnectionError for both requests",
+  "web_search": "No usable result; search connector returned isError=true",
+  "journal_specific_requirement_verified": false,
+  "manuscript_disclosure_restored": true,
+  "submission_instruction_check_remains_pending": true
+}

@@ -248,9 +248,9 @@ WENDy's covariance iteration motivates this construction [@bortz2023], and physi
 
 This is the Godambe-information construction for optimally weighted estimating equations [@godambe1960]: the local information is $D^\top\Sigma^{-1}D$. WENDy-MLE has the same leading small-noise map under regularity and correctly specified covariance; finite-noise covariance-derivative terms distinguish its objective (S6.3).
 
-**Proposition 3 (guarded fixed-family weak GLS).** Fix a finite deterministic boundary-free test family, a correctly specified polynomial vector field linear in its coefficients, known initial state and supplied independent-coordinate OU covariance shape. Suppose the true coefficient is interior to a compact final box; clean and nearby pilot trajectories exist in a common bounded region; the clean pilot and final designs have full column rank; and the first-order residual covariance $\Sigma_1$ is positive definite. Quadrature weights have bounded total mass, converge to their integrals, and clean quadrature and pilot-model numerical defects are $o(\epsilon)$ with the local derivative control in (G4) of S7.2.
+**Proposition 3 (guarded fixed-family weak GLS).** Fix a finite deterministic boundary-free test family, a correctly specified polynomial vector field linear in its coefficients, known initial state and supplied independent-coordinate OU covariance shape with a known common correlation time. Suppose the true coefficient is interior to a compact final box; clean and nearby pilot trajectories exist in a common bounded region; the clean pilot and final designs have full column rank; and the first-order residual covariance $\Sigma_1$ is positive definite. Quadrature weights have bounded total mass, converge to their integrals, and clean quadrature and pilot-model numerical defects are $o(\epsilon)$ with the local derivative control in (G4) of S7.2.
 
-Use a declared pilot family containing the true vector field and a pilot box containing its true coefficients. Apply corrected least squares, clip the pilot, evaluate the full Hermite covariance on its integrated trajectory, and apply the vanishing-ridge, guarded and box-projected GLS routine described below. Then its pilot is root-$\epsilon$ consistent, its normalized weights converge, and
+Use a declared pilot family containing the true vector field and a pilot box containing its true coefficients. Apply corrected least squares, clip the pilot, evaluate the full Hermite covariance on its integrated trajectory, and apply the vanishing-ridge, guarded and box-projected GLS routine described below. Then its pilot satisfies $\widetilde\theta-\theta=O_P(\epsilon)$, its normalized weights converge, and
 
 $$
 \epsilon^{-1}(\widehat\theta_{K,\epsilon}-\theta)\Rightarrow N(0,V_K),\qquad
@@ -345,17 +345,17 @@ $$
 
 Reflect the interpolant at the endpoints. The proxy $z$ supplies the $m$ feature tests $w g_j(z)$ and their analytic derivatives. Their Hermite-corrected weak equations give a full-library least-squares pilot, clipped to $B$. A fixed deterministic-window pilot on a declared correct structural family gives the alternative construction in Proposition 3.
 
-Append the cubic splines $B_3(t/a-j)$, $a=T/2^k$, $j=2,\ldots,2^k-2$, where $B_3$ is the normalized cardinal cubic spline supported on $[-2,2]$. Whiten the combined $H^1$ Gram matrix, retaining eigenvalues above $10^{-10}\epsilon^{1/10}$ times its largest eigenvalue. The exact Hermite covariance (Proposition 4), evaluated at the proxy and pilot, gives $\widehat\Sigma_1=\widehat\Omega/\epsilon^2$. Add ridge $\epsilon^2\operatorname{tr}(\widehat\Sigma_1)I/q$, then solve corrected GLS and project the result to $B$. Relative minimum-eigenvalue guards use $10^{-8}\epsilon^2$; singular, nonfinite or failed calculations return the box midpoint. S8 specifies the column scaling and covariance guard. No generating support or pilot ODE solution is supplied to this full-library procedure.
+Append the cubic splines $B_3(t/a-j)$, $a=T/2^k$, $j=2,\ldots,2^k-2$, where $B_3$ is the normalized cardinal cubic spline supported on $[-2,2]$. Whiten the combined $H^1$ Gram matrix, retaining eigenvalues above $10^{-10}\epsilon^{1/10}$ times its largest eigenvalue. The exact Hermite covariance (Proposition 4), evaluated at the proxy and pilot, gives $\widehat\Sigma_1=\widehat\Omega/\epsilon^2$. Let $r_k$ be the number of retained scalar tests and $q_k=d r_k=\dim(\widehat\Sigma_1)$ the number of stacked residual moments. Add ridge $\epsilon^2\operatorname{tr}(\widehat\Sigma_1)I_{q_k}/q_k$, then solve corrected GLS and project the result to $B$. Relative minimum-eigenvalue guards use $10^{-8}\epsilon^2$; singular, nonfinite or failed calculations return the box midpoint. S8 specifies the column scaling and covariance guard. No generating support or pilot ODE solution is supplied to this full-library procedure.
 
 The technical restriction $T>1$ makes the fixed half-unit interior margins of $w$ nonempty. Proportional margins and a rescaled kernel give an equivalent construction on any positive horizon. Write $\mathcal I_{e,C}$ for the initial-state-adjusted information of Theorem 1 computed with the unit-amplitude covariance $C$ of $\eta$.
 
-**Theorem 3 (constructive attainability under a jet condition).** Consider an analytic trajectory $x_0$ of a polynomial ODE on $[0,T]$, $T>1$, with vector field linear in a polynomial library $g_1,\ldots,g_m$ in each of $d$ equations. Let the $dm$ true coefficients lie strictly inside a supplied compact box. Observe $Y=x_0+\epsilon\eta$ with known positive independent-coordinate stationary OU covariance. Assume that, at some $t_*$ in the observation interval,
+**Theorem 3 (constructive attainability under a jet condition).** Consider an analytic trajectory $x_0$ of a polynomial ODE on $[0,T]$, $T>1$, with vector field linear in a polynomial library $g_1,\ldots,g_m$ in each of $d$ equations. Let the $dm$ true coefficients lie strictly inside a supplied compact box. Observe $Y=x_0+\epsilon\eta$ with known positive independent-coordinate stationary OU covariance and common correlation time $\tau>0$. Assume that, at some $t_*$ in the observation interval,
 
 $$
 \det[\partial_t^r g_j(x_0(t_*))]_{r=0,\ldots,m-1;\ j=1,\ldots,m}\ne0.
 $$
 
-For the full-library procedure just defined, let $h^2=o(\epsilon)$. For each fixed spline level $k$, the pilot is root-$\epsilon$ consistent, the normalized covariance weights are consistent, and
+For the full-library procedure just defined, let $h^2=o(\epsilon)$. For each fixed spline level $k$, the pilot satisfies $\widetilde\theta-\theta_0=O_P(\epsilon)$, the normalized covariance weights are consistent, and
 
 $$
 \epsilon^{-1}(\widehat\theta_{k,\epsilon}-\theta_0)\Rightarrow N(0,V_k),\qquad
@@ -510,6 +510,8 @@ For the prespecified negative cubic perturbation $\delta x^3$ in the second Van 
 
 ### 7.6. Matching the constructive estimator to its finite-span reference
 
+The interior proxy smoothing bias is $O(b^2)=O(\epsilon^{1/5})$ (Lemma S8.A); instrument convergence can therefore be slow even though the clean weak identity gives $\widetilde\theta-\theta_0=O_P(\epsilon)$. This instrument rate is not a claimed rate for the empirical RMSE ratio. Conditioning amplifies small perturbations: the clean raw Gram has minimum eigenvalue $6.07\times10^{-10}$ and condition number at least $7.1\times10^9$, from a cubic-test diagonal Rayleigh bound. The column-scaled GLS normal matrix has condition number $1.40\times10^6$. Positivity at fixed level suffices for Theorem 3, but its constants depend on these gaps; no uniform growing-span rate is established.
+
 The full-library estimator of Theorem 3 uses nine smoothed-data feature instruments and 125 time-only cubic splines. The deterministic limiting covariance for this 134-test span has $\sqrt{\operatorname{tr}V_k}=9.8144$. The calculation retains all rows and uses neither ridge nor rank truncation. Refining the finest grid from $h=0.00015625$ to $0.000078125$ changes this reference by $4.7\times10^{-8}$ relatively. It concerns all eighteen coefficients, unlike the earlier supplied four-coefficient Van der Pol benchmarks.
 
 Table 7. Constructive full-library estimator on 100 independent paths at each amplitude. Intervals resample archived coefficient errors 10,000 times and are pointwise; no new observations are generated for this comparison.
@@ -538,5 +540,9 @@ The scope is fully observed deterministic polynomial ODEs with known positive se
 ## Data availability
 
 The current code and synthetic-data archive, v1.3.1, is publicly available in the [versioned reproducibility repository](https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.3.1). Configurations, seed ranges, source fingerprints, coefficient estimates, covariance summaries and SHA256 manifests permit exact input reconstruction and paired audit. Full synthetic time series are regenerated from the frozen seed protocol. Pinned download specifications retrieve original author sources. The separate research archive preserves earlier extensions. Moderate-noise bootstrap validation remains incomplete after a recorded compute-budget decision. The [preceding v1.2.0 Zenodo snapshot](https://doi.org/10.5281/zenodo.23313935) remains unchanged; a DOI for the current version has not yet been publicly verified. No external experimental dataset is used.
+
+## Declaration of generative AI and AI-assisted technologies
+
+OpenAI Codex was used to assist with literature searches, mathematical derivations and proof development, research code, and manuscript drafting and editing. The author personally reviewed and verified the mathematical arguments, calculations, references and final text, and takes full responsibility for the accuracy and integrity of the work. The tool is not an author.
 
 ## References

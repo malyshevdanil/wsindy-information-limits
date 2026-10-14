@@ -115,6 +115,8 @@ def remove_encoding_coincidences(path):
 
 
 def main():
+    raise RuntimeError('Historical redaction command disabled: preserve AI disclosure and repository history. See AGENTS.md.')
+    # Historical implementation retained as provenance, never executed.
     paths=[ROOT/n for n in subprocess.check_output(['git','ls-files'],cwd=ROOT,text=True).splitlines()]
     changed=[];notebooks=[]
     for path in paths:

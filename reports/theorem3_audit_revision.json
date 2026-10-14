@@ -1,0 +1,40 @@
+{
+  "pilot_rate": "theta_tilde - theta_0 = O_P(epsilon)",
+  "ridge_divisor": "q_k = d*r_k = dimension of stacked residual covariance; not library size m",
+  "lemmas": [
+    "S8.A smoothing and kernel bias",
+    "S8.B Simpson quadrature and OU continuity",
+    "S8.C self-instrumentation and pilot",
+    "S8.D localization E1-E6 and uniform integrability"
+  ],
+  "kernel_second_moment": "1/11",
+  "leading_interior_bias_coefficient": "1/22",
+  "instrument_bias_order": "epsilon^(1/5); not a claimed RMSE-ratio rate",
+  "bad_event_fourth_scaled_moment_bound": "O(epsilon^(22/5))",
+  "raw_Gram_minimum_eigenvalue": 6.072172597018804e-10,
+  "scaled_normal_condition": 1403871.7906340847,
+  "mathematical_tests_passed": 9,
+  "new_monte_carlo_runs": 0,
+  "ai_disclosure_restored": true,
+  "human_author_verification_confirmed": true,
+  "historical_commits_and_tags_unchanged": true,
+  "general_proof_sha256": "394cb3673128ea10509ca40e5d1c0d5e0607aafb2af03f1a132bbd448bbea710",
+  "implementation_scope_clarified": "Known common OU correlation time, matching the covariance routine",
+  "raw_Gram_condition_lower_bound": 7149940801.171008,
+  "cubic_H1_Rayleigh_diagonal": 4.341567460317727,
+  "bound_scope": "Diagonal Rayleigh lower bound for the archived fine-grid raw Gram; not its exact condition number",
+  "pdf_checks": [
+    {
+      "document": "article_ejs",
+      "pages": 25,
+      "ai_disclosure_checked": true,
+      "pilot_notation_checked": true
+    },
+    {
+      "document": "supplement",
+      "pages": 30,
+      "ai_disclosure_checked": true,
+      "pilot_notation_checked": true
+    }
+  ]
+}

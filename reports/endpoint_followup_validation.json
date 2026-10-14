@@ -118,7 +118,7 @@
   "pdfs": [
     {
       "name": "article_ejs",
-      "pages": 24
+      "pages": 25
     },
     {
       "name": "article_revised",
@@ -126,7 +126,7 @@
     },
     {
       "name": "supplement",
-      "pages": 28
+      "pages": 30
     }
   ],
   "ejs_metadata_verified": true,

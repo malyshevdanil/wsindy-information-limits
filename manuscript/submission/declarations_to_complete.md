@@ -13,3 +13,7 @@ These fields require factual author input; no identities, funding or institution
 
 
 ORCID: https://orcid.org/0009-0007-0947-3866
+
+## Generative AI disclosure
+
+OpenAI Codex assisted with literature searches, mathematical derivations and proof development, research code, and manuscript drafting and editing. On 2026-10-14 the author explicitly confirmed personal verification of the proofs, calculations and references, and responsibility for the final manuscript. The disclosure is included before the bibliography in the main article. Confirm the current EJS instructions when completing submission; no unverified assertion about a journal-specific AI requirement is made here.

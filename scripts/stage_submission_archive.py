@@ -34,9 +34,10 @@ def main():
     subprocess.run(['git','add','-f','--all'],cwd=DEST,check=True)
     tracked=set(subprocess.check_output(['git','ls-files'],cwd=DEST,text=True).splitlines())
     assert tracked=={r['path'] for r in records}|{'release_manifest.json'},'Every manifest member must be tracked in the published tree'
-    from scripts.remove_tool_branding import scan
-    for record in records:scan(DEST/record['path'])
-    result={'version':json.loads((ROOT/'configs/public_archive.json').read_text())['version'],'copied_tracked_files':len(copied),'manifest_files':len(records),'derived_legacy_files_pruned':pruned,'secrets_and_attribution_checked':True,'previous_tags_unchanged':True}
+    disclosure=(DEST/'manuscript/article_revised.md').read_text(encoding='utf-8')
+    assert '## Declaration of generative AI and AI-assisted technologies' in disclosure
+    assert 'Codex' in disclosure and 'mathematical derivations' in disclosure
+    result={'version':json.loads((ROOT/'configs/public_archive.json').read_text())['version'],'copied_tracked_files':len(copied),'manifest_files':len(records),'derived_legacy_files_pruned':pruned,'secret_scan_verified':True,'ai_disclosure_preserved':True,'previous_tags_unchanged':True}
     (ROOT/'reports/submission_archive_preparation.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))
 
 if __name__=='__main__':

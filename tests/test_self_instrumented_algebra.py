@@ -4,6 +4,14 @@ import numpy as np
 from src.self_instrumented_gls import interpolation_kernel,dyadic_cubic_tests
 
 class ConstructionChecks(unittest.TestCase):
+    def test_exact_kernel_second_moment_in_smoothing_lemma(self):
+        import sympy as sp
+        s=sp.symbols('s')
+        K=sp.Rational(315,256)*(1-s**2)**4
+        self.assertEqual(sp.integrate(K,(s,-1,1)),1)
+        self.assertEqual(sp.integrate(s*K,(s,-1,1)),0)
+        self.assertEqual(sp.integrate(s**2*K,(s,-1,1)),sp.Rational(1,11))
+
     def test_interpolation_reproduces_constant_and_linear_derivative(self):
         for h,b in [(.005,.147),(.001,.1)]:
             k,d,m=interpolation_kernel(h,b);lag=np.arange(-m,m+1)*h

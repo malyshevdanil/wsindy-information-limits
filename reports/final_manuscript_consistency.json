@@ -1,6 +1,19 @@
 {
-  "tracked_files_scanned": 1242,
-  "current_named_tool_attribution_absent": true,
+  "ai_disclosure_present": true,
+  "tools_disclosed": [
+    "OpenAI Codex"
+  ],
+  "uses_disclosed": [
+    "literature search",
+    "mathematical derivations and proof development",
+    "research code",
+    "manuscript drafting and editing"
+  ],
+  "author_personal_verification_confirmed": true,
+  "confirmation_date": "2026-10-14",
+  "historical_attribution_absence_check_superseded": true,
+  "historical_commits_and_tags_unchanged": true,
+  "automatic_redaction_disabled": true,
   "main_supplement_references_resolve": true,
   "section_numbers": [
     1,

@@ -64,6 +64,15 @@ def main():
     assert 'targeted selection' not in main_text
     assert 'remain supplementary extensions' not in main_text
     assert 'before any new endpoint outcomes' in main_text
+    for current in [main_text,supplement_text,ejs]:
+        current=re.sub(r'\s+',' ',current)
+        assert 'Declaration of generative AI and AI-assisted technologies' in current
+        assert 'Codex' in current and 'mathematical derivations' in current
+    assert 'root-$\\epsilon$' not in main_text+supplement_text
+    for letter in 'ABCD':
+        assert f'**Lemma S8.{letter} (' in supplement_text
+    assert 'I_{q_k}/q_k' in main_text and 'I_{q_k}/q_k' in supplement_text
+    assert '\\epsilon^{1/5}' in main_text
     differences=json.loads((ROOT/'reports/support_wald_paired_intervals.json').read_text())
     assert differences['all_1600_paired_outcomes_retained'] and differences['counts_unchanged']
     assert len(differences['groups'])==16 and all(g['ci95'][0]<g['ci95'][1] for g in differences['groups'])
