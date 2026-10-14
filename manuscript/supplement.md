@@ -1170,6 +1170,6 @@ bootstrap SE procedure in S4.
 
 ## Declaration of generative AI and AI-assisted technologies
 
-OpenAI Codex assisted with literature searches, mathematical derivations and proof development, research code, and manuscript drafting and editing. The author personally reviewed and verified the mathematical arguments, calculations, references and final text, and takes full responsibility for the accuracy and integrity of the work.
+Codex assisted with research code, literature searches, Russian-to-English translation, and mathematical derivations and proof development. The author verified the results and takes full responsibility for the manuscript.
 
 ## References

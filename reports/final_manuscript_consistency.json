@@ -4,10 +4,10 @@
     "OpenAI Codex"
   ],
   "uses_disclosed": [
-    "literature search",
-    "mathematical derivations and proof development",
     "research code",
-    "manuscript drafting and editing"
+    "literature searches",
+    "Russian-to-English translation",
+    "mathematical derivations and proof development"
   ],
   "author_personal_verification_confirmed": true,
   "confirmation_date": "2026-10-14",
@@ -40,5 +40,6 @@
     1,
     2,
     3
-  ]
+  ],
+  "disclosure_wording": "Short declaration explicitly approved by the author"
 }

@@ -6,11 +6,9 @@ constructive full-library small-noise efficiency under a checkable jet condition
 and paired correlated-noise benchmarks with independently checked Wald size.
 Known-initial trace adaptation is attributed to Brunel and coauthors.
 
-OpenAI Codex assisted with literature search, mathematical derivations and proof
-development, research code, and manuscript drafting and editing. The author's
-confirmed verification and responsibility are recorded in the manuscript's
-generative-AI declaration. AI tools are not authors. Prior commits and published
-tags remain unchanged; historical redaction commands are disabled by AGENTS.md.
+Codex assisted with research code, literature searches, Russian-to-English translation, and mathematical derivations and proof development. The author verified the results and takes full responsibility for the manuscript.
+AI tools are not authors. Prior commits and published tags remain unchanged;
+historical redaction commands are disabled by AGENTS.md.
 
 - [EJS manuscript](manuscript/article_ejs.pdf), [IMS LaTeX](manuscript/article_ejs.tex),
   [Word](manuscript/article_revised.docx), [editable source](manuscript/article_revised.md).
