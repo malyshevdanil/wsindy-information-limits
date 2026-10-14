@@ -1,0 +1,16 @@
+{
+  "theorem_2_reference": "Proposition 2",
+  "bibliography_case_protected": [
+    "Wiener",
+    "Gaussian",
+    "Brownian"
+  ],
+  "introduction_testing_contribution_removed": true,
+  "data_availability_internal_notes_removed": true,
+  "main_frozen_and_gate_terms_removed": true,
+  "supplement_dash_and_runtimes_fixed": true,
+  "verified_doi": "10.5281/zenodo.23366538",
+  "verified_zenodo_version": "v1.3.1",
+  "pdf_link_and_visible_doi_checked": true,
+  "scientific_results_unchanged": true
+}

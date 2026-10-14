@@ -4735,6 +4735,11 @@
     "sha256": "649833a625e537d9da71be8921049db6ab2fddee7b115ff2bbc24e7261ea9d9c"
   },
   {
+    "path": "reports/final_copyedit_checks.json",
+    "bytes": 511,
+    "sha256": "2fdef55405fd76799889b170fa213f13c28656ab9fbc7f07a8fad3df4eb3d193"
+  },
+  {
     "path": "reports/final_manuscript_consistency.json",
     "bytes": 872,
     "sha256": "c95f2c2eceaeded20b823d396667258824728879974ab7f1654757e8864c8a2b"
@@ -5193,6 +5198,11 @@
     "path": "reports/zenodo_archive_validation.json",
     "bytes": 339,
     "sha256": "d1f86f71202ec0b291afbf2b569a6226016f7836b095ccbf2ba2cc9cc8b60715"
+  },
+  {
+    "path": "reports/zenodo_current_public_record.json",
+    "bytes": 4606,
+    "sha256": "b655c334df3415267cb1045a2d18bda00429a8c6837ccd0f854be55b3245c9a9"
   },
   {
     "path": "reports/zenodo_current_version_pending.json",
