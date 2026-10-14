@@ -223,10 +223,10 @@ The paper has three contributions: exact boundary-free and known-initial
 adjoint-range characterizations; a constructive efficient full-library
 estimator under a checkable jet condition, verified exactly for Van der
 Pol (Theorem 3); and quantitative correlated-noise benchmarks separating
-information cost, established boundary recovery and prespecified
-testing. Polynomial Hermite covariance supplies the feasible weights.
-Independent-record GMM, fission and cross-fitting are preserved in a
-separate research archive.
+information cost, established boundary recovery and constructive
+attainability. Polynomial Hermite covariance supplies the feasible
+weights. Independent-record GMM, fission and cross-fitting are preserved
+in a separate research archive.
 
 \subsection{2. Related estimation
 methods}\label{related-estimation-methods}
@@ -247,7 +247,7 @@ iteratively updating their linearized covariance {[}24{]}. WENDy-MLE
 uses an approximate Gaussian weak-residual likelihood with
 parameter-dependent covariance and analytic derivatives {[}25{]}. Its
 log determinant and covariance-derivative terms distinguish its
-finite-noise objective from frozen-weight GLS. Polynomial Hermite
+finite-noise objective from fixed-weight GLS. Polynomial Hermite
 correction and exact residual covariance here extend that coupled
 calculation to all Gaussian orders for supplied OU noise. They do not
 alone correct the nonlinear coefficient estimator. Gaussian correction
@@ -312,8 +312,8 @@ Fix \(K\) test functions \(\phi_k\in C_c^2(0,T)\). Their positions and
 full support widths \(L\) remain fixed as \(h\) decreases. Let
 \(\mathcal Q_h\) denote composite trapezoidal quadrature with weights
 \(w_n\) in the formulas; matched endpoint confirmations use composite
-Simpson quadrature as specified in their frozen protocols. Clean weak
-quantities are
+Simpson quadrature as specified in their prespecified protocols. Clean
+weak quantities are
 
 \[
 G^0_{kj}=\int_0^T\phi_k\vartheta_j(x)\,dt,\qquad
@@ -788,7 +788,7 @@ imply \(g'=Jg\) in the weak sense. Such solutions are \(g=Zc\). For all
 arbitrary, so \(g(0)=c=0\). Their annihilator is trivial and their
 closure is \(\mathcal E\). For tests with \(\phi(0)=0\), every \(Zc\)
 annihilates the range and there are no further annihilators. Its closure
-is therefore \(\mathcal M\), as characterized in Theorem 1.
+is therefore \(\mathcal M\), as characterized in Proposition 2.
 
 For any \(\lambda\in\mathcal E\), define
 \(a_j=\langle Z_{\cdot j},\lambda\rangle\). Continuity of this pairing
@@ -1143,15 +1143,15 @@ Known-initial scoring & 0.00129800 & 0.00008753 & 0.00129505 \\
 
 These 1968 records were unused for endpoint fitting, while their compact
 and scoring references were archived. After inspecting the 32-path
-pilot, we replaced the absolute RMSE gate of 0.00140 with paired
+pilot, we replaced the absolute RMSE criterion of 0.00140 with paired
 relative criteria because known-initial likelihood itself failed that
-gate; the amendment was frozen before any new endpoint outcomes on the
-1968 confirmation records were inspected. The frozen confirmation
-criterion requires at least 50\% gap recovery. Universal endpoints
-recover 97.1\%, with paired interval 95.5--98.6\%, and lie 0.88\% above
-scoring. Model-adjoint tests realize score directions and provide an
-implementation check. S2 and S5.5 record the criterion amendment and
-quadrature checks.
+criterion; the amendment was fixed before any new endpoint outcomes on
+the 1968 confirmation records were inspected. The prespecified
+confirmation criterion requires at least 50\% gap recovery. Universal
+endpoints recover 97.1\%, with paired interval 95.5--98.6\%, and lie
+0.88\% above scoring. Model-adjoint tests realize score directions and
+provide an implementation check. S2 and S5.5 record the criterion
+amendment and quadrature checks.
 
 \begin{figure}[p]
 \centering
@@ -1242,11 +1242,11 @@ Unknown-initial MLE & 0.0171952 & 0.0006504 & 0.0171829 \\
 \end{center}
 
 Universal endpoints recover 32.6\% of the gap (18.3--45.8\%), failing
-the frozen 50\% criterion. Clean-design first-order and full-Hermite
-references are 0.013094 and 0.013636, below empirical dispersion
-0.021125. Restored local geometry therefore leaves finite-noise design,
-pilot and fitting effects. The matched author-WENDy comparison is in
-S5.3.
+the prespecified 50\% criterion. Clean-design first-order and
+full-Hermite references are 0.013094 and 0.013636, below empirical
+dispersion 0.021125. Restored local geometry therefore leaves
+finite-noise design, pilot and fitting effects. The matched author-WENDy
+comparison is in S5.3.
 
 For Lorenz, we fit \((s,r,b)=(10,28,8/3)\) in its supplied physical
 structure, with \(u=(1,1,1)\), \(T=4\), \(h=0.001\), OU range 0.1 and
@@ -1420,17 +1420,16 @@ states, partial observation and process noise require further analysis.
 The current code and synthetic-data archive, v1.3.1, is publicly
 available in the
 \href{https://github.com/malyshevdanil/wsindy-information-limits/tree/v1.3.1}{versioned
-reproducibility repository}. Configurations, seed ranges, source
+reproducibility repository} and its
+\href{https://doi.org/10.5281/zenodo.23366538}{Zenodo snapshot, DOI
+10.5281/zenodo.23366538}. Configurations, seed ranges, source
 fingerprints, coefficient estimates, covariance summaries and SHA256
 manifests permit exact input reconstruction and paired audit. Full
-synthetic time series are regenerated from the frozen seed protocol.
-Pinned download specifications retrieve original author sources. The
-separate research archive preserves earlier extensions. Moderate-noise
-bootstrap validation remains incomplete after a recorded compute-budget
-decision. The \href{https://doi.org/10.5281/zenodo.23313935}{preceding
-v1.2.0 Zenodo snapshot} remains unchanged; a DOI for the current version
-has not yet been publicly verified. No external experimental dataset is
-used.
+synthetic time series are regenerated from the prespecified seed
+protocol. Pinned download specifications retrieve original author
+sources. The separate research archive preserves earlier extensions. The
+\href{https://doi.org/10.5281/zenodo.23313935}{preceding v1.2.0
+snapshot} remains unchanged. No external experimental dataset is used.
 
 \subsection{Declaration of generative AI and AI-assisted
 technologies}\label{declaration-of-generative-ai-and-ai-assisted-technologies}
@@ -1494,7 +1493,7 @@ kriging. Springer (1999)
 \bibitem[\citeproctext]{ref-ying1991}
 \CSLLeftMargin{{[}8{]} }%
 \CSLRightInline{Ying Z. Asymptotic properties of a maximum likelihood
-estimator with data from a gaussian process. \emph{Journal of
+estimator with data from a {G}aussian process. \emph{Journal of
 Multivariate Analysis} 36 (1991) 280--296.
 \url{https://doi.org/10.1016/0047-259X(91)90062-7}.}
 
@@ -1661,21 +1660,21 @@ the Royal Society A} 478 (2022) 20210904.
 
 \bibitem[\citeproctext]{ref-uhlenbeck1930}
 \CSLLeftMargin{{[}33{]} }%
-\CSLRightInline{Uhlenbeck GE, Ornstein LS. On the theory of the brownian
-motion. \emph{Physical Review} 36 (1930) 823--841.
+\CSLRightInline{Uhlenbeck GE, Ornstein LS. On the theory of the
+{B}rownian motion. \emph{Physical Review} 36 (1930) 823--841.
 \url{https://doi.org/10.1103/PhysRev.36.823}.}
 
 \bibitem[\citeproctext]{ref-cameron1944}
 \CSLLeftMargin{{[}34{]} }%
-\CSLRightInline{Cameron RH, Martin WT. Transformations of weiner
+\CSLRightInline{Cameron RH, Martin WT. Transformations of {W}iener
 integrals under translations. \emph{Annals of Mathematics} 45 (1944)
 386--396. \url{https://doi.org/10.2307/1969276}.}
 
 \bibitem[\citeproctext]{ref-feldman1958}
 \CSLLeftMargin{{[}35{]} }%
-\CSLRightInline{Feldman J. Equivalence and perpendicularity of gaussian
-processes. \emph{Pacific Journal of Mathematics} 8 (1958) 699--708.
-\url{https://doi.org/10.2140/pjm.1958.8.699}.}
+\CSLRightInline{Feldman J. Equivalence and perpendicularity of
+{G}aussian processes. \emph{Pacific Journal of Mathematics} 8 (1958)
+699--708. \url{https://doi.org/10.2140/pjm.1958.8.699}.}
 
 \bibitem[\citeproctext]{ref-isserlis1918}
 \CSLLeftMargin{{[}36{]} }%

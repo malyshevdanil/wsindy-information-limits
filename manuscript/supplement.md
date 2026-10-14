@@ -611,11 +611,11 @@ The largest value is $6.70\times10^{-15}$ for the Lorenz endpoint/control
 family; the largest relative map change is $9.13\times10^{-8}$.
 Normalization errors are below $4.3\times10^{-13}$.
 These negligible local increments address regularization cost, not the
-existence of finite-noise estimator moments. Tables 1?6 retain their
+existence of finite-noise estimator moments. Tables 1–6 retain their
 original finite-sample outcomes; they are not relabelled as guarded fits.
 Original output bytes, maps and covariance matrices are preserved in
 `data/archived_ridge_check`; the frozen source audit passes for all eight
-families. The calculation took 24.3 seconds on Kaggle.
+families.
 
 ## S8. Constructive full-library efficiency under a jet condition
 
@@ -1141,7 +1141,7 @@ All 134 test rows are retained; the fine-grid first-order residual
 covariance minimum eigenvalue is 0.00117261, and the scaled normal-matrix
 condition number is $1.40\times10^6$. The identity $P\Sigma_1P^\top=V_k$
 is checked with relative discrepancy below $2.6\times10^{-11}$.
-The calculation took 35.0 seconds on Kaggle. Its executed-source hash
+Its executed-source hash
 and protocol match the frozen notebook; original bytes are preserved
 in `data/guarded_geometry_reference`.
 

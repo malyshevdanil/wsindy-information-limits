@@ -9,5 +9,6 @@
   "all_public_blob_hashes_verified": true,
   "sha256_manifest_verified": true,
   "source_and_data_verified": true,
-  "doi": null
+  "doi": "10.5281/zenodo.23366538",
+  "zenodo_metadata_verified": true
 }

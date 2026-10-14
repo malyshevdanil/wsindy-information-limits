@@ -1,7 +1,7 @@
 {
-  "doi": "10.5281/zenodo.23313935",
+  "doi": "10.5281/zenodo.23366538",
   "immutable_tag_unchanged": true,
-  "manuscript_change": "Data availability DOI sentence only",
-  "manuscript_before_sha256": "0401737311c70428a36070987bab13827b0c62cbcfd0a4f7c1014cab222fd7fb",
-  "manuscript_after_sha256": "7f9d2a66a6101a06d4dc769900634630c656fd808a4d0de18fc0bead04bdc2ef"
+  "manuscript_change": "Data availability paragraph replaced with verified archive citation",
+  "manuscript_before_sha256": "078469bb250bce9e7738788fbc97ddc7cf6fa999640b30f32bcd105186508bb9",
+  "manuscript_after_sha256": "506d946c2e0b90bbd0f77585e7df9aa133ffb68e65138402dca94aeff456f2c2"
 }

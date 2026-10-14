@@ -8,7 +8,7 @@ These fields require factual author input; no identities, funding or institution
 - CRediT roles of each human author: to be supplied.
 - Funding and competing interests: to be supplied.
 - Approval by all authors and exclusive-submission statement: to be supplied.
-- Data/code availability: code, synthetic data, frozen notebooks and recorded outputs are provided in the versioned GitHub reproducibility repository linked in the main article. Check `reports/public_archive_validation.json` for the verified public URL and commit. The v1.2.0 archive DOI is https://doi.org/10.5281/zenodo.23313935.
+- Data/code availability: code, synthetic data, frozen notebooks and recorded outputs are provided in the versioned GitHub reproducibility repository linked in the main article. Check `reports/public_archive_validation.json` for the verified public URL and commit. The current v1.3.1 archive DOI is https://doi.org/10.5281/zenodo.23366538.
 - Ethics: the executed study uses synthetic deterministic trajectories and synthetic sensor errors. If real data are added, update this statement according to their provenance.
 
 

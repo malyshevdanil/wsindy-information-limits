@@ -79,7 +79,8 @@ def main():
     for p in [ROOT/'manuscript/article_revised.md',ROOT/'manuscript/supplement.md']:
         text=p.read_text(encoding='utf-8');assert not re.search('KGAT_|credentials|access_token',text)
     result={'archive_files':len(manifest['files']),'sha256_all_verified':True,'frozen_source_audits':audits,
-            'documents':docs,'pdfs':pdfs,'ejs_metadata_verified':True,'public_identifier_for_current_revision_pending':True}
+            'documents':docs,'pdfs':pdfs,'ejs_metadata_verified':True,
+            'public_identifier_for_current_revision_pending':not bool(json.loads((ROOT/'configs/public_archive.json').read_text()).get('doi'))}
     (ROOT/'reports/endpoint_followup_validation.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result))
 

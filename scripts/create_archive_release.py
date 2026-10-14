@@ -38,7 +38,7 @@ The main manuscript uses the official IMS EJS class. Core proofs are in a shorte
         raise RuntimeError('GitHub release request failed with HTTP '+str(response.status_code))
     data=response.json();assert data['tag_name']==cfg['version'] and not data['draft']
     result=dict(published=True,tag=data['tag_name'],url=data['html_url'],release_id=data['id'],
-        created_at=data['created_at'],published_at=data['published_at'],zenodo_doi_pending=True)
+        created_at=data['created_at'],published_at=data['published_at'],zenodo_doi_pending=not bool(cfg.get('doi')),doi=cfg.get('doi'))
     (ROOT/'reports/github_release_validation.json').write_text(json.dumps(result,indent=2))
     print(json.dumps(result))
 
